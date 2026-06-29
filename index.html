@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linked2Pay for Acumatica - Presentation & Client Guide</title>
+
+    <style>
+      :root {
+        --brand: #007acc;
+        --bg: #ffffff;
+        --text: #17212b;
+        --muted: #5d6b78;
+        --line: #d9e6f2;
+        --soft: #f4f9fd;
+        --success: #16794c;
+        --warning: #9a6a00;
+        --danger: #b3261e;
+        --shadow: 0 14px 34px rgba(0, 122, 204, 0.1);
+        --radius: 8px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--brand);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding: 28px 22px;
+        border-right: 1px solid var(--line);
+        background: #ffffff;
+        overflow-y: auto;
+      }
+
+      .brand {
+        margin-bottom: 28px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        background: var(--brand);
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .brand h1 {
+        margin: 0;
+        color: var(--brand);
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      .brand p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .toc-title {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .toc {
+        display: grid;
+        gap: 4px;
+      }
+
+      .toc a {
+        display: block;
+        padding: 9px 10px;
+        border-radius: 6px;
+        color: var(--text);
+        font-size: 14px;
+      }
+
+      .toc a:hover {
+        background: var(--soft);
+        color: var(--brand);
+        text-decoration: none;
+      }
+
+      main {
+        min-width: 0;
+      }
+
+      .page {
+        min-height: 100vh;
+        padding: 64px clamp(28px, 6vw, 88px);
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+      }
+
+      .page-inner {
+        width: 100%;
+        max-width: 1080px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--brand);
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      h2 {
+        margin: 0 0 18px;
+        color: var(--brand);
+        font-size: clamp(32px, 5vw, 56px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin: 28px 0 10px;
+        color: var(--text);
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      p {
+        margin: 0 0 16px;
+        color: var(--text);
+        font-size: 17px;
+      }
+
+      .lead {
+        max-width: 820px;
+        color: var(--muted);
+        font-size: clamp(18px, 2vw, 23px);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: var(--shadow);
+      }
+
+      .card h3 {
+        margin-top: 0;
+        color: var(--brand);
+        font-size: 19px;
+      }
+
+      .card p,
+      .card li {
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .number {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--brand);
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      ul,
+      ol {
+        margin: 12px 0 0;
+        padding-left: 22px;
+      }
+
+      li {
+        margin: 7px 0;
+        font-size: 16px;
+      }
+
+      .callout {
+        margin-top: 24px;
+        border-left: 4px solid var(--brand);
+        background: var(--soft);
+        padding: 18px 20px;
+        border-radius: 0 var(--radius) var(--radius) 0;
+      }
+
+      .callout strong {
+        color: var(--brand);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 22px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        font-size: 15px;
+      }
+
+      th,
+      td {
+        padding: 13px 14px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: var(--brand);
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      code {
+        color: var(--brand);
+        background: var(--soft);
+        padding: 2px 6px;
+        border-radius: 5px;
+        font-family: Consolas, Monaco, monospace;
+        font-size: 90%;
+      }
+
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .badge {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--brand);
+        background: #ffffff;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .demo-flow {
+        display: grid;
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .demo-step {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        gap: 14px;
+        align-items: start;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #ffffff;
+      }
+
+      .demo-step h3 {
+        margin: 0 0 4px;
+        color: var(--brand);
+        font-size: 18px;
+      }
+
+      .demo-step p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .status {
+        font-weight: 800;
+      }
+
+      .status.good {
+        color: var(--success);
+      }
+
+      .status.warn {
+        color: var(--warning);
+      }
+
+      .status.danger {
+        color: var(--danger);
+      }
+
+      .footer-note {
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 28px;
+      }
+
+      .logo-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .logo-row img {
+        max-width: 96px;
+        max-height: 38px;
+        object-fit: contain;
+      }
+
+      .logo-plus {
+        color: var(--brand);
+        font-weight: 800;
+        font-size: 18px;
+      }
+
+      @media (max-width: 900px) {
+        .layout {
+          display: block;
+        }
+
+        .sidebar {
+          position: relative;
+          height: auto;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .toc {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .page {
+          min-height: auto;
+          padding: 44px 22px;
+        }
+
+        .grid,
+        .grid.two {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        .layout {
+          display: block;
+        }
+
+        .sidebar {
+          display: none;
+        }
+
+        .page {
+          min-height: auto;
+          page-break-after: always;
+          padding: 40px;
+        }
+
+        .card,
+        .demo-step {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo-row">
+            <img src="/linked2pay.png" alt="Linked2Pay logo" />
+            <span class="logo-plus">+</span>
+            <img src="/acumatica.png" alt="Acumatica logo" />
+          </div>
+
+          <h1>Documentation</h1>
+          <p>Presentation, setup guide, and client walkthrough.</p>
+        </div>
+
+        <p class="toc-title">Contents</p>
+        <nav class="toc">
+          <a href="#overview">Overview</a>
+          <a href="#value">Why It Matters</a>
+          <a href="#architecture">How It Works</a>
+          <a href="#setup">Initial Setup</a>
+          <a href="#customers">Customer Sync</a>
+          <a href="#payment-methods">Payment Methods</a>
+          <a href="#autobill">Auto-Bill</a>
+          <a href="#webhooks">Webhooks</a>
+          <a href="#demo">Demo Script</a>
+          <a href="#testing">Testing Checklist</a>
+          <a href="#faq">FAQ</a>
+          <a href="#support">Support Notes</a>
+        </nav>
+      </aside>
+
+      <main>
+        <section class="page" id="overview">
+          <div class="page-inner">
+            <p class="eyebrow">Client Presentation</p>
+            <h2>Linked2Pay Integration for Acumatica</h2>
+            <p class="lead">
+              Linked2Pay connects Acumatica customers, payment methods,
+              invoices, and payments with the Linked2Pay gateway. The goal is
+              simple: reduce manual payment work, support saved payment
+              profiles, and automate recurring billing.
+            </p>
+
+            <div class="badge-row">
+              <span class="badge">Customer Boarding</span>
+              <span class="badge">Payment Method Sync</span>
+              <span class="badge">Auto-Bill</span>
+              <span class="badge">Credit Card Fee</span>
+              <span class="badge">Webhook Updates</span>
+            </div>
+
+            <div class="callout">
+              <strong>Important:</strong> This is an Acumatica customization
+              extension. It does not modify Acumatica source code.
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="value">
+          <div class="page-inner">
+            <p class="eyebrow">Business Value</p>
+            <h2>What This Solves</h2>
+            <p class="lead">
+              Businesses using Acumatica often need to collect payments from
+              customers repeatedly. Linked2Pay helps turn that into a guided,
+              repeatable, and automated workflow.
+            </p>
+
+            <div class="grid">
+              <div class="card">
+                <h3>Less Manual Work</h3>
+                <p>
+                  Users do not need to manually copy payment tokens, chase
+                  payment status, or process every recurring invoice one by one.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Cleaner Customer Records</h3>
+                <p>
+                  Each Acumatica customer can store the Linked2Pay Contact ID
+                  and synced payment profile references.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Automated Collections</h3>
+                <p>
+                  Auto-Bill can process due invoices for customers that have
+                  saved Linked2Pay payment methods.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="architecture">
+          <div class="page-inner">
+            <p class="eyebrow">Simple Architecture</p>
+            <h2>How The Integration Works</h2>
+            <p class="lead">
+              Acumatica remains the accounting system of record. Linked2Pay
+              handles gateway-side contact profiles, payment profiles, and
+              transaction processing.
+            </p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>Acumatica</th>
+                  <th>Linked2Pay</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Customer</td>
+                  <td>Customer record</td>
+                  <td>Contact Profile ID</td>
+                </tr>
+                <tr>
+                  <td>Payment Method</td>
+                  <td>Customer payment method</td>
+                  <td>Payment Profile ID for card or ACH</td>
+                </tr>
+                <tr>
+                  <td>Invoice</td>
+                  <td>AR invoice or debit memo</td>
+                  <td>Used for payment transaction context</td>
+                </tr>
+                <tr>
+                  <td>Payment</td>
+                  <td>AR payment record</td>
+                  <td>Card or ACH transaction</td>
+                </tr>
+                <tr>
+                  <td>Status</td>
+                  <td>Updated by processing and webhook logic</td>
+                  <td>Sends transaction result/status</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <strong>Key idea:</strong> Acumatica stores profile IDs and masked
+              payment details only. Full card or bank numbers stay in
+              Linked2Pay.
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="setup">
+          <div class="page-inner">
+            <p class="eyebrow">Setup Guide</p>
+            <h2>Initial Setup</h2>
+            <p class="lead">
+              Before using the integration, the Linked2Pay processing center and
+              payment methods must be configured in Acumatica.
+            </p>
+
+            <div class="demo-flow">
+              <div class="demo-step">
+                <div class="number">1</div>
+                <div>
+                  <h3>Create Payment Methods</h3>
+                  <p>
+                    Create or confirm payment methods such as
+                    <code>L2PCC</code> for credit card and
+                    <code>L2PACH</code> for ACH.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">2</div>
+                <div>
+                  <h3>Create Linked2Pay Processing Center</h3>
+                  <p>
+                    Set up the Linked2Pay processing center and enter the
+                    required API settings.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">3</div>
+                <div>
+                  <h3>Attach Payment Methods</h3>
+                  <p>
+                    On the processing center, add <code>L2PCC</code> and
+                    <code>L2PACH</code> under the payment methods tab and make
+                    them active.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">4</div>
+                <div>
+                  <h3>Test Credentials</h3>
+                  <p>
+                    Use the Test Credentials action to confirm Acumatica can
+                    connect to Linked2Pay successfully.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="customers">
+          <div class="page-inner">
+            <p class="eyebrow">Customer Workflow</p>
+            <h2>Boarding And Syncing Customers</h2>
+            <p class="lead">
+              A customer can be connected to Linked2Pay from the Acumatica
+              Customer screen.
+            </p>
+
+            <div class="grid two">
+              <div class="card">
+                <h3>Board To Gateway</h3>
+                <p>
+                  Creates a Linked2Pay contact profile from the Acumatica
+                  customer. The returned Linked2Pay Contact ID is saved on the
+                  customer record.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Sync With Linked2Pay</h3>
+                <p>
+                  Reads the customer’s Linked2Pay Contact ID, pulls current
+                  contact/payment profile data, and updates Acumatica.
+                </p>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Linked2Pay Contact ID</td>
+                  <td>The customer/contact profile ID from Linked2Pay.</td>
+                </tr>
+                <tr>
+                  <td>Boarded To Gateway</td>
+                  <td>
+                    Shows whether the customer has already been created or
+                    connected in Linked2Pay.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Enable Auto Bill</td>
+                  <td>
+                    Controls whether this customer is eligible for automated
+                    invoice payments.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="page" id="payment-methods">
+          <div class="page-inner">
+            <p class="eyebrow">Wallet Sync</p>
+            <h2>Payment Method Sync</h2>
+            <p class="lead">
+              Linked2Pay payment profiles can be synced into Acumatica as
+              customer payment methods. The Payment Profile ID is the matching
+              key.
+            </p>
+
+            <div class="grid">
+              <div class="card">
+                <h3>Create</h3>
+                <p>
+                  If Linked2Pay has a payment profile that does not exist in
+                  Acumatica, sync creates it.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Update</h3>
+                <p>
+                  If the Payment Profile ID already exists, sync updates the
+                  masked card or ACH display details.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Deactivate</h3>
+                <p>
+                  If a Linked2Pay profile no longer exists, Acumatica can
+                  deactivate the local payment method reference.
+                </p>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Linked2Pay Object</th>
+                  <th>Acumatica Result</th>
+                  <th>Stored Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Credit card profile</td>
+                  <td>Customer payment method using <code>L2PCC</code></td>
+                  <td>Masked card, expiration date, Payment Profile ID</td>
+                </tr>
+                <tr>
+                  <td>Bank account profile</td>
+                  <td>Customer payment method using <code>L2PACH</code></td>
+                  <td>Masked account, routing number, Payment Profile ID</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <strong>Note:</strong> Deleting a payment method in Acumatica does
+              not delete or disable the payment method in Linked2Pay.
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="autobill">
+          <div class="page-inner">
+            <p class="eyebrow">Automation</p>
+            <h2>Auto-Bill Processing</h2>
+            <p class="lead">
+              Auto-Bill finds due AR invoices for eligible customers and
+              processes payment through Linked2Pay using the customer’s saved
+              payment method.
+            </p>
+
+            <div class="demo-flow">
+              <div class="demo-step">
+                <div class="number">1</div>
+                <div>
+                  <h3>Invoice Becomes Due</h3>
+                  <p>
+                    An AR invoice is open or ready to be released and has a due
+                    date within the selected processing date.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">2</div>
+                <div>
+                  <h3>Customer Is Eligible</h3>
+                  <p>
+                    The customer has Enable Auto Bill turned on and has a
+                    default Linked2Pay payment method.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">3</div>
+                <div>
+                  <h3>Payment Is Created</h3>
+                  <p>
+                    Acumatica creates an AR payment and applies it to the
+                    invoice.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">4</div>
+                <div>
+                  <h3>Linked2Pay Charges The Customer</h3>
+                  <p>
+                    The extension sends the transaction to Linked2Pay and
+                    records the result back in Acumatica.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout">
+              <strong>Credit card fee:</strong> If configured, the extension can
+              apply the credit card processing fee as part of the auto-bill
+              flow.
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="webhooks">
+          <div class="page-inner">
+            <p class="eyebrow">Status Updates</p>
+            <h2>Webhook Handling</h2>
+            <p class="lead">
+              Linked2Pay can send transaction status updates back to Acumatica
+              through a webhook endpoint. This helps Acumatica stay aligned with
+              gateway payment results.
+            </p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Webhook Requirement</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Endpoint URL</td>
+                  <td>
+                    The public URL that Linked2Pay calls when payment status
+                    changes.
+                  </td>
+                </tr>
+                <tr>
+                  <td>API Key Header</td>
+                  <td>
+                    Used to validate that the incoming request is allowed.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Transaction Reference</td>
+                  <td>
+                    Used to find the matching Acumatica payment or Linked2Pay
+                    transaction record.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <strong>Security:</strong> Incoming webhook requests should be
+              validated before Acumatica updates payment status.
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="demo">
+          <div class="page-inner">
+            <p class="eyebrow">Live Demo</p>
+            <h2>Suggested Demo Script</h2>
+            <p class="lead">
+              This flow is designed for showing the full customer story: setup
+              once, then automate monthly collections.
+            </p>
+
+            <div class="demo-flow">
+              <div class="demo-step">
+                <div class="number">1</div>
+                <div>
+                  <h3>Show Processing Center</h3>
+                  <p>
+                    Open the Linked2Pay processing center, show API settings,
+                    card fee, payment method mapping, and Test Credentials.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">2</div>
+                <div>
+                  <h3>Open Customer</h3>
+                  <p>
+                    Show the Linked2Pay Integration tab with Contact ID, Boarded
+                    status, and Enable Auto Bill.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">3</div>
+                <div>
+                  <h3>Board Or Sync Customer</h3>
+                  <p>
+                    Use Board to Gateway for a new customer, or Sync with
+                    Linked2Pay for an existing Linked2Pay contact.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">4</div>
+                <div>
+                  <h3>Sync Payment Methods</h3>
+                  <p>
+                    Show card and ACH payment profiles appearing in Acumatica as
+                    masked customer payment methods.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">5</div>
+                <div>
+                  <h3>Create Due Invoice</h3>
+                  <p>
+                    Create or generate an AR invoice for the customer and
+                    confirm it is due.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">6</div>
+                <div>
+                  <h3>Run Auto-Bill</h3>
+                  <p>
+                    Open Linked2Pay Auto-Bill Processing, select eligible
+                    invoices, and process them.
+                  </p>
+                </div>
+              </div>
+
+              <div class="demo-step">
+                <div class="number">7</div>
+                <div>
+                  <h3>Show Result</h3>
+                  <p>
+                    Open the payment record, show invoice application, payment
+                    status, and any Linked2Pay transaction details.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="testing">
+          <div class="page-inner">
+            <p class="eyebrow">Validation</p>
+            <h2>Testing Checklist</h2>
+            <p class="lead">
+              Use this checklist before presenting or going live.
+            </p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Test</th>
+                  <th>Expected Result</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Test Credentials</td>
+                  <td>Acumatica connects successfully to Linked2Pay.</td>
+                  <td><span class="status good">Required</span></td>
+                </tr>
+                <tr>
+                  <td>Board customer</td>
+                  <td>Linked2Pay Contact ID is returned and saved.</td>
+                  <td><span class="status good">Required</span></td>
+                </tr>
+                <tr>
+                  <td>Sync existing customer</td>
+                  <td>Customer data and wallet are pulled from Linked2Pay.</td>
+                  <td><span class="status good">Required</span></td>
+                </tr>
+                <tr>
+                  <td>Sync card profile</td>
+                  <td>
+                    Card appears in Acumatica with masked number and Payment
+                    Profile ID.
+                  </td>
+                  <td><span class="status good">Required</span></td>
+                </tr>
+                <tr>
+                  <td>Sync ACH profile</td>
+                  <td>
+                    Bank account appears in Acumatica with masked account and
+                    Payment Profile ID.
+                  </td>
+                  <td><span class="status good">Required</span></td>
+                </tr>
+                <tr>
+                  <td>Auto-Bill invoice</td>
+                  <td>
+                    Payment is created, applied to invoice, and sent to
+                    Linked2Pay.
+                  </td>
+                  <td><span class="status good">Required</span></td>
+                </tr>
+                <tr>
+                  <td>Webhook status update</td>
+                  <td>
+                    Incoming webhook is validated and transaction status is
+                    updated.
+                  </td>
+                  <td><span class="status warn">Recommended</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="page" id="faq">
+          <div class="page-inner">
+            <p class="eyebrow">Client FAQ</p>
+            <h2>Common Questions</h2>
+
+            <div class="grid two">
+              <div class="card">
+                <h3>Does this replace Acumatica?</h3>
+                <p>
+                  No. Acumatica remains the ERP and accounting system.
+                  Linked2Pay handles payment gateway operations.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Are full card numbers stored in Acumatica?</h3>
+                <p>
+                  No. Acumatica stores masked display values and Linked2Pay
+                  profile IDs.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Can one customer have multiple payment methods?</h3>
+                <p>
+                  Yes. A customer can have multiple cards and ACH accounts
+                  synced from Linked2Pay.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Does Auto-Bill only pay recurring invoices?</h3>
+                <p>
+                  No. Auto-Bill can process eligible due AR invoices, not only
+                  invoices created by recurring transactions.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>
+                  What happens if a payment method is removed in Linked2Pay?
+                </h3>
+                <p>
+                  The next sync can update Acumatica so the local payment method
+                  reference is no longer active.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>Can this run automatically?</h3>
+                <p>
+                  Yes. Acumatica processing screens can be scheduled so
+                  recurring invoices and Linked2Pay auto-bill can run daily.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="support">
+          <div class="page-inner">
+            <p class="eyebrow">Support Notes</p>
+            <h2>Before Going Live</h2>
+            <p class="lead">
+              A successful launch depends on clean setup, validated credentials,
+              and a tested customer/payment workflow.
+            </p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>Confirm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Processing Center</td>
+                  <td>
+                    Linked2Pay processing center is active and credentials pass
+                    testing.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Payment Methods</td>
+                  <td>
+                    <code>L2PCC</code> and/or <code>L2PACH</code> are active and
+                    attached to the processing center.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Customers</td>
+                  <td>
+                    Customers have Linked2Pay Contact IDs and correct Auto-Bill
+                    settings.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Wallet</td>
+                  <td>
+                    Payment methods are synced and show the correct Payment
+                    Profile IDs.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Automation</td>
+                  <td>
+                    Recurring transaction generation and Linked2Pay Auto-Bill
+                    schedules are configured if automation is required.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Webhook</td>
+                  <td>
+                    Webhook URL and API key validation are configured for status
+                    updates.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p class="footer-note">
+              Linked2Pay for Acumatica is designed to make customer payments
+              easier, safer, and more automated while keeping Acumatica as the
+              source of accounting truth.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
