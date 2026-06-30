@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Support Notes</title>
+    <title>Linked2Pay for Acumatica | Review Customer Payment Methods</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
@@ -20,8 +20,8 @@
           <a class="sidebar-link" href="index.html">Overview</a>
           <a class="sidebar-link" href="business-value.html">Business Value</a>
           <a class="sidebar-link" href="architecture.html">Architecture</a>
-          <details class="sidebar-group">
-            <summary class="sidebar-link">Initial Setup</summary>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link is-parent-active">Initial Setup</summary>
             <div class="sidebar-sublist setup-sublist">
               <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1</span>Confirm Extension</a>
               <a class="sidebar-sublink" href="setup-payment-methods.html"><span>2</span>Payment Methods</a>
@@ -31,7 +31,7 @@
               <a class="sidebar-sublink" href="setup-customer.html"><span>6</span>Set Up Customer</a>
               <a class="sidebar-sublink" href="setup-board-customer.html"><span>7</span>Board Customer</a>
               <a class="sidebar-sublink" href="setup-sync-linked2pay.html"><span>8</span>Sync Linked2Pay</a>
-              <a class="sidebar-sublink" href="setup-review-payment-methods.html"><span>9</span>Review Methods</a>
+              <a class="sidebar-sublink is-active" href="setup-review-payment-methods.html" aria-current="page"><span>9</span>Review Methods</a>
               <a class="sidebar-sublink" href="setup-enable-auto-bill.html"><span>10</span>Enable Auto Bill</a>
               <a class="sidebar-sublink" href="setup-run-auto-bill.html"><span>11</span>Run Auto-Bill</a>
               <a class="sidebar-sublink" href="setup-schedule-automation.html"><span>12</span>Schedule Automation</a>
@@ -48,7 +48,7 @@
           </div>
           <a class="sidebar-link" href="testing.html">Testing Checklist</a>
           <a class="sidebar-link" href="faq.html">FAQ</a>
-          <a class="sidebar-link is-active" href="support.html" aria-current="page">Support Notes</a>
+          <a class="sidebar-link" href="support.html">Support Notes</a>
         </nav>
       </aside>
       <div class="page-frame">
@@ -64,102 +64,43 @@
         </header>
 
     <main class="main-shell">
-      <section class="hero">
+      <section class="hero setup-step-hero">
         <div class="hero-inner">
-          <p class="eyebrow">Support Notes</p>
-          <h1>Before Going Live</h1>
-          <p class="lead">
-            A successful launch depends on clean setup, validated credentials,
-            and a tested customer and payment workflow.
-          </p>
+          <p class="eyebrow">Setup Step 9</p>
+          <h1>Review Customer Payment Methods</h1>
+          <p class="lead">After syncing, check the customer payment methods.</p>
         </div>
       </section>
 
-
-      <section class="story-band">
+      <section class="story-band setup-story">
         <article class="story-copy">
-          <p class="eyebrow">Guided Walkthrough</p>
-          <h2>Close with a clean go-live check.</h2>
-          <p>This page is the final pass before launch. It helps the reader confirm credentials, customers, wallet sync, automation, and webhook setup.</p>
-          <p>Treat this like a calm checklist. By the end, the user should know exactly what is ready and what still needs attention.</p>
+          <p class="eyebrow">Where To Go</p>
+          <h2>Open this screen first.</h2>
+          <p>In Acumatica, go to <code>Customer Screen &gt; Payment Methods</code>.</p>
+          <p>You should see the synced Linked2Pay payment methods. For credit cards, you may see the masked card number and expiration date. For ACH, you may see masked bank account information.</p>
+          <p>Each payment method stores the Linked2Pay Payment Profile ID. This is the token Acumatica uses when charging that customer through Linked2Pay.</p>
         </article>
 
         <figure class="guide-image">
-          <img src="/images/screenshot.png" alt="Placeholder Acumatica screenshot for this guide page" />
-          <figcaption>Placeholder image. Replace this with the matching Acumatica or Linked2Pay screen later.</figcaption>
+          <img src="/images/screenshot.png" alt="Placeholder screenshot for setup step 9" />
+          <figcaption>Placeholder image. Replace this with the matching setup screenshot for step 9.</figcaption>
         </figure>
       </section>
-      <section class="content-band">
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Area</th>
-                <th>Confirm</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Processing Center</td>
-                <td>
-                  Linked2Pay processing center is active and credentials pass
-                  testing.
-                </td>
-              </tr>
-              <tr>
-                <td>Payment Methods</td>
-                <td>
-                  <code>L2PCC</code> and/or <code>L2PACH</code> are active and
-                  attached to the processing center.
-                </td>
-              </tr>
-              <tr>
-                <td>Customers</td>
-                <td>
-                  Customers have Linked2Pay Contact IDs and correct Auto-Bill
-                  settings.
-                </td>
-              </tr>
-              <tr>
-                <td>Wallet</td>
-                <td>
-                  Payment methods are synced and show the correct Payment
-                  Profile IDs.
-                </td>
-              </tr>
-              <tr>
-                <td>Automation</td>
-                <td>
-                  Recurring transaction generation and Linked2Pay Auto-Bill
-                  schedules are configured if automation is required.
-                </td>
-              </tr>
-              <tr>
-                <td>Webhook</td>
-                <td>
-                  Webhook URL and API key validation are configured for status
-                  updates.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
 
-        <p class="closing-note">
-          Linked2Pay for Acumatica is designed to make customer payments easier,
-          safer, and more automated while keeping Acumatica as the source of
-          accounting truth.
-        </p>
+      <section class="content-band">
+        <div class="callout">
+          <strong>Step 9:</strong> Use this page as the focused walkthrough for Review Customer Payment Methods.
+        </div>
       </section>
 
       <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="faq.html">
+        <a class="pager-link muted" href="setup-sync-linked2pay.html">
           <span>Previous</span>
-          <strong>FAQ</strong>
+          <strong>Step 8</strong>
         </a>
-        <a class="pager-link" href="index.html">
+        <a class="pager-link" href="setup-enable-auto-bill.html">
           <span>Next</span>
-          <strong>Overview</strong>
+          <strong>Step 10</strong>
         </a>
       </nav>
     </main>

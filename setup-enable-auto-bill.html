@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Support Notes</title>
+    <title>Linked2Pay for Acumatica | Enable Auto Bill If Needed</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
@@ -20,8 +20,8 @@
           <a class="sidebar-link" href="index.html">Overview</a>
           <a class="sidebar-link" href="business-value.html">Business Value</a>
           <a class="sidebar-link" href="architecture.html">Architecture</a>
-          <details class="sidebar-group">
-            <summary class="sidebar-link">Initial Setup</summary>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link is-parent-active">Initial Setup</summary>
             <div class="sidebar-sublist setup-sublist">
               <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1</span>Confirm Extension</a>
               <a class="sidebar-sublink" href="setup-payment-methods.html"><span>2</span>Payment Methods</a>
@@ -32,7 +32,7 @@
               <a class="sidebar-sublink" href="setup-board-customer.html"><span>7</span>Board Customer</a>
               <a class="sidebar-sublink" href="setup-sync-linked2pay.html"><span>8</span>Sync Linked2Pay</a>
               <a class="sidebar-sublink" href="setup-review-payment-methods.html"><span>9</span>Review Methods</a>
-              <a class="sidebar-sublink" href="setup-enable-auto-bill.html"><span>10</span>Enable Auto Bill</a>
+              <a class="sidebar-sublink is-active" href="setup-enable-auto-bill.html" aria-current="page"><span>10</span>Enable Auto Bill</a>
               <a class="sidebar-sublink" href="setup-run-auto-bill.html"><span>11</span>Run Auto-Bill</a>
               <a class="sidebar-sublink" href="setup-schedule-automation.html"><span>12</span>Schedule Automation</a>
               <a class="sidebar-sublink" href="setup-webhook.html"><span>13</span>Webhook Setup</a>
@@ -48,7 +48,7 @@
           </div>
           <a class="sidebar-link" href="testing.html">Testing Checklist</a>
           <a class="sidebar-link" href="faq.html">FAQ</a>
-          <a class="sidebar-link is-active" href="support.html" aria-current="page">Support Notes</a>
+          <a class="sidebar-link" href="support.html">Support Notes</a>
         </nav>
       </aside>
       <div class="page-frame">
@@ -64,102 +64,43 @@
         </header>
 
     <main class="main-shell">
-      <section class="hero">
+      <section class="hero setup-step-hero">
         <div class="hero-inner">
-          <p class="eyebrow">Support Notes</p>
-          <h1>Before Going Live</h1>
-          <p class="lead">
-            A successful launch depends on clean setup, validated credentials,
-            and a tested customer and payment workflow.
-          </p>
+          <p class="eyebrow">Setup Step 10</p>
+          <h1>Enable Auto Bill If Needed</h1>
+          <p class="lead">If this customer should be charged automatically for due invoices, turn on Enable Auto Bill.</p>
         </div>
       </section>
 
-
-      <section class="story-band">
+      <section class="story-band setup-story">
         <article class="story-copy">
-          <p class="eyebrow">Guided Walkthrough</p>
-          <h2>Close with a clean go-live check.</h2>
-          <p>This page is the final pass before launch. It helps the reader confirm credentials, customers, wallet sync, automation, and webhook setup.</p>
-          <p>Treat this like a calm checklist. By the end, the user should know exactly what is ready and what still needs attention.</p>
+          <p class="eyebrow">Where To Go</p>
+          <h2>Open this screen first.</h2>
+          <p>In Acumatica, go to <code>Customer Screen &gt; Enable Auto Bill</code>.</p>
+          <p>When this is enabled, the customer becomes eligible for Linked2Pay Auto-Bill Processing.</p>
+          <p>This is useful for subscriptions, monthly services, recurring billing, and any customer who should be charged automatically.</p>
         </article>
 
         <figure class="guide-image">
-          <img src="/images/screenshot.png" alt="Placeholder Acumatica screenshot for this guide page" />
-          <figcaption>Placeholder image. Replace this with the matching Acumatica or Linked2Pay screen later.</figcaption>
+          <img src="/images/screenshot.png" alt="Placeholder screenshot for setup step 10" />
+          <figcaption>Placeholder image. Replace this with the matching setup screenshot for step 10.</figcaption>
         </figure>
       </section>
-      <section class="content-band">
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Area</th>
-                <th>Confirm</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Processing Center</td>
-                <td>
-                  Linked2Pay processing center is active and credentials pass
-                  testing.
-                </td>
-              </tr>
-              <tr>
-                <td>Payment Methods</td>
-                <td>
-                  <code>L2PCC</code> and/or <code>L2PACH</code> are active and
-                  attached to the processing center.
-                </td>
-              </tr>
-              <tr>
-                <td>Customers</td>
-                <td>
-                  Customers have Linked2Pay Contact IDs and correct Auto-Bill
-                  settings.
-                </td>
-              </tr>
-              <tr>
-                <td>Wallet</td>
-                <td>
-                  Payment methods are synced and show the correct Payment
-                  Profile IDs.
-                </td>
-              </tr>
-              <tr>
-                <td>Automation</td>
-                <td>
-                  Recurring transaction generation and Linked2Pay Auto-Bill
-                  schedules are configured if automation is required.
-                </td>
-              </tr>
-              <tr>
-                <td>Webhook</td>
-                <td>
-                  Webhook URL and API key validation are configured for status
-                  updates.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
 
-        <p class="closing-note">
-          Linked2Pay for Acumatica is designed to make customer payments easier,
-          safer, and more automated while keeping Acumatica as the source of
-          accounting truth.
-        </p>
+      <section class="content-band">
+        <div class="callout">
+          <strong>Step 10:</strong> Use this page as the focused walkthrough for Enable Auto Bill If Needed.
+        </div>
       </section>
 
       <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="faq.html">
+        <a class="pager-link muted" href="setup-review-payment-methods.html">
           <span>Previous</span>
-          <strong>FAQ</strong>
+          <strong>Step 9</strong>
         </a>
-        <a class="pager-link" href="index.html">
+        <a class="pager-link" href="setup-run-auto-bill.html">
           <span>Next</span>
-          <strong>Overview</strong>
+          <strong>Step 11</strong>
         </a>
       </nav>
     </main>
