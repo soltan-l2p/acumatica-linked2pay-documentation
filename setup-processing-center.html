@@ -3,16 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Create The Linked2Pay Processing Center</title>
+    <title>
+      Linked2Pay for Acumatica | Create the Linked2Pay Processing Center
+    </title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Documentation sections">
-        <a class="sidebar-brand simple-logo" href="index.html" aria-label="Linked2Pay for Acumatica home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="index.html"
+          aria-label="Linked2Pay for Acumatica home"
+        >
           <img src="/images/linked2pay.png" alt="Linked2Pay logo" />
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
@@ -21,30 +31,35 @@
           <a class="sidebar-link" href="business-value.html">Business Value</a>
           <a class="sidebar-link" href="architecture.html">Architecture</a>
           <details class="sidebar-group" open>
-            <summary class="sidebar-link is-parent-active">Initial Setup</summary>
+            <summary class="sidebar-link is-parent-active">
+              Initial Setup
+            </summary>
             <div class="sidebar-sublist setup-sublist">
-              <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1</span>Confirm Extension</a>
-              <a class="sidebar-sublink" href="setup-payment-methods.html"><span>2</span>Payment Methods</a>
-              <a class="sidebar-sublink is-active" href="setup-processing-center.html" aria-current="page"><span>3</span>Processing Center</a>
-              <a class="sidebar-sublink" href="setup-attach-payment-methods.html"><span>4</span>Attach Methods</a>
-              <a class="sidebar-sublink" href="setup-test-credentials.html"><span>5</span>Test Credentials</a>
-              <a class="sidebar-sublink" href="setup-customer.html"><span>6</span>Set Up Customer</a>
-              <a class="sidebar-sublink" href="setup-board-customer.html"><span>7</span>Board Customer</a>
-              <a class="sidebar-sublink" href="setup-sync-linked2pay.html"><span>8</span>Sync Linked2Pay</a>
-              <a class="sidebar-sublink" href="setup-review-payment-methods.html"><span>9</span>Review Methods</a>
-              <a class="sidebar-sublink" href="setup-enable-auto-bill.html"><span>10</span>Enable Auto Bill</a>
-              <a class="sidebar-sublink" href="setup-run-auto-bill.html"><span>11</span>Run Auto-Bill</a>
-              <a class="sidebar-sublink" href="setup-schedule-automation.html"><span>12</span>Schedule Automation</a>
-              <a class="sidebar-sublink" href="setup-webhook.html"><span>13</span>Webhook Setup</a>
+              <a class="sidebar-sublink" href="setup-confirm-extension.html"
+                ><span>1</span>Confirm Extension</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="setup-processing-center.html"
+                aria-current="page"
+                ><span>2</span>Processing Center</a
+              >
+              <a class="sidebar-sublink" href="setup-payment-methods.html"
+                ><span>3</span>Payment Methods</a
+              >
             </div>
           </details>
           <a class="sidebar-link" href="customers.html">Customer Sync</a>
-          <a class="sidebar-link" href="payment-methods.html">Payment Methods</a>
+          <a class="sidebar-link" href="payment-methods.html"
+            >Payment Methods</a
+          >
           <a class="sidebar-link" href="auto-bill.html">Auto-Bill</a>
           <a class="sidebar-link" href="webhooks.html">Webhooks</a>
           <a class="sidebar-link" href="demo.html">Demo Script</a>
           <div class="sidebar-sublist">
-            <a class="sidebar-sublink" href="demo-walkthrough.html">Live Walkthrough</a>
+            <a class="sidebar-sublink" href="demo-walkthrough.html"
+              >Live Walkthrough</a
+            >
           </div>
           <a class="sidebar-link" href="testing.html">Testing Checklist</a>
           <a class="sidebar-link" href="faq.html">FAQ</a>
@@ -53,57 +68,193 @@
       </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="index.html" aria-label="Linked2Pay for Acumatica home">
+          <a
+            class="mobile-brand simple-logo"
+            href="index.html"
+            aria-label="Linked2Pay for Acumatica home"
+          >
             <img src="/images/linked2pay.png" alt="Linked2Pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
           </label>
         </header>
 
-    <main class="main-shell">
-      <section class="hero setup-step-hero">
-        <div class="hero-inner">
-          <p class="eyebrow">Setup Step 3</p>
-          <h1>Create The Linked2Pay Processing Center</h1>
-          <p class="lead">Next, create the processing center that stores your Linked2Pay connection settings.</p>
-        </div>
-      </section>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Setup Step 2</p>
+              <h1>Create the Linked2Pay Processing Center</h1>
+              <p class="lead">
+                Next, create the processing center that stores your Linked2Pay
+                connection settings in Acumatica.
+              </p>
+            </div>
+          </section>
 
-      <section class="story-band setup-story">
-        <article class="story-copy">
-          <p class="eyebrow">Where To Go</p>
-          <h2>Open this screen first.</h2>
-          <p>In Acumatica, go to <code>Banking &gt; Profiles &gt; Processing Centers</code>.</p>
-          <p>Create or open the Linked2Pay processing center.</p>
-          <p>This is where you enter the Linked2Pay API information, such as API key, username, webhook key, payment mode, and card fee settings. Think of this screen as the main connection between Acumatica and Linked2Pay.</p>
-        </article>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Now we connect the pieces</p>
+              <h2>Let's set up the processing center.</h2>
+            </article>
+          </section>
 
-        <figure class="guide-image">
-          <img src="/images/screenshot.png" alt="Placeholder screenshot for setup step 3" />
-          <figcaption>Placeholder image. Replace this with the matching setup screenshot for step 3.</figcaption>
-        </figure>
-      </section>
+          <section>
+            <p>
+              In Acumatica, go to <code>Banking</code> &gt;
+              <code>Credit Card Processing</code> &gt;
+              <code>Processing Centers</code> (Screen ID:
+              <span class="text-bold">CA2050PL</span>).
+            </p>
+            <p>
+              This is where Acumatica keeps the connection details for payment
+              gateways. For Linked2Pay, this page becomes the main bridge
+              between Acumatica and your Linked2Pay account.
+            </p>
+          </section>
 
-      <section class="content-band">
-        <div class="callout">
-          <strong>Step 3:</strong> Use this page as the focused walkthrough for Create The Linked2Pay Processing Center.
-        </div>
-      </section>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Start by creating a new processing center. Click the
+                <code>+</code> button to open the processing center setup form.
+              </p>
+            </article>
 
-      <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="setup-payment-methods.html">
-          <span>Previous</span>
-          <strong>Step 2</strong>
-        </a>
-        <a class="pager-link" href="setup-attach-payment-methods.html">
-          <span>Next</span>
-          <strong>Step 4</strong>
-        </a>
-      </nav>
-    </main>
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/7.png"
+                alt="Placeholder processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                You should see a form like this. (Screen ID:
+                <span class="text-bold">CA205000</span>).
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/8.png"
+                alt="Placeholder processing center settings screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">
+                1st Processing Center - For the Credit Card Payments
+              </p>
+              <p>
+                Please enter the following information into the processing
+                center form:
+              </p>
+              <ul>
+                <li>
+                  <span class="text-bold">Processing Center ID:</span> L2PCC
+                </li>
+                <li>
+                  <span class="text-bold">Name:</span> Linked2Pay Credit Card
+                  Payments
+                </li>
+                <li><span class="text-bold">Active:</span> Checked</li>
+                <li>
+                  <span class="text-bold">Cash Account:</span> Your Acumatica
+                  Cash Account
+                </li>
+              </ul>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/9.png"
+                alt="Placeholder Linked2Pay credentials screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                For the <span class="text-bold">Payment Plug-In</span>, click on
+                <span class="text-italic">Search</span> icon and then pick
+                <code>Linked2PayIntegration.PaymentProcessor</code>.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/10.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Once you pick
+                <code>Linked2PayIntegration.PaymentProcessor</code> as the
+                <span class="text-bold">Payment Plug-In</span>, you will see the
+                following fields appear.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/11.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Linked2Pay Portal</p>
+              <p>Now we need to go to the Linked2Pay portal and configure the integration settings.</p>
+              <p>At the bottom of the sidebar, click on <strong>API Settings</strong>.</p>
+              <p class="text-italic">or simply use this link: <a class="text-underline text-bold" href="https://test.linked2pay.com/client/apiSettings" target="_blank">Linked2Pay API Settings Page</a></p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/12.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              So we are basically done creating the Linked2Pay processing
+              center. This page is the connection point between Acumatica and
+              Linked2Pay, and the next step is to confirm the payment methods
+              that will use it.
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="setup-confirm-extension.html">
+              <span>Previous</span>
+              <strong>Step 1</strong>
+            </a>
+            <a class="pager-link" href="setup-payment-methods.html">
+              <span>Next</span>
+              <strong>Step 3</strong>
+            </a>
+          </nav>
+        </main>
       </div>
     </div>
   </body>

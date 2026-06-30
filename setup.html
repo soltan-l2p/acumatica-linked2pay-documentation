@@ -24,18 +24,8 @@
             <summary class="sidebar-link is-active" aria-current="page">Initial Setup</summary>
             <div class="sidebar-sublist setup-sublist">
               <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1</span>Confirm Extension</a>
-              <a class="sidebar-sublink" href="setup-payment-methods.html"><span>2</span>Payment Methods</a>
-              <a class="sidebar-sublink" href="setup-processing-center.html"><span>3</span>Processing Center</a>
-              <a class="sidebar-sublink" href="setup-attach-payment-methods.html"><span>4</span>Attach Methods</a>
-              <a class="sidebar-sublink" href="setup-test-credentials.html"><span>5</span>Test Credentials</a>
-              <a class="sidebar-sublink" href="setup-customer.html"><span>6</span>Set Up Customer</a>
-              <a class="sidebar-sublink" href="setup-board-customer.html"><span>7</span>Board Customer</a>
-              <a class="sidebar-sublink" href="setup-sync-linked2pay.html"><span>8</span>Sync Linked2Pay</a>
-              <a class="sidebar-sublink" href="setup-review-payment-methods.html"><span>9</span>Review Methods</a>
-              <a class="sidebar-sublink" href="setup-enable-auto-bill.html"><span>10</span>Enable Auto Bill</a>
-              <a class="sidebar-sublink" href="setup-run-auto-bill.html"><span>11</span>Run Auto-Bill</a>
-              <a class="sidebar-sublink" href="setup-schedule-automation.html"><span>12</span>Schedule Automation</a>
-              <a class="sidebar-sublink" href="setup-webhook.html"><span>13</span>Webhook Setup</a>
+              <a class="sidebar-sublink" href="setup-processing-center.html"><span>2</span>Processing Center</a>
+              <a class="sidebar-sublink" href="setup-payment-methods.html"><span>3</span>Payment Methods</a>
             </div>
           </details>
           <a class="sidebar-link" href="customers.html">Customer Sync</a>
@@ -69,7 +59,7 @@
           <p class="eyebrow">Setup Guide</p>
           <h1>Initial Setup</h1>
           <p class="lead">
-            This is the big-picture setup path. Start here, then jump into each focused step from the cards below.
+            This is the big-picture setup path. Start here, then move through the three foundation steps in order.
           </p>
         </div>
       </section>
@@ -78,8 +68,8 @@
         <article class="story-copy">
           <p class="eyebrow">How To Use This Section</p>
           <h2>Follow the setup in order, or jump to the exact step you need.</h2>
-          <p>The setup flow connects Acumatica to Linked2Pay, prepares payment methods, links customers, syncs saved payment profiles, and optionally enables automatic billing.</p>
-          <p>Each setup step has its own page in the sidebar. The Setup menu opens and closes, so the full checklist is available without crowding the rest of the documentation.</p>
+          <p>The setup flow installs the Linked2Pay customization, creates the processing center, and confirms the payment methods Acumatica will use.</p>
+          <p>Each setup step has its own page in the sidebar. The tutorial-style customer, sync, auto-bill, and webhook steps can stay outside this setup path.</p>
         </article>
 
         <figure class="guide-image">
@@ -92,73 +82,23 @@
         <div class="setup-index-grid">
           <a class="setup-card" href="setup-confirm-extension.html">
             <span class="card-number">01</span>
-            <strong>Confirm The Extension Is Installed</strong>
+            <strong>Confirm the Extension Is Installed</strong>
             <span>First, make sure the Linked2Pay customization project is published in Acumatica.</span>
           </a>
-          <a class="setup-card" href="setup-payment-methods.html">
-            <span class="card-number">02</span>
-            <strong>Create Or Confirm Payment Methods</strong>
-            <span>Linked2Pay uses Acumatica payment methods to know whether a payment is a credit card or ACH/bank payment.</span>
-          </a>
           <a class="setup-card" href="setup-processing-center.html">
-            <span class="card-number">03</span>
-            <strong>Create The Linked2Pay Processing Center</strong>
+            <span class="card-number">02</span>
+            <strong>Create the Linked2Pay Processing Center</strong>
             <span>Next, create the processing center that stores your Linked2Pay connection settings.</span>
           </a>
-          <a class="setup-card" href="setup-attach-payment-methods.html">
-            <span class="card-number">04</span>
-            <strong>Attach Payment Methods To The Processing Center</strong>
-            <span>Inside the Linked2Pay processing center, open the payment methods section.</span>
-          </a>
-          <a class="setup-card" href="setup-test-credentials.html">
-            <span class="card-number">05</span>
-            <strong>Test The Credentials</strong>
-            <span>After entering the Linked2Pay settings, click the Test Credentials button.</span>
-          </a>
-          <a class="setup-card" href="setup-customer.html">
-            <span class="card-number">06</span>
-            <strong>Set Up A Customer</strong>
-            <span>Now open a customer in Acumatica.</span>
-          </a>
-          <a class="setup-card" href="setup-board-customer.html">
-            <span class="card-number">07</span>
-            <strong>Board The Customer To Linked2Pay</strong>
-            <span>If the customer does not already exist in Linked2Pay, click Board to Gateway.</span>
-          </a>
-          <a class="setup-card" href="setup-sync-linked2pay.html">
-            <span class="card-number">08</span>
-            <strong>Sync With Linked2Pay</strong>
-            <span>If the customer already exists in Linked2Pay, enter the Linked2Pay Contact ID in Acumatica and click Sync with Linked2Pay.</span>
-          </a>
-          <a class="setup-card" href="setup-review-payment-methods.html">
-            <span class="card-number">09</span>
-            <strong>Review Customer Payment Methods</strong>
-            <span>After syncing, check the customer payment methods.</span>
-          </a>
-          <a class="setup-card" href="setup-enable-auto-bill.html">
-            <span class="card-number">10</span>
-            <strong>Enable Auto Bill If Needed</strong>
-            <span>If this customer should be charged automatically for due invoices, turn on Enable Auto Bill.</span>
-          </a>
-          <a class="setup-card" href="setup-run-auto-bill.html">
-            <span class="card-number">11</span>
-            <strong>Run Linked2Pay Auto-Bill Processing</strong>
-            <span>Go to the Linked2Pay Auto-Bill Processing screen.</span>
-          </a>
-          <a class="setup-card" href="setup-schedule-automation.html">
-            <span class="card-number">12</span>
-            <strong>Optional: Schedule Automation</strong>
-            <span>If you want the process to run automatically, Acumatica can schedule processing screens.</span>
-          </a>
-          <a class="setup-card" href="setup-webhook.html">
-            <span class="card-number">13</span>
-            <strong>Webhook Setup</strong>
-            <span>Linked2Pay can also send payment status updates back to Acumatica.</span>
+          <a class="setup-card" href="setup-payment-methods.html">
+            <span class="card-number">03</span>
+            <strong>Create or Confirm Payment Methods</strong>
+            <span>Finally, confirm the credit card and ACH payment methods Acumatica will use with Linked2Pay.</span>
           </a>
         </div>
 
         <div class="callout">
-          <strong>Final result:</strong> customers are connected to Linked2Pay, payment methods are synced into Acumatica, invoices are created in Acumatica, Linked2Pay processes payment, and Acumatica keeps the payment record connected to the invoice.
+          <strong>Final result:</strong> Acumatica has the Linked2Pay extension published, the Linked2Pay processing center is ready, and the payment methods are prepared for the rest of the workflow.
         </div>
       </section>
 
