@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Overview</title>
+    <title>Linked2Pay for Acumatica | Architecture</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="site theme-light">
@@ -16,9 +16,9 @@
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
         <nav class="sidebar-menu" aria-label="Documentation sections">
-          <a class="sidebar-link is-active" href="index.html" aria-current="page">Overview</a>
+          <a class="sidebar-link" href="index.html">Overview</a>
           <a class="sidebar-link" href="business-value.html">Business Value</a>
-          <a class="sidebar-link" href="architecture.html">Architecture</a>
+          <a class="sidebar-link is-active" href="architecture.html" aria-current="page">Architecture</a>
           <a class="sidebar-link" href="setup.html">Initial Setup</a>
           <a class="sidebar-link" href="customers.html">Customer Sync</a>
           <a class="sidebar-link" href="payment-methods.html">Payment Methods</a>
@@ -48,12 +48,12 @@
     <main class="main-shell">
       <section class="hero">
         <div class="hero-inner">
-          <p class="eyebrow">Client Presentation</p>
-          <h1>Linked2Pay Integration for Acumatica</h1>
+          <p class="eyebrow">Simple Architecture</p>
+          <h1>How The Integration Works</h1>
           <p class="lead">
-            A polished guide for explaining how Linked2Pay connects Acumatica
-            customers, payment methods, invoices, payments, and status updates
-            into one repeatable payment workflow.
+            Acumatica remains the accounting system of record. Linked2Pay
+            handles gateway-side contact profiles, payment profiles, and
+            transaction processing.
           </p>
         </div>
       </section>
@@ -62,9 +62,9 @@
       <section class="story-band">
         <article class="story-copy">
           <p class="eyebrow">Guided Walkthrough</p>
-          <h2>Start with the payment journey.</h2>
-          <p>Start here when you want the big picture. Think of this page as the front door: it shows the customer, wallet, invoice, payment, and status update pieces before you go deeper.</p>
-          <p>When you present it, use the screenshot as the visual anchor. You can replace this placeholder later with the exact Acumatica screen that tells the story best.</p>
+          <h2>Keep the architecture simple.</h2>
+          <p>Use this page when someone asks where each record lives. Acumatica stays the accounting source of truth, and Linked2Pay stays responsible for gateway-side payment profiles and transactions.</p>
+          <p>The table is the main reference. The screenshot is only a placeholder for now, but later it can become the system diagram or processing-center view.</p>
         </article>
 
         <figure class="guide-image">
@@ -73,62 +73,59 @@
         </figure>
       </section>
       <section class="content-band">
-        <div class="section-heading">
-          <p class="eyebrow">Executive Summary</p>
-          <h2>One integration, focused around payment operations.</h2>
-        </div>
-
-        <div class="badge-row">
-          <span class="badge">Customer Boarding</span>
-          <span class="badge">Payment Method Sync</span>
-          <span class="badge">Auto-Bill</span>
-          <span class="badge">Credit Card Fee</span>
-          <span class="badge">Webhook Updates</span>
-        </div>
-
-        <div class="content-grid three">
-          <article class="feature-card">
-            <span class="card-number">01</span>
-            <h3>Connect the customer</h3>
-            <p>
-              Acumatica stores the Linked2Pay Contact ID so a customer can be
-              boarded, synced, and connected to saved payment profiles.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="card-number">02</span>
-            <h3>Sync the wallet</h3>
-            <p>
-              Credit card and ACH profiles are represented in Acumatica with
-              masked values and Linked2Pay Payment Profile IDs.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="card-number">03</span>
-            <h3>Automate collections</h3>
-            <p>
-              Auto-Bill can process eligible due invoices using the customer's
-              saved Linked2Pay payment method.
-            </p>
-          </article>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Area</th>
+                <th>Acumatica</th>
+                <th>Linked2Pay</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Customer</td>
+                <td>Customer record</td>
+                <td>Contact Profile ID</td>
+              </tr>
+              <tr>
+                <td>Payment Method</td>
+                <td>Customer payment method</td>
+                <td>Payment Profile ID for card or ACH</td>
+              </tr>
+              <tr>
+                <td>Invoice</td>
+                <td>AR invoice or debit memo</td>
+                <td>Used for payment transaction context</td>
+              </tr>
+              <tr>
+                <td>Payment</td>
+                <td>AR payment record</td>
+                <td>Card or ACH transaction</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td>Updated by processing and webhook logic</td>
+                <td>Sends transaction result and status</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="callout">
-          <strong>Important:</strong> This is an Acumatica customization
-          extension. It does not modify Acumatica source code.
+          <strong>Key idea:</strong> Acumatica stores profile IDs and masked
+          payment details only. Full card or bank numbers stay in Linked2Pay.
         </div>
       </section>
 
       <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="support.html">
+        <a class="pager-link muted" href="business-value.html">
           <span>Previous</span>
-          <strong>Support Notes</strong>
-        </a>
-        <a class="pager-link" href="business-value.html">
-          <span>Next</span>
           <strong>Business Value</strong>
+        </a>
+        <a class="pager-link" href="setup.html">
+          <span>Next</span>
+          <strong>Initial Setup</strong>
         </a>
       </nav>
     </main>

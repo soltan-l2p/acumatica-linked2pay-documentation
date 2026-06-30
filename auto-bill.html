@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Overview</title>
+    <title>Linked2Pay for Acumatica | Auto-Bill</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="site theme-light">
@@ -16,13 +16,13 @@
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
         <nav class="sidebar-menu" aria-label="Documentation sections">
-          <a class="sidebar-link is-active" href="index.html" aria-current="page">Overview</a>
+          <a class="sidebar-link" href="index.html">Overview</a>
           <a class="sidebar-link" href="business-value.html">Business Value</a>
           <a class="sidebar-link" href="architecture.html">Architecture</a>
           <a class="sidebar-link" href="setup.html">Initial Setup</a>
           <a class="sidebar-link" href="customers.html">Customer Sync</a>
           <a class="sidebar-link" href="payment-methods.html">Payment Methods</a>
-          <a class="sidebar-link" href="auto-bill.html">Auto-Bill</a>
+          <a class="sidebar-link is-active" href="auto-bill.html" aria-current="page">Auto-Bill</a>
           <a class="sidebar-link" href="webhooks.html">Webhooks</a>
           <a class="sidebar-link" href="demo.html">Demo Script</a>
           <div class="sidebar-sublist">
@@ -48,12 +48,12 @@
     <main class="main-shell">
       <section class="hero">
         <div class="hero-inner">
-          <p class="eyebrow">Client Presentation</p>
-          <h1>Linked2Pay Integration for Acumatica</h1>
+          <p class="eyebrow">Automation</p>
+          <h1>Auto-Bill Processing</h1>
           <p class="lead">
-            A polished guide for explaining how Linked2Pay connects Acumatica
-            customers, payment methods, invoices, payments, and status updates
-            into one repeatable payment workflow.
+            Auto-Bill finds due AR invoices for eligible customers and processes
+            payment through Linked2Pay using the customer's saved payment
+            method.
           </p>
         </div>
       </section>
@@ -62,9 +62,9 @@
       <section class="story-band">
         <article class="story-copy">
           <p class="eyebrow">Guided Walkthrough</p>
-          <h2>Start with the payment journey.</h2>
-          <p>Start here when you want the big picture. Think of this page as the front door: it shows the customer, wallet, invoice, payment, and status update pieces before you go deeper.</p>
-          <p>When you present it, use the screenshot as the visual anchor. You can replace this placeholder later with the exact Acumatica screen that tells the story best.</p>
+          <h2>Turn automation into a simple story.</h2>
+          <p>Auto-Bill is easiest to understand as a sequence: invoice is due, customer is eligible, payment is created, Linked2Pay charges the customer.</p>
+          <p>Read this page like a guided walkthrough. Each step should make the next one feel expected, not mysterious.</p>
         </article>
 
         <figure class="guide-image">
@@ -73,62 +73,65 @@
         </figure>
       </section>
       <section class="content-band">
-        <div class="section-heading">
-          <p class="eyebrow">Executive Summary</p>
-          <h2>One integration, focused around payment operations.</h2>
-        </div>
-
-        <div class="badge-row">
-          <span class="badge">Customer Boarding</span>
-          <span class="badge">Payment Method Sync</span>
-          <span class="badge">Auto-Bill</span>
-          <span class="badge">Credit Card Fee</span>
-          <span class="badge">Webhook Updates</span>
-        </div>
-
-        <div class="content-grid three">
-          <article class="feature-card">
-            <span class="card-number">01</span>
-            <h3>Connect the customer</h3>
-            <p>
-              Acumatica stores the Linked2Pay Contact ID so a customer can be
-              boarded, synced, and connected to saved payment profiles.
-            </p>
+        <div class="flow-list">
+          <article class="flow-step">
+            <span class="step-number">1</span>
+            <div>
+              <h3>Invoice becomes due</h3>
+              <p>
+                An AR invoice is open or ready to be released and has a due date
+                within the selected processing date.
+              </p>
+            </div>
           </article>
 
-          <article class="feature-card">
-            <span class="card-number">02</span>
-            <h3>Sync the wallet</h3>
-            <p>
-              Credit card and ACH profiles are represented in Acumatica with
-              masked values and Linked2Pay Payment Profile IDs.
-            </p>
+          <article class="flow-step">
+            <span class="step-number">2</span>
+            <div>
+              <h3>Customer is eligible</h3>
+              <p>
+                The customer has Enable Auto Bill turned on and has a default
+                Linked2Pay payment method.
+              </p>
+            </div>
           </article>
 
-          <article class="feature-card">
-            <span class="card-number">03</span>
-            <h3>Automate collections</h3>
-            <p>
-              Auto-Bill can process eligible due invoices using the customer's
-              saved Linked2Pay payment method.
-            </p>
+          <article class="flow-step">
+            <span class="step-number">3</span>
+            <div>
+              <h3>Payment is created</h3>
+              <p>
+                Acumatica creates an AR payment and applies it to the invoice.
+              </p>
+            </div>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-number">4</span>
+            <div>
+              <h3>Linked2Pay charges the customer</h3>
+              <p>
+                The extension sends the transaction to Linked2Pay and records
+                the result back in Acumatica.
+              </p>
+            </div>
           </article>
         </div>
 
         <div class="callout">
-          <strong>Important:</strong> This is an Acumatica customization
-          extension. It does not modify Acumatica source code.
+          <strong>Credit card fee:</strong> If configured, the extension can
+          apply the credit card processing fee as part of the auto-bill flow.
         </div>
       </section>
 
       <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="support.html">
+        <a class="pager-link muted" href="payment-methods.html">
           <span>Previous</span>
-          <strong>Support Notes</strong>
+          <strong>Payment Methods</strong>
         </a>
-        <a class="pager-link" href="business-value.html">
+        <a class="pager-link" href="webhooks.html">
           <span>Next</span>
-          <strong>Business Value</strong>
+          <strong>Webhooks</strong>
         </a>
       </nav>
     </main>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Overview</title>
+    <title>Linked2Pay for Acumatica | Business Value</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="site theme-light">
@@ -16,8 +16,8 @@
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
         <nav class="sidebar-menu" aria-label="Documentation sections">
-          <a class="sidebar-link is-active" href="index.html" aria-current="page">Overview</a>
-          <a class="sidebar-link" href="business-value.html">Business Value</a>
+          <a class="sidebar-link" href="index.html">Overview</a>
+          <a class="sidebar-link is-active" href="business-value.html" aria-current="page">Business Value</a>
           <a class="sidebar-link" href="architecture.html">Architecture</a>
           <a class="sidebar-link" href="setup.html">Initial Setup</a>
           <a class="sidebar-link" href="customers.html">Customer Sync</a>
@@ -48,12 +48,12 @@
     <main class="main-shell">
       <section class="hero">
         <div class="hero-inner">
-          <p class="eyebrow">Client Presentation</p>
-          <h1>Linked2Pay Integration for Acumatica</h1>
+          <p class="eyebrow">Business Value</p>
+          <h1>What This Solves</h1>
           <p class="lead">
-            A polished guide for explaining how Linked2Pay connects Acumatica
-            customers, payment methods, invoices, payments, and status updates
-            into one repeatable payment workflow.
+            Businesses using Acumatica often collect payments from customers
+            repeatedly. Linked2Pay turns that work into a guided, repeatable,
+            and more automated workflow.
           </p>
         </div>
       </section>
@@ -62,9 +62,9 @@
       <section class="story-band">
         <article class="story-copy">
           <p class="eyebrow">Guided Walkthrough</p>
-          <h2>Start with the payment journey.</h2>
-          <p>Start here when you want the big picture. Think of this page as the front door: it shows the customer, wallet, invoice, payment, and status update pieces before you go deeper.</p>
-          <p>When you present it, use the screenshot as the visual anchor. You can replace this placeholder later with the exact Acumatica screen that tells the story best.</p>
+          <h2>Show why the workflow matters.</h2>
+          <p>This page helps you explain the business reason before the technical details. The point is not just that the integration exists, but that it removes repeated manual payment work.</p>
+          <p>Walk the reader through the cards first, then use the checklist to connect the value back to everyday finance operations.</p>
         </article>
 
         <figure class="guide-image">
@@ -73,62 +73,57 @@
         </figure>
       </section>
       <section class="content-band">
-        <div class="section-heading">
-          <p class="eyebrow">Executive Summary</p>
-          <h2>One integration, focused around payment operations.</h2>
-        </div>
-
-        <div class="badge-row">
-          <span class="badge">Customer Boarding</span>
-          <span class="badge">Payment Method Sync</span>
-          <span class="badge">Auto-Bill</span>
-          <span class="badge">Credit Card Fee</span>
-          <span class="badge">Webhook Updates</span>
-        </div>
-
         <div class="content-grid three">
           <article class="feature-card">
             <span class="card-number">01</span>
-            <h3>Connect the customer</h3>
+            <h3>Less manual work</h3>
             <p>
-              Acumatica stores the Linked2Pay Contact ID so a customer can be
-              boarded, synced, and connected to saved payment profiles.
+              Users do not need to manually copy payment tokens, chase payment
+              status, or process each recurring invoice one by one.
             </p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card spotlight">
             <span class="card-number">02</span>
-            <h3>Sync the wallet</h3>
+            <h3>Cleaner customer records</h3>
             <p>
-              Credit card and ACH profiles are represented in Acumatica with
-              masked values and Linked2Pay Payment Profile IDs.
+              Each Acumatica customer can store the Linked2Pay Contact ID and
+              synced payment profile references in a consistent location.
             </p>
           </article>
 
           <article class="feature-card">
             <span class="card-number">03</span>
-            <h3>Automate collections</h3>
+            <h3>Automated collections</h3>
             <p>
-              Auto-Bill can process eligible due invoices using the customer's
-              saved Linked2Pay payment method.
+              Auto-Bill can process due invoices for customers with saved
+              Linked2Pay payment methods and the proper customer settings.
             </p>
           </article>
         </div>
 
-        <div class="callout">
-          <strong>Important:</strong> This is an Acumatica customization
-          extension. It does not modify Acumatica source code.
+        <div class="split-list">
+          <div>
+            <p class="eyebrow">Operational Impact</p>
+            <h2>Designed for repeatable payment operations.</h2>
+          </div>
+          <ul class="check-list">
+            <li>Reduce re-entry between Acumatica and Linked2Pay.</li>
+            <li>Keep full payment credentials out of Acumatica.</li>
+            <li>Support both card and ACH payment profile workflows.</li>
+            <li>Give staff a cleaner demo and support story.</li>
+          </ul>
         </div>
       </section>
 
       <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="support.html">
+        <a class="pager-link muted" href="index.html">
           <span>Previous</span>
-          <strong>Support Notes</strong>
+          <strong>Overview</strong>
         </a>
-        <a class="pager-link" href="business-value.html">
+        <a class="pager-link" href="architecture.html">
           <span>Next</span>
-          <strong>Business Value</strong>
+          <strong>Architecture</strong>
         </a>
       </nav>
     </main>

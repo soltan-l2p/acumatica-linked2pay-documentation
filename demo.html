@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linked2Pay for Acumatica | Demo Script</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Documentation sections">
+        <a class="sidebar-brand simple-logo" href="index.html" aria-label="Linked2Pay for Acumatica home">
+          <img src="linked2pay.png" alt="Linked2Pay logo" />
+        </a>
+        <p class="sidebar-kicker">Guide Menu</p>
+        <nav class="sidebar-menu" aria-label="Documentation sections">
+          <a class="sidebar-link" href="index.html">Overview</a>
+          <a class="sidebar-link" href="business-value.html">Business Value</a>
+          <a class="sidebar-link" href="architecture.html">Architecture</a>
+          <a class="sidebar-link" href="setup.html">Initial Setup</a>
+          <a class="sidebar-link" href="customers.html">Customer Sync</a>
+          <a class="sidebar-link" href="payment-methods.html">Payment Methods</a>
+          <a class="sidebar-link" href="auto-bill.html">Auto-Bill</a>
+          <a class="sidebar-link" href="webhooks.html">Webhooks</a>
+          <a class="sidebar-link is-active" href="demo.html" aria-current="page">Demo Script</a>
+          <div class="sidebar-sublist">
+            <a class="sidebar-sublink" href="demo-walkthrough.html">Live Walkthrough</a>
+          </div>
+          <a class="sidebar-link" href="testing.html">Testing Checklist</a>
+          <a class="sidebar-link" href="faq.html">FAQ</a>
+          <a class="sidebar-link" href="support.html">Support Notes</a>
+        </nav>
+      </aside>
+      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a class="mobile-brand simple-logo" href="index.html" aria-label="Linked2Pay for Acumatica home">
+            <img src="linked2pay.png" alt="Linked2Pay logo" />
+          </a>
+          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+
+    <main class="main-shell">
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">Live Demo</p>
+          <h1>Suggested Demo Script</h1>
+          <p class="lead">
+            This flow is designed for showing the full customer story: setup
+            once, then automate monthly collections.
+          </p>
+        </div>
+      </section>
+
+
+      <section class="story-band">
+        <article class="story-copy">
+          <p class="eyebrow">Guided Walkthrough</p>
+          <h2>Use this as the presenter path.</h2>
+          <p>This page is the live walkthrough. Follow it from top to bottom and you will have a natural story: setup, customer, wallet, invoice, auto-bill, result.</p>
+          <p>The goal is to make the demo feel smooth, not rushed. The screenshot helps reset the audience before the step list begins.</p>
+        </article>
+
+        <figure class="guide-image">
+          <img src="screenshot.png" alt="Placeholder Acumatica screenshot for this guide page" />
+          <figcaption>Placeholder image. Replace this with the matching Acumatica or Linked2Pay screen later.</figcaption>
+        </figure>
+      </section>
+      <section class="content-band">
+        <div class="flow-list compact">
+          <article class="flow-step">
+            <span class="step-number">1</span>
+            <div>
+              <h3>Show processing center</h3>
+              <p>
+                Open the Linked2Pay processing center, show API settings, card
+                fee, payment method mapping, and Test Credentials.
+              </p>
+            </div>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-number">2</span>
+            <div>
+              <h3>Open customer</h3>
+              <p>
+                Show the Linked2Pay Integration tab with Contact ID, Boarded
+                status, and Enable Auto Bill.
+              </p>
+            </div>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-number">3</span>
+            <div>
+              <h3>Board or sync customer</h3>
+              <p>
+                Use Board to Gateway for a new customer, or Sync with
+                Linked2Pay for an existing Linked2Pay contact.
+              </p>
+            </div>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-number">4</span>
+            <div>
+              <h3>Sync payment methods</h3>
+              <p>
+                Show card and ACH payment profiles appearing in Acumatica as
+                masked customer payment methods.
+              </p>
+            </div>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-number">5</span>
+            <div>
+              <h3>Create due invoice</h3>
+              <p>
+                Create or generate an AR invoice for the customer and confirm it
+                is due.
+              </p>
+            </div>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-number">6</span>
+            <div>
+              <h3>Run Auto-Bill</h3>
+              <p>
+                Open Linked2Pay Auto-Bill Processing, select eligible invoices,
+                and process them.
+              </p>
+            </div>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-number">7</span>
+            <div>
+              <h3>Show result</h3>
+              <p>
+                Open the payment record, show invoice application, payment
+                status, and any Linked2Pay transaction details.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <nav class="pager" aria-label="Page navigation">
+        <a class="pager-link muted" href="webhooks.html">
+          <span>Previous</span>
+          <strong>Webhooks</strong>
+        </a>
+        <a class="pager-link" href="demo-walkthrough.html">
+          <span>Next</span>
+          <strong>Live Walkthrough</strong>
+        </a>
+      </nav>
+    </main>
+      </div>
+    </div>
+  </body>
+</html>

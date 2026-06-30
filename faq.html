@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Overview</title>
+    <title>Linked2Pay for Acumatica | FAQ</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="site theme-light">
@@ -16,7 +16,7 @@
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
         <nav class="sidebar-menu" aria-label="Documentation sections">
-          <a class="sidebar-link is-active" href="index.html" aria-current="page">Overview</a>
+          <a class="sidebar-link" href="index.html">Overview</a>
           <a class="sidebar-link" href="business-value.html">Business Value</a>
           <a class="sidebar-link" href="architecture.html">Architecture</a>
           <a class="sidebar-link" href="setup.html">Initial Setup</a>
@@ -29,7 +29,7 @@
             <a class="sidebar-sublink" href="demo-walkthrough.html">Live Walkthrough</a>
           </div>
           <a class="sidebar-link" href="testing.html">Testing Checklist</a>
-          <a class="sidebar-link" href="faq.html">FAQ</a>
+          <a class="sidebar-link is-active" href="faq.html" aria-current="page">FAQ</a>
           <a class="sidebar-link" href="support.html">Support Notes</a>
         </nav>
       </aside>
@@ -48,12 +48,11 @@
     <main class="main-shell">
       <section class="hero">
         <div class="hero-inner">
-          <p class="eyebrow">Client Presentation</p>
-          <h1>Linked2Pay Integration for Acumatica</h1>
+          <p class="eyebrow">Client FAQ</p>
+          <h1>Common Questions</h1>
           <p class="lead">
-            A polished guide for explaining how Linked2Pay connects Acumatica
-            customers, payment methods, invoices, payments, and status updates
-            into one repeatable payment workflow.
+            Short answers for the questions that usually come up during client
+            walkthroughs and handoff conversations.
           </p>
         </div>
       </section>
@@ -62,9 +61,9 @@
       <section class="story-band">
         <article class="story-copy">
           <p class="eyebrow">Guided Walkthrough</p>
-          <h2>Start with the payment journey.</h2>
-          <p>Start here when you want the big picture. Think of this page as the front door: it shows the customer, wallet, invoice, payment, and status update pieces before you go deeper.</p>
-          <p>When you present it, use the screenshot as the visual anchor. You can replace this placeholder later with the exact Acumatica screen that tells the story best.</p>
+          <h2>Answer the questions before they slow you down.</h2>
+          <p>Use this page when a client or internal team member needs quick answers. The tone should feel direct and reassuring.</p>
+          <p>The cards keep the answers scannable, and the screenshot gives you a place to add a real example once the final screens are ready.</p>
         </article>
 
         <figure class="guide-image">
@@ -73,62 +72,65 @@
         </figure>
       </section>
       <section class="content-band">
-        <div class="section-heading">
-          <p class="eyebrow">Executive Summary</p>
-          <h2>One integration, focused around payment operations.</h2>
-        </div>
-
-        <div class="badge-row">
-          <span class="badge">Customer Boarding</span>
-          <span class="badge">Payment Method Sync</span>
-          <span class="badge">Auto-Bill</span>
-          <span class="badge">Credit Card Fee</span>
-          <span class="badge">Webhook Updates</span>
-        </div>
-
-        <div class="content-grid three">
+        <div class="content-grid two">
           <article class="feature-card">
-            <span class="card-number">01</span>
-            <h3>Connect the customer</h3>
+            <h3>Does this replace Acumatica?</h3>
             <p>
-              Acumatica stores the Linked2Pay Contact ID so a customer can be
-              boarded, synced, and connected to saved payment profiles.
+              No. Acumatica remains the ERP and accounting system. Linked2Pay
+              handles payment gateway operations.
             </p>
           </article>
 
           <article class="feature-card">
-            <span class="card-number">02</span>
-            <h3>Sync the wallet</h3>
+            <h3>Are full card numbers stored in Acumatica?</h3>
             <p>
-              Credit card and ACH profiles are represented in Acumatica with
-              masked values and Linked2Pay Payment Profile IDs.
+              No. Acumatica stores masked display values and Linked2Pay profile
+              IDs.
             </p>
           </article>
 
           <article class="feature-card">
-            <span class="card-number">03</span>
-            <h3>Automate collections</h3>
+            <h3>Can one customer have multiple payment methods?</h3>
             <p>
-              Auto-Bill can process eligible due invoices using the customer's
-              saved Linked2Pay payment method.
+              Yes. A customer can have multiple cards and ACH accounts synced
+              from Linked2Pay.
             </p>
           </article>
-        </div>
 
-        <div class="callout">
-          <strong>Important:</strong> This is an Acumatica customization
-          extension. It does not modify Acumatica source code.
+          <article class="feature-card">
+            <h3>Does Auto-Bill only pay recurring invoices?</h3>
+            <p>
+              No. Auto-Bill can process eligible due AR invoices, not only
+              invoices created by recurring transactions.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>What happens if a payment method is removed?</h3>
+            <p>
+              The next sync can update Acumatica so the local payment method
+              reference is no longer active.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Can this run automatically?</h3>
+            <p>
+              Yes. Acumatica processing screens can be scheduled so recurring
+              invoices and Linked2Pay auto-bill can run daily.
+            </p>
+          </article>
         </div>
       </section>
 
       <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="support.html">
+        <a class="pager-link muted" href="testing.html">
           <span>Previous</span>
-          <strong>Support Notes</strong>
+          <strong>Testing Checklist</strong>
         </a>
-        <a class="pager-link" href="business-value.html">
+        <a class="pager-link" href="support.html">
           <span>Next</span>
-          <strong>Business Value</strong>
+          <strong>Support Notes</strong>
         </a>
       </nav>
     </main>
