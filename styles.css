@@ -984,6 +984,27 @@ code {
   font-weight: 700;
 }
 
+.transparent-image {
+  margin: 0;
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.transparent-image:hover {
+  transform: translateY(-4px);
+}
+
+.transparent-image img {
+  width: 100%;
+  height: auto;
+}
+
+.transparent-image figcaption {
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .content-band {
   padding-top: 0;
 }
