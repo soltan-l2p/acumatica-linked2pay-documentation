@@ -9,136 +9,126 @@
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Documentation sections">
-        <a class="sidebar-brand simple-logo" href="index.html" aria-label="Linked2Pay for Acumatica home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="index.html"
+          aria-label="Linked2Pay for Acumatica home"
+        >
           <img src="/images/linked2pay.png" alt="Linked2Pay logo" />
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
         <nav class="sidebar-menu" aria-label="Documentation sections">
           <a class="sidebar-link is-active" href="index.html" aria-current="page">Overview</a>
-          <a class="sidebar-link" href="business-value.html">Business Value</a>
-          <a class="sidebar-link" href="architecture.html">Architecture</a>
-          <details class="sidebar-group">
+          <details class="sidebar-group" open>
             <summary class="sidebar-link">Initial Setup</summary>
             <div class="sidebar-sublist setup-sublist">
-              <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1</span>Confirm Extension</a>
-              <a class="sidebar-sublink" href="setup-processing-center.html"><span>2</span>Processing Center</a>
-              <a class="sidebar-sublink" href="setup-payment-methods.html"><span>3</span>Payment Methods</a>
+              <a class="sidebar-sublink" href="setup.html"><span>0</span>Setup Overview</a>
+              <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1A</span>Import Extension</a>
+              <a class="sidebar-sublink" href="setup-confirm-publish.html"><span>1B</span>Publish Extension</a>
+              <a class="sidebar-sublink" href="setup-processing-center.html"><span>2A</span>Create Center</a>
+              <a class="sidebar-sublink" href="setup-processing-api.html"><span>2B</span>API Settings</a>
+              <a class="sidebar-sublink" href="setup-processing-webhook.html"><span>2C</span>Webhook Setup</a>
+              <a class="sidebar-sublink" href="setup-processing-ach.html"><span>2D</span>ACH Center</a>
+              <a class="sidebar-sublink" href="setup-payment-methods.html"><span>3A</span>Credit Card Method</a>
+              <a class="sidebar-sublink" href="setup-payment-link-center.html"><span>3B</span>Link Processing Center</a>
+              <a class="sidebar-sublink" href="setup-payment-ach.html"><span>3C</span>ACH Method</a>
             </div>
           </details>
-          <a class="sidebar-link" href="customers.html">Customer Sync</a>
-          <a class="sidebar-link" href="payment-methods.html">Payment Methods</a>
-          <a class="sidebar-link" href="auto-bill.html">Auto-Bill</a>
-          <a class="sidebar-link" href="webhooks.html">Webhooks</a>
-          <a class="sidebar-link" href="demo.html">Demo Script</a>
-          <div class="sidebar-sublist">
-            <a class="sidebar-sublink" href="demo-walkthrough.html">Live Walkthrough</a>
-          </div>
-          <a class="sidebar-link" href="testing.html">Testing Checklist</a>
-          <a class="sidebar-link" href="faq.html">FAQ</a>
-          <a class="sidebar-link" href="support.html">Support Notes</a>
         </nav>
-      </aside>
-      <div class="page-frame">
+      </aside>      <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="index.html" aria-label="Linked2Pay for Acumatica home">
+          <a
+            class="mobile-brand simple-logo"
+            href="index.html"
+            aria-label="Linked2Pay for Acumatica home"
+          >
             <img src="/images/linked2pay.png" alt="Linked2Pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
           </label>
         </header>
+        <main class="main-shell">
+          <section class="hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Linked2Pay for Acumatica</p>
+              <h1>Setup Documentation</h1>
+              <p class="lead">
+                Use this guide to install the Linked2Pay customization, configure
+                the processing centers, and prepare the payment methods Acumatica
+                needs for the integration.
+              </p>
+            </div>
+          </section>
 
-    <main class="main-shell">
-      <section class="hero">
-        <div class="hero-inner">
-          <p class="eyebrow">Client Presentation</p>
-          <h1><span style="color: #2B2B2B; font-weight: 500;">linked</span><span style="color: #0088CC; font-weight: 500;">2</span><span style="color: #2B2B2B; font-weight: 500;">pay</span> Integration for Acumatica</h1>
-          <p class="lead">
-            A polished guide for explaining how Linked2Pay connects Acumatica
-            customers, payment methods, invoices, payments, and status updates
-            into one repeatable payment workflow.
-          </p>
-        </div>
-      </section>
+          <section class="story-band">
+            <article class="story-copy">
+              <p class="eyebrow">Guided Setup</p>
+              <h2>Start with the foundation, then move step by step.</h2>
+              <p>
+                This documentation is focused on the setup path only. The
+                customer workflow, auto-bill workflow, webhooks reference,
+                testing checklist, and support notes can be added back later as
+                separate sections.
+              </p>
+              <p>
+                The setup pages are split into smaller walkthroughs so each page
+                stays focused on one part of the process.
+              </p>
+            </article>
 
+            <figure class="transparent-image">
+              <img
+                src="/images/head-link.png"
+                alt="Linked2Pay and Acumatica integration overview"
+              />
+            </figure>
+          </section>
 
-      <section class="story-band">
-        <article class="story-copy">
-          <p class="eyebrow">Guided Walkthrough</p>
-          <h2>Start with the payment journey.</h2>
-          <p>Start here when you want the big picture. Think of this page as the front door: it shows the customer, wallet, invoice, payment, and status update pieces before you go deeper.</p>
-          <p>When you present it, use the screenshot as the visual anchor. You can replace this placeholder later with the exact Acumatica screen that tells the story best.</p>
-        </article>
+          <section class="content-band">
+            <div class="setup-index-grid">
+              <a class="setup-card" href="setup-confirm-extension.html">
+                <span class="card-number">01</span>
+                <strong>Confirm Extension</strong>
+                <span>Import, review, publish, and verify the Linked2Pay customization project.</span>
+              </a>
+              <a class="setup-card" href="setup-processing-center.html">
+                <span class="card-number">02</span>
+                <strong>Processing Center</strong>
+                <span>Create the Linked2Pay processing centers and configure the connection values.</span>
+              </a>
+              <a class="setup-card" href="setup-payment-methods.html">
+                <span class="card-number">03</span>
+                <strong>Payment Methods</strong>
+                <span>Prepare the credit card and ACH payment methods used by Linked2Pay.</span>
+              </a>
+            </div>
+          </section>
 
-        <figure class="transparent-image">
-          <img src="/images/head-link.png" alt="Placeholder Acumatica screenshot for this guide page" />
-        </figure>
-      </section>
-      <section class="content-band">
-        <div class="section-heading">
-          <p class="eyebrow">Executive Summary</p>
-          <h2>One integration, focused around payment operations.</h2>
-        </div>
-
-        <div class="badge-row">
-          <span class="badge">Customer Boarding</span>
-          <span class="badge">Payment Method Sync</span>
-          <span class="badge">Auto-Bill</span>
-          <span class="badge">Credit Card Fee</span>
-          <span class="badge">Webhook Updates</span>
-        </div>
-
-        <div class="content-grid three">
-          <article class="feature-card">
-            <span class="card-number">01</span>
-            <h3>Connect the customer</h3>
-            <p>
-              Acumatica stores the Linked2Pay Contact ID so a customer can be
-              boarded, synced, and connected to saved payment profiles.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="card-number">02</span>
-            <h3>Sync the wallet</h3>
-            <p>
-              Credit card and ACH profiles are represented in Acumatica with
-              masked values and Linked2Pay Payment Profile IDs.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="card-number">03</span>
-            <h3>Automate collections</h3>
-            <p>
-              Auto-Bill can process eligible due invoices using the customer's
-              saved Linked2Pay payment method.
-            </p>
-          </article>
-        </div>
-
-        <div class="callout">
-          <strong>Important:</strong> This is an Acumatica customization
-          extension. It does not modify Acumatica source code.
-        </div>
-      </section>
-
-      <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="support.html">
-          <span>Previous</span>
-          <strong>Support Notes</strong>
-        </a>
-        <a class="pager-link" href="business-value.html">
-          <span>Next</span>
-          <strong>Business Value</strong>
-        </a>
-      </nav>
-    </main>
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="setup-payment-ach.html">
+              <span>Previous</span>
+              <strong>Final Setup Page</strong>
+            </a>
+            <a class="pager-link" href="setup.html">
+              <span>Next</span>
+              <strong>Setup Overview</strong>
+            </a>
+          </nav>
+        </main>
       </div>
     </div>
   </body>

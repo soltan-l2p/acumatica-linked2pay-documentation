@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Create the Credit Card Payment Method</title>
+    <title>Linked2Pay for Acumatica | Link the Processing Center and AR Settings</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
@@ -36,8 +36,8 @@
               <a class="sidebar-sublink" href="setup-processing-api.html"><span>2B</span>API Settings</a>
               <a class="sidebar-sublink" href="setup-processing-webhook.html"><span>2C</span>Webhook Setup</a>
               <a class="sidebar-sublink" href="setup-processing-ach.html"><span>2D</span>ACH Center</a>
-              <a class="sidebar-sublink is-active" href="setup-payment-methods.html" aria-current="page"><span>3A</span>Credit Card Method</a>
-              <a class="sidebar-sublink" href="setup-payment-link-center.html"><span>3B</span>Link Processing Center</a>
+              <a class="sidebar-sublink" href="setup-payment-methods.html"><span>3A</span>Credit Card Method</a>
+              <a class="sidebar-sublink is-active" href="setup-payment-link-center.html" aria-current="page"><span>3B</span>Link Processing Center</a>
               <a class="sidebar-sublink" href="setup-payment-ach.html"><span>3C</span>ACH Method</a>
             </div>
           </details>
@@ -64,102 +64,89 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Setup 3A</p>
-              <h1>Create the Credit Card Payment Method</h1>
+              <p class="eyebrow">Setup 3B</p>
+              <h1>Link the Processing Center and AR Settings</h1>
               <p class="lead">
-                Create and configure the Acumatica payment method used for
-                Linked2Pay credit card payments.
+                Attach the Linked2Pay processing center to the payment method
+                and add the required Accounts Receivable payment detail.
               </p>
             </div>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Payment Methods</p>
-              <h2>Prepare the credit card payment method first.</h2>
-            </article>
-          </section>
-
-          <section>
-            <p>
-              In Acumatica, go to <code>Banking</code> &gt;
-              <code>Preferences</code> &gt; <code>Payment Methods</code> (Screen
-              ID: <span class="text-bold">CA2040PL</span>).
-            </p>
-            <p>
-              This screen is where you confirm the payment methods Linked2Pay
-              will use for credit card and ACH payments.
-            </p>
-          </section>
-
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p class="eyebrow">Credit card payment method</p>
               <p>
-                On the Payment Methods page, click <code>+</code>
-                <span class="text-italic">(New Record)</span> to create a new
-                payment method.
+                Open the <span class="text-bold">Processing Center</span> tab
+                and add the Linked2Pay processing center to the payment method.
+                This processing center will handle credit card payments.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/28.png" alt="Create a credit card payment method" />
-            </figure>
-          </section>
-
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>Enter the values for the credit card payment method:</p>
-              <ul>
-                <li><span class="text-bold">Payment Method ID:</span> L2PCC</li>
-                <li><span class="text-bold">Active:</span> Checked</li>
-                <li><span class="text-bold">Means of Payment:</span> Credit Card</li>
-                <li>
-                  <span class="text-bold">Description:</span> Linked2Pay Credit
-                  Card Payments
-                </li>
-              </ul>
-
-              <p>Also confirm the following options are selected:</p>
-              <ul>
-                <li><span class="text-bold">Use in AP:</span> Checked</li>
-                <li><span class="text-bold">Use in AR:</span> Checked</li>
-                <li>
-                  <span class="text-bold"
-                    >Require Remittance Information for Cash Account:</span
-                  >
-                  Checked
-                </li>
-              </ul>
-            </article>
-            <figure class="guide-image">
-              <img src="/images/screenshots/29.png" alt="Credit card payment method values" />
+              <img src="/images/screenshots/31.png" alt="Processing center tab on payment method" />
             </figure>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                Add your cash account to the payment method. This is the account
-                that will receive credit card payments.
+                Click <span class="text-bold">Search</span>, select
+                <code>L2PCC</code>, and then click
+                <span class="text-bold">Select</span>. This is the credit card
+                processing center you created earlier.
               </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/images/screenshots/32.png" alt="Select L2PCC processing center" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>The payment method should now show the linked processing center.</p>
+            </article>
+            <figure class="guide-image">
+              <img src="/images/screenshots/33.png" alt="Linked processing center on payment method" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Finally, configure
+                <span class="text-bold text-italic">"SETTINGS FOR USE IN AR"</span>.
+                Add a new <span class="text-bold">Payment Method Details</span>
+                row with these values:
+              </p>
+
               <ul>
-                <li><span class="text-bold">Use in AP:</span> Checked</li>
-                <li><span class="text-bold">Use in AR:</span> Checked</li>
+                <li><span class="text-bold">ID:</span> CCPID</li>
+                <li><span class="text-bold">Description:</span> Payment Profile ID</li>
+                <li><span class="text-bold">Required:</span> Checked</li>
+                <li><span class="text-bold">Payment Profile ID:</span> Checked</li>
+                <li><span class="text-bold">Sort Order:</span> 1</li>
               </ul>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/30.png" alt="Cash account for credit card payment method" />
+              <img src="/images/screenshots/34.png" alt="Settings for use in AR payment method details" />
             </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              Click <span class="text-bold">Save</span> at the top of the page.
+              The credit card payment method is now ready. Next, create the ACH
+              payment method.
+            </div>
           </section>
 
           <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="setup-processing-ach.html">
+            <a class="pager-link muted" href="setup-payment-methods.html">
               <span>Previous</span>
-              <strong>2D ACH Center</strong>
+              <strong>3A Credit Card Method</strong>
             </a>
-            <a class="pager-link" href="setup-payment-link-center.html">
+            <a class="pager-link" href="setup-payment-ach.html">
               <span>Next</span>
-              <strong>3B Link Processing Center</strong>
+              <strong>3C ACH Method</strong>
             </a>
           </nav>
         </main>

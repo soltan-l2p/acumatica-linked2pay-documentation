@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Create the Credit Card Processing Center</title>
+    <title>Linked2Pay for Acumatica | Configure the Webhook Connection</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
@@ -32,9 +32,9 @@
               <a class="sidebar-sublink" href="setup.html"><span>0</span>Setup Overview</a>
               <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1A</span>Import Extension</a>
               <a class="sidebar-sublink" href="setup-confirm-publish.html"><span>1B</span>Publish Extension</a>
-              <a class="sidebar-sublink is-active" href="setup-processing-center.html" aria-current="page"><span>2A</span>Create Center</a>
+              <a class="sidebar-sublink" href="setup-processing-center.html"><span>2A</span>Create Center</a>
               <a class="sidebar-sublink" href="setup-processing-api.html"><span>2B</span>API Settings</a>
-              <a class="sidebar-sublink" href="setup-processing-webhook.html"><span>2C</span>Webhook Setup</a>
+              <a class="sidebar-sublink is-active" href="setup-processing-webhook.html" aria-current="page"><span>2C</span>Webhook Setup</a>
               <a class="sidebar-sublink" href="setup-processing-ach.html"><span>2D</span>ACH Center</a>
               <a class="sidebar-sublink" href="setup-payment-methods.html"><span>3A</span>Credit Card Method</a>
               <a class="sidebar-sublink" href="setup-payment-link-center.html"><span>3B</span>Link Processing Center</a>
@@ -64,117 +64,133 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Setup 2A</p>
-              <h1>Create the Credit Card Processing Center</h1>
+              <p class="eyebrow">Setup 2C</p>
+              <h1>Configure the Webhook Connection</h1>
               <p class="lead">
-                Create the first Linked2Pay processing center for credit card
-                payments.
+                Create the Acumatica webhook, register it in Linked2Pay, and
+                copy the webhook key back into Acumatica.
               </p>
             </div>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Open the processing center screen</p>
-              <h2>Now we connect Acumatica to Linked2Pay.</h2>
-            </article>
-          </section>
-
-          <section>
-            <p>
-              In Acumatica, go to <code>Banking</code> &gt;
-              <code>Credit Card Processing</code> &gt;
-              <code>Processing Centers</code> (Screen ID:
-              <span class="text-bold">CA2050PL</span>).
-            </p>
-            <p>
-              This screen stores the gateway connection details. For Linked2Pay,
-              the processing center becomes the main connection point between
-              Acumatica and your Linked2Pay account.
-            </p>
-          </section>
-
-          <section class="story-band setup-story">
-            <article class="story-copy">
               <p>
-                Create a new processing center. Click the <code>+</code> button
-                to open the processing center setup form.
+                Open a new browser tab and go to Acumatica. Then go to
+                <code>More Items</code>. Under <code>Configuration</code>, click
+                <code>Integration</code>.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/7.png" alt="Create a processing center" />
+              <img src="/images/screenshots/19.png" alt="Acumatica integration menu" />
             </figure>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                You should now see the processing center form (Screen ID:
-                <span class="text-bold">CA205000</span>).
+                In the <code>Integration</code> section, under
+                <code>Preferences</code>, click <code>Webhooks</code>. This opens
+                the Webhooks page (Screen ID:
+                <span class="text-bold">SM304000</span>).
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/8.png" alt="Processing center form" />
-            </figure>
-          </section>
-
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p class="eyebrow">First processing center: credit card payments</p>
-              <p>Enter the following values into the processing center form:</p>
-              <ul>
-                <li><span class="text-bold">Processing Center ID:</span> L2PCC</li>
-                <li>
-                  <span class="text-bold">Name:</span> Linked2Pay Credit Card
-                  Payments
-                </li>
-                <li><span class="text-bold">Active:</span> Checked</li>
-                <li>
-                  <span class="text-bold">Cash Account:</span> Your Acumatica
-                  cash account
-                </li>
-              </ul>
-            </article>
-            <figure class="guide-image">
-              <img src="/images/screenshots/9.png" alt="Credit card processing center values" />
+              <img src="/images/screenshots/20.png" alt="Acumatica webhooks menu" />
             </figure>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                For <span class="text-bold">Payment Plug-In</span>, click the
-                <span class="text-bold">Search</span> icon and select
-                <code>Linked2PayIntegration.PaymentProcessor</code>.
+                Use <code>Linked2Pay</code> as the webhook name. For the
+                implementation class, click
+                <span class="text-bold">Search</span> and select
+                <code>Linked2PayIntegration.Webhooks.L2PWebhookHandler</code>.
+                Then click <span class="text-bold">Save</span>.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/10.png" alt="Select Linked2Pay payment plugin" />
+              <img src="/images/screenshots/21.png" alt="Acumatica Linked2Pay webhook setup" />
             </figure>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                After you select
-                <code>Linked2PayIntegration.PaymentProcessor</code>, additional
-                fields appear. Keep this Acumatica window open for the next
-                part of the setup.
+                After the webhook is saved, Acumatica displays a
+                <span class="text-bold">URL</span> field. Copy that URL, then
+                return to the Linked2Pay portal.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/11.png" alt="Linked2Pay processing center fields" />
+              <img src="/images/screenshots/22.png" alt="Acumatica webhook URL" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                In the Linked2Pay portal, return to
+                <span class="text-bold">API Settings</span>. Under
+                <span class="text-bold">Webhooks</span>, click
+                <span class="text-bold">Add Webhook</span>.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/images/screenshots/23.png" alt="Add webhook in Linked2Pay" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Paste the Acumatica webhook URL into
+                <span class="text-bold">Payload URL</span>. Copy the
+                <span class="text-bold">API Key</span>; you will paste it into
+                Acumatica in the next step. Make sure both
+                <span class="text-bold">ACH</span> and
+                <span class="text-bold">Credit Card</span> are selected, then
+                click <span class="text-bold">Save</span>.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/images/screenshots/24.png" alt="Linked2Pay webhook payload URL and API key" />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              <span class="text-bold">Important:</span>
+              <span class="text-italic">
+                If the Linked2Pay webhook API Key changes, update the key in
+                every Linked2Pay processing center in Acumatica. Otherwise,
+                Acumatica will not receive payment status updates through the
+                webhook connection.
+              </span>
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                In Acumatica, paste the API Key from the Linked2Pay webhook into
+                the <span class="text-bold">WEBHOOKKEY</span> field.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/images/screenshots/25.png" alt="Webhook key in Acumatica" />
             </figure>
           </section>
 
           <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="setup-confirm-publish.html">
+            <a class="pager-link muted" href="setup-processing-api.html">
               <span>Previous</span>
-              <strong>1B Publish Extension</strong>
-            </a>
-            <a class="pager-link" href="setup-processing-api.html">
-              <span>Next</span>
               <strong>2B API Settings</strong>
+            </a>
+            <a class="pager-link" href="setup-processing-ach.html">
+              <span>Next</span>
+              <strong>2D ACH Center</strong>
             </a>
           </nav>
         </main>

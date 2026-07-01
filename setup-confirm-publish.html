@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Create the Credit Card Payment Method</title>
+    <title>Linked2Pay for Acumatica | Publish and Verify the Extension</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
@@ -31,12 +31,12 @@
             <div class="sidebar-sublist setup-sublist">
               <a class="sidebar-sublink" href="setup.html"><span>0</span>Setup Overview</a>
               <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1A</span>Import Extension</a>
-              <a class="sidebar-sublink" href="setup-confirm-publish.html"><span>1B</span>Publish Extension</a>
+              <a class="sidebar-sublink is-active" href="setup-confirm-publish.html" aria-current="page"><span>1B</span>Publish Extension</a>
               <a class="sidebar-sublink" href="setup-processing-center.html"><span>2A</span>Create Center</a>
               <a class="sidebar-sublink" href="setup-processing-api.html"><span>2B</span>API Settings</a>
               <a class="sidebar-sublink" href="setup-processing-webhook.html"><span>2C</span>Webhook Setup</a>
               <a class="sidebar-sublink" href="setup-processing-ach.html"><span>2D</span>ACH Center</a>
-              <a class="sidebar-sublink is-active" href="setup-payment-methods.html" aria-current="page"><span>3A</span>Credit Card Method</a>
+              <a class="sidebar-sublink" href="setup-payment-methods.html"><span>3A</span>Credit Card Method</a>
               <a class="sidebar-sublink" href="setup-payment-link-center.html"><span>3B</span>Link Processing Center</a>
               <a class="sidebar-sublink" href="setup-payment-ach.html"><span>3C</span>ACH Method</a>
             </div>
@@ -64,102 +64,76 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Setup 3A</p>
-              <h1>Create the Credit Card Payment Method</h1>
+              <p class="eyebrow">Setup 1B</p>
+              <h1>Publish and Verify the Extension</h1>
               <p class="lead">
-                Create and configure the Acumatica payment method used for
-                Linked2Pay credit card payments.
+                Publish the Linked2Pay customization project and confirm that the
+                publishing process completes successfully.
               </p>
             </div>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Payment Methods</p>
-              <h2>Prepare the credit card payment method first.</h2>
-            </article>
-          </section>
-
-          <section>
-            <p>
-              In Acumatica, go to <code>Banking</code> &gt;
-              <code>Preferences</code> &gt; <code>Payment Methods</code> (Screen
-              ID: <span class="text-bold">CA2040PL</span>).
-            </p>
-            <p>
-              This screen is where you confirm the payment methods Linked2Pay
-              will use for credit card and ACH payments.
-            </p>
-          </section>
-
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p class="eyebrow">Credit card payment method</p>
+              <p class="eyebrow">Publish the extension</p>
               <p>
-                On the Payment Methods page, click <code>+</code>
-                <span class="text-italic">(New Record)</span> to create a new
-                payment method.
+                Return to the
+                <span class="text-bold">Customization Projects</span> screen
+                (Screen ID: <span class="text-bold">SM204505</span>). Select the
+                <code>linked2payintegration</code> project, then click
+                <span class="text-bold">Publish</span> at the top of the page.
+                This publishes the customization project and makes it available
+                in Acumatica.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/28.png" alt="Create a credit card payment method" />
-            </figure>
-          </section>
-
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>Enter the values for the credit card payment method:</p>
-              <ul>
-                <li><span class="text-bold">Payment Method ID:</span> L2PCC</li>
-                <li><span class="text-bold">Active:</span> Checked</li>
-                <li><span class="text-bold">Means of Payment:</span> Credit Card</li>
-                <li>
-                  <span class="text-bold">Description:</span> Linked2Pay Credit
-                  Card Payments
-                </li>
-              </ul>
-
-              <p>Also confirm the following options are selected:</p>
-              <ul>
-                <li><span class="text-bold">Use in AP:</span> Checked</li>
-                <li><span class="text-bold">Use in AR:</span> Checked</li>
-                <li>
-                  <span class="text-bold"
-                    >Require Remittance Information for Cash Account:</span
-                  >
-                  Checked
-                </li>
-              </ul>
-            </article>
-            <figure class="guide-image">
-              <img src="/images/screenshots/29.png" alt="Credit card payment method values" />
+              <img src="/images/screenshots/4.png" alt="Publish Linked2Pay customization project" />
             </figure>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                Add your cash account to the payment method. This is the account
-                that will receive credit card payments.
+                During publishing, Acumatica may show a warning that says
+                <span class="text-italic">"Active website users will be logged out."</span>
+                This is built-in Acumatica behavior and is safe. Review the
+                warning, then click <span class="text-bold">Publish</span>.
               </p>
-              <ul>
-                <li><span class="text-bold">Use in AP:</span> Checked</li>
-                <li><span class="text-bold">Use in AR:</span> Checked</li>
-              </ul>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/30.png" alt="Cash account for credit card payment method" />
+              <img src="/images/screenshots/5.png" alt="Acumatica publishing warning" />
             </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Publishing may take several minutes. Wait for the process to
+                finish. When it is complete, you should see successful log
+                messages like the ones shown here.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/images/screenshots/6.png" alt="Successful customization publishing logs" />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              The Linked2Pay customization project is now imported and published.
+              Next, configure the processing center so Acumatica can communicate
+              with Linked2Pay.
+            </div>
           </section>
 
           <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="setup-processing-ach.html">
+            <a class="pager-link muted" href="setup-confirm-extension.html">
               <span>Previous</span>
-              <strong>2D ACH Center</strong>
+              <strong>1A Import Extension</strong>
             </a>
-            <a class="pager-link" href="setup-payment-link-center.html">
+            <a class="pager-link" href="setup-processing-center.html">
               <span>Next</span>
-              <strong>3B Link Processing Center</strong>
+              <strong>2A Create Center</strong>
             </a>
           </nav>
         </main>
