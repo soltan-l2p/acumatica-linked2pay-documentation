@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linked2Pay for Acumatica | Configure the Webhook Connection</title>
+    <title>linked2pay for Acumatica | Configure the Webhook Connection</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
@@ -19,9 +19,9 @@
         <a
           class="sidebar-brand simple-logo"
           href="index.html"
-          aria-label="Linked2Pay for Acumatica home"
+          aria-label="linked2pay for Acumatica home"
         >
-          <img src="/images/linked2pay.png" alt="Linked2Pay logo" />
+          <img src="/images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
         <nav class="sidebar-menu" aria-label="Documentation sections">
@@ -47,9 +47,9 @@
           <a
             class="mobile-brand simple-logo"
             href="index.html"
-            aria-label="Linked2Pay for Acumatica home"
+            aria-label="linked2pay for Acumatica home"
           >
-            <img src="/images/linked2pay.png" alt="Linked2Pay logo" />
+            <img src="/images/linked2pay.png" alt="linked2pay logo" />
           </a>
           <label
             class="menu-button"
@@ -67,7 +67,7 @@
               <p class="eyebrow">Setup 2C</p>
               <h1>Configure the Webhook Connection</h1>
               <p class="lead">
-                Create the Acumatica webhook, register it in Linked2Pay, and
+                Create the Acumatica webhook, register it in linked2pay, and
                 copy the webhook key back into Acumatica.
               </p>
             </div>
@@ -103,7 +103,7 @@
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                Use <code>Linked2Pay</code> as the webhook name. For the
+                Use <code>linked2pay</code> as the webhook name. For the
                 implementation class, click
                 <span class="text-bold">Search</span> and select
                 <code>Linked2PayIntegration.Webhooks.L2PWebhookHandler</code>.
@@ -111,7 +111,7 @@
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/21.png" alt="Acumatica Linked2Pay webhook setup" />
+              <img src="/images/screenshots/21.png" alt="Acumatica linked2pay webhook setup" />
             </figure>
           </section>
 
@@ -120,7 +120,7 @@
               <p>
                 After the webhook is saved, Acumatica displays a
                 <span class="text-bold">URL</span> field. Copy that URL, then
-                return to the Linked2Pay portal.
+                return to the linked2pay portal.
               </p>
             </article>
             <figure class="guide-image">
@@ -131,14 +131,14 @@
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                In the Linked2Pay portal, return to
+                In the linked2pay portal, return to
                 <span class="text-bold">API Settings</span>. Under
                 <span class="text-bold">Webhooks</span>, click
                 <span class="text-bold">Add Webhook</span>.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/23.png" alt="Add webhook in Linked2Pay" />
+              <img src="/images/screenshots/23.png" alt="Add webhook in linked2pay" />
             </figure>
           </section>
 
@@ -155,7 +155,7 @@
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/images/screenshots/24.png" alt="Linked2Pay webhook payload URL and API key" />
+              <img src="/images/screenshots/24.png" alt="linked2pay webhook payload URL and API key" />
             </figure>
           </section>
 
@@ -163,8 +163,8 @@
             <div class="callout">
               <span class="text-bold">Important:</span>
               <span class="text-italic">
-                If the Linked2Pay webhook API Key changes, update the key in
-                every Linked2Pay processing center in Acumatica. Otherwise,
+                If the linked2pay webhook API Key changes, update the key in
+                every linked2pay processing center in Acumatica. Otherwise,
                 Acumatica will not receive payment status updates through the
                 webhook connection.
               </span>
@@ -174,7 +174,7 @@
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                In Acumatica, paste the API Key from the Linked2Pay webhook into
+                In Acumatica, paste the API Key from the linked2pay webhook into
                 the <span class="text-bold">WEBHOOKKEY</span> field.
               </p>
             </article>
