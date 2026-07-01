@@ -207,7 +207,7 @@
                 Once you pick
                 <code>Linked2PayIntegration.PaymentProcessor</code> as the
                 <span class="text-bold">Payment Plug-In</span>, you will see the
-                following fields appear.
+                following fields appear. Keep that window open for now.
               </p>
             </article>
 
@@ -222,9 +222,23 @@
           <section class="story-band setup-story">
             <article class="story-copy">
               <p class="eyebrow">Linked2Pay Portal</p>
-              <p>Now we need to go to the Linked2Pay portal and configure the integration settings.</p>
-              <p>At the bottom of the sidebar, click on <strong>API Settings</strong>.</p>
-              <p class="text-italic">or simply use this link: <a class="text-underline text-bold" href="https://test.linked2pay.com/client/apiSettings" target="_blank">Linked2Pay API Settings Page</a></p>
+              <p>
+                Now we need to go to the Linked2Pay portal and configure the
+                integration settings.
+              </p>
+              <p>
+                At the bottom of the sidebar, click on
+                <strong>API Settings</strong>.
+              </p>
+              <p class="text-italic">
+                or simply use this link:
+                <a
+                  class="text-underline text-bold"
+                  href="https://test.linked2pay.com/client/apiSettings"
+                  target="_blank"
+                  >Linked2Pay API Settings Page</a
+                >
+              </p>
             </article>
 
             <figure class="guide-image">
@@ -235,12 +249,372 @@
             </figure>
           </section>
 
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                You should be able to see
+                <span class="text-bold">Web Service Key</span> under the
+                <span class="text-bold">API Settings</span> section. Copy that
+                Web Service Key.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/13.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Acumatica</p>
+              <p>
+                Now in Acumatica, paste that Web Service Key into the
+                <span class="text-bold">APIKEY</span> field in Acumatica.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/14.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
           <section class="content-band">
             <div class="callout">
-              So we are basically done creating the Linked2Pay processing
-              center. This page is the connection point between Acumatica and
-              Linked2Pay, and the next step is to confirm the payment methods
-              that will use it.
+              <span class="text-bold">Important: </span
+              ><span class="text-italic"
+                >This key is the credential that allows Acumatica to communicate
+                with Linked2Pay. If you change the Web Service Key in
+                Linked2Pay, you must update it in Acumatica to maintain the
+                connection.</span
+              >
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Important - Recommended</p>
+              <p>
+                Set the <span class="text-bold">AUTOBILL</span> field to
+                <span class="text-italic text-bold">True</span> if you want to
+                enable Auto-Bill for newly created customers. <br />This acts as
+                the global default value for the Auto-Bill Enabled field on new
+                customer records.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/15.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              <span class="text-bold">Clearance: </span
+              ><span class="text-italic"
+                >You can still manage this settings individually for each
+                customer later. This is just a global default value for newly
+                created customers. So basically, you can override this setting
+                for specific customers as needed. You should set this True if
+                you want to enable Auto-Bill for newly created customers, so
+                that way you don't have to manually enable it for each customer
+                everytime you create one.</span
+              >
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                <span class="text-bold">FEE</span> field is used to determine
+                how many percent of the credit card processing fee you want to
+                pass on to your customers.
+                <br />
+                <span class="text-italic"
+                  >For example, if you set this to
+                  <span class="text-bold">3</span>, then
+                  <span class="text-bold">3%</span> of the credit card
+                  processing fee will be added to the invoice total for
+                  customers who pay with a credit card. If you set this to
+                  <span class="text-bold">0</span>, then
+                  <span class="text-bold">no fee</span> will be added to the
+                  invoice total for customers who pay with a credit card.</span
+                >
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/16.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                <span class="text-bold">L2PUSER</span> field will be your
+                Linked2Pay username. This is the username you use to log in to
+                the Linked2Pay portal.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/17.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                <span class="text-bold">PAYMETHOD</span> field will be
+                <span class="text-italic text-bold">Credit Card</span> for the
+                first processing center. This is the Credit Card processing
+                center. You will create a second processing center for ACH
+                payments later.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/18.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Now open <span class="text-bold text-italic">a new tab</span> in
+                your browser and go to Acumatica. Then go to
+                <code>More Items</code>, under <code>Configuration</code> click
+                on <code>Integration</code>.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/19.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                In <code>Integration</code> section, under
+                <code>Preferences</code> click on <code>Webhooks</code>. It will
+                bring you to the Webhooks page. (Screen ID:
+                <span class="text-bold">SM304000</span>).
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/20.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Use <code>Linked2Pay</code> as the webhook name. For the
+                implementation class, click the
+                <span class="text-bold">Search</span> button and select
+                <code>Linked2PayIntegration.Webhooks.L2PWebhookHandler</code>.
+                Then click <span class="text-bold">Save</span> to save the
+                webhook.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/21.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Once you save it, you should be able to see
+                <span class="text-bold">URL</span> field. Copy that URL and go
+                back to the Linked2Pay portal.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/22.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                In Linked2Pay portal, go to
+                <span class="text-bold">API Settings</span> page again and under
+                <span class="text-bold">Webhooks</span> section click on
+                <span class="text-bold">Add Webhook</span> button.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/23.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                For the <span class="text-bold">Payload URL</span>, paste the
+                URL you copied from Acumatica webhook. <br /><br />
+                And copy the
+                <span class="text-bold">API Key</span> value
+                <span class="text-italic"
+                  >(You will paste it in next step in Acumatica).</span
+                ><br /><br />Make sure you check
+                <span class="text-bold">ACH</span> and
+                <span class="text-bold">Credit Card</span> options. Then click
+                on <span class="text-bold">Save</span> to save the webhook.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/24.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              <span class="text-bold">Important: </span
+              ><span class="text-italic"
+                >If you ever happen to change the API Key in Linked2Pay, you
+                must update it in Acumatica to maintain the webhook connection
+                (for all the Linked2Pay Processing Centers).</span
+              >
+              <br /><br />
+              <span class="text-bold">Crucial: </span
+              ><span class="text-italic"
+                >If you ever change the API Key in Linked2Pay and you don't
+                update it in Acumatica, you won't have payment status updates as
+                they happen with Webhook connections.</span
+              >
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                For the <span class="text-bold">WEBHOOKKEY</span>, paste the API
+                Key you copied from Linked2Pay Webhook.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/25.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                We are done with Linked2Pay Credit Card Processing Center setup.
+                Click on <span class="text-bold">Save</span> to save the
+                processing center. <br /><br />And then click on
+                <span class="text-bold">Test Credentials</span> to make sure the
+                connection is working. You should see a success message if
+                everything is set up correctly.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/26.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                And finally create another processing center for ACH payments.
+                The steps are the same as above, except for the following
+                changes:
+              </p>
+              <ul>
+                <li>
+                  <span class="text-bold">Processing Center ID:</span> L2PACH
+                </li>
+                <li>
+                  <span class="text-bold">Name:</span> Linked2Pay ACH Payments
+                </li>
+                <li>
+                  <span class="text-bold">FEE:</span> 0 (ACH payments do not
+                  have a processing fee)
+                </li>
+              </ul>
+
+              <p>
+                Once you are done, <span class="text-bold">Save</span> and
+                <span class="text-bold">Test Credentials</span>.
+              </p>
+              <p>
+                <span class="text-bold">Important:</span>
+                <span class="text-italic"
+                  >Payment Method should be still
+                  <span class="text-bold">Credit Card</span> even though it is
+                  for ACH payments. So it is not a mistake, it is
+                  intentional.</span
+                >
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/27.png"
+                alt="Placeholder saved processing center screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              <span class="text-bold">Congratulations!</span>
+              <span class="text-italic"
+                >You have successfully set up the processing centers.</span
+              >
+              <br /><br />
+              <span class="text-italic">Now we will move to the last step for setting up payment methods.</span>
             </div>
           </section>
 
