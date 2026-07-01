@@ -9,10 +9,18 @@
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Documentation sections">
-        <a class="sidebar-brand simple-logo" href="index.html" aria-label="Linked2Pay for Acumatica home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="index.html"
+          aria-label="Linked2Pay for Acumatica home"
+        >
           <img src="/images/linked2pay.png" alt="Linked2Pay logo" />
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
@@ -21,20 +29,35 @@
           <a class="sidebar-link" href="business-value.html">Business Value</a>
           <a class="sidebar-link" href="architecture.html">Architecture</a>
           <details class="sidebar-group" open>
-            <summary class="sidebar-link is-parent-active">Initial Setup</summary>
+            <summary class="sidebar-link is-parent-active">
+              Initial Setup
+            </summary>
             <div class="sidebar-sublist setup-sublist">
-              <a class="sidebar-sublink" href="setup-confirm-extension.html"><span>1</span>Confirm Extension</a>
-              <a class="sidebar-sublink" href="setup-processing-center.html"><span>2</span>Processing Center</a>
-              <a class="sidebar-sublink is-active" href="setup-payment-methods.html" aria-current="page"><span>3</span>Payment Methods</a>
+              <a class="sidebar-sublink" href="setup-confirm-extension.html"
+                ><span>1</span>Confirm Extension</a
+              >
+              <a class="sidebar-sublink" href="setup-processing-center.html"
+                ><span>2</span>Processing Center</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="setup-payment-methods.html"
+                aria-current="page"
+                ><span>3</span>Payment Methods</a
+              >
             </div>
           </details>
           <a class="sidebar-link" href="customers.html">Customer Sync</a>
-          <a class="sidebar-link" href="payment-methods.html">Payment Methods</a>
+          <a class="sidebar-link" href="payment-methods.html"
+            >Payment Methods</a
+          >
           <a class="sidebar-link" href="auto-bill.html">Auto-Bill</a>
           <a class="sidebar-link" href="webhooks.html">Webhooks</a>
           <a class="sidebar-link" href="demo.html">Demo Script</a>
           <div class="sidebar-sublist">
-            <a class="sidebar-sublink" href="demo-walkthrough.html">Live Walkthrough</a>
+            <a class="sidebar-sublink" href="demo-walkthrough.html"
+              >Live Walkthrough</a
+            >
           </div>
           <a class="sidebar-link" href="testing.html">Testing Checklist</a>
           <a class="sidebar-link" href="faq.html">FAQ</a>
@@ -43,57 +66,261 @@
       </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="index.html" aria-label="Linked2Pay for Acumatica home">
+          <a
+            class="mobile-brand simple-logo"
+            href="index.html"
+            aria-label="Linked2Pay for Acumatica home"
+          >
             <img src="/images/linked2pay.png" alt="Linked2Pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
           </label>
         </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Setup Step 3</p>
+              <h1>Create or Confirm Payment Methods</h1>
+              <p class="lead">
+                Finally, confirm the payment methods Acumatica will use when
+                Linked2Pay processes credit card and ACH payments.
+              </p>
+            </div>
+          </section>
 
-    <main class="main-shell">
-      <section class="hero setup-step-hero">
-        <div class="hero-inner">
-          <p class="eyebrow">Setup Step 3</p>
-          <h1>Create or Confirm Payment Methods</h1>
-          <p class="lead">Linked2Pay uses Acumatica payment methods to know whether a payment is a credit card or ACH/bank payment.</p>
-        </div>
-      </section>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Now we prepare the payment methods</p>
+              <h2>Let's make sure Acumatica has the right payment methods.</h2>
+            </article>
+          </section>
 
-      <section class="story-band setup-story">
-        <article class="story-copy">
-          <p class="eyebrow">Where To Go</p>
-          <h2>Open this screen first.</h2>
-          <p>In Acumatica, go to <code>Banking &gt; Preferences &gt; Payment Methods</code>.</p>
-          <p>You should have payment methods like L2PCC for Linked2Pay credit card payments and L2PACH for Linked2Pay ACH/bank payments.</p>
-          <p>Make sure these payment methods are active and available for Accounts Receivable.</p>
-        </article>
+          <section>
+            <p>
+              In Acumatica, go to <code>Banking</code> &gt;
+              <code>Preferences</code> &gt; <code>Payment Methods</code> (Screen
+              ID: <span class="text-bold">CA2040PL</span>).
+            </p>
+            <p>
+              This is where you confirm the payment methods that Linked2Pay will
+              use for credit card and ACH payments. At the end of this step, you
+              should have one method for credit cards and one method for
+              ACH/bank payments.
+            </p>
+          </section>
 
-        <figure class="guide-image">
-          <img src="/images/screenshot.png" alt="Placeholder screenshot for setup step 3" />
-          <figcaption>Placeholder image. Replace this with the matching setup screenshot for step 3.</figcaption>
-        </figure>
-      </section>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Credit card payment method</p>
+              <p>
+                In payment methods page click <code>+</code>
+                <span class="text-italic">(New Record)</span> to create a new
+                payment method.
+              </p>
+            </article>
 
-      <section class="content-band">
-        <div class="callout">
-          <strong>Step 2:</strong> Use this page as the focused walkthrough for Create or Confirm Payment Methods.
-        </div>
-      </section>
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/28.png"
+                alt="Credit card payment method screenshot"
+              />
+            </figure>
+          </section>
 
-      <nav class="pager" aria-label="Page navigation">
-        <a class="pager-link muted" href="setup-processing-center.html">
-          <span>Previous</span>
-          <strong>Step 2</strong>
-        </a>
-        <a class="pager-link" href="customers.html">
-          <span>Next</span>
-          <strong>Customer Sync</strong>
-        </a>
-      </nav>
-    </main>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>Fill the values for the credit card payment method.</p>
+              <ul>
+                <li>Payment Method ID: <code>L2PCC</code></li>
+                <li>Active: <code>Checked</code></li>
+                <li>Means of Payment: <code>Credit Card</code></li>
+                <li>
+                  Description: <code>Linked2Pay Credit Card Payments</code>
+                </li>
+              </ul>
+
+              <p>And please make sure you check:</p>
+              <ul>
+                <li>Use in AP: <code>Checked</code></li>
+                <li>Use in AR: <code>Checked</code></li>
+                <li>
+                  Require Remittance Information for Cash Account:
+                  <code>Checked</code>
+                </li>
+              </ul>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/29.png"
+                alt="Credit card payment method settings screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Then make sure you add your Cash Account to the payment method.
+                This is the account that will receive the credit card payments.
+              </p>
+              <ul>
+                <li>Use in AP: <code>Checked</code></li>
+                <li>Use in AR: <code>Checked</code></li>
+              </ul>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/30.png"
+                alt="Credit card method review screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Then go the
+                <span class="text-bold">Processing Center tab</span> and add the
+                Linked2Pay processing center to the payment method.
+                <br /><br />This is the processing center that will handle the
+                credit card payments.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/31.png"
+                alt="Saved credit card payment method screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Click on <span class="text-bold">Search</span> button and from
+                the selections pick L2PCC
+                <span class="text-italic"
+                  >(This is the processing center for Credit Cards we just
+                  created)</span
+                >
+                and click on <span class="text-bold">Select</span>.
+              </p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/32.png"
+                alt="Saved credit card payment method screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>It should look like this.</p>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/33.png"
+                alt="Saved credit card payment method screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Finally you have to setup
+                <span class="text-bold text-italic"
+                  >"SETTINGS FOR USE IN AR"</span
+                >. You just have to simply add new
+                <span class="text-bold">Payment Method Details</span>.
+              </p>
+
+              <ul>
+                <li>ID: <code>CCPID</code></li>
+                <li>Description: <code>Payment Profile ID</code></li>
+                <li>Required: <code>checked</code></li>
+                <li>Payment Profile ID: <code>checked</code></li>
+                <li>Sort Order: <code>1</code></li>
+              </ul>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/34.png"
+                alt="Saved credit card payment method screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              Click on <span class="text-bold">Save</span> button on the top and
+              you are done with the credit card payment method. <br />Now we
+              will move to the ACH/bank payment method.
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">ACH payment method</p>
+              <p>
+                For the ACH/bank payment method, follow the same steps used for
+                the credit card payment method. The only differences are listed
+                below:
+              </p>
+              <ul>
+                <li>Payment Method ID: <code>L2PACH</code></li>
+                <li>
+                  Means of Payment: <code>Credit Card</code>
+                  <span class="text-italic"
+                    >(it is not a mistake, we still pick Credit Card even for
+                    ACH payments)</span
+                  >
+                </li>
+                <li>Description: <code>Linked2Pay ACH/Bank Payments</code></li>
+              </ul>
+            </article>
+
+            <figure class="guide-image">
+              <img
+                src="/images/screenshots/35.png"
+                alt="ACH payment method screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              So we are basically done confirming the payment methods. The
+              extension is published, the processing center is ready, and
+              Acumatica has the payment methods it needs for the next workflow.
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="setup-processing-center.html">
+              <span>Previous</span>
+              <strong>Step 2</strong>
+            </a>
+            <a class="pager-link" href="customers.html">
+              <span>Next</span>
+              <strong>Customer Sync</strong>
+            </a>
+          </nav>
+        </main>
       </div>
     </div>
   </body>
