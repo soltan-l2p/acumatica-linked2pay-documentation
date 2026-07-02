@@ -1,0 +1,731 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0032)https://linked2pay.com/acumatica -->
+<html lang="en" class="scroll-smooth js no-touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- SITE TITLE -->
+   <title>Secure Acumatica Payment Integration | linked2pay</title>
+   <meta name="description" content="Streamline Acumatica payment operations with linked2pay. Acumatica teams can securely prepare credit card and ACH workflows while keeping the setup connected to their ERP.">
+   <meta name="author" content="linked2pay">
+  
+  <!-- Canonical tag: to prevent duplicate content issues -->
+  <link rel="canonical" href="https://linked2pay.com/acumatica">
+
+  <!-- Open graph tags: for social sharing -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="linked2pay">
+  <meta property="og:url" content="https://linked2pay.com/acumatica">
+  <meta property="og:title" content="Secure Acumatica Payment Integration | linked2pay">
+  <meta property="og:description" content="Streamline Acumatica payment operations with linked2pay. Acumatica teams can securely prepare credit card and ACH workflows while keeping the setup connected to their ERP.">
+  <meta property="og:image" content="https://linked2pay.com/images/social-share-card.png">
+
+  <!-- Tells Google who we are -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "linked2pay",
+    "url": "https://linked2pay.com",
+    "logo": "https://linked2pay.com/images/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/transmodus"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-866-587-8249",
+      "contactType": "Customer Support"
+    }
+  }
+  </script>
+
+  <!-- FAVICON AND TOUCH ICONS -->
+  <link rel="icon" href="https://linked2pay.com/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="https://linked2pay.com/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="https://linked2pay.com/apple-touch-icon.png">
+  
+  <!-- FONT ICONS -->
+  <link href="./acumatica_files/flaticon.css" rel="stylesheet">
+  <!-- PLUGINS STYLESHEET -->
+  <link href="./acumatica_files/menu.css" rel="stylesheet">
+  <link id="effect" href="./acumatica_files/fade-down.css" media="all" rel="stylesheet">
+  <link href="./acumatica_files/magnific-popup.css" rel="stylesheet">
+  <link href="./acumatica_files/owl.carousel.min.css" rel="stylesheet">
+  <link href="./acumatica_files/owl.theme.default.min.css" rel="stylesheet">
+  <link href="./acumatica_files/lunar.css" rel="stylesheet">
+  <!-- ON SCROLL ANIMATION -->
+  <link href="./acumatica_files/animate.css" rel="stylesheet">
+  <!-- TEMPLATE CSS -->
+  <link href="./acumatica_files/style.css" rel="stylesheet">
+  <!-- Style Switcher CSS -->
+   <link href="./acumatica_files/l2p-theme.css" rel="stylesheet">
+
+   <style>
+    /* 1. Hide on Mobile */
+    @media ((max-width: 640px)) {
+       .mobile-hide { display: none !important; }
+    }
+
+    /* 2. Hide on Desktop */
+    @media ((min-width: 641px)) {
+       .desktop-hide { display: none !important; }
+    }
+
+    /* Fix Sign In button visibility */
+    #header .wsmenu-list li a.btn.hover--tra-white:hover {
+        color: #353F4F !important;        /* Dark Text */
+        border-color: #353F4F !important; /* Dark Border */
+        background-color: transparent !important;
+    }
+</style>
+  
+</head>
+
+<body cz-shortcut-listen="true">
+   <!-- PRELOADER SPINNER
+                  ============================================= -->
+   <div id="loading" class="loading--theme  h-full w-full fixed z-[99999999] mt--0 top-0 bg-[#f5f5f9]" style="display: none;">
+      <div id="loading-center" class="absolute !h-[100px] !w-[100px] mt-[-50px] ml-[-50px] animate-[loading-center-absolute_1s_infinite] left-2/4 top-2/4 lg:max-xl:!h-[90px] lg:max-xl:!w-[90px] lg:max-xl:!mt-[-45px] lg:max-xl:ml-[-45px] md:max-lg:!h-[90px] md:max-lg:!w-[90px] md:max-lg:!mt-[-45px] md:max-lg:ml-[-45px]" style="display: none;">
+         <span class="loader !w-[100px] !h-[100px] inline-block relative box-border animate-[rotation_1s_linear_infinite] rounded-[50%] border-2 border-solid border-[transparent_#888] after:content-[&#39;&#39;] after:box-border after:absolute after:-translate-x-2/4 after:-translate-y-2/4 after:rounded-[50%] after:border-[50px] after:border-solid after:border-[transparent_rgba(30,30,30,0.15)] after:left-2/4 after:!top-2/4 lg:max-xl:!w-[90px] lg:max-xl:!h-[90px] lg:max-xl:after:border-[45px] lg:max-xl:after:border-solid md:max-lg:!w-[90px] md:max-lg:!h-[90px] md:max-lg:after:border-[45px] md:max-lg:after:border-solid sm:max-md:!w-[80px] sm:max-md:!h-[80px] sm:max-md:after:border-[40px] sm:max-md:after:border-solid"></span>
+      </div>
+   </div>
+   
+   <!-- PAGE CONTENT
+                  ============================================= -->
+   <div id="page" class="page font--jakarta">
+      
+      <!-- Header -->
+                  <header id="header" class="tra-menu navbar-dark inner-page-header white-scroll w-full block !pt-0"><div class="header-wrapper fixed z-[1030] top-0 inset-x-0">
+
+    <div class="wsmobileheader clearfix relative z-[1050]">
+        
+        <span class="smllogo md:max-lg:!block md:max-lg:!mt-[22px] md:max-lg:!pl-[22px] sm:max-md:!block sm:max-md:!mt-[23px] sm:max-md:!pl-[18px] xsm:max-sm:!block xsm:max-sm:!mt-[23px] xsm:max-sm:!pl-[16px]">
+    <a href="https://linked2pay.com/" class="inline-block w-auto max-w-max relative z-[1035]">
+        <img class="md:w-auto md:max-lg:!max-w-[inherit] md:max-lg:!max-h-[34px] sm:max-md:!w-auto sm:max-md:!max-w-[inherit] sm:max-md:!max-h-[34px] xsm:max-sm:!w-auto xsm:max-sm:!max-w-[inherit] xsm:max-sm:!max-h-[34px]" src="./acumatica_files/l2p-color.png" alt="mobile-logo">
+    </a>
+</span>
+
+        <a id="wsnavtoggle" class="wsanimated-arrow">
+            <span></span>
+        </a>
+    </div>
+
+    <div class="wsmainfull menu clearfix !text-[#b1b7cd] p-[20px_0] w-full h-auto z-[1031] [transition:all_450ms_ease-in-out]">
+        <div class="wsmainwp clearfix">
+
+            <div class="desktoplogo">
+                <a href="https://linked2pay.com/" class="logo-black">
+                    <img class="light-theme-img w-auto max-w-[inherit] !max-h-[80px] lg:max-xl:!max-h-[80px] inline-block" src="./acumatica_files/l2p-color.png" alt="logo">
+                    <img class="dark-theme-img w-auto max-w-[inherit] !max-h-[80px] lg:max-xl:!max-h-[80px]" src="./acumatica_files/l2p-white.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="desktoplogo">
+                <a href="https://linked2pay.com/" class="logo-white">
+                    <img class="w-auto max-w-[inherit] !max-h-[80px] lg:max-xl:!max-h-[80px] inline-block" src="./acumatica_files/l2p-white.png" alt="logo">
+                </a>
+            </div>
+
+            <nav class="wsmenu clearfix">
+                <style>
+                    @media (min-width: 992px) { #mobile-close-btn-wrapper { display: none !important; } }
+                </style>
+                <div id="mobile-close-btn-wrapper" class="absolute top-0 left-0 p-4 z-[1100] w-auto">
+                    <button id="mobile-close-btn" class="text-[#b1b7cd] hover:text-white text-3xl font-bold leading-none focus:outline-none">×</button>
+                </div>
+
+                <div class="overlapblackbg"></div>
+
+                <ul class="wsmenu-list nav-theme">
+                    
+                    <li aria-haspopup="true">
+                        <span class="wsmenu-click"><i class="wsmenu-arrow"></i></span>
+
+                        <a href="https://linked2pay.com/acumatica#" class="h-link">
+        Products <span class="wsarrow"></span>
+    </a>
+                        
+                        <ul class="sub-menu">
+                            <li aria-haspopup="true"><a href="https://linked2pay.com/payment-processing">Payment Processing</a></li>
+                            <li aria-haspopup="true"><a href="https://linked2pay.com/gateway">Gateway</a></li>
+                            <li aria-haspopup="true"><a href="https://linked2pay.com/edd">EDD</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nl-simple" aria-haspopup="true"><a href="https://linked2pay.com/partners" class="h-link">Partners</a></li>
+                    <li class="nl-simple" aria-haspopup="true"><a href="https://linked2pay.com/about" class="h-link">Company</a></li>
+                    <li class="nl-simple" aria-haspopup="true"><a href="https://linked2pay.com/support" class="h-link">Support</a></li>
+                    <li class="nl-simple" aria-haspopup="true"><a href="tel:8665878249" class="h-link">(866) 587-8249</a></li>
+
+                    <li class="nl-simple reg-fst-link mobile-last-link" aria-haspopup="true">
+                        <a href="https://payments.linked2pay.com/" target="_blank" class="btn r-04 btn--theme hover--tra-white last-link">Sign in</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    @media only screen and (max-width: 991px) {
+
+        
+        
+        /* 1. TEXT COLOR */
+        ul.wsmenu-list > li.ws-activearrow > a {
+            color: #000000 !important;
+            font-weight: 700 !important;
+        }
+
+        /* 2. SUBMENU LINK SPACING */
+        ul.wsmenu-list .sub-menu li a {
+            color: #555 !important;
+            padding: 12px 0 !important;
+            display: block !important;
+        }
+        ul.wsmenu-list .sub-menu li a:hover {
+            color: #000 !important;
+        }
+
+        /* 3. ARROW ANIMATION */
+        .wsmenu-arrow {
+            display: inline-block !important; 
+            transform-origin: center center !important; 
+            transition: transform 0.2s ease !important; /* Made faster (0.2s) to match menu speed */
+        }
+
+        /* 4. ROTATION (-45deg) */
+        .wsmenu-rotate {
+            -webkit-transform: rotate(-45deg) !important;
+            transform: rotate(-45deg) !important;
+        }
+
+        /* 5. CONTAINER RESET */
+        ul.wsmenu-list .sub-menu {
+            margin: 0 !important;
+            padding: 0 !important;
+            transition: none !important; 
+            list-style: none !important;
+            border: none !important;
+        }
+
+        /* 6. HARDWARE ACCELERATION (Helps render the close smoothly) */
+        ul.wsmenu-list .sub-menu {
+            transform: translateZ(0); 
+            -webkit-transform: translateZ(0);
+        }
+
+        /* 7. LAST CHILD FIX (Crucial for closing gap) */
+        /* Ensures the very last item doesn't hold the door open */
+        ul.wsmenu-list .sub-menu li:last-child,
+        ul.wsmenu-list .sub-menu li:last-child a {
+            margin-bottom: 0 !important;
+            padding-bottom: 12px !important; /* Keep internal padding, kill external margin */
+            border-bottom: none !important;
+        }
+    }
+</style></header>
+
+      
+      
+
+      <!-- FEATURES-12 Desktop
+              ============================================= -->
+              <section id="features-12" class="mobile-hide shape--bg shape--white-500 features-section division after:bg-[#f2f4f8] pt--100 pt-[200px] pb-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px] after:absolute after:content-[&#39;&#39;] after:z-[-1] after:w-[48%] after:h-[72%] after:left-[52%] after:top-[21%] lg:max-xl:after:!w-6/12 lg:max-xl:after:!h-[76%] lg:max-xl:after:!left-2/4 lg:max-xl:after:!top-[18%] md:max-lg:after:!w-[52%] md:max-lg:after:!h-3/4 md:max-lg:after:!left-[48%] md:max-lg:after:!top-[19%] xsm:max-sm:after:!h-[64%] xsm:max-sm:after:!top-[32.35%]">
+   <div class="container">
+      <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  items-center">
+         <div class="md:max-lg:w-5/12 lg:max-xl:w-5/12 xl:w-5/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+            <div class="txt-block left-column wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+               <span class="section-id block !text-[0.85rem] leading-none !font-bold !tracking-[0.5px] uppercase xl:!mb-[35px] lg:max-xl:!mb-[30px] md:max-lg:!mb-[25px] sm:max-md:!mb-[25px] font-Jakarta">
+                  <img src="./acumatica_files/acumatica.png" alt="Acumatica integration logo" style="width: 250px; height: auto;">
+               </span>
+               <h2 class="s-46 w--700 xl:!text-[2.875rem] lg:max-xl:!text-[2.625rem] md:max-lg:!text-[2.35294rem] sm:max-md:!text-[2.25rem] xsm:max-sm:!text-[1.8125rem] !font-bold lg:max-xl:!mb-[20px] md:max-lg:!mb-[15px] sm:max-md:!mb-[20px] xsm:max-sm:!mb-[15px] xl:!mb-[26px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">
+                  Securing your Acumatica payments
+               </h2>
+               <p>Now Acumatica teams can connect payment setup, processing centers, and payment methods with a clear credit card and ACH workflow.</p>
+               <div class="cbox-1 ico-15 flex relative items-stretch justify-start [flex-flow:row_wrap] group">
+                  <div class="ico-wrap color--theme ml-[8px]">
+                     <div class="cbox-1-ico"><span class="flaticon-check relative right-[8px] top-px xsm:max-sm:right-[6px] xsm:max-sm:top-[0.5px]"></span></div>
+                  </div>
+                  <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                     <p class="xl:!mb-[8px] lg:max-xl:!mb-[5px] md:max-lg:!mb-[5px] xsm:max-sm:!mb-[5px]">Works with Acumatica processing centers, customer records, invoices, and payment method configuration</p>
+                  </div>
+               </div>
+               <div class="cbox-1 ico-15 flex relative items-stretch justify-start [flex-flow:row_wrap] group">
+                  <div class="ico-wrap color--theme ml-[8px]">
+                     <div class="cbox-1-ico"><span class="flaticon-check relative right-[8px] top-px xsm:max-sm:right-[6px] xsm:max-sm:top-[0.5px]"></span></div>
+                  </div>
+                  <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                     <p class="xl:!mb-[8px] lg:max-xl:!mb-[5px] md:max-lg:!mb-[5px] xsm:max-sm:!mb-[5px]">
+                     Keeps payment setup aligned with the records your Acumatica users already know</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- 1,2,3,4 -->
+
+         <div class="md:max-lg:w-7/12 lg:max-xl:w-7/12 xl:w-7/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+   <div class="fbox-12-wrapper wow fadeInLeft pl-[45px] lg:max-xl:!pl-[30px] md:max-lg:!pl-0" style="visibility: visible; animation-name: fadeInLeft;">
+      <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] ">
+         
+         <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+            <div id="fb-12-1" class="fbox-12 cbox-2 bg--white-100 block-shadow rounded-[12px] mb--30 xl:!mb-[30px] px-[35px] py-[32px] lg:max-xl:!p-[30px] md:max-lg:px-[18px] md:max-lg:py-[22px] sm:max-md:!px-[50px] sm:max-md:py-[40px] xsm:max-sm:px-[30px] xsm:max-sm:py-[35px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)] group">
+               <div class="fbox-ico ico-50 !mb-[20px] xsm:max-sm:!mb-[20px]">
+                  <div class="cbox-2-ico bg--theme color--white relative xl:!w-[2.625rem] xl:!h-[2.625rem] !text-center xl:!text-[1.1875rem] font-medium leading-[2.375rem] [transition:all_450ms_ease-in-out] rounded-[100%] [border:2px_solid_transparent] lg:max-xl:!w-[2.35rem] lg:max-xl:!h-[2.35rem] lg:max-xl:!text-[1.135rem] lg:max-xl:leading-8 md:max-lg:!w-[2.15rem] md:max-lg:!h-[2.15rem] md:max-lg:!text-[1.125rem] md:max-lg:!leading-[1.85rem] xsm:max-sm:!w-[2.3rem] xsm:max-sm:!h-[2.3rem] xsm:max-sm:!text-[1.15rem] xsm:max-sm:!leading-[2.05rem] group-hover:!bg-transparent group-hover:scale-110">1</div>
+               </div>
+               <div class="fbox-txt"><p class="!mb-0">Built for Acumatica payment setup</p></div>
+            </div>
+
+            <div id="fb-12-2" class="fbox-12 cbox-2 bg--white-100 block-shadow rounded-[12px] px-[35px] py-[32px] lg:max-xl:!p-[30px] md:max-lg:px-[18px] md:max-lg:py-[22px] sm:max-md:!px-[50px] sm:max-md:py-[40px] xsm:max-sm:px-[30px] xsm:max-sm:py-[35px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)] group">
+               <div class="fbox-ico ico-50 !mb-[20px] xsm:max-sm:!mb-[20px]">
+                  <div class="cbox-2-ico bg--theme color--white relative xl:!w-[2.625rem] xl:!h-[2.625rem] !text-center xl:!text-[1.1875rem] font-medium leading-[2.375rem] [transition:all_450ms_ease-in-out] rounded-[100%] [border:2px_solid_transparent] lg:max-xl:!w-[2.35rem] lg:max-xl:!h-[2.35rem] lg:max-xl:!text-[1.135rem] lg:max-xl:leading-8 md:max-lg:!w-[2.15rem] md:max-lg:!h-[2.15rem] md:max-lg:!text-[1.125rem] md:max-lg:!leading-[1.85rem] xsm:max-sm:!w-[2.3rem] xsm:max-sm:!h-[2.3rem] xsm:max-sm:!text-[1.15rem] xsm:max-sm:!leading-[2.05rem] group-hover:!bg-transparent group-hover:scale-110">3</div>
+               </div>
+               <div class="fbox-txt"><p class="!mb-0">Guided around customer and invoice workflows</p></div>
+            </div>
+         </div>
+
+         <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+            <div id="fb-12-3" class="fbox-12 cbox-2 bg--white-100 block-shadow rounded-[12px] mb--30 xl:!mb-[30px] px-[35px] py-[32px] lg:max-xl:!p-[30px] md:max-lg:px-[18px] md:max-lg:py-[22px] sm:max-md:!px-[50px] sm:max-md:py-[40px] xsm:max-sm:px-[30px] xsm:max-sm:py-[35px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)] group">
+               <div class="fbox-ico ico-50 !mb-[20px] xsm:max-sm:!mb-[20px]">
+                  <div class="cbox-2-ico bg--theme color--white relative xl:!w-[2.625rem] xl:!h-[2.625rem] !text-center xl:!text-[1.1875rem] font-medium leading-[2.375rem] [transition:all_450ms_ease-in-out] rounded-[100%] [border:2px_solid_transparent] lg:max-xl:!w-[2.35rem] lg:max-xl:!h-[2.35rem] lg:max-xl:!text-[1.135rem] lg:max-xl:leading-8 md:max-lg:!w-[2.15rem] md:max-lg:!h-[2.15rem] md:max-lg:!text-[1.125rem] md:max-lg:!leading-[1.85rem] xsm:max-sm:!w-[2.3rem] xsm:max-sm:!h-[2.3rem] xsm:max-sm:!text-[1.15rem] xsm:max-sm:!leading-[2.05rem] group-hover:!bg-transparent group-hover:scale-110">2</div>
+               </div>
+               <div class="fbox-txt"><p class="!mb-0">Supports credit card and ACH paths</p></div>
+            </div>
+
+            <div id="fb-12-4" class="fbox-12 cbox-2 bg--white-100 block-shadow rounded-[12px] px-[35px] py-[32px] lg:max-xl:!p-[30px] md:max-lg:px-[18px] md:max-lg:py-[22px] sm:max-md:!px-[50px] sm:max-md:py-[40px] xsm:max-sm:px-[30px] xsm:max-sm:py-[35px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)] group">
+               <div class="fbox-ico ico-50 !mb-[20px] xsm:max-sm:!mb-[20px]">
+                  <div class="cbox-2-ico bg--theme color--white relative xl:!w-[2.625rem] xl:!h-[2.625rem] !text-center xl:!text-[1.1875rem] font-medium leading-[2.375rem] [transition:all_450ms_ease-in-out] rounded-[100%] [border:2px_solid_transparent] lg:max-xl:!w-[2.35rem] lg:max-xl:!h-[2.35rem] lg:max-xl:!text-[1.135rem] lg:max-xl:leading-8 md:max-lg:!w-[2.15rem] md:max-lg:!h-[2.15rem] md:max-lg:!text-[1.125rem] md:max-lg:!leading-[1.85rem] xsm:max-sm:!w-[2.3rem] xsm:max-sm:!h-[2.3rem] xsm:max-sm:!text-[1.15rem] xsm:max-sm:!leading-[2.05rem] group-hover:!bg-transparent group-hover:scale-110">4</div>
+               </div>
+               <div class="fbox-txt"><p class="!mb-0">Designed for a clean implementation handoff</p></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+         <!-- End 1,2,3,4 -->
+
+      </div>
+   </div>
+</section>
+
+<!-- Mobile View -->
+
+<section id="features-12-mobile" class="desktop-hide features-section division" style="padding-top: 100px !important; padding-bottom: 50px !important;">
+   
+   <div class="container">
+      <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
+         
+         <div class="md:max-lg:w-5/12 lg:max-xl:w-5/12 xl:w-5/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+            <div class="txt-block left-column wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+               <span class="section-id block !text-[0.85rem] leading-none !font-bold !tracking-[0.5px] uppercase xl:!mb-[35px] lg:max-xl:!mb-[30px] md:max-lg:!mb-[25px] sm:max-md:!mb-[25px] font-Jakarta">
+                  <img src="./acumatica_files/mp-secure-plugin2.png" alt="Acumatica integration logo" style="width: 100%; max-width: 200px; height: auto;">
+               </span>
+               <h2 class="s-46 w--700 xl:!text-[2.875rem] lg:max-xl:!text-[2.625rem] md:max-lg:!text-[2.35294rem] sm:max-md:!text-[2.25rem] xsm:max-sm:!text-[1.8125rem] !font-bold lg:max-xl:!mb-[20px] md:max-lg:!mb-[15px] sm:max-md:!mb-[20px] xsm:max-sm:!mb-[15px] xl:!mb-[26px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">
+                  Securing your Acumatica payments
+               </h2>
+               <p>Now Acumatica teams can connect payment setup, processing centers, and payment methods with a clear credit card and ACH workflow.</p>
+               <div class="cbox-1 ico-15 flex relative items-stretch justify-start [flex-flow:row_wrap] group">
+                  <div class="ico-wrap color--theme ml-[8px]">
+                     <div class="cbox-1-ico"><span class="flaticon-check relative right-[8px] top-px xsm:max-sm:right-[6px] xsm:max-sm:top-[0.5px]"></span></div>
+                  </div>
+                  <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                     <p class="xl:!mb-[8px] lg:max-xl:!mb-[5px] md:max-lg:!mb-[5px] xsm:max-sm:!mb-[5px]">Works with Acumatica processing centers, customer records, invoices, and payment method configuration</p>
+                  </div>
+               </div>
+               <div class="cbox-1 ico-15 flex relative items-stretch justify-start [flex-flow:row_wrap] group">
+                  <div class="ico-wrap color--theme ml-[8px]">
+                     <div class="cbox-1-ico"><span class="flaticon-check relative right-[8px] top-px xsm:max-sm:right-[6px] xsm:max-sm:top-[0.5px]"></span></div>
+                  </div>
+                  <div class="cbox-1-txt overflow-hidden flex-1 max-w-full">
+                     <p class="xl:!mb-[8px] lg:max-xl:!mb-[5px] md:max-lg:!mb-[5px] xsm:max-sm:!mb-[5px]">
+                     Keeps payment setup aligned with the records your Acumatica users already know</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Mobile 1,2,3,4 -->
+         
+         <div class="md:max-lg:w-7/12 lg:max-xl:w-7/12 xl:w-7/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+   <div class="fbox-12-wrapper wow fadeInLeft pl-[45px] lg:max-xl:!pl-[30px] md:max-lg:!pl-0 mt-[40px] animated" style="visibility: visible; animation-name: fadeInLeft;">
+      <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] ">
+         
+         <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+            
+            <div class="fbox-12 cbox-2 mb-[30px] group">
+               <div class="fbox-ico ico-50 !mb-[15px]">
+                  <div class="cbox-2-ico bg--theme color--white relative inline-block !text-center !text-[1.15rem] rounded-[100%]" style="width: 2.3rem !important; height: 2.3rem !important; min-width: 2.3rem !important; line-height: 2.3rem !important; flex-shrink: 0 !important;">
+                     1
+                  </div>
+               </div>
+               <div class="fbox-txt"><p class="!mb-0">Built for Acumatica payment setup</p></div>
+            </div>
+
+            <div class="fbox-12 cbox-2 mb-[30px] group">
+               <div class="fbox-ico ico-50 !mb-[15px]">
+                  <div class="cbox-2-ico bg--theme color--white relative inline-block !text-center !text-[1.15rem] rounded-[100%]" style="width: 2.3rem !important; height: 2.3rem !important; min-width: 2.3rem !important; line-height: 2.3rem !important; flex-shrink: 0 !important;">
+                     2
+                  </div>
+               </div>
+               <div class="fbox-txt"><p class="!mb-0">Supports credit card and ACH paths</p></div>
+            </div>
+
+         </div>
+
+         <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+            
+            <div class="fbox-12 cbox-2 mb-[30px] group">
+               <div class="fbox-ico ico-50 !mb-[15px]">
+                  <div class="cbox-2-ico bg--theme color--white relative inline-block !text-center !text-[1.15rem] rounded-[100%]" style="width: 2.3rem !important; height: 2.3rem !important; min-width: 2.3rem !important; line-height: 2.3rem !important; flex-shrink: 0 !important;">
+                     3
+                  </div>
+               </div>
+               <div class="fbox-txt"><p class="!mb-0">Guided around customer and invoice workflows</p></div>
+            </div>
+
+            <div class="fbox-12 cbox-2 mb-[30px] group">
+               <div class="fbox-ico ico-50 !mb-[15px]">
+                  <div class="cbox-2-ico bg--theme color--white relative inline-block !text-center !text-[1.15rem] rounded-[100%]" style="width: 2.3rem !important; height: 2.3rem !important; min-width: 2.3rem !important; line-height: 2.3rem !important; flex-shrink: 0 !important;">
+                     4
+                  </div>
+               </div>
+               <div class="fbox-txt"><p class="!mb-0">Designed for a clean implementation handoff</p></div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</div>
+
+         <!-- End Mobile 1,2,3,4 -->
+
+      </div>
+   </div>
+</section>
+    <!-- END FEATURES-12 -->
+
+    <div class="container" style="margin-bottom: 0px !important; padding-bottom: 10px !important;">
+  <hr class="responsive-divider w-full h-px border-0 bg-transparent bg-[linear-gradient(90deg,rgba(206,211,246,0)_0,#bbb_38%,#bbb_64%,rgba(206,211,246,0)_99%)] opacity-40" style="margin: 10px 0 !important;">
+</div>
+
+    <!--  TEXT CONTENT
+              ============================================= -->
+    <section id="lnk-2" class=" pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px]  ct-02 content-section division">
+      <div class="container">
+        <!-- SECTION CONTENT (ROW) -->
+        <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  items-center">
+          <!-- IMAGE BLOCK -->
+          <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+            <div class="img-block !text-center left-column wow fadeInRight mr-[30px] lg:max-xl:mr-[5px] md:max-lg:mr-0 sm:max-md:mx-[3%] xsm:max-sm:m-[0_2%_35px]" style="visibility: visible; animation-name: fadeInRight;">
+              <img class="img-fluid" src="./acumatica_files/magento-icons-img.png" alt="content-image">
+            </div>
+          </div>
+          <!-- TEXT BLOCK -->
+          <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+            <div class="txt-block right-column wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
+              <!-- TEXT BOX -->
+              <div class="txt-box !mb-[20px] md:max-lg:!mb-[5px] last:!mb-0">
+                <!-- Title -->
+                <h5 class="s-24 w--700 xl:!text-[1.5rem] lg:max-xl:!text-[1.375rem] md:max-lg:!text-[1.470588rem] sm:max-md:!text-[1.625rem] xsm:max-sm:!text-[1.4375rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[18px] md:max-lg:!mb-[18px] sm:max-md:!mb-[18px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                  The Acumatica/linked2pay connection</h5>
+                <!-- Text -->
+                <p>The Acumatica integration gives your team a practical way to connect payment setup, processing centers, and payment methods with linked2pay while keeping the work inside a familiar ERP flow.
+                </p>
+              </div>
+              <!-- END TEXT BOX -->
+              <!-- TEXT BOX -->
+              <div class="txt-box  !mb-0 ">
+                <!-- Title -->
+                <h5 class="s-24 w--700 xl:!text-[1.5rem] lg:max-xl:!text-[1.375rem] md:max-lg:!text-[1.470588rem] sm:max-md:!text-[1.625rem] xsm:max-sm:!text-[1.4375rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[18px] md:max-lg:!mb-[18px] sm:max-md:!mb-[18px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                  Key setup points include:</h5>
+                <!-- List -->
+                <ul class="simple-list">
+                  <li class="list-item">
+                    <p>Guided setup for Acumatica administrators
+                    </p>
+                  </li>
+                  <li class="list-item">
+                    <p>Clear path for Acumatica payment configuration
+                    </p>
+                  </li>
+                  <li class="list-item">
+                    <p>Support for credit card and ACH payment methods
+                    </p>
+                  </li>
+                  <li class="list-item">
+                    <p class="!mb-0">Documentation that can grow with future workflows
+                    </p>
+                  </li>
+                </ul>
+               
+                <!-- Button -->
+                           <style>
+                              /* Forces the button to go transparent with dark text/border on hover */
+                              .hover--tra-theme:hover {
+                                 background-color: transparent !important;
+                                 color: #353F4F !important;       
+                                 border-color: #353F4F !important; 
+                              }
+                              </style>
+
+                              <a href="https://acumatica-linked2pay-documentation.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn r-04 btn--theme hover--tra-theme !rounded-[4px] mt-[25px] lg:max-xl:!mt-[22px] md:max-lg:!mt-[15px] sm:max-md:!mt-[18px] xsm:max-sm:!mt-[18px]">
+                                 Open Setup Guide
+                              </a>
+
+                              
+                
+                
+              </div>
+              <!-- END TEXT BOX -->
+            </div>
+          </div>
+          <!-- END TEXT BLOCK -->
+        </div>
+        <!-- END SECTION CONTENT (ROW) -->
+      </div>
+      <!-- End container -->
+    </section>
+    <!-- END TEXT CONTENT -->
+
+    
+
+
+    <!-- FAQs-3
+              ============================================= -->
+    <section id="faqs-3" class="pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px] faqs-section">
+      <div class="container">
+        <!-- SECTION TITLE -->
+        <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  justify-center">
+          <div class="md:w-10/12 lg:max-xl:w-9/12 xl:w-9/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+            <div class="section-title !text-center mb--70 xl:!mb-[70px] lg:max-xl:!mb-[55px] md:max-lg:!mb-[45px] sm:max-md:!mb-[40px] xsm:max-sm:!mb-[40px]">
+              <!-- Title -->
+              <h2 class="s-50 w--700 xl:!text-[3.125rem] lg:max-xl:!text-[2.875rem] md:max-lg:!text-[2.64705rem] sm:max-md:!text-[2.375rem] xsm:max-sm:!text-[2.0625rem] !font-bold !tracking-[-0.5px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">
+                Questions &amp; Answers</h2>
+              <!-- Text -->
+              <p class="s-21 color--grey xl:!text-[1.3125rem] xl:!mt-[18px] !mb-0 lg:max-xl:!mt-[15px] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.32352rem] md:max-lg:!mt-3 sm:max-md:!text-[1.21875rem] sm:max-md:!mt-3 xsm:max-sm:!text-[1.1875rem] xsm:max-sm:!mt-3 xsm:max-sm:px-[3%] xsm:max-sm:py-0">
+                Here are the most common questions before starting the Acumatica setup.</p>
+            </div>
+          </div>
+        </div>
+        <!-- FAQs-3 QUESTIONS -->
+        <div class="faqs-3-questions">
+          <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]">
+            <!-- QUESTIONS HOLDER -->
+            <div class="xl:w-6/12 lg:max-xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+              <div class="questions-holder px-[10px] py-0 lg:max-xl:!p-0 md:max-lg:!p-0">
+                <!-- QUESTION #1 -->
+                <div class="question mb--35 !mb-[35px] wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <!-- Question -->
+                  <h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                    <span class=" mr-[5px]">1.</span> How does the Acumatica payment integration work with linked2pay?
+                  </h5>
+                  <!-- Answer -->
+                  <p class="color--grey">Acumatica holds the ERP-side setup while linked2pay supports the payment connection, processing center configuration, and payment method workflow.
+                  </p>
+                </div>
+                <!-- QUESTION #2 -->
+                <div class="question mb--35 !mb-[35px] wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <!-- Question -->
+                  <h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                    <span class=" mr-[5px]">2.</span> Does the Acumatica integration require setup?
+                  </h5>
+                  <!-- Answer -->
+                  <p class="color--grey">Yes. The administrator publishes the customization, configures the processing centers, and prepares the payment methods before the workflow is used.
+                  </p>
+                </div>
+                <!-- QUESTION #3 -->
+                <div class="question mb--35 !mb-[35px] wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <!-- Question -->
+                  <h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                    <span class=" mr-[5px]">3.</span> How does this help Acumatica users?
+                  </h5>
+                  <!-- Answer -->
+                  <p class="color--grey">It gives users a clearer payment path inside Acumatica and keeps setup, screenshots, and handoff steps organized in one implementation flow.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- END QUESTIONS HOLDER -->
+            <!-- QUESTIONS WRAPPER -->
+            <div class="xl:w-6/12 lg:max-xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+              <div class="questions-holder px-[10px] py-0 lg:max-xl:!p-0 md:max-lg:!p-0">
+                <!-- QUESTION #4 -->
+                <div class="question mb--35 !mb-[35px] wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <!-- Question -->
+                  <h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                    <span class=" mr-[5px]">4.</span> Can users follow the setup step by step?
+                  </h5>
+                  <!-- Answer -->
+                  <p class="color--grey">Yes. The setup guide is split into focused pages so each step covers one part of the Acumatica configuration.
+                  </p>
+                  
+                </div>
+                <!-- QUESTION #5 -->
+                <div class="question mb--35 !mb-[35px] wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <!-- Question -->
+                  <h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                    <span class=" mr-[5px]">5.</span>  Does the integration support multiple payment types?
+                  </h5>
+                  <!-- Answer -->
+                  <p class="color--grey">Yes. The setup path covers credit card and ACH configuration so teams can prepare both payment methods.
+                  </p>
+                </div>
+                <!-- QUESTION #6 -->
+                <div class="question mb--35 !mb-[35px] wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <!-- Question -->
+                  <h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                    <span class=" mr-[5px]">6.</span> Why does this overview page matter?
+                  </h5>
+                  <!-- Answer -->
+                  <p class="color--grey">It gives the user the big picture before they begin, so the setup feels guided instead of becoming just a list of screens.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- END QUESTIONS HOLDER -->
+          </div>
+          <!-- End row -->
+        </div>
+        <!-- END FAQs-3 QUESTIONS -->
+        <!-- MORE QUESTIONS LINK -->
+        <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]">
+          <div class="flex-[0_0_auto] w-full max-w-full px-[calc(0.5*_1.5rem)]">
+            <div class="more-questions !text-center mt--40 mt-[40px] lg:max-xl:!mt-[30px] md:max-lg:!mt-[30px] ">
+              <div class="more-questions-txt bg--white-400 rounded-[100px] inline-block px-[46px] py-[22px] lg:max-xl:px-11 lg:max-xl:py-[18px] md:max-lg:px-[42px] md:max-lg:py-[18px] sm:max-md:px-[42px] sm:max-md:py-[18px] xsm:max-sm:px-9 xsm:max-sm:py-[18px]">
+                <p class="p-lg leading-none !mb-0 lg:max-xl:!text-[1.125rem] md:max-lg:!text-[1.125rem] sm:max-md:!text-[1.125rem] xsm:max-sm:!text-[1.125rem]">
+                  Ready to start the Acumatica setup?
+                  <a href="https://acumatica-linked2pay-documentation.netlify.app/" target="_blank" class="color--theme font-medium !underline hover:text-[#353f4f] hover:!underline">Open Setup Guide</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End container -->
+    </section>
+    <!-- END FAQs-3 -->
+      
+      
+      <!-- FOOTER-3
+                     ============================================= -->
+      <footer id="footer-3" class="footer ft-3-ntr pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px] !pb-[50px] lg:max-xl:!pb-[35px] md:max-lg:!pb-[25px] sm:max-md:!pb-[30px] xsm:max-sm:!pb-[30px]"><div class="container">
+  <!-- Divider-->
+   <hr class=" mt-[30px] !mb-[50px] lg:max-xl:!mt-[10px] lg:max-xl:lg:!mb-[35px] md:max-lg:!mt-[5px] md:max-lg:!mb-[25px] sm:max-md:!mt-[15px] sm:max-md:!mb-[30px] xsm:max-sm:!mt-[5px] xsm:max-sm:!mb-[30px]">
+  <!-- Divider-->
+   <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] ">
+    <div class="xl:w-3/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+      <div class="footer-info !mb-[40px] lg:max-xl:!mb-[50px]">
+        <img class="footer-logo w-auto max-h-[60px] md:max-h-[70px] xl:max-h-[80px]" src="./acumatica_files/l2p-color.png" alt="footer-logo">
+        <img class="footer-logo-dark hidden w-auto w-auto max-h-[60px] md:max-h-[70px] xl:max-h-[80px]" src="./acumatica_files/l2p-white.png" alt="footer-logo">
+      </div>
+    </div>
+    <div class="sm:w-4/12 md:max-lg:w-4/12 lg:max-xl:w-3/12 xl:w-2/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+      <div class="footer-links !mb-[40px] fl-1">
+        <h6 class="s-17 w--700 xl:!text-[1.0625rem] lg:max-xl:!text-[1.0625rem] !leading-none xl:!mb-[25px] lg:max-xl:!mb-[20px] md:max-lg:!text-[1.17647rem] md:max-lg:!mb-[16px] sm:max-md:!text-[1.21875rem] sm:max-md:!mb-[20px] xsm:max-sm:!text-[1.21875rem] xsm:max-sm:!mb-[20px] font-Jakarta !font-bold">
+          Company</h6>
+        <ul class="foo-links clearfix">
+          <li class=" w-auto block align-top clear-none !m-0 !p-0">
+            <p class=" !font-normal !mb-[10px] md:max-lg:!mb-[8px]"><a href="https://linked2pay.com/about">About Us</a></p>
+          </li>
+          <li class=" w-auto block align-top clear-none !m-0 !p-0">
+            <p class=" !font-normal !mb-[10px] md:max-lg:!mb-[8px]"><a href="https://linked2pay.com/careers">Careers</a></p>
+          </li>
+          <li class=" w-auto block align-top clear-none !m-0 !p-0">
+            <p class=" !font-normal !mb-[10px] md:max-lg:!mb-[8px]">
+              <a href="https://developer.linked2pay.com/" target="_blank" rel="noopener noreferrer">
+              Developers
+              </a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sm:w-4/12 md:max-lg:w-4/12 lg:max-xl:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+      <div class="footer-links !mb-[40px] fl-2">
+        <h6 class="s-17 w--700 xl:!text-[1.0625rem] lg:max-xl:!text-[1.0625rem] !leading-none xl:!mb-[25px] lg:max-xl:!mb-[20px] md:max-lg:!text-[1.17647rem] md:max-lg:!mb-[16px] sm:max-md:!text-[1.21875rem] sm:max-md:!mb-[20px] xsm:max-sm:!text-[1.21875rem] xsm:max-sm:!mb-[20px] font-Jakarta !font-bold">
+          Product</h6>
+        <ul class="foo-links clearfix">
+          <li class=" w-auto block align-top clear-none !m-0 !p-0">
+            <p class=" !font-normal !mb-[10px] md:max-lg:!mb-[8px]"><a href="https://linked2pay.com/iso-insights">Payment Insights</a></p>
+          </li>
+          <li class=" w-auto block align-top clear-none !m-0 !p-0">
+            <p class=" !font-normal !mb-[10px] md:max-lg:!mb-[8px]"><a href="https://linked2pay.com/video-hub">Video Hub</a></p>
+          </li>
+          <li class=" w-auto block align-top clear-none !m-0 !p-0">
+            <p class=" !font-normal !mb-[10px] md:max-lg:!mb-[8px]"><a href="https://linked2pay.com/marketplace">Marketplace</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sm:w-4/12 md:max-lg:w-4/12 lg:max-xl:w-3/12 xl:w-2/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+      <div class="footer-links !mb-[40px] fl-3 lg:max-xl:!pl-[28%]">
+        <h6 class="s-17 w--700 xl:!text-[1.0625rem] lg:max-xl:!text-[1.0625rem] !leading-none xl:!mb-[25px] lg:max-xl:!mb-[20px] md:max-lg:!text-[1.17647rem] md:max-lg:!mb-[16px] sm:max-md:!text-[1.21875rem] sm:max-md:!mb-[20px] xsm:max-sm:!text-[1.21875rem] xsm:max-sm:!mb-[20px] font-Jakarta !font-bold">
+          Legal</h6>
+        <ul class="foo-links clearfix">
+          <li class=" w-auto block align-top clear-none !m-0 !p-0">
+            <p class=" !font-normal !mb-[10px] md:max-lg:!mb-[8px]"><a href="https://linked2pay.com/terms">Terms of Use</a></p>
+          </li>
+          <li class=" w-auto block align-top clear-none !m-0 !p-0">
+            <p class=" !font-normal !mb-[10px] md:max-lg:!mb-[8px]"><a href="https://linked2pay.com/privacy">Privacy Policy</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    </div>
+  
+  <div class="bottom-footer">
+    <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  row-cols-1 row-cols-md-2 items-center">
+      <div class="xl:w-10/12 lg:max-xl:w-10/12 md:max-lg:w-10/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+        <div class="footer-copyright">
+          <p class="p-sm !mb-0">© Copyright 2026. All Rights Reserved.</p>
+        </div>
+      </div>
+      <div class="xl:w-2/12 lg:max-xl:w-2/12 md:max-lg:w-2/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+        <ul class="bottom-footer-socials ico-20 text-end sm:max-md:!mt-[10px] xsm:max-sm:!mt-[10px]">
+          <li class="pl-[14px] w-auto inline-block align-top clear-none"><a href="https://www.linkedin.com/company/transmodus" target="_blank" rel="noopener noreferrer"><span class="flaticon-linkedin-logo relative opacity-80 top-[4px]"></span></a></li>
+          
+        </ul>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</footer>
+      <!-- END FOOTER-3 -->
+   </div>
+   <!-- END PAGE CONTENT -->
+   <!-- EXTERNAL SCRIPTS
+                  ============================================= -->
+   <script src="./acumatica_files/jquery-3.7.0.min.js.download"></script>
+   <script src="./acumatica_files/bootstrap.min.js.download"></script>
+   <script src="./acumatica_files/modernizr.custom.js.download"></script>
+   <script src="./acumatica_files/jquery.easing.js.download"></script>
+   <script src="./acumatica_files/jquery.appear.js.download"></script>
+   <script src="./acumatica_files/owl.carousel.min.js.download"></script>
+   <script src="./acumatica_files/pricing-toggle.js.download"></script>
+   <script src="./acumatica_files/jquery.magnific-popup.min.js.download"></script>
+   <script src="./acumatica_files/contact-form.js.download"></script>
+   <script src="./acumatica_files/jquery.validate.min.js.download"></script>
+   <script src="./acumatica_files/jquery.ajaxchimp.min.js.download"></script>
+   <script src="./acumatica_files/popper.min.js.download"></script>
+   <script src="./acumatica_files/lunar.js.download"></script>
+   <script src="./acumatica_files/wow.js.download"></script>
+   <!-- Custom Script -->
+   <script src="./acumatica_files/custom.js.download"></script>
+
+   <script src="./acumatica_files/changer.js.download"></script>
+   <script defer="" src="./acumatica_files/styleswitch.js.download"></script>
+
+
+
+</body></html>
