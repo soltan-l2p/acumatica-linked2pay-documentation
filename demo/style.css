@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #5f6368;
+  --primary: #0d6efd;
+
+  --content-width: 980px;
+  --radius: 50px;
+
+  --transition: 0.35s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+}
+
+/* ===================== */
+/* SLIDE */
+/* ===================== */
+
+.slide {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: clamp(40px, 6vw, 90px) clamp(24px, 8vw, 120px);
+
+  animation: fadeUp 0.45s ease;
+}
+
+.content {
+  width: 100%;
+  max-width: var(--content-width);
+}
+
+/* ===================== */
+/* TYPOGRAPHY */
+/* ===================== */
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-weight: 700;
+  line-height: 1.05;
+
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  margin-bottom: 16px;
+}
+
+p {
+  max-width: 760px;
+
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  line-height: 1.8;
+
+  color: var(--muted);
+
+  margin-bottom: 20px;
+}
+
+strong {
+  color: var(--text);
+}
+
+.accent {
+  color: var(--primary);
+}
+
+.small {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ===================== */
+/* LISTS */
+/* ===================== */
+
+ul {
+  margin-top: 18px;
+  padding-left: 28px;
+}
+
+li {
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* ===================== */
+/* TWO COLUMN */
+/* ===================== */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ===================== */
+/* CARD */
+/* ===================== */
+
+.card {
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+/* ===================== */
+/* IMAGE */
+/* ===================== */
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* ===================== */
+/* NAVIGATION */
+/* ===================== */
+
+.navigation {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 14px;
+
+  z-index: 1000;
+}
+
+.nav-btn {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  background: #fff;
+
+  border: 1px solid #ececec;
+  border-radius: 999px;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.nav-btn svg {
+  width: 24px;
+  height: 24px;
+
+  stroke: #111;
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: stroke 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: #0d6efd;
+  border-color: #0d6efd;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.2);
+}
+
+.nav-btn:hover svg {
+  stroke: white;
+}
+
+.nav-btn:active {
+  transform: translateY(-1px) scale(0.96);
+}
+
+/* ===================== */
+/* ANIMATION */
+/* ===================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 900px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  .slide {
+    min-height: 100vh;
+
+    align-items: flex-start;
+
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .navigation {
+    bottom: 20px;
+  }
+}
+
+/* EXTRA */
+/* ===================== */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* ===================== */
