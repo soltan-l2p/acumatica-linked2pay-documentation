@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Save, Test, and Create the ACH Center</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Documentation sections">
+        <a
+          class="sidebar-brand simple-logo"
+          href="index.html"
+          aria-label="linked2pay for Acumatica home"
+        >
+          <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Guide Menu</p>
+                <nav class="sidebar-menu" aria-label="Documentation sections">
+          <a class="sidebar-link" href="index.html">Overview</a>
+          <p class="sidebar-section-label">Setup Path</p>
+          <a class="sidebar-link sidebar-step-link" href="setup.html"><span>1</span>Setup Overview</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-confirm-extension.html"><span>1A</span>Import Extension</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-confirm-publish.html"><span>1B</span>Publish Extension</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-processing-center.html"><span>2A</span>Create Center</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-processing-api.html"><span>2B</span>API Settings</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-processing-webhook.html"><span>2C</span>Webhook Setup</a>
+          <a class="sidebar-link sidebar-step-link is-active" href="setup-processing-ach.html" aria-current="page"><span>2D</span>ACH Center</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-payment-methods.html"><span>3A</span>Credit Card Method</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-payment-link-center.html"><span>3B</span>Link Processing Center</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-payment-ach.html"><span>3C</span>ACH Method</a>
+          <a class="sidebar-link sidebar-step-link" href="setup-nonstock-items.html"><span>4</span>Non-Stock Items</a>
+        </nav>
+      </aside>      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a
+            class="mobile-brand simple-logo"
+            href="index.html"
+            aria-label="linked2pay for Acumatica home"
+          >
+            <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Setup 2D</p>
+              <h1>Save, Test, and Create the ACH Center</h1>
+              <p class="lead">
+                Save and test the credit card processing center, then create the
+                ACH processing center using the required differences.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                The linked2pay credit card processing center setup is complete.
+                Click <span class="text-bold">Save</span>, then click
+                <span class="text-bold">Test Credentials</span> to confirm that
+                the connection is working. If everything is configured correctly,
+                Acumatica should show a success message.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/26.png" alt="Save and test linked2pay processing center" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Finally, create a second processing center for ACH payments. Use
+                the same setup process as the credit card processing center, with
+                these differences:
+              </p>
+              <ul>
+                <li><span class="text-bold">Processing Center ID:</span> L2PACH</li>
+                <li><span class="text-bold">Name:</span> linked2pay ACH Payments</li>
+                <li>
+                  <span class="text-bold">FEE:</span> 0 (ACH payments do not
+                  have a processing fee)
+                </li>
+              </ul>
+
+              <p>
+                When you are done, click <span class="text-bold">Save</span>,
+                then click <span class="text-bold">Test Credentials</span>.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/27.png" alt="ACH processing center setup" />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              <span class="text-bold">Processing centers are ready.</span>
+              <span class="text-italic">
+                Next, configure the Acumatica payment methods that will use the
+                linked2pay processing centers.
+              </span>
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="setup-processing-webhook.html">
+              <span>Previous</span>
+              <strong>2C Webhook Setup</strong>
+            </a>
+            <a class="pager-link" href="setup-payment-methods.html">
+              <span>Next</span>
+              <strong>3A Credit Card Method</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>
