@@ -2679,10 +2679,6 @@ code {
   margin-top: 2px;
 }
 
-.sidebar-menu > .sidebar-link:first-child {
-  margin-bottom: 6px;
-}
-
 @media (max-width: 720px) {
   .sidebar-section-label {
     margin-top: 16px;
@@ -2691,4 +2687,10 @@ code {
   .sidebar-step-link {
     min-height: 44px;
   }
+}
+.brand-case {
+  display: inline-block;
+  letter-spacing: 0;
+  margin-right: 0.24em;
+  text-transform: none;
 }
