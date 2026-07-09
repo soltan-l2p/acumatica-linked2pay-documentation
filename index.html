@@ -1,107 +1,163 @@
 ﻿<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>linked2pay for Acumatica | ERP Payment Processing Setup Guide</title>
-  <meta name="description" content="Connect linked2pay with Acumatica ERP for payment processing. Follow setup guidance for payment processors, payment methods, extension setup, and demo resources.">
-  <meta name="keywords" content="ERP system, ERP payments, payment processors, Acumatica, linked2pay, payment processing, Acumatica payment integration, payment methods, payment gateway, accounts receivable, customer payments">
-  <meta name="author" content="linked2pay">
-  <meta name="application-name" content="linked2pay for Acumatica">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#1168c9">
-  <meta name="msapplication-TileColor" content="#1168c9">
-  <meta name="msapplication-TileImage" content="https://linked2pay.com/images/linked2pay-acumatica-icon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | ERP Payment Processing Setup Guide</title>
+    <meta
+      name="description"
+      content="Connect linked2pay with Acumatica ERP for payment processing. Follow setup guidance for payment processors, payment methods, extension setup, and demo resources."
+    />
+    <meta
+      name="keywords"
+      content="ERP system, ERP payments, payment processors, Acumatica, linked2pay, payment processing, Acumatica payment integration, payment methods, payment gateway, accounts receivable, customer payments"
+    />
+    <meta name="author" content="linked2pay" />
+    <meta name="application-name" content="linked2pay for Acumatica" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta
+      name="googlebot"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#1168c9" />
+    <meta name="msapplication-TileColor" content="#1168c9" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://linked2pay.com/images/linked2pay-acumatica-icon.png"
+    />
 
-  <link rel="canonical" href="https://linked2pay.com/">
-  <link rel="icon" href="images/favicon.ico" sizes="any">
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="apple-touch-icon" href="images/linked2pay-acumatica-icon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="home.css">
+    <link rel="canonical" href="https://linked2pay.com/" />
+    <link rel="icon" href="images/favicon.ico" sizes="any" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/linked2pay-acumatica-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="home.css" />
 
-  <meta property="og:locale" content="en_US">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="linked2pay">
-  <meta property="og:title" content="linked2pay for Acumatica | ERP Payment Processing Guide">
-  <meta property="og:description" content="Setup and demo resources for connecting linked2pay payment processing with Acumatica ERP.">
-  <meta property="og:url" content="https://linked2pay.com/">
-  <meta property="og:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png">
-  <meta property="og:image:secure_url" content="https://linked2pay.com/images/linked2pay-acumatica-share.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="linked2pay for Acumatica ERP payment processing setup guide">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="linked2pay" />
+    <meta
+      property="og:title"
+      content="linked2pay for Acumatica | ERP Payment Processing Guide"
+    />
+    <meta
+      property="og:description"
+      content="Setup and demo resources for connecting linked2pay payment processing with Acumatica ERP."
+    />
+    <meta property="og:url" content="https://linked2pay.com/" />
+    <meta
+      property="og:image"
+      content="https://linked2pay.com/images/linked2pay-acumatica-share.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://linked2pay.com/images/linked2pay-acumatica-share.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="linked2pay for Acumatica ERP payment processing setup guide"
+    />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="linked2pay for Acumatica | ERP Payment Processing Guide">
-  <meta name="twitter:description" content="Setup and demo resources for connecting linked2pay payment processing with Acumatica ERP.">
-  <meta name="twitter:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png">
-  <meta name="twitter:image:alt" content="linked2pay for Acumatica ERP payment processing setup guide">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="linked2pay for Acumatica | ERP Payment Processing Guide"
+    />
+    <meta
+      name="twitter:description"
+      content="Setup and demo resources for connecting linked2pay payment processing with Acumatica ERP."
+    />
+    <meta
+      name="twitter:image"
+      content="https://linked2pay.com/images/linked2pay-acumatica-share.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="linked2pay for Acumatica ERP payment processing setup guide"
+    />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "linked2pay for Acumatica ERP Payment Processing Setup Guide",
-    "description": "Setup and demo resources for connecting linked2pay payment processing with Acumatica ERP.",
-    "inLanguage": "en-US",
-    "url": "https://linked2pay.com/",
-    "mainEntityOfPage": "https://linked2pay.com/",
-    "image": "https://linked2pay.com/images/linked2pay-acumatica-share.png",
-    "publisher": {
-      "@type": "Organization",
-      "name": "linked2pay",
-      "url": "https://linked2pay.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://linked2pay.com/images/linked2pay.png"
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "linked2pay for Acumatica ERP Payment Processing Setup Guide",
+        "description": "Setup and demo resources for connecting linked2pay payment processing with Acumatica ERP.",
+        "inLanguage": "en-US",
+        "url": "https://linked2pay.com/",
+        "mainEntityOfPage": "https://linked2pay.com/",
+        "image": "https://linked2pay.com/images/linked2pay-acumatica-share.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "linked2pay",
+          "url": "https://linked2pay.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://linked2pay.com/images/linked2pay.png"
+          }
+        },
+        "about": [
+          { "@type": "Thing", "name": "ERP System" },
+          { "@type": "Thing", "name": "Payment Processors" },
+          { "@type": "Thing", "name": "Acumatica" },
+          { "@type": "Thing", "name": "linked2pay" },
+          { "@type": "Thing", "name": "Payment Processing" }
+        ]
       }
-    },
-    "about": [
-      { "@type": "Thing", "name": "ERP System" },
-      { "@type": "Thing", "name": "Payment Processors" },
-      { "@type": "Thing", "name": "Acumatica" },
-      { "@type": "Thing", "name": "linked2pay" },
-      { "@type": "Thing", "name": "Payment Processing" }
-    ]
-  }
-  </script>
-</head>
-<body>
-  <main class="home-shell">
-    <section class="home-hero" aria-labelledby="home-title">
-      <div class="brand-strip" aria-label="Integration brands">
-        <img class="brand-acumatica" src="images/acumatica.png" alt="Acumatica">
-      </div>
+    </script>
+  </head>
+  <body>
+    <main class="home-shell">
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="brand-strip" aria-label="Integration brands">
+          <img
+            class="brand-acumatica"
+            src="images/acumatica.png"
+            alt="Acumatica"
+          />
+        </div>
 
-      <div class="title-stage">
-        <p class="eyebrow">Acumatica payment integration guide</p>
-        <h1 id="home-title" class="animated-title" aria-label="linked2pay">
-          <span class="title-linked" style="color: #444;">linked</span><span class="title-two" style="color: #1985c9;">2</span><span class="title-pay" style="color: #444;">pay</span>
-        </h1>
-        <p class="hero-copy">
-          Start with the setup path if this is your first time connecting the extension. If your environment is already ready, jump straight into the demo flow.
-        </p>
-      </div>
+        <div class="title-stage">
+          <p class="eyebrow">Acumatica payment integration guide</p>
+          <h1 id="home-title" class="animated-title" aria-label="linked2pay">
+            <span class="title-linked" style="color: #444">linked</span
+            ><span class="title-two" style="color: #1985c9">2</span
+            ><span class="title-pay" style="color: #444">pay</span>
+          </h1>
+          <p class="hero-copy">
+            Start with the setup path if this is your first time connecting the
+            extension.<br />If your environment is already ready, jump straight
+            into the demo flow.
+          </p>
+        </div>
 
-      <nav class="path-grid" aria-label="Documentation paths">
-        <a class="path-card setup-card" href="setup/">
-          <span class="path-kicker">First time here</span>
-          <span class="path-title">Set up the extension</span>
-          <span class="path-copy">Follow the ordered setup pages and get the linked2pay connection ready inside Acumatica.</span>
-          <span class="path-action">Open setup</span>
-        </a>
+        <nav class="path-grid" aria-label="Documentation paths">
+          <a class="path-card setup-card" href="setup/">
+            <span class="path-kicker">First time here</span>
+            <span class="path-title">Set up the extension</span>
+            <span class="path-copy"
+              >Follow the ordered setup pages and get the linked2pay connection
+              ready inside Acumatica.</span
+            >
+            <span class="path-action">Open setup</span>
+          </a>
 
-        <a class="path-card demo-card" href="demo/">
-          <span class="path-kicker">Already configured</span>
-          <span class="path-title">Go to the demo</span>
-          <span class="path-copy">Review the sample demo walkthrough for customer and invoice payment workflows.</span>
-          <span class="path-action">Open demo</span>
-        </a>
-      </nav>
-    </section>
-  </main>
-</body>
+          <a class="path-card demo-card" href="demo/">
+            <span class="path-kicker">Already configured</span>
+            <span class="path-title">Go to the demo</span>
+            <span class="path-copy"
+              >Review the sample demo walkthrough for customer and invoice
+              payment workflows.</span
+            >
+            <span class="path-action">Open demo</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </body>
 </html>
