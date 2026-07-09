@@ -89,6 +89,10 @@ a {
   object-fit: contain;
 }
 
+.brand-strip img.brand-acumatica {
+  height: 42px;
+}
+
 .brand-bridge {
   color: var(--blue);
   font-weight: 800;
@@ -321,6 +325,11 @@ a {
   .brand-strip img {
     max-width: 42%;
     height: 24px;
+  }
+
+  .brand-strip img.brand-acumatica {
+    max-width: 82%;
+    height: 36px;
   }
 
   .animated-title {

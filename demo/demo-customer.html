@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Customer Demo</title>
+    <meta name="description" content="Sample customer workflow demo for linked2pay inside Acumatica." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Demo sections">
+        <a class="sidebar-brand simple-logo" href="index.html" aria-label="linked2pay demo home">
+          <img src="images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Demo Menu</p>
+        <nav class="sidebar-menu" aria-label="Demo sections">
+          <a class="sidebar-link" href="../index.html">Home</a>
+          <p class="sidebar-section-label">Demo Path</p>
+          <a class="sidebar-link sidebar-step-link" href="index.html"><span>0</span>Demo Overview</a>
+          <a class="sidebar-link sidebar-step-link is-active" href="demo-customer.html" aria-current="page"><span>1</span>Customer Demo</a>
+          <a class="sidebar-link sidebar-step-link" href="demo-invoice.html"><span>2</span>Invoice Demo</a>
+        </nav>
+      </aside>
+      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a class="mobile-brand simple-logo" href="index.html" aria-label="linked2pay demo home">
+            <img src="images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Demo 1</p>
+              <h1>Customer Payment Profile Demo</h1>
+              <p class="lead">
+                Use this sample page to show how a user would review a customer record before taking a payment-related action with linked2pay.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Customer record</p>
+              <h2>Start from the customer you want to review.</h2>
+              <p>
+                Open the customer record in Acumatica and pause on the fields that matter for the demo: customer name, account status, billing contact, and any linked2pay-related profile details. This gives the viewer the context before you move into payment activity.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/1.png" alt="Sample customer record in Acumatica" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Next, point out where saved payment information or linked2pay sync status would appear. The goal is not to rush the person through the screen. Let them see which customer is being used and why this record is ready for payment activity.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/2.png" alt="Sample linked2pay customer payment profile area" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Finish the customer portion by confirming what the viewer should remember: the customer is selected, the payment profile is available, and the next step can move into a transaction workflow.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/3.png" alt="Sample customer payment readiness confirmation" />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              Replace these sample notes with the exact customer workflow once the final demo screenshots are ready.
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="index.html">
+              <span>Previous</span>
+              <strong>Demo Overview</strong>
+            </a>
+            <a class="pager-link" href="demo-invoice.html">
+              <span>Next</span>
+              <strong>Invoice Demo</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>

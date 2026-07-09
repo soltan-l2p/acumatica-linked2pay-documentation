@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Demo Overview</title>
+    <meta name="description" content="Sample demo walkthrough for linked2pay payment workflows inside Acumatica." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Demo sections">
+        <a class="sidebar-brand simple-logo" href="index.html" aria-label="linked2pay demo home">
+          <img src="images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Demo Menu</p>
+        <nav class="sidebar-menu" aria-label="Demo sections">
+          <a class="sidebar-link" href="../index.html">Home</a>
+          <p class="sidebar-section-label">Demo Path</p>
+          <a class="sidebar-link sidebar-step-link is-active" href="index.html" aria-current="page"><span>0</span>Demo Overview</a>
+          <a class="sidebar-link sidebar-step-link" href="demo-customer.html"><span>1</span>Customer Demo</a>
+          <a class="sidebar-link sidebar-step-link" href="demo-invoice.html"><span>2</span>Invoice Demo</a>
+        </nav>
+      </aside>
+      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a class="mobile-brand simple-logo" href="index.html" aria-label="linked2pay demo home">
+            <img src="images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero">
+            <div class="hero-inner">
+              <p class="eyebrow">linked2pay for Acumatica</p>
+              <h1>Demo Walkthrough</h1>
+              <p class="lead">
+                This sample demo path shows how a user can move through common payment moments in Acumatica after linked2pay has already been configured.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-band">
+            <article class="story-copy">
+              <p class="eyebrow">What this demo covers</p>
+              <h2>Start with the customer, then follow the payment flow.</h2>
+              <p>
+                Think of this section as the guided tour. You will first look at a customer record, then move into an invoice-style payment example. The real screenshots and exact wording can be swapped in later without changing the page structure.
+              </p>
+              <p>
+                Each demo page keeps the conversation focused on one workflow so the person reading it always knows where they are and what they are looking at.
+              </p>
+            </article>
+
+            <figure class="transparent-image">
+              <img src="images/head-link.png" alt="linked2pay and Acumatica demo overview" />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="setup-index-grid">
+              <a class="setup-card" href="demo-customer.html">
+                <span class="card-number">01</span>
+                <strong>Customer Demo</strong>
+                <span>Show where customer payment details, linked2pay status, and saved profile information would appear.</span>
+              </a>
+              <a class="setup-card" href="demo-invoice.html">
+                <span class="card-number">02</span>
+                <strong>Invoice Demo</strong>
+                <span>Walk through a sample invoice payment moment, from review to payment confirmation.</span>
+              </a>
+              <a class="setup-card" href="../setup/">
+                <span class="card-number">03</span>
+                <strong>Need Setup?</strong>
+                <span>If the environment is not ready yet, jump back to the setup path before running the demo.</span>
+              </a>
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="../index.html">
+              <span>Previous</span>
+              <strong>Home</strong>
+            </a>
+            <a class="pager-link" href="demo-customer.html">
+              <span>Next</span>
+              <strong>Customer Demo</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>
