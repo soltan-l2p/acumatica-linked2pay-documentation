@@ -5,16 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Sync Customer Payment Methods</title>
-    <meta name="description" content="Sample demo page for syncing customer payment methods from linked2pay into Acumatica." />
+    <meta
+      name="description"
+      content="Sample demo page for syncing customer payment methods from linked2pay into Acumatica."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
@@ -26,27 +37,56 @@
           <details class="sidebar-group" open>
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
-            <summary class="sidebar-link is-parent-active">Payment Methods</summary>
+            <summary class="sidebar-link is-parent-active">
+              Payment Methods
+            </summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink is-active" href="/demo/sync-customer-payment-methods" aria-current="page"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/sync-customer-payment-methods"
+                aria-current="page"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
-        </nav>      </aside>
+        </nav>
+      </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -55,10 +95,11 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Payment Methods 2</p>
+              <p class="eyebrow">Payment Methods</p>
               <h1>Sync Customer with linked2pay</h1>
               <p class="lead">
-                Return to Acumatica and sync the customer so the linked2pay payment methods become visible in the customer workflow.
+                Return to Acumatica and sync the customer so the linked2pay
+                payment methods become visible in the customer workflow.
               </p>
             </div>
           </section>
@@ -66,42 +107,94 @@
           <section class="story-band setup-story">
             <article class="story-copy">
               <p class="eyebrow">Return to Acumatica</p>
-              <h2>Open the customer again.</h2>
+              <h2>Go to Acumatica and Synchronize.</h2>
               <p>
-                Bring the viewer back to the same customer record so the payment method sync feels connected to the earlier customer steps.
+                In Acumatica Customer page, under the linked2pay Integration
+                tab, click on the
+                <span class="text-bold text-italic">Sync with linked2pay</span>
+                button to synchronize the payment methods you created in
+                linked2pay.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/13.png" alt="Sample return to Acumatica customer" />
+              <img
+                src="images/screenshots/16.png"
+                alt="Sample saved linked2pay payment method"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Sync payment methods</p>
-              <h2>Run the linked2pay sync.</h2>
               <p>
-                Show the sync action that refreshes customer payment method data from linked2pay into Acumatica.
+                Under
+                <span class="text-bold text-italic">Payment Methods</span> tab,
+                you should see the payment methods you created in linked2pay now
+                available in Acumatica.<br /><br /><span
+                  class="text-bold text-italic"
+                  >RECOMMENDED:</span
+                >
+                Set one of those payment methods as the default for the customer
+                in Acumatica by checking the
+                <span class="text-bold text-italic">"Is Default"</span>
+                checkbox.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/14.png" alt="Sample sync payment methods action" />
+              <img
+                src="images/screenshots/17.png"
+                alt="Sample saved linked2pay payment method"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Review imported methods</p>
-              <h2>Confirm the methods appear.</h2>
               <p>
-                Point out where the linked2pay payment methods are now visible and how the user can identify the correct method.
+                Then click on the payment method and then click on the
+                <span class="text-bold text-italic">"View Payment Method"</span>
+                button.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/15.png" alt="Sample synced payment methods in Acumatica" />
+              <img
+                src="images/screenshots/18.png"
+                alt="Sample saved linked2pay payment method"
+              />
             </figure>
           </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                By default Cash Account may be empty but you have to select the
+                Cash Account that you want to use for this payment method.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/19.png"
+                alt="Sample saved linked2pay payment method"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>Set your cash account and save it.<br /><br /><span class="text-bold text-italic">IMPORTANT:</span> Do this step for each payment method you synced from linked2pay.</p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/20.png"
+                alt="Sample saved linked2pay payment method"
+              />
+            </figure>
+          </section>
+
           <section class="content-band">
             <div class="callout">
-              The viewer should now see the bridge between linked2pay payment methods and the Acumatica customer record.
+              The viewer should now see the bridge between linked2pay payment
+              methods and the Acumatica customer record.
             </div>
           </section>
 
