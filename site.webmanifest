@@ -1,0 +1,23 @@
+﻿{
+  "name": "linked2pay for Acumatica",
+  "short_name": "linked2pay",
+  "description": "Setup and demo resources for linked2pay payment processing with Acumatica ERP.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f9fc",
+  "theme_color": "#1168c9",
+  "icons": [
+    {
+      "src": "/images/linked2pay-acumatica-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
