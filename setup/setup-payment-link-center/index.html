@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <base href="/setup/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Link the Processing Center and AR Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Documentation sections">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay for Acumatica home"
+        >
+          <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Guide Menu</p>
+                <nav class="sidebar-menu" aria-label="Documentation sections">
+          <a class="sidebar-link" href="/">Documentation Home</a>
+          <a class="sidebar-link" href="/demo/">Demo Walkthrough</a>
+          <a class="sidebar-link" href="/setup/">Overview</a>
+          <p class="sidebar-section-label">Setup Path</p>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup"><span>1</span>Setup Overview</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-extension"><span>1A</span>Import Extension</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-publish"><span>1B</span>Publish Extension</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-center"><span>2A</span>Create Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-api"><span>2B</span>API Settings</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-webhook"><span>2C</span>Webhook Setup</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-ach"><span>2D</span>ACH Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-methods"><span>3A</span>Credit Card Method</a>
+          <a class="sidebar-link sidebar-step-link is-active" href="/setup/setup-payment-link-center" aria-current="page"><span>3B</span>Link Processing Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-ach"><span>3C</span>ACH Method</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-nonstock-items"><span>4</span>Non-Stock Items</a>
+        </nav>
+      </aside>      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay for Acumatica home"
+          >
+            <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Setup 3B</p>
+              <h1>Link the Processing Center and AR Settings</h1>
+              <p class="lead">
+                Attach the linked2pay processing center to the payment method
+                and add the required Accounts Receivable payment detail.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Open the <span class="text-bold">Processing Center</span> tab
+                and add the linked2pay processing center to the payment method.
+                This processing center will handle credit card payments.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/31.png" alt="Processing center tab on payment method" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Click <span class="text-bold">Search</span>, select
+                <code>L2PCC</code>, and then click
+                <span class="text-bold">Select</span>. This is the credit card
+                processing center you created earlier.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/32.png" alt="Select L2PCC processing center" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>The payment method should now show the linked processing center.</p>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/33.png" alt="Linked processing center on payment method" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Finally, configure
+                <span class="text-bold text-italic">"SETTINGS FOR USE IN AR"</span>.
+                Add a new <span class="text-bold">Payment Method Details</span>
+                row with these values:
+              </p>
+
+              <ul>
+                <li><span class="text-bold">ID:</span> CCPID</li>
+                <li><span class="text-bold">Description:</span> Payment Profile ID</li>
+                <li><span class="text-bold">Required:</span> Checked</li>
+                <li><span class="text-bold">Payment Profile ID:</span> Checked</li>
+                <li><span class="text-bold">Sort Order:</span> 1</li>
+              </ul>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/34.png" alt="Settings for use in AR payment method details" />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              Click <span class="text-bold">Save</span> at the top of the page.
+              The credit card payment method is now ready. Next, create the ACH
+              payment method.
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="/setup/setup-payment-methods">
+              <span>Previous</span>
+              <strong>3A Credit Card Method</strong>
+            </a>
+            <a class="pager-link" href="/setup/setup-payment-ach">
+              <span>Next</span>
+              <strong>3C ACH Method</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>

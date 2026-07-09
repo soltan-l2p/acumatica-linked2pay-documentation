@@ -1,0 +1,159 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <base href="/setup/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Configure Non-Stock Items</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Documentation sections">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay for Acumatica home"
+        >
+          <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Guide Menu</p>
+                <nav class="sidebar-menu" aria-label="Documentation sections">
+          <a class="sidebar-link" href="/">Documentation Home</a>
+          <a class="sidebar-link" href="/demo/">Demo Walkthrough</a>
+          <a class="sidebar-link" href="/setup/">Overview</a>
+          <p class="sidebar-section-label">Setup Path</p>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup"><span>1</span>Setup Overview</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-extension"><span>1A</span>Import Extension</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-publish"><span>1B</span>Publish Extension</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-center"><span>2A</span>Create Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-api"><span>2B</span>API Settings</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-webhook"><span>2C</span>Webhook Setup</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-ach"><span>2D</span>ACH Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-methods"><span>3A</span>Credit Card Method</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-link-center"><span>3B</span>Link Processing Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-ach"><span>3C</span>ACH Method</a>
+          <a class="sidebar-link sidebar-step-link is-active" href="/setup/setup-nonstock-items" aria-current="page"><span>4</span>Non-Stock Items</a>
+        </nav>
+      </aside>
+      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay for Acumatica home"
+          >
+            <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Setup 4</p>
+              <h1>Configure Non-Stock Items</h1>
+              <p class="lead">
+                Create a non-stock item in Acumatica for the Credit Card Fee.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                In Acumatica, go to
+                <span class="text-bold">Receivables</span> &gt;
+                <span class="text-bold">Profiles</span> &gt;
+                <span class="text-bold">Non-Stock Items</span>.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="/setup/images/screenshots/36.png"
+                alt="Processing center tab on payment method"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Create <span class="text-bold">a new record</span> for the
+                non-stock item. Click the <code>+</code> button to create a new
+                record.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="/setup/images/screenshots/37.png"
+                alt="Processing center tab on payment method"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>Make sure the values match the following.</p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="/setup/images/screenshots/38.png"
+                alt="Processing center tab on payment method"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Click on <span class="text-bold">Save</span> to save the
+                non-stock item.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="/setup/images/screenshots/39.png"
+                alt="Processing center tab on payment method"
+              />
+            </figure>
+          </section>
+
+          <section class="content-band">
+            <div class="callout">
+              The setup steps are complete. The extension is published, the
+              processing centers are ready, and Acumatica has the payment
+              methods needed for the linked2pay workflow.
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="/setup/setup-payment-ach">
+              <span>Previous</span>
+              <strong>3C ACH Method</strong>
+            </a>
+            <a class="pager-link" href="/setup/setup">
+              <span>Next</span>
+              <strong>Setup Overview</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>

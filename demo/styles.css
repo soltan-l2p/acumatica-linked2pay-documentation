@@ -1991,6 +1991,21 @@ body {
   color: var(--white);
 }
 
+.setup-sublist .sidebar-sublink.is-active {
+  padding-right: 28px;
+}
+
+.setup-sublist .sidebar-sublink.is-active::after {
+  position: absolute;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.72;
+}
+
 .simple-logo.sidebar-brand img {
   width: min(168px, 100%);
 }

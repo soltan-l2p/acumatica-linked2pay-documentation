@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <base href="/demo/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Create Payment Methods</title>
+    <meta name="description" content="Sample demo page for creating payment methods in linked2pay." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Demo sections">
+        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <img src="images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Demo Menu</p>
+        <nav class="sidebar-menu" aria-label="Demo sections">
+          <a class="sidebar-link" href="/">Documentation Home</a>
+          <a class="sidebar-link" href="/setup/">Setup Guide</a>
+          <a class="sidebar-link" href="/demo/">Overview</a>
+          <p class="sidebar-section-label">Demo Path</p>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link">Customers</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+            </div>
+          </details>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link is-parent-active">Payment Methods</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink is-active" href="/demo/create-payment-methods" aria-current="page"><span>4</span>Create Payment Methods in linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
+              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+            </div>
+          </details>
+        </nav>      </aside>
+      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+            <img src="images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Payment Methods 1</p>
+              <h1>Create Payment Methods in linked2pay</h1>
+              <p class="lead">
+                Move into linked2pay and show how the customer receives one or more payment methods for later Acumatica use.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Payment method entry</p>
+              <h2>Add a new payment method.</h2>
+              <p>
+                Show where the payment method is created in linked2pay. Keep sensitive values out of the walkthrough and focus on the visible workflow.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/10.png" alt="Sample create payment method screen" />
+            </figure>
+          </section>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Card or ACH</p>
+              <h2>Explain the method type.</h2>
+              <p>
+                Point out whether the method is a credit card, ACH, or another supported type. The viewer should understand what kind of payment profile is being created.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/11.png" alt="Sample payment method type" />
+            </figure>
+          </section>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Saved method</p>
+              <h2>Confirm the method is saved.</h2>
+              <p>
+                Show the saved method state so the viewer knows linked2pay now has payment data ready to synchronize.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/12.png" alt="Sample saved linked2pay payment method" />
+            </figure>
+          </section>
+          <section class="content-band">
+            <div class="callout">
+              This step should establish that linked2pay is the source for the customer payment method records that Acumatica will later sync and use.
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="/demo/sync-customer">
+              <span>Previous</span>
+              <strong>Sync Customer</strong>
+            </a>
+            <a class="pager-link" href="/demo/sync-customer-payment-methods">
+              <span>Next</span>
+              <strong>Sync Customer with linked2pay</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <base href="/setup/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Import the linked2pay Extension</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Documentation sections">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay for Acumatica home"
+        >
+          <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Guide Menu</p>
+                <nav class="sidebar-menu" aria-label="Documentation sections">
+          <a class="sidebar-link" href="/">Documentation Home</a>
+          <a class="sidebar-link" href="/demo/">Demo Walkthrough</a>
+          <a class="sidebar-link" href="/setup/">Overview</a>
+          <p class="sidebar-section-label">Setup Path</p>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup"><span>1</span>Setup Overview</a>
+          <a class="sidebar-link sidebar-step-link is-active" href="/setup/setup-confirm-extension" aria-current="page"><span>1A</span>Import Extension</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-publish"><span>1B</span>Publish Extension</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-center"><span>2A</span>Create Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-api"><span>2B</span>API Settings</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-webhook"><span>2C</span>Webhook Setup</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-ach"><span>2D</span>ACH Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-methods"><span>3A</span>Credit Card Method</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-link-center"><span>3B</span>Link Processing Center</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-ach"><span>3C</span>ACH Method</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup-nonstock-items"><span>4</span>Non-Stock Items</a>
+        </nav>
+      </aside>      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay for Acumatica home"
+          >
+            <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Setup 1A</p>
+              <h1>Import the linked2pay Extension</h1>
+              <p class="lead">
+                Start by downloading and importing the linked2pay customization
+                project into Acumatica.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Download the package</p>
+              <h2>Import the customization project first.</h2>
+            </article>
+          </section>
+
+          <section>
+            <p>
+              Download the linked2pay extension from the link below:
+              <a
+                class="text-bold text-underline"
+                href="https://example.com/linked2pay-extension"
+                >Download Extension (.zip file)</a
+              >
+            </p>
+            <p>
+              In Acumatica, go to <code>More Items</code> &gt;
+              <code>Customization</code> &gt;
+              <code>Customization Projects</code> (Screen ID:
+              <span class="text-bold">SM204505</span>).
+            </p>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Click the <code>Import</code> button at the top of the screen,
+                then select the downloaded <code>.zip</code> file to import the
+                customization project.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/1.png" alt="Import customization project" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                After the upload completes, the
+                <code>linked2payintegration</code> project should appear under
+                Customization Projects.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/2.png" alt="linked2pay project in customization projects" />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Open the <code>linked2payintegration</code> project and review
+                the customization project details. The screen should look similar
+                to the screenshot.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="/setup/images/screenshots/3.png" alt="linked2pay customization project details" />
+            </figure>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="/setup/setup">
+              <span>Previous</span>
+              <strong>Setup Overview</strong>
+            </a>
+            <a class="pager-link" href="/setup/setup-confirm-publish">
+              <span>Next</span>
+              <strong>1B Publish Extension</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>
