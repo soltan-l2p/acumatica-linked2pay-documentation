@@ -5,16 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Sync Customer</title>
-    <meta name="description" content="Sample demo page for syncing an Acumatica customer with linked2pay." />
+    <meta
+      name="description"
+      content="Sample demo page for syncing an Acumatica customer with linked2pay."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
@@ -26,27 +37,56 @@
           <details class="sidebar-group" open>
             <summary class="sidebar-link is-parent-active">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink is-active" href="/demo/sync-customer" aria-current="page"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/sync-customer"
+                aria-current="page"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
-        </nav>      </aside>
+        </nav>
+      </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -55,53 +95,72 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Customers 3</p>
+              <p class="eyebrow">Customers</p>
               <h1>Sync Customer with linked2pay</h1>
               <p class="lead">
-                Demonstrate the sync moment that keeps customer information aligned between Acumatica and linked2pay.
+                Demonstrate the sync moment that keeps customer information
+                aligned between Acumatica and linked2pay.
               </p>
             </div>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Sync trigger</p>
-              <h2>Run the customer sync.</h2>
+              <h2>First update customer in Acumatica</h2>
               <p>
-                Show the sync action and explain that Acumatica is sending or refreshing customer details against the linked2pay customer profile.
+                As you can see in the screenshot, I've updated the customer
+                information in Acumatica for simulation purposes.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/7.png" alt="Sample customer sync action" />
+              <img
+                src="images/screenshots/9.png"
+                alt="Sample customer sync action"
+              />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Review status</p>
-              <h2>Check the sync result.</h2>
               <p>
-                Point out any status, timestamp, or message that tells the user the sync completed successfully.
+                Now go to
+                <span class="text-bold text-italic"
+                  >linked2pay Integration</span
+                >
+                tab and click on the
+                <span class="text-bold text-italic">Sync with linked2pay</span>
+                button to sync the customer information from Acumatica to
+                linked2pay.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/8.png" alt="Sample customer sync status" />
+              <img
+                src="images/screenshots/10.png"
+                alt="Sample customer sync status"
+              />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Ready for payments</p>
-              <h2>Move into payment methods.</h2>
+              <p class="eyebrow">
+                <span class="brand-case">linked2pay</span> Portal
+              </p>
               <p>
-                Close by reminding the viewer that the customer is now ready for payment method work in linked2pay.
+                After the sync, you can see the updated customer information in
+                <span class="text-bold text-italic">linked2pay</span> portal.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/9.png" alt="Sample customer ready for payment methods" />
+              <img
+                src="images/screenshots/11.png"
+                alt="Sample customer ready for payment methods"
+              />
             </figure>
           </section>
           <section class="content-band">
             <div class="callout">
-              After this step, the customer section is complete and the demo can move naturally into payment method creation.
+              At the end of this step, you should have a customer record in
+              linked2pay that is synced with the latest information from
+              Acumatica.
             </div>
           </section>
 

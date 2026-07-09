@@ -5,16 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Board Customer</title>
-    <meta name="description" content="Sample demo page for boarding an Acumatica customer into linked2pay." />
+    <meta
+      name="description"
+      content="Sample demo page for boarding an Acumatica customer into linked2pay."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
@@ -26,27 +37,56 @@
           <details class="sidebar-group" open>
             <summary class="sidebar-link is-parent-active">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink is-active" href="/demo/board-customer" aria-current="page"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/board-customer"
+                aria-current="page"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
-        </nav>      </aside>
+        </nav>
+      </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -55,53 +95,106 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Customers 2</p>
-              <h1>Board Your Customer from Acumatica to linked2pay</h1>
+              <p class="eyebrow">Customers</p>
+              <h1>Board your Customer from Acumatica to linked2pay</h1>
               <p class="lead">
-                Show how the customer record is sent from Acumatica into linked2pay so both systems can work from the same customer profile.
+                Show how the customer record is sent from Acumatica into
+                linked2pay for the first time.
               </p>
             </div>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Boarding action</p>
-              <h2>Start the customer boarding action.</h2>
+              <h2>linked2pay Tab</h2>
               <p>
-                Show the action or command the user would choose to board the customer. Keep the explanation focused on what the user clicked and what they should expect to happen next.
+                In the customer record (ScreenId:
+                <span class="text-bold">AR303000</span>), you should be able to
+                see the linked2pay tab.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/4.png" alt="Sample board customer action" />
+              <img
+                src="images/screenshots/4.png"
+                alt="Sample board customer action"
+              />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">linked2pay profile</p>
-              <h2>Confirm the profile is created.</h2>
               <p>
-                Explain that linked2pay receives the customer details and prepares a customer profile for payment method activity.
+                Click on the <code>Board to Gateway</code> button to send the
+                customer record from Acumatica into linked2pay.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/5.png" alt="Sample linked2pay customer profile" />
+              <img
+                src="images/screenshots/5.png"
+                alt="Sample linked2pay customer profile"
+              />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Result</p>
-              <h2>Return to Acumatica with context.</h2>
               <p>
-                Bring the viewer back to Acumatica and show where the boarded customer status or linked2pay reference would be visible.
+                You should see a confirmation message and the
+                <span class="text-italic text-bold"
+                  >Boarded to external gateway</span
+                >
+                checkbox should be <code>checked</code>.<br /><br />And finally
+                your
+                <span class="text-italic text-bold"
+                  >linked2pay Contact Profile ID</span
+                >
+                should be populated with the linked2pay contact profile ID.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/6.png" alt="Sample boarded customer status" />
+              <img
+                src="images/screenshots/6.png"
+                alt="Sample boarded customer status"
+              />
             </figure>
           </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                In <span class="text-italic text-bold">linked2pay</span> portal,
+                you should be able to see the customer profile that was just
+                created from Acumatica. <br />
+                <br />
+                Click on it.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/7.png"
+                alt="Sample boarded customer status"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                As you can see in the screenshot, the customer profile in
+                linked2pay has the same information as the customer record in
+                Acumatica. The handoff is complete.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/8.png"
+                alt="Sample boarded customer status"
+              />
+            </figure>
+          </section>
+
           <section class="content-band">
             <div class="callout">
-              This step should make the handoff clear: Acumatica remains the working record, while linked2pay receives the customer profile needed for payment workflows.
+              At the end of this step, you should have a customer record in
+              linked2pay that was sent from Acumatica.
             </div>
           </section>
 
