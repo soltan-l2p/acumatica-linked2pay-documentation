@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Create Customer</title>
+    <meta name="description" content="Sample demo page for creating a customer in Acumatica before linked2pay synchronization." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Demo sections">
+        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <img src="images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Demo Menu</p>
+        <nav class="sidebar-menu" aria-label="Demo sections">
+          <a class="sidebar-link" href="/">Documentation Home</a>
+          <a class="sidebar-link" href="/setup/">Setup Guide</a>
+          <a class="sidebar-link" href="/demo/">Overview</a>
+          <p class="sidebar-section-label">Demo Path</p>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link is-parent-active">Customers</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink is-active" href="/demo/create-customer" aria-current="page"><span>1</span>Create Customer</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+            </div>
+          </details>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link">Payment Methods</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
+              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+            </div>
+          </details>
+        </nav>      </aside>
+      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+            <img src="images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Customers 1</p>
+              <h1>Create Customer</h1>
+              <p class="lead">
+                Start in Acumatica by creating or opening the customer record that will be used for the rest of the linked2pay demo.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Customer record</p>
+              <h2>Create or select the customer first.</h2>
+              <p>
+                Walk the viewer through the customer identity fields, account settings, and billing contact details. This is the foundation for everything that happens later in linked2pay.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/1.png" alt="Sample Acumatica customer record" />
+            </figure>
+          </section>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Review details</p>
+              <h2>Pause on the fields that matter.</h2>
+              <p>
+                Point out the customer name, status, address, billing contact, and any required account settings. The demo should feel calm here, because this screen gives the viewer orientation.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/2.png" alt="Sample Acumatica customer detail fields" />
+            </figure>
+          </section>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Ready for next step</p>
+              <h2>Confirm the customer is ready.</h2>
+              <p>
+                Close the step by confirming that the customer has enough information to be boarded from Acumatica to linked2pay.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img src="images/screenshots/3.png" alt="Sample customer ready for linked2pay workflow" />
+            </figure>
+          </section>
+          <section class="content-band">
+            <div class="callout">
+              At the end of this step, the viewer should understand which customer record will be used and why it is ready for the linked2pay workflow.
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="/demo/">
+              <span>Previous</span>
+              <strong>Demo Overview</strong>
+            </a>
+            <a class="pager-link" href="/demo/board-customer">
+              <span>Next</span>
+              <strong>Board Customer</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>

@@ -79,14 +79,45 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://linked2pay.com/demo/demo-customer</loc>
+    <loc>https://linked2pay.com/demo/create-customer</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://linked2pay.com/demo/demo-invoice</loc>
+    <loc>https://linked2pay.com/demo/board-customer</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url></urlset>
+  </url>
+  <url>
+    <loc>https://linked2pay.com/demo/sync-customer</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://linked2pay.com/demo/create-payment-methods</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://linked2pay.com/demo/sync-customer-payment-methods</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://linked2pay.com/demo/payment-methods-crud</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://linked2pay.com/demo/payment-defaults</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

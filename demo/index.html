@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Demo Overview</title>
-    <meta name="description" content="Sample demo walkthrough for linked2pay payment workflows inside Acumatica." />
+    <meta name="description" content="Original linked2pay for Acumatica demo flow for customers and payment methods." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
@@ -13,22 +13,36 @@
     <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay demo home">
+        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-                <nav class="sidebar-menu" aria-label="Demo sections">
+        <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link is-active" href="/demo/" aria-current="page">Overview</a>
           <p class="sidebar-section-label">Demo Path</p>
-          <a class="sidebar-link sidebar-step-link" href="/demo/demo-customer"><span>1</span>Customer Demo</a>
-          <a class="sidebar-link sidebar-step-link" href="/demo/demo-invoice"><span>2</span>Invoice Demo</a>
-        </nav>
-      </aside>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link">Customers</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+            </div>
+          </details>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link">Payment Methods</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
+              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+            </div>
+          </details>
+        </nav>      </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay demo home">
+          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
           <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
@@ -43,23 +57,22 @@
               <p class="eyebrow"><span class="brand-case">linked2pay</span> for Acumatica</p>
               <h1>Demo Walkthrough</h1>
               <p class="lead">
-                This sample demo path shows how a user can move through common payment moments in Acumatica after linked2pay has already been configured.
+                Follow the original demo path in order: start with customer creation and synchronization, then move into payment methods, payment method changes, defaults, and cash account setup.
               </p>
             </div>
           </section>
 
           <section class="story-band">
             <article class="story-copy">
-              <p class="eyebrow">What this demo covers</p>
-              <h2>Start with the customer, then follow the payment flow.</h2>
+              <p class="eyebrow">Demo Flow</p>
+              <h2>Customers first, then payment methods.</h2>
               <p>
-                Think of this section as the guided tour. You will first look at a customer record, then move into an invoice-style payment example. The real screenshots and exact wording can be swapped in later without changing the page structure.
+                The demo is split into two sections so the viewer always knows what kind of work they are watching. The Customers section shows how the customer record gets prepared and synchronized. The Payment Methods section shows how linked2pay methods are created, synced, changed, deleted, and tied back to Acumatica defaults.
               </p>
               <p>
-                Each demo page keeps the conversation focused on one workflow so the person reading it always knows where they are and what they are looking at.
+                Treat the text here as a walking guide. The screenshots can be replaced later with final production screenshots while keeping the same route and sidebar structure.
               </p>
             </article>
-
             <figure class="transparent-image">
               <img src="images/head-link.png" alt="linked2pay and Acumatica demo overview" />
             </figure>
@@ -67,20 +80,40 @@
 
           <section class="content-band">
             <div class="setup-index-grid">
-              <a class="setup-card" href="/demo/demo-customer">
+              <a class="setup-card" href="/demo/create-customer">
                 <span class="card-number">01</span>
-                <strong>Customer Demo</strong>
-                <span>Show where customer payment details, linked2pay status, and saved profile information would appear.</span>
+                <strong>Create Customer</strong>
+                <span>Begin in Acumatica with the customer record that will be used throughout the demo.</span>
               </a>
-              <a class="setup-card" href="/demo/demo-invoice">
+              <a class="setup-card" href="/demo/board-customer">
                 <span class="card-number">02</span>
-                <strong>Invoice Demo</strong>
-                <span>Walk through a sample invoice payment moment, from review to payment confirmation.</span>
+                <strong>Board Customer</strong>
+                <span>Show how the customer moves from Acumatica into linked2pay.</span>
               </a>
-              <a class="setup-card" href="/setup/">
+              <a class="setup-card" href="/demo/sync-customer">
                 <span class="card-number">03</span>
-                <strong>Need Setup?</strong>
-                <span>If the environment is not ready yet, jump back to the setup path before running the demo.</span>
+                <strong>Sync Customer</strong>
+                <span>Confirm that the customer stays aligned between Acumatica and linked2pay.</span>
+              </a>
+              <a class="setup-card" href="/demo/create-payment-methods">
+                <span class="card-number">04</span>
+                <strong>Create Payment Methods</strong>
+                <span>Add sample payment methods in linked2pay for the customer.</span>
+              </a>
+              <a class="setup-card" href="/demo/sync-customer-payment-methods">
+                <span class="card-number">05</span>
+                <strong>Sync Customer with linked2pay</strong>
+                <span>Bring linked2pay customer payment method details back into the Acumatica flow.</span>
+              </a>
+              <a class="setup-card" href="/demo/payment-methods-crud">
+                <span class="card-number">06</span>
+                <strong>Payment Method CRUD</strong>
+                <span>Demonstrate what changes after payment methods are updated or deleted.</span>
+              </a>
+              <a class="setup-card" href="/demo/payment-defaults">
+                <span class="card-number">07</span>
+                <strong>Defaults and Cash Account</strong>
+                <span>Set the recommended default payment method and cash account values.</span>
               </a>
             </div>
           </section>
@@ -88,11 +121,11 @@
           <nav class="pager" aria-label="Page navigation">
             <a class="pager-link muted" href="/">
               <span>Previous</span>
-              <strong>Home</strong>
+              <strong>Documentation Home</strong>
             </a>
-            <a class="pager-link" href="/demo/demo-customer">
+            <a class="pager-link" href="/demo/create-customer">
               <span>Next</span>
-              <strong>Customer Demo</strong>
+              <strong>Create Customer</strong>
             </a>
           </nav>
         </main>
