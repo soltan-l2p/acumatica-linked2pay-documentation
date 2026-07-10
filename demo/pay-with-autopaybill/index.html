@@ -5,20 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Pay with AutoPayBill</title>
-    <meta name="description" content="Sample demo page for pay with autopaybill in the linked2pay for Acumatica walkthrough." />
+    <meta
+      name="description"
+      content="Sample demo page for pay with autopaybill in the linked2pay for Acumatica walkthrough."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-                <nav class="sidebar-menu" aria-label="Demo sections">
+        <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link" href="/demo/">Overview</a>
@@ -26,46 +37,92 @@
           <details class="sidebar-group">
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
             <summary class="sidebar-link is-parent-active">Invoice</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink is-active" href="/demo/pay-with-autopaybill" aria-current="page"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice"
+                ><span>8</span>Create Invoice</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-card"
+                ><span>9</span>Pay with Card</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"
+                ><span>10</span>Pay with ACH</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/pay-with-autopaybill"
+                aria-current="page"
+                ><span>11</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Recurring Payments</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"
+                ><span>12</span>Create Invoice (Template)</a
+              >
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"
+                ><span>13</span>Add to Schedule</a
+              >
+              <a class="sidebar-sublink" href="/demo/generate-invoices"
+                ><span>14</span>Generate Invoices</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/recurring-pay-with-autopaybill"
+                ><span>15</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
         </nav>
       </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -77,49 +134,135 @@
               <p class="eyebrow">Invoice</p>
               <h1>Pay with AutoPayBill</h1>
               <p class="lead">
-                Use AutoPayBill to pay the invoice with the recommended saved payment method.
+                Use AutoPayBill to pay the invoice with the recommended saved
+                payment method.
               </p>
             </div>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">AutoPayBill action</p>
-              <h2>Choose AutoPayBill</h2>
+              <h2>Create Invoice</h2>
               <p>
-                Open the invoice and choose the AutoPayBill action from the available payment options.
+                Create a brand new invoice in Acumatica and save it. Make sure
+                you
+                <span class="text-bold text-italic"
+                  >set the due date for today</span
+                >
+                (the day you are implementing the demo walkthrough).
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Choose AutoPayBill screenshot" />
+              <img
+                src="images/screenshots/40.png"
+                alt="Capture payment screenshot"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Default method</p>
-              <h2>Review the selected method</h2>
               <p>
-                Confirm that the recommended default payment method and cash account are selected.
+                Make sure your customer has been
+                <span class="text-bold text-italic"
+                  >enabled for AutoPayBill</span
+                >
+                and
+                <span class="text-bold text-italic"
+                  >has a default payment method set</span
+                >.<br /><br /><span class="text-italic"
+                  >If the customer has <span class="text-bold">NOT</span> been
+                  enabled for AutoPayBill, you will
+                  <span class="text-bold">NOT</span> see his invoice listed
+                  under the AutoPayBill section.</span
+                >
+                <br /><br />
+                <span class="text-bold">Note:</span> Check
+                <a
+                  class="text-bold text-italic"
+                  style="color: #1985c9"
+                  href="/demo/board-customer/"
+                  >Enable AutoPayBill</a
+                >
+                for more details on how to enable AutoPayBill for a customer.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Review the selected method screenshot" />
+              <img
+                src="images/screenshots/41.png"
+                alt="Capture payment screenshot"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Payment result</p>
-              <h2>Complete the payment</h2>
               <p>
-                Run the payment and confirm that the invoice balance and activity are updated.
+                In <code>Receivables</code> under <code>Processes</code> you
+                will find the <code>AutoPayBill</code> section. Open it...<br /><br />(Screen
+                ID: <span class="text-bold">AR508800)</span>
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Complete the payment screenshot" />
+              <img
+                src="images/screenshots/42.png"
+                alt="Capture payment screenshot"
+              />
             </figure>
           </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                ...in the <span class="text-bold">Auto Bill</span> page, Set the
+                <span class="text-bold">Invoices Due Before</span> date to today
+                (the day you are implementing the demo walkthrough).<br /><br />
+                <span class="text-bold">Note:</span> If you have multiple
+                invoices due for that date, page will show all of them at once.
+              </p>
+              <p>Either:</p>
+              <ul>
+                <li>
+                  select the invoice you want to pay and click on
+                  <code>Process</code>.
+                </li>
+                <li>
+                  Or click on <code>Process All</code> to pay all invoices due
+                  for that date.
+                </li>
+              </ul>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/43.png"
+                alt="Capture payment screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                You will see the loading screen with real time progress of the
+                payment processing. Once the payment is completed, you will see
+                the confirmation message on the screen. The invoice is now paid
+                with AutoPayBill using the default payment method set for the
+                customer. You can also check the linked2pay portal to see the
+                payment status of the invoice.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/44.png"
+                alt="Capture payment screenshot"
+              />
+            </figure>
+          </section>
+
           <section class="content-band">
             <div class="callout">
-              AutoPayBill should feel like the shortest path once the customer and payment defaults are already prepared.
+              AutoPayBill should feel like the shortest path once the customer
+              and payment defaults are already prepared.
             </div>
           </section>
           <nav class="pager" aria-label="Page navigation">

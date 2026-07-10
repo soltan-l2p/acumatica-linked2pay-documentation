@@ -5,20 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Create Invoice</title>
-    <meta name="description" content="Sample demo page for create invoice in the linked2pay for Acumatica walkthrough." />
+    <meta
+      name="description"
+      content="Sample demo page for create invoice in the linked2pay for Acumatica walkthrough."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-                <nav class="sidebar-menu" aria-label="Demo sections">
+        <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link" href="/demo/">Overview</a>
@@ -26,46 +37,92 @@
           <details class="sidebar-group">
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
             <summary class="sidebar-link is-parent-active">Invoice</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink is-active" href="/demo/create-invoice" aria-current="page"><span>8</span>Create Invoice</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/create-invoice"
+                aria-current="page"
+                ><span>8</span>Create Invoice</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-card"
+                ><span>9</span>Pay with Card</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"
+                ><span>10</span>Pay with ACH</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"
+                ><span>11</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Recurring Payments</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"
+                ><span>12</span>Create Invoice (Template)</a
+              >
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"
+                ><span>13</span>Add to Schedule</a
+              >
+              <a class="sidebar-sublink" href="/demo/generate-invoices"
+                ><span>14</span>Generate Invoices</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/recurring-pay-with-autopaybill"
+                ><span>15</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
         </nav>
       </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -77,49 +134,82 @@
               <p class="eyebrow">Invoice</p>
               <h1>Create Invoice</h1>
               <p class="lead">
-                Create a sample invoice in Acumatica and prepare it for the linked2pay payment flow.
+                Create a sample invoice in Acumatica and prepare it for the
+                linked2pay payment flow.
               </p>
             </div>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Invoice page</p>
+              <p class="eyebrow">Invoices page</p>
               <h2>Open the invoice workspace</h2>
               <p>
-                Go to <code>Receivables</code> and open the invoice screen for the customer you prepared earlier.
+                Go to <code>Receivables</code>, under
+                <code>Transactions</code> click on
+                <code>Invoices and Memos</code><br /><br />
+                (Screen ID: <span class="text-bold">AR3010PL</span>).
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Open the invoice workspace screenshot" />
+              <img
+                src="images/screenshots/25.png"
+                alt="Open the invoice workspace screenshot"
+              />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">New invoice</p>
-              <h2>Create the invoice record</h2>
               <p>
-                Click the <code>+</code> button, select the customer, and enter the basic invoice details.
+                Click the <code>+</code> button to create a new invoice record.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Create the invoice record screenshot" />
+              <img
+                src="images/screenshots/26.png"
+                alt="Create the invoice record screenshot"
+              />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Review invoice</p>
-              <h2>Save and confirm totals</h2>
               <p>
-                Review the balance, tax, and due date, then save the invoice before moving to payment.
+                You should face the invoice form where you can fill in the
+                invoice details, line items, and amounts.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Save and confirm totals screenshot" />
+              <img
+                src="images/screenshots/27.png"
+                alt="Invoice form screenshot"
+              />
             </figure>
           </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Pick your <span class="text-bold">customer</span> and fill in
+                the invoice details, <span class="text-bold">line items</span>,
+                and etc. <br /><br />
+                When you are done, click the
+                <span class="text-bold">Save</span> button on the top and then
+                click on the <span class="text-bold">Release</span>.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/28.png"
+                alt="Invoice form screenshot"
+              />
+            </figure>
+          </section>
+
           <section class="content-band">
             <div class="callout">
-              This step gives the demo a real invoice balance that can be paid by card, ACH, or AutoPayBill.
+              This page demonstrates how to create an invoice in Acumatica and
+              prepare it for the linked2pay payment flow. Make sure to fill in
+              all necessary details and release the invoice to proceed with
+              payment processing.
             </div>
           </section>
           <nav class="pager" aria-label="Page navigation">

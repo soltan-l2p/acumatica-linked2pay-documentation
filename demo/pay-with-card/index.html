@@ -5,20 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Pay with Card</title>
-    <meta name="description" content="Sample demo page for pay with card in the linked2pay for Acumatica walkthrough." />
+    <meta
+      name="description"
+      content="Sample demo page for pay with card in the linked2pay for Acumatica walkthrough."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-                <nav class="sidebar-menu" aria-label="Demo sections">
+        <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link" href="/demo/">Overview</a>
@@ -26,46 +37,92 @@
           <details class="sidebar-group">
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
             <summary class="sidebar-link is-parent-active">Invoice</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
-              <a class="sidebar-sublink is-active" href="/demo/pay-with-card" aria-current="page"><span>9</span>Pay with Card</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice"
+                ><span>8</span>Create Invoice</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/pay-with-card"
+                aria-current="page"
+                ><span>9</span>Pay with Card</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"
+                ><span>10</span>Pay with ACH</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"
+                ><span>11</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Recurring Payments</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"
+                ><span>12</span>Create Invoice (Template)</a
+              >
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"
+                ><span>13</span>Add to Schedule</a
+              >
+              <a class="sidebar-sublink" href="/demo/generate-invoices"
+                ><span>14</span>Generate Invoices</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/recurring-pay-with-autopaybill"
+                ><span>15</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
         </nav>
       </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -77,49 +134,182 @@
               <p class="eyebrow">Invoice</p>
               <h1>Pay with Card</h1>
               <p class="lead">
-                Use a card payment method to pay the invoice through the linked2pay workflow.
+                Use a card payment method to pay the invoice through the
+                linked2pay workflow.
               </p>
             </div>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Payment action</p>
-              <h2>Start the card payment</h2>
               <p>
-                Open the invoice, choose the payment action, and select the saved card payment method.
+                In the last step you released the invoice and created a balance.
+                Now you should be able to see <code>Pay</code> button in the
+                invoice workspace. Click it to start the payment flow.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Start the card payment screenshot" />
+              <img
+                src="images/screenshots/29.png"
+                alt="Start the card payment screenshot"
+              />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Review payment</p>
-              <h2>Confirm card details</h2>
               <p>
-                Check the amount, customer, and card label before submitting the payment.
+                You should be able to see the payment details page like this:
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Confirm card details screenshot" />
+              <img
+                src="images/screenshots/30.png"
+                alt="Confirm card details screenshot"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Payment result</p>
-              <h2>Verify the paid status</h2>
+              <h2>Attention</h2>
               <p>
-                After the payment is processed, return to the invoice and confirm the updated balance.
+                Because I picked <code>linked2pay Credit Card</code> as the
+                payment method, you can see there is a
+                <span class="text-bold">Processing Fee</span> added to the total
+                amount. <br /><br />
+                <span class="text-bold">Note:</span> The processing fee is only
+                for credit card payments. ACH payments do not have a processing
+                fee. <br /><br />
+                Check
+                <a
+                  class="text-bold text-italic"
+                  style="color: #1985c9"
+                  href="/setup/setup-processing-api"
+                  >Processing Fee</a
+                >
+                to see how you can manage these fees.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Verify the paid status screenshot" />
+              <img
+                src="images/screenshots/31.png"
+                alt="Verify the paid status screenshot"
+              />
             </figure>
           </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                You can click on
+                <span class="text-bold">Remove Processing Fee</span> if you want
+                to make exceptions for your customers or exclude processing fee
+                for specific invoices.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/32.png"
+                alt="Remove processing fee screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                And visa versa, you can click on
+                <span class="text-bold">Apply Fee</span> if you want to add
+                after removing it for some reason.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/33.png"
+                alt="Apply processing fee screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Now click on <code>...</code> on the top to open the actions
+                menu.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/34.png"
+                alt="Actions menu screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Click on <code>Authorize</code> first to authorize the payment.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/35.png"
+                alt="Actions menu screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                On <span class="text-bold">linked2pay</span> portal, please go
+                to <span class="text-bold">Card</span> section under
+                <span class="text-bold">Reporting</span> to see the payment is
+                authorized and ready to be captured.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/36.png"
+                alt="Card reporting screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Finally click on <code>Capture</code> to capture the authorized
+                payment.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/37.png"
+                alt="Capture payment screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                On linked2pay portal, you should be able to see the payment is
+                captured.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/38.png"
+                alt="Capture payment screenshot"
+              />
+            </figure>
+          </section>
+
           <section class="content-band">
             <div class="callout">
-              This page is for the card payment path. Keep the narration simple and let the screenshot show the important fields.
+              This page is for the card payment path. Keep the narration simple
+              and let the screenshot show the important fields.
             </div>
           </section>
           <nav class="pager" aria-label="Page navigation">

@@ -29,7 +29,7 @@
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-                <nav class="sidebar-menu" aria-label="Demo sections">
+        <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link" href="/demo/">Overview</a>
@@ -37,36 +37,74 @@
           <details class="sidebar-group" open>
             <summary class="sidebar-link is-parent-active">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink is-active" href="/demo/board-customer" aria-current="page"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/board-customer"
+                aria-current="page"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Invoice</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice"
+                ><span>8</span>Create Invoice</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-card"
+                ><span>9</span>Pay with Card</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"
+                ><span>10</span>Pay with ACH</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"
+                ><span>11</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Recurring Payments</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"
+                ><span>12</span>Create Invoice (Template)</a
+              >
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"
+                ><span>13</span>Add to Schedule</a
+              >
+              <a class="sidebar-sublink" href="/demo/generate-invoices"
+                ><span>14</span>Generate Invoices</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/recurring-pay-with-autopaybill"
+                ><span>15</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
         </nav>
@@ -150,6 +188,34 @@
             <figure class="guide-image">
               <img
                 src="images/screenshots/6.png"
+                alt="Sample boarded customer status"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <h2>Important</h2>
+              <p>
+                Make sure you
+                <span class="text-italic text-bold">enable Auto Bill</span> by
+                checking the <code>Auto Bill</code> checkbox if you want to use
+                the AutoPayBill feature for this customer. <br /><br />
+                <span class="text-bold">Recommended:</span> If you don't want to
+                do this manually for each customer, check
+                <a
+                  class="text-bold text-italic"
+                  style="color: #1985c9"
+                  href="/setup/setup-processing-api/"
+                  >Enable AutoPayBill</a
+                >
+                for more details on how to enable AutoPayBill for newly
+                customers automatically.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/6-2.png"
                 alt="Sample boarded customer status"
               />
             </figure>

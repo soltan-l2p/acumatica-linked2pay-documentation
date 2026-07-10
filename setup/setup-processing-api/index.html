@@ -25,24 +25,68 @@
           <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Guide Menu</p>
-                <nav class="sidebar-menu" aria-label="Documentation sections">
+        <nav class="sidebar-menu" aria-label="Documentation sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/demo/">Demo Walkthrough</a>
           <a class="sidebar-link" href="/setup/">Overview</a>
           <p class="sidebar-section-label">Setup Path</p>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup"><span>1</span>Setup Overview</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-extension"><span>1A</span>Import Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-publish"><span>1B</span>Publish Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-center"><span>2A</span>Create Center</a>
-          <a class="sidebar-link sidebar-step-link is-active" href="/setup/setup-processing-api" aria-current="page"><span>2B</span>API Settings</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-webhook"><span>2C</span>Webhook Setup</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-ach"><span>2D</span>ACH Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-methods"><span>3A</span>Credit Card Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-link-center"><span>3B</span>Link Processing Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-ach"><span>3C</span>ACH Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-nonstock-items"><span>4</span>Non-Stock Items</a>
+          <a class="sidebar-link sidebar-step-link" href="/setup/setup"
+            ><span>1</span>Setup Overview</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-confirm-extension"
+            ><span>1A</span>Import Extension</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-confirm-publish"
+            ><span>1B</span>Publish Extension</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-processing-center"
+            ><span>2A</span>Create Center</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link is-active"
+            href="/setup/setup-processing-api"
+            aria-current="page"
+            ><span>2B</span>API Settings</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-processing-webhook"
+            ><span>2C</span>Webhook Setup</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-processing-ach"
+            ><span>2D</span>ACH Center</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-payment-methods"
+            ><span>3A</span>Credit Card Method</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-payment-link-center"
+            ><span>3B</span>Link Processing Center</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-payment-ach"
+            ><span>3C</span>ACH Method</a
+          >
+          <a
+            class="sidebar-link sidebar-step-link"
+            href="/setup/setup-nonstock-items"
+            ><span>4</span>Non-Stock Items</a
+          >
         </nav>
-      </aside>      <div class="page-frame">
+      </aside>
+      <div class="page-frame">
         <header class="mobile-topbar">
           <a
             class="mobile-brand simple-logo"
@@ -75,7 +119,9 @@
 
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow"><span class="brand-case">linked2pay</span> Portal</p>
+              <p class="eyebrow">
+                <span class="brand-case">linked2pay</span> Portal
+              </p>
               <p>
                 Go to the linked2pay portal and open the API settings page. At
                 the bottom of the sidebar, click
@@ -93,20 +139,26 @@
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/setup/images/screenshots/12.png" alt="linked2pay API settings navigation" />
+              <img
+                src="/setup/images/screenshots/12.png"
+                alt="linked2pay API settings navigation"
+              />
             </figure>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
               <p>
-                In the <span class="text-bold">API Settings</span> section,
-                find the <span class="text-bold">Web Service Key</span>. Copy
-                that value.
+                In the <span class="text-bold">API Settings</span> section, find
+                the <span class="text-bold">Web Service Key</span>. Copy that
+                value.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/setup/images/screenshots/13.png" alt="linked2pay web service key" />
+              <img
+                src="/setup/images/screenshots/13.png"
+                alt="linked2pay web service key"
+              />
             </figure>
           </section>
 
@@ -119,7 +171,10 @@
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/setup/images/screenshots/14.png" alt="API key field in Acumatica" />
+              <img
+                src="/setup/images/screenshots/14.png"
+                alt="API key field in Acumatica"
+              />
             </figure>
           </section>
 
@@ -140,13 +195,25 @@
               <p>
                 Set <span class="text-bold">AUTOBILL</span> to
                 <span class="text-italic text-bold">True</span> if newly created
-                customers should have Auto-Bill enabled by default. This value is
-                used as the global default for the Auto-Bill Enabled field on new
-                customer records.
+                customers should have Auto-Bill enabled by default. This value
+                is used as the global default for the Auto-Bill Enabled field on
+                new customer records.<br /><br /><span
+                  class="text-bold text-italic"
+                  >Do this for both processing centers.</span
+                ><br /><span class="text-italic"
+                  >(You haven't created ACH Processing Center yet, but keep in
+                  mind)</span
+                ><br /><br />
+                If one of them at least is set to
+                <span class="text-bold">False</span>, newly created customers
+                will have Auto-Bill disabled by default.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/setup/images/screenshots/15.png" alt="AutoBill processing center setting" />
+              <img
+                src="/setup/images/screenshots/15.png"
+                alt="AutoBill processing center setting"
+              />
             </figure>
           </section>
 
@@ -154,9 +221,9 @@
             <div class="callout">
               <span class="text-bold">Note:</span>
               <span class="text-italic">
-                You can still manage this setting individually for each customer.
-                This value only controls the default for newly created customers,
-                so you can override it later when needed.
+                You can still manage this setting individually for each
+                customer. This value only controls the default for newly created
+                customers, so you can override it later when needed.
               </span>
             </div>
           </section>
@@ -166,14 +233,18 @@
               <p>
                 The <span class="text-bold">FEE</span> field controls the
                 percentage of the credit card processing fee that is passed to
-                customers. For example, enter <span class="text-bold">3</span>
-                to add a <span class="text-bold">3%</span> fee to invoices paid
-                by credit card. Enter <span class="text-bold">0</span> if no fee
-                should be added.
+                customers. For example, enter
+                <span class="text-bold">3</span> to add a
+                <span class="text-bold">3%</span> fee to invoices paid by credit
+                card. Enter <span class="text-bold">0</span> if no fee should be
+                added.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/setup/images/screenshots/16.png" alt="Fee field in processing center" />
+              <img
+                src="/setup/images/screenshots/16.png"
+                alt="Fee field in processing center"
+              />
             </figure>
           </section>
 
@@ -186,7 +257,10 @@
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/setup/images/screenshots/17.png" alt="linked2pay user field" />
+              <img
+                src="/setup/images/screenshots/17.png"
+                alt="linked2pay user field"
+              />
             </figure>
           </section>
 
@@ -201,7 +275,10 @@
               </p>
             </article>
             <figure class="guide-image">
-              <img src="/setup/images/screenshots/18.png" alt="Payment method field for credit card processing" />
+              <img
+                src="/setup/images/screenshots/18.png"
+                alt="Payment method field for credit card processing"
+              />
             </figure>
           </section>
 
