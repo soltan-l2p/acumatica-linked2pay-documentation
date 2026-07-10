@@ -4,28 +4,17 @@
     <base href="/demo/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linked2pay for Acumatica | Board Customer</title>
-    <meta
-      name="description"
-      content="Sample demo page for boarding an Acumatica customer into linked2pay."
-    />
+    <title>linked2pay for Acumatica | Create Invoice</title>
+    <meta name="description" content="Sample demo page for create invoice in the linked2pay for Acumatica walkthrough." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label
-      class="sidebar-backdrop"
-      for="sidebar-toggle"
-      aria-label="Close menu"
-    ></label>
+    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a
-          class="sidebar-brand simple-logo"
-          href="/"
-          aria-label="linked2pay documentation home"
-        >
+        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
@@ -34,11 +23,11 @@
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link" href="/demo/">Overview</a>
           <p class="sidebar-section-label">Demo Path</p>
-          <details class="sidebar-group" open>
-            <summary class="sidebar-link is-parent-active">Customers</summary>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink is-active" href="/demo/board-customer" aria-current="page"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
               <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
             </div>
           </details>
@@ -51,10 +40,10 @@
               <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
             </div>
           </details>
-          <details class="sidebar-group">
-            <summary class="sidebar-link">Invoice</summary>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link is-parent-active">Invoice</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
+              <a class="sidebar-sublink is-active" href="/demo/create-invoice" aria-current="page"><span>8</span>Create Invoice</a>
               <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
               <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
               <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
@@ -73,18 +62,10 @@
       </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a
-            class="mobile-brand simple-logo"
-            href="/"
-            aria-label="linked2pay documentation home"
-          >
+          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label
-            class="menu-button"
-            for="sidebar-toggle"
-            aria-label="Open menu"
-          >
+          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
@@ -93,117 +74,62 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Customers</p>
-              <h1>Board your Customer from Acumatica to linked2pay</h1>
+              <p class="eyebrow">Invoice</p>
+              <h1>Create Invoice</h1>
               <p class="lead">
-                Show how the customer record is sent from Acumatica into
-                linked2pay for the first time.
+                Create a sample invoice in Acumatica and prepare it for the linked2pay payment flow.
               </p>
             </div>
           </section>
-
           <section class="story-band setup-story">
             <article class="story-copy">
-              <h2>linked2pay Tab</h2>
+              <p class="eyebrow">Invoice page</p>
+              <h2>Open the invoice workspace</h2>
               <p>
-                In the customer record (ScreenId:
-                <span class="text-bold">AR303000</span>), you should be able to
-                see the linked2pay tab.
+                Go to <code>Receivables</code> and open the invoice screen for the customer you prepared earlier.
               </p>
             </article>
             <figure class="guide-image">
-              <img
-                src="images/screenshots/4.png"
-                alt="Sample board customer action"
-              />
+              <img src="sample.png" alt="Open the invoice workspace screenshot" />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
+              <p class="eyebrow">New invoice</p>
+              <h2>Create the invoice record</h2>
               <p>
-                Click on the <code>Board to Gateway</code> button to send the
-                customer record from Acumatica into linked2pay.
+                Click the <code>+</code> button, select the customer, and enter the basic invoice details.
               </p>
             </article>
             <figure class="guide-image">
-              <img
-                src="images/screenshots/5.png"
-                alt="Sample linked2pay customer profile"
-              />
+              <img src="sample.png" alt="Create the invoice record screenshot" />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
+              <p class="eyebrow">Review invoice</p>
+              <h2>Save and confirm totals</h2>
               <p>
-                You should see a confirmation message and the
-                <span class="text-italic text-bold"
-                  >Boarded to external gateway</span
-                >
-                checkbox should be <code>checked</code>.<br /><br />And finally
-                your
-                <span class="text-italic text-bold"
-                  >linked2pay Contact Profile ID</span
-                >
-                should be populated with the linked2pay contact profile ID.
+                Review the balance, tax, and due date, then save the invoice before moving to payment.
               </p>
             </article>
             <figure class="guide-image">
-              <img
-                src="images/screenshots/6.png"
-                alt="Sample boarded customer status"
-              />
+              <img src="sample.png" alt="Save and confirm totals screenshot" />
             </figure>
           </section>
-
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                In <span class="text-italic text-bold">linked2pay</span> portal,
-                you should be able to see the customer profile that was just
-                created from Acumatica. <br />
-                <br />
-                Click on it.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/7.png"
-                alt="Sample boarded customer status"
-              />
-            </figure>
-          </section>
-
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                As you can see in the screenshot, the customer profile in
-                linked2pay has the same information as the customer record in
-                Acumatica. The handoff is complete.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/8.png"
-                alt="Sample boarded customer status"
-              />
-            </figure>
-          </section>
-
           <section class="content-band">
             <div class="callout">
-              At the end of this step, you should have a customer record in
-              linked2pay that was sent from Acumatica.
+              This step gives the demo a real invoice balance that can be paid by card, ACH, or AutoPayBill.
             </div>
           </section>
-
           <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="/demo/create-customer">
+            <a class="pager-link muted" href="/demo/payment-defaults">
               <span>Previous</span>
-              <strong>Create Customer</strong>
+              <strong>Set Default Payments and Cash Account</strong>
             </a>
-            <a class="pager-link" href="/demo/sync-customer">
+            <a class="pager-link" href="/demo/pay-with-card">
               <span>Next</span>
-              <strong>Sync Customer with linked2pay</strong>
+              <strong>Pay with Card</strong>
             </a>
           </nav>
         </main>

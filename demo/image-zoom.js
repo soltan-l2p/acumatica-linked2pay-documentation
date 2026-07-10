@@ -1,4 +1,20 @@
 ﻿(() => {
+  const sidebarGroups = [...document.querySelectorAll(".sidebar-group")];
+
+  sidebarGroups.forEach((group) => {
+    group.addEventListener("toggle", () => {
+      if (!group.open) {
+        return;
+      }
+
+      sidebarGroups.forEach((otherGroup) => {
+        if (otherGroup !== group) {
+          otherGroup.open = false;
+        }
+      });
+    });
+  });
+
   const figures = [...document.querySelectorAll(".guide-image")].filter((figure) => figure.querySelector("img"));
 
   if (!figures.length) {

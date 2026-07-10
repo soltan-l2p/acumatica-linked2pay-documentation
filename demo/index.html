@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Demo Overview</title>
-    <meta name="description" content="Original linked2pay for Acumatica demo flow for customers and payment methods." />
+    <meta name="description" content="linked2pay for Acumatica demo flow for customers, payment methods, invoices, and recurring payments." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
@@ -17,12 +17,12 @@
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-        <nav class="sidebar-menu" aria-label="Demo sections">
+                <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link is-active" href="/demo/" aria-current="page">Overview</a>
           <p class="sidebar-section-label">Demo Path</p>
-          <details class="sidebar-group" open>
+          <details class="sidebar-group">
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
@@ -30,7 +30,7 @@
               <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
             </div>
           </details>
-          <details class="sidebar-group" open>
+          <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
@@ -39,7 +39,26 @@
               <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
             </div>
           </details>
-        </nav>      </aside>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Invoice</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+            </div>
+          </details>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Recurring Payments</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
+              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
+              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+            </div>
+          </details>
+        </nav>
+      </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
           <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
@@ -57,7 +76,7 @@
               <p class="eyebrow"><span class="brand-case">linked2pay</span> for Acumatica</p>
               <h1>Demo Walkthrough</h1>
               <p class="lead">
-                Follow the original demo path in order: start with customer creation and synchronization, then move into payment methods, payment method changes, defaults, and cash account setup.
+                Follow the demo path in order: start with customers and payment methods, then move into invoice payments and recurring payment flows.
               </p>
             </div>
           </section>
@@ -65,9 +84,9 @@
           <section class="story-band">
             <article class="story-copy">
               <p class="eyebrow">Demo Flow</p>
-              <h2>Customers first, then payment methods.</h2>
+              <h2>Customers, payment methods, invoices, then recurring payments.</h2>
               <p>
-                The demo is split into two sections so the viewer always knows what kind of work they are watching. The Customers section shows how the customer record gets prepared and synchronized. The Payment Methods section shows how linked2pay methods are created, synced, changed, deleted, and tied back to Acumatica defaults.
+                The demo is split into clear sections so the viewer always knows what kind of work they are watching. Start with the customer, prepare payment methods, pay invoices, and then repeat the same idea through recurring payments.
               </p>
               <p>
                 Treat the text here as a walking guide. The screenshots can be replaced later with final production screenshots while keeping the same route and sidebar structure.
@@ -83,37 +102,77 @@
               <a class="setup-card" href="/demo/create-customer">
                 <span class="card-number">01</span>
                 <strong>Create Customer</strong>
-                <span>Begin in Acumatica with the customer record that will be used throughout the demo.</span>
+                <span>Begin with the customer record used throughout the demo.</span>
               </a>
               <a class="setup-card" href="/demo/board-customer">
                 <span class="card-number">02</span>
                 <strong>Board Customer</strong>
-                <span>Show how the customer moves from Acumatica into linked2pay.</span>
+                <span>Move the customer from Acumatica into linked2pay.</span>
               </a>
               <a class="setup-card" href="/demo/sync-customer">
                 <span class="card-number">03</span>
                 <strong>Sync Customer</strong>
-                <span>Confirm that the customer stays aligned between Acumatica and linked2pay.</span>
+                <span>Confirm the customer stays aligned with linked2pay.</span>
               </a>
               <a class="setup-card" href="/demo/create-payment-methods">
                 <span class="card-number">04</span>
                 <strong>Create Payment Methods</strong>
-                <span>Add sample payment methods in linked2pay for the customer.</span>
+                <span>Add sample payment methods in linked2pay.</span>
               </a>
               <a class="setup-card" href="/demo/sync-customer-payment-methods">
                 <span class="card-number">05</span>
                 <strong>Sync Customer with linked2pay</strong>
-                <span>Bring linked2pay customer payment method details back into the Acumatica flow.</span>
+                <span>Bring payment method details back into Acumatica.</span>
               </a>
               <a class="setup-card" href="/demo/payment-methods-crud">
                 <span class="card-number">06</span>
                 <strong>Payment Method CRUD</strong>
-                <span>Demonstrate what changes after payment methods are updated or deleted.</span>
+                <span>Show what changes after updates or deletions.</span>
               </a>
               <a class="setup-card" href="/demo/payment-defaults">
                 <span class="card-number">07</span>
                 <strong>Defaults and Cash Account</strong>
-                <span>Set the recommended default payment method and cash account values.</span>
+                <span>Set the recommended defaults for payment work.</span>
+              </a>
+              <a class="setup-card" href="/demo/create-invoice">
+                <span class="card-number">08</span>
+                <strong>Create Invoice</strong>
+                <span>Create the invoice that will be paid in the demo.</span>
+              </a>
+              <a class="setup-card" href="/demo/pay-with-card">
+                <span class="card-number">09</span>
+                <strong>Pay with Card</strong>
+                <span>Pay the invoice using a saved card method.</span>
+              </a>
+              <a class="setup-card" href="/demo/pay-with-ach">
+                <span class="card-number">10</span>
+                <strong>Pay with ACH</strong>
+                <span>Pay the invoice using a saved ACH method.</span>
+              </a>
+              <a class="setup-card" href="/demo/pay-with-autopaybill">
+                <span class="card-number">11</span>
+                <strong>Pay with AutoPayBill</strong>
+                <span>Use AutoPayBill for the invoice payment.</span>
+              </a>
+              <a class="setup-card" href="/demo/create-invoice-template">
+                <span class="card-number">12</span>
+                <strong>Create Invoice (Template)</strong>
+                <span>Create the recurring invoice template.</span>
+              </a>
+              <a class="setup-card" href="/demo/add-to-schedule">
+                <span class="card-number">13</span>
+                <strong>Add to Schedule</strong>
+                <span>Add the template to the recurring schedule.</span>
+              </a>
+              <a class="setup-card" href="/demo/generate-invoices">
+                <span class="card-number">14</span>
+                <strong>Generate Invoices</strong>
+                <span>Generate invoices from the recurring schedule.</span>
+              </a>
+              <a class="setup-card" href="/demo/recurring-pay-with-autopaybill">
+                <span class="card-number">15</span>
+                <strong>Pay with AutoPayBill</strong>
+                <span>Pay the generated recurring invoice.</span>
               </a>
             </div>
           </section>

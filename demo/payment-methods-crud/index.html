@@ -29,48 +29,44 @@
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-        <nav class="sidebar-menu" aria-label="Demo sections">
+                <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link" href="/demo/">Overview</a>
           <p class="sidebar-section-label">Demo Path</p>
-          <details class="sidebar-group" open>
+          <details class="sidebar-group">
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"
-                ><span>1</span>Create Customer</a
-              >
-              <a class="sidebar-sublink" href="/demo/board-customer"
-                ><span>2</span>Board Your Customer from Acumatica to
-                linked2pay</a
-              >
-              <a class="sidebar-sublink" href="/demo/sync-customer"
-                ><span>3</span>Sync Customer with linked2pay</a
-              >
+              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
             </div>
           </details>
           <details class="sidebar-group" open>
-            <summary class="sidebar-link is-parent-active">
-              Payment Methods
-            </summary>
+            <summary class="sidebar-link is-parent-active">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"
-                ><span>4</span>Create Payment Methods in linked2pay</a
-              >
-              <a
-                class="sidebar-sublink"
-                href="/demo/sync-customer-payment-methods"
-                ><span>5</span>Sync Customer with linked2pay</a
-              >
-              <a
-                class="sidebar-sublink is-active"
-                href="/demo/payment-methods-crud"
-                aria-current="page"
-                ><span>6</span>Demonstrate CRUD of Payment Methods</a
-              >
-              <a class="sidebar-sublink" href="/demo/payment-defaults"
-                ><span>7</span>Set Default Payments and Cash Account</a
-              >
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink is-active" href="/demo/payment-methods-crud" aria-current="page"><span>6</span>Demonstrate CRUD of Payment Methods</a>
+              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+            </div>
+          </details>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Invoice</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+            </div>
+          </details>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Recurring Payments</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
+              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
+              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
             </div>
           </details>
         </nav>
@@ -192,16 +188,13 @@
           </section>
 
           <nav class="pager" aria-label="Page navigation">
-            <a
-              class="pager-link muted"
-              href="/demo/sync-customer-payment-methods"
-            >
+            <a class="pager-link muted" href="/demo/sync-customer-payment-methods">
               <span>Previous</span>
               <strong>Sync Customer with linked2pay</strong>
             </a>
             <a class="pager-link" href="/demo/payment-defaults">
               <span>Next</span>
-              <strong>Defaults and Cash Account</strong>
+              <strong>Set Default Payments and Cash Account</strong>
             </a>
           </nav>
         </main>
