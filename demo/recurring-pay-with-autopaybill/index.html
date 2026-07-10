@@ -5,20 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Pay with AutoPayBill</title>
-    <meta name="description" content="Sample demo page for pay with autopaybill in the linked2pay for Acumatica walkthrough." />
+    <meta
+      name="description"
+      content="Sample demo page for pay with autopaybill in the linked2pay for Acumatica walkthrough."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-                <nav class="sidebar-menu" aria-label="Demo sections">
+        <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link" href="/demo/">Overview</a>
@@ -26,46 +37,92 @@
           <details class="sidebar-group">
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Invoice</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice"
+                ><span>8</span>Create Invoice</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-card"
+                ><span>9</span>Pay with Card</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"
+                ><span>10</span>Pay with ACH</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"
+                ><span>11</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
-            <summary class="sidebar-link is-parent-active">Recurring Payments</summary>
+            <summary class="sidebar-link is-parent-active">
+              Recurring Payments
+            </summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink is-active" href="/demo/recurring-pay-with-autopaybill" aria-current="page"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"
+                ><span>12</span>Create Invoice (Template)</a
+              >
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"
+                ><span>13</span>Add to Schedule</a
+              >
+              <a class="sidebar-sublink" href="/demo/generate-invoices"
+                ><span>14</span>Generate Invoices</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/recurring-pay-with-autopaybill"
+                aria-current="page"
+                ><span>15</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
         </nav>
       </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -77,51 +134,95 @@
               <p class="eyebrow">Recurring Payments</p>
               <h1>Pay with AutoPayBill</h1>
               <p class="lead">
-                Pay the generated recurring invoice with AutoPayBill and the saved customer method.
+                Pay the generated recurring invoice with AutoPayBill and the
+                saved customer method.
               </p>
             </div>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Generated invoice</p>
-              <h2>Open the recurring invoice</h2>
               <p>
-                Open the invoice generated from the recurring schedule and review the balance.
+                In <code>Receivables</code> under <code>Processes</code> you
+                will find the <code>AutoPayBill</code> section. Open it...<br /><br />(Screen
+                ID: <span class="text-bold">AR508800)</span>
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Open the recurring invoice screenshot" />
+              <img
+                src="images/screenshots/42.png"
+                alt="Capture payment screenshot"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">AutoPayBill</p>
-              <h2>Run AutoPayBill</h2>
               <p>
-                Use AutoPayBill so the saved method and cash account can be applied automatically.
+                ...in the <span class="text-bold">Auto Bill</span> page, Set the
+                <span class="text-bold">Invoices Due Before</span> date to the
+                date you wanna pay until.
+                <span class="text-italic"
+                  ><br />(for example I'll set till 1 September)</span
+                ><br /><br />
+                <span class="text-bold">Note:</span> If you have multiple
+                invoices due for that date, page will show all of them at once.
+              </p>
+              <p>Either:</p>
+              <ul>
+                <li>
+                  select the invoice you want to pay and click on
+                  <code>Process</code>.
+                </li>
+                <li>
+                  Or click on <code>Process All</code> to pay all invoices due
+                  for that date.
+                </li>
+              </ul>
+              <p>
+                In this example we've picked all of those recurring transactions
+                which we just generated and clicked on
+                <span class="text-bold text-italic">Process</span> button.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Run AutoPayBill screenshot" />
+              <img
+                src="images/screenshots/53.png"
+                alt="Capture payment screenshot"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Final review</p>
-              <h2>Confirm the recurring payment</h2>
               <p>
-                Check that the invoice activity and payment status are updated after the payment runs.
+                This one may take a little time since it bulk processes all the
+                transactions in once.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Confirm the recurring payment screenshot" />
+              <img
+                src="images/screenshots/54.png"
+                alt="Capture payment screenshot"
+              />
             </figure>
           </section>
-          <section class="content-band">
-            <div class="callout">
-              This final recurring step shows the full loop: template, schedule, generated invoice, and AutoPayBill payment.
-            </div>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                And we processed all of the generated recurring transactions by
+                linked2pay.<br /><br />Final result should look like this:
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/55.png"
+                alt="Capture payment screenshot"
+              />
+            </figure>
           </section>
+          
           <nav class="pager" aria-label="Page navigation">
             <a class="pager-link muted" href="/demo/generate-invoices">
               <span>Previous</span>

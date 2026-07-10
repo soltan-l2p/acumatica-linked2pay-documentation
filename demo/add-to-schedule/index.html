@@ -5,20 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Add to Schedule</title>
-    <meta name="description" content="Sample demo page for add to schedule in the linked2pay for Acumatica walkthrough." />
+    <meta
+      name="description"
+      content="Sample demo page for add to schedule in the linked2pay for Acumatica walkthrough."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
-                <nav class="sidebar-menu" aria-label="Demo sections">
+        <nav class="sidebar-menu" aria-label="Demo sections">
           <a class="sidebar-link" href="/">Documentation Home</a>
           <a class="sidebar-link" href="/setup/">Setup Guide</a>
           <a class="sidebar-link" href="/demo/">Overview</a>
@@ -26,46 +37,94 @@
           <details class="sidebar-group">
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Invoice</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice"
+                ><span>8</span>Create Invoice</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-card"
+                ><span>9</span>Pay with Card</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"
+                ><span>10</span>Pay with ACH</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"
+                ><span>11</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
-            <summary class="sidebar-link is-parent-active">Recurring Payments</summary>
+            <summary class="sidebar-link is-parent-active">
+              Recurring Payments
+            </summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink is-active" href="/demo/add-to-schedule" aria-current="page"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"
+                ><span>12</span>Create Invoice (Template)</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/add-to-schedule"
+                aria-current="page"
+                ><span>13</span>Add to Schedule</a
+              >
+              <a class="sidebar-sublink" href="/demo/generate-invoices"
+                ><span>14</span>Generate Invoices</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/recurring-pay-with-autopaybill"
+                ><span>15</span>Pay with AutoPayBill</a
+              >
             </div>
           </details>
         </nav>
       </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -77,49 +136,82 @@
               <p class="eyebrow">Recurring Payments</p>
               <h1>Add to Schedule</h1>
               <p class="lead">
-                Add the invoice template to a recurring schedule so invoices can be generated later.
+                Add the invoice template to a recurring schedule so invoices can
+                be generated later.
               </p>
             </div>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Schedule setup</p>
-              <h2>Open the schedule</h2>
               <p>
-                Go to the schedule area and start a new recurring payment schedule for the customer.
+                Click on <code>...</code> and then under
+                <span class="text-bold">Other</span> you will see "<span
+                  class="text-bold"
+                  >Add to Schedule</span
+                >" button.<br /><br />Click on that, it will bring you to
+                <span class="text-bold">Recurring Transactions</span> page
+                (Screen ID: <span class="text-bold">AR203500</span>).
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Open the schedule screenshot" />
+              <img
+                src="images/screenshots/46.png"
+                alt="Start the template screenshot"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Template link</p>
-              <h2>Attach the template</h2>
               <p>
-                Select the invoice template and define how often the invoice should be generated.
+                Fill the required fields and click on <code>Save</code> button.
+                <br /><br />
+                For this example:
+              </p>
+              <ul>
+                <li>
+                  <span class="text-bold">Description:</span> Subscription
+                  Recurring Transaction
+                </li>
+                <li>
+                  <span class="text-bold">Execution Limit:</span> 10 times
+                </li>
+                <li><span class="text-bold">Recurrence:</span> Every 2 days</li>
+                <li>
+                  <span class="text-bold">Invoice:</span> It should be already
+                  populated
+                </li>
+              </ul>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/47.png"
+                alt="Start the template screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Go to <code>Receivables</code>, under
+                <code>Processes</code> click on
+                <code>Generate Recurring Transactions</code>.<br /><br />
+                (Screen ID: <span class="text-bold">AR504000</span>).
               </p>
             </article>
             <figure class="guide-image">
-              <img src="sample.png" alt="Attach the template screenshot" />
+              <img
+                src="images/screenshots/48.png"
+                alt="Start the template screenshot"
+              />
             </figure>
           </section>
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p class="eyebrow">Review schedule</p>
-              <h2>Save the schedule</h2>
-              <p>
-                Review the start date, frequency, and customer details, then save the schedule.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img src="sample.png" alt="Save the schedule screenshot" />
-            </figure>
-          </section>
+
           <section class="content-band">
             <div class="callout">
-              The goal here is to show how the template becomes a repeatable invoice process.
+             Now you should be ready to go ahead and generate recurring invoices.
             </div>
           </section>
           <nav class="pager" aria-label="Page navigation">
