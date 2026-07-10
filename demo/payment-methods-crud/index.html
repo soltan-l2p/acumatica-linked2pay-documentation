@@ -5,16 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>linked2pay for Acumatica | Payment Method CRUD</title>
-    <meta name="description" content="Sample demo page for showing create, update, and delete behavior for linked2pay payment methods." />
+    <meta
+      name="description"
+      content="Sample demo page for showing create, update, and delete behavior for linked2pay payment methods."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
   <body class="site theme-light">
     <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label>
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
     <div class="site-shell">
       <aside class="sidebar-nav" aria-label="Demo sections">
-        <a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
           <img src="images/linked2pay.png" alt="linked2pay logo" />
         </a>
         <p class="sidebar-kicker">Demo Menu</p>
@@ -26,27 +37,58 @@
           <details class="sidebar-group" open>
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
             </div>
           </details>
           <details class="sidebar-group" open>
-            <summary class="sidebar-link is-parent-active">Payment Methods</summary>
+            <summary class="sidebar-link is-parent-active">
+              Payment Methods
+            </summary>
             <div class="setup-sublist">
-              <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink is-active" href="/demo/payment-methods-crud" aria-current="page"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/payment-methods-crud"
+                aria-current="page"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
             </div>
           </details>
-        </nav>      </aside>
+        </nav>
+      </aside>
       <div class="page-frame">
         <header class="mobile-topbar">
-          <a class="mobile-brand simple-logo" href="/" aria-label="linked2pay documentation home">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
             <img src="images/linked2pay.png" alt="linked2pay logo" />
           </a>
-          <label class="menu-button" for="sidebar-toggle" aria-label="Open menu">
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -55,58 +97,105 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Payment Methods 3</p>
+              <p class="eyebrow">Payment Methods</p>
               <h1>Demonstrate CRUD of Payment Methods</h1>
               <p class="lead">
-                Show what happens when linked2pay payment methods are created, changed, deleted, and then synchronized back into Acumatica.
+                Show what happens when linked2pay payment methods are created,
+                changed, deleted, and then synchronized back into Acumatica.
               </p>
             </div>
           </section>
 
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Change method</p>
-              <h2>Update an existing method.</h2>
+              <p class="eyebrow">Add new methods</p>
+              <h2>Add a new payment method.</h2>
               <p>
-                Start by showing a simple change to a payment method, such as the description or status, so the viewer can compare before and after states.
+                Starting by the creation of new payment methods in linked2pay.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/16.png" alt="Sample payment method update" />
+              <img
+                src="images/screenshots/18.png"
+                alt="Sample payment method update"
+              />
             </figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Delete method</p>
-              <h2>Show a deleted or unavailable method.</h2>
+              <h2>Now synchronize it in Acumatica.</h2>
               <p>
-                Demonstrate what the user sees when a linked2pay payment method is removed or no longer available after synchronization.
+                Click on the "<span class="text-bold">Sync with linked2pay</span
+                >" button in Acumatica to see the new payment method appear in
+                the list.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/17.png" alt="Sample payment method delete result" />
+              <img
+                src="images/screenshots/19.png"
+                alt="Sample payment method delete result"
+              />
             </figure>
           </section>
+
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">Sync result</p>
-              <h2>Review the final list.</h2>
               <p>
-                Close by showing the refreshed list in Acumatica and explaining which methods were added, changed, or removed.
+                As you can see, the new payment methods is now available in
+                Acumatica after the sync. You can also demonstrate updating an
+                existing payment method and then syncing again to show the
+                changes reflected in Acumatica.
               </p>
             </article>
             <figure class="guide-image">
-              <img src="images/screenshots/18.png" alt="Sample payment method CRUD result" />
+              <img
+                src="images/screenshots/20.png"
+                alt="Sample payment method delete result"
+              />
             </figure>
           </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <h2>Delete some and synchronize in Acumatica.</h2>
+              <p>
+                You should be able to see the deleted payment methods are
+                <span class="text-bold">de-activated</span> and marked as
+                <span class="text-bold text-italic">(deleted)</span> in
+                Acumatica after the sync.<br /><br /><span class="text-italic"
+                  >The reason it doesn't delete it completely is because
+                  Acumatica needs to keep a record of the payment method for
+                  historical transactions.</span
+                >
+                <br /><br /><span class="text-bold">Important:</span> If you
+                delete a payment method in linked2pay that is default for a
+                customer in Acumatica, you will need to set a new default
+                payment method for that customer in Acumatica before you sync.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/21.png"
+                alt="Sample payment method delete result"
+              />
+            </figure>
+          </section>
+
           <section class="content-band">
             <div class="callout">
-              This page is where the demo can prove that changes in linked2pay are reflected clearly in Acumatica after sync.
+              This page is a demonstration of the create, update, and delete
+              behavior of linked2pay payment methods and how they are reflected
+              in Acumatica after synchronization. Make sure to follow the steps
+              carefully to understand the process and implications of managing
+              payment methods across both platforms.
             </div>
           </section>
 
           <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="/demo/sync-customer-payment-methods">
+            <a
+              class="pager-link muted"
+              href="/demo/sync-customer-payment-methods"
+            >
               <span>Previous</span>
               <strong>Sync Customer with linked2pay</strong>
             </a>
