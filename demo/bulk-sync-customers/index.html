@@ -1,0 +1,318 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <base href="/demo/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linked2pay for Acumatica | Bulk Sync Customers</title>
+    <meta
+      name="description"
+      content="Sample demo page for bulk syncing customers from Acumatica through linked2pay Center."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
+    <label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Demo sections">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay documentation home"
+        >
+          <img src="images/linked2pay.png" alt="linked2pay logo" />
+        </a>
+        <p class="sidebar-kicker">Demo Menu</p>
+        <nav class="sidebar-menu" aria-label="Demo sections">
+          <a class="sidebar-link" href="/">Documentation Home</a>
+          <a class="sidebar-link" href="/setup/">Setup Guide</a>
+          <a class="sidebar-link" href="/demo/">Overview</a>
+          <p class="sidebar-section-label">Demo Path</p>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Customers</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-customer"
+                ><span>1</span>Create Customer</a
+              >
+              <a class="sidebar-sublink" href="/demo/board-customer"
+                ><span>2</span>Board Your Customer from Acumatica to
+                linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/sync-customer"
+                ><span>3</span>Sync Customer with linked2pay</a
+              >
+            </div>
+          </details>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Payment Methods</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-payment-methods"
+                ><span>4</span>Create Payment Methods in linked2pay</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/sync-customer-payment-methods"
+                ><span>5</span>Sync Customer with linked2pay</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"
+                ><span>6</span>Demonstrate CRUD of Payment Methods</a
+              >
+              <a class="sidebar-sublink" href="/demo/payment-defaults"
+                ><span>7</span>Set Default Payments and Cash Account</a
+              >
+            </div>
+          </details>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Invoice</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-invoice"
+                ><span>8</span>Create Invoice</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-card"
+                ><span>9</span>Pay with Card</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-ach"
+                ><span>10</span>Pay with ACH</a
+              >
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"
+                ><span>11</span>Pay with AutoPayBill</a
+              >
+            </div>
+          </details>
+          <details class="sidebar-group">
+            <summary class="sidebar-link">Recurring Payments</summary>
+            <div class="setup-sublist">
+              <a class="sidebar-sublink" href="/demo/create-invoice-template"
+                ><span>12</span>Create Invoice (Template)</a
+              >
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"
+                ><span>13</span>Add to Schedule</a
+              >
+              <a class="sidebar-sublink" href="/demo/generate-invoices"
+                ><span>14</span>Generate Invoices</a
+              >
+              <a
+                class="sidebar-sublink"
+                href="/demo/recurring-pay-with-autopaybill"
+                ><span>15</span>Pay with AutoPayBill</a
+              >
+            </div>
+          </details>
+          <details class="sidebar-group" open>
+            <summary class="sidebar-link is-parent-active">
+              linked2pay Center
+            </summary>
+            <div class="setup-sublist">
+              <a
+                class="sidebar-sublink is-active"
+                href="/demo/bulk-sync-customers"
+                aria-current="page"
+                ><span>16</span>Bulk Sync Customers</a
+              >
+            </div>
+          </details>
+        </nav>
+      </aside>
+      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay documentation home"
+          >
+            <img src="images/linked2pay.png" alt="linked2pay logo" />
+          </a>
+          <label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </header>
+        <main class="main-shell">
+          <section class="hero setup-step-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">
+                <span class="brand-case">linked2pay</span> Center
+              </p>
+              <h1>Bulk Sync Customers</h1>
+              <p class="lead">
+                Use linked2pay Center to sync multiple customer records from
+                Acumatica into linked2pay in one guided step.
+              </p>
+            </div>
+          </section>
+          <section class="content-band">
+            <article class="story-copy">
+              <h2>We already synced customers one by one.</h2>
+              <p>
+                In the previous steps, we experienced syncing customers one by
+                one from Acumatica to linked2pay. If you want to review that
+                flow again, open the
+                <a
+                  class="text-bold"
+                  style="color: #1985c9"
+                  href="/demo/sync-customer"
+                  >Sync Customer with linked2pay</a
+                >
+                page.
+              </p>
+              <p>
+                But what if you have multiple customers and you want to sync and
+                board all of them together? That is where linked2pay Center
+                becomes useful.
+              </p>
+            </article>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <h2>Get Started with Bulk Sync</h2>
+              <p>
+                In <code>Receivables</code>, under <code>Processes</code>, click
+                on <code>linked2pay Center</code>.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/56.png"
+                alt="Open linked2pay Center from Receivables Processes screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                You will see the list of
+                <span class="text-bold text-italic">Customers</span> you have in
+                Acumatica.<br /><br />Each customer has an
+                <code>L2P Contact Profile ID</code> and
+                <code>Boarded to External Gateway</code> status. These fields
+                are currently empty because the customers have not been synced
+                yet.<br /><br />
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/57.png"
+                alt="Open linked2pay Center from Receivables Processes screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                Use the pagination controls in the bottom-right corner to
+                navigate through the customer list, or use the search bar in the
+                top-right corner to quickly find a specific customer.<br /><br />You
+                can also sort and filter the list by
+                <span class="text-bold text-italic"
+                  >L2P Contact Profile ID</span
+                >
+                and
+                <span class="text-bold text-italic"
+                  >Boarded to External Gateway</span
+                >.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/58.png"
+                alt="Open linked2pay Center from Receivables Processes screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>Either:</p>
+              <ul>
+                <li>
+                  Select the customers you want to sync and click on "<span
+                    class="text-bold text-italic"
+                  >
+                    Sync Selected Customers to linked2pay</span
+                  >"
+                </li>
+                <li>
+                  or you can simply click "<span class="text-bold text-italic"
+                    >Sync All Customers to linked2pay </span
+                  >" to sync all customers.
+                </li>
+              </ul>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/59.png"
+                alt="Open linked2pay Center from Receivables Processes screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p>
+                <span class="text-bold text-italic"
+                  >117 out of 121 Customers</span
+                >
+                have been successfully synced with linked2pay.<br /><br />
+                <span class="text-bold text-italic">Note:</span> The failed ones
+                were because of invalid address information. Make sure your
+                customers have valid informaiton.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/60.png"
+                alt="Open linked2pay Center from Receivables Processes screenshot"
+              />
+            </figure>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <h2>Result</h2>
+              <p>
+                You should be able to see those customers in your linked2pay
+                portal under
+                <span class="text-bold text-italic">My Contacts</span> sections.
+              </p>
+            </article>
+            <figure class="guide-image">
+              <img
+                src="images/screenshots/61.png"
+                alt="Open linked2pay Center from Receivables Processes screenshot"
+              />
+            </figure>
+          </section>
+
+          <nav class="pager" aria-label="Page navigation">
+            <a
+              class="pager-link muted"
+              href="/demo/recurring-pay-with-autopaybill"
+            >
+              <span>Previous</span>
+              <strong>Pay with AutoPayBill</strong>
+            </a>
+            <a class="pager-link" href="/demo/">
+              <span>Next</span>
+              <strong>Demo Overview</strong>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="image-zoom.js"></script>
+  </body>
+</html>
