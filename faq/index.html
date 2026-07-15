@@ -157,14 +157,14 @@
 
       <section class="faq" aria-label="Frequently asked questions">
         <div class="section-inner faq-inner">
-          <details class="faq-item" open><summary>Does the integration send vendor payments?</summary><p>Not in the current release. linked2pay for Acumatica currently receives customer credit card and ACH payments through Accounts Receivable. Vendor payments are planned for a future release; do not scope, configure, demonstrate, or sell them as available today.</p></details>
-          <details class="faq-item">
+          <details class="faq-item" name="faq" open><summary>Does the integration send vendor payments?</summary><p>Not in the current release. linked2pay for Acumatica currently receives customer credit card and ACH payments through Accounts Receivable. Vendor payments are planned for a future release; do not scope, configure, demonstrate, or sell them as available today.</p></details>
+          <details class="faq-item" name="faq">
             <summary>What exactly is linked2pay for Acumatica?</summary>
             <p>
               It is a payment integration installed in Acumatica. The current release supports Accounts Receivable customer credit card and ACH collections, saved payment methods, recurring billing, synchronization, fees, and reconciliation.
             </p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item" name="faq">
             <summary>Does it support both credit cards and ACH?</summary>
             <p>
               Yes. Both are first-class payment methods with their own
@@ -172,13 +172,13 @@
               record, and full support in one-time and recurring payments.
             </p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item" name="faq">
             <summary>Do payments sync back into Acumatica automatically?</summary>
             <p>
               The integration records gateway results against the Acumatica payment workflow, and webhooks update transaction status. Teams must still validate releases, cash accounts, settlement, returns, and generated batches during reconciliation.
             </p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item" name="faq">
             <summary>Can it handle recurring invoices and auto-collection?</summary>
             <p>
               Yes. Create an invoice template, add it to a recurring schedule,
@@ -186,14 +186,14 @@
               automatically against the customer's saved payment method.
             </p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item" name="faq">
             <summary>How long does implementation take?</summary>
             <p>
               Setup is configuration-led: publish the validated customization, connect linked2pay, configure payment methods, and complete sandbox testing. A VAR or developer may be required for version validation, environment builds, network controls, or conflicts. The
               <a href="/setup/">step-by-step setup guide</a> covers every screen.
             </p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item" name="faq">
             <summary>Will it reduce our processing costs?</summary>
             <p>
               Two ways: built-in processing fee programs can offset card
@@ -201,7 +201,7 @@
               shifts volume to the lowest-cost rail.
             </p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item" name="faq">
             <summary>Is it secure? Where is card data stored?</summary>
             <p>
               Card and bank account details are tokenized and vaulted with linked2pay so Acumatica uses payment-profile references instead of raw account data. Tokenization reduces exposure but does not remove merchant PCI, access-control, or data-handling responsibilities.
@@ -250,5 +250,6 @@
         </p>
       </div>
     </footer>
+    <script src="/faq-accordion.js"></script>
   </body>
 </html>
