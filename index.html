@@ -3,13 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      linked2pay for Acumatica | Credit Card &amp; ACH Payments Inside Acumatica
-      ERP
-    </title>
+    <title>Acumatica Credit Card &amp; ACH Payments | linked2pay</title>
     <meta
       name="description"
-      content="Receive customer credit card and ACH payments in Acumatica. Support recurring billing, synchronization, reconciliation, fee programs, and reduced manual work."
+      content="Accept customer credit card and ACH payments in Acumatica with linked2pay. Automate recurring billing, synchronization, reconciliation, and fee programs."
     />
     <meta
       name="keywords"
@@ -44,11 +41,11 @@
     <meta property="og:site_name" content="linked2pay" />
     <meta
       property="og:title"
-      content="linked2pay for Acumatica | Payments Built Into Your ERP"
+      content="Acumatica Credit Card &amp; ACH Payments | linked2pay"
     />
     <meta
       property="og:description"
-      content="Receive customer card and ACH payments, support recurring billing and synchronization, and simplify reconciliation inside Acumatica ERP."
+      content="Accept customer credit card and ACH payments in Acumatica with linked2pay. Automate recurring billing, synchronization, reconciliation, and fee programs."
     />
     <meta property="og:url" content="https://linked2pay.com/" />
     <meta
@@ -60,8 +57,8 @@
       content="https://linked2pay.com/images/linked2pay-acumatica-share.png"
     />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="736" />
+    <meta property="og:image:height" content="266" />
     <meta
       property="og:image:alt"
       content="linked2pay payment processing built into Acumatica ERP"
@@ -70,11 +67,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="linked2pay for Acumatica | Payments Built Into Your ERP"
+      content="Acumatica Credit Card &amp; ACH Payments | linked2pay"
     />
     <meta
       name="twitter:description"
-      content="Receive customer card and ACH payments, support recurring billing and synchronization, and simplify reconciliation inside Acumatica ERP."
+      content="Accept customer credit card and ACH payments in Acumatica with linked2pay. Automate recurring billing, synchronization, reconciliation, and fee programs."
     />
     <meta
       name="twitter:image"
@@ -88,24 +85,58 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "linked2pay for Acumatica",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "description": "Payment integration for Acumatica ERP. Receive customer card and ACH payments, automate recurring billing and synchronization, and simplify reconciliation.",
-        "url": "https://linked2pay.com/",
-        "image": "https://linked2pay.com/images/linked2pay-acumatica-share.png",
-        "publisher": {
-          "@type": "Organization",
-          "name": "linked2pay",
-          "url": "https://linked2pay.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://linked2pay.com/images/linked2pay.png"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://linked2pay.com/#organization",
+            "name": "linked2pay",
+            "url": "https://linked2pay.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://linked2pay.com/images/linked2pay.png"
+            },
+            "contactPoint": [
+              { "@type": "ContactPoint", "contactType": "sales", "email": "sales@linked2pay.com" },
+              { "@type": "ContactPoint", "contactType": "technical support", "email": "support@linked2pay.com" }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://linked2pay.com/#website",
+            "url": "https://linked2pay.com/",
+            "name": "linked2pay for Acumatica",
+            "publisher": { "@id": "https://linked2pay.com/#organization" },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://linked2pay.com/#software",
+            "name": "linked2pay for Acumatica",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "description": "Customer payment integration for Acumatica ERP supporting credit cards, ACH, recurring billing, payment synchronization, fee programs, and reconciliation.",
+            "url": "https://linked2pay.com/",
+            "image": "https://linked2pay.com/images/linked2pay-acumatica-share.png",
+            "publisher": { "@id": "https://linked2pay.com/#organization" },
+            "audience": {
+              "@type": "BusinessAudience",
+              "audienceType": "Acumatica customers, developers, and value-added resellers"
+            },
+            "featureList": [
+              "Customer credit card payments",
+              "Customer ACH payments",
+              "Recurring billing with AutoPayBill",
+              "Customer and payment-method synchronization",
+              "Payment fee programs",
+              "Payment reconciliation support"
+            ]
           }
-        }
+        ]
       }
     </script>
+      <!-- SEO:START -->
+    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://linked2pay.com/#webpage","url":"https://linked2pay.com/","name":"Acumatica Credit Card \u0026 ACH Payments | linked2pay","description":"Accept customer credit card and ACH payments in Acumatica with linked2pay. Automate recurring billing, synchronization, reconciliation, and fee programs.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/#primaryimage"},"dateModified":"2026-07-15"},{"@type":"ImageObject","@id":"https://linked2pay.com/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"}]}</script>
+    <!-- SEO:END -->
   </head>
   <body class="landing">
     <header class="site-nav" aria-label="Primary">
@@ -207,7 +238,7 @@
               <img
                 src="/demo/images/screenshots/30.png"
                 alt="A card payment being processed inside Acumatica with the linked2pay Credit Card Payment Method, showing the payment amount, processing fee, and invoice application"
-                loading="eager"
+                loading="eager" width="1697" height="835" decoding="async" fetchpriority="high"
               />
             </div>
             <figcaption>
@@ -435,7 +466,7 @@
               <img
                 src="/demo/images/screenshots/9.png"
                 alt="Acumatica customer record showing the linked2pay Integration and Payment Methods tabs"
-                loading="lazy"
+                loading="lazy" width="1631" height="781" decoding="async"
               />
               <figcaption>
                 Saved cards and bank accounts, right on the Acumatica customer

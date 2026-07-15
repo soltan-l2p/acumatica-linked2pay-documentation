@@ -1,7 +1,7 @@
-﻿{
+{
   "name": "linked2pay for Acumatica",
   "short_name": "linked2pay",
-  "description": "Setup and demo resources for linked2pay payment processing with Acumatica ERP.",
+  "description": "Customer credit card and ACH payment processing, recurring billing, synchronization, and reconciliation for Acumatica ERP.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

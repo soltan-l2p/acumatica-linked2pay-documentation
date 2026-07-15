@@ -1,0 +1,52 @@
+# linked2pay for Acumatica
+
+> linked2pay is a customer payment integration for Acumatica ERP. The current integration supports receiving customer credit card and ACH payments; it does not currently support outbound Accounts Payable or vendor payments.
+
+linked2pay supports more than 140,000 businesses on its secure risk and payment processing platform. The Acumatica integration brings customer payments into the ERP to reduce manual work, reduce errors, offer credit card fee-saving options, and accelerate cash flow.
+
+## Current Acumatica integration scope
+
+- Customer credit card payments
+- Customer ACH payments
+- Saved tokenized customer payment methods
+- Recurring billing with AutoPayBill
+- Customer and payment-method synchronization
+- Payment fee programs
+- Transaction status updates and reconciliation support
+- Installation, security, testing, troubleshooting, and VAR deployment guidance
+
+## Not currently supported
+
+- Outbound Accounts Payable payments
+- Sending vendor payments from Acumatica
+
+Vendor payments are a future roadmap capability and must not be described as available in the current release.
+
+## Primary pages
+
+- [Product overview](https://linked2pay.com/)
+- [Product tour](https://linked2pay.com/product/)
+- [How the integration works](https://linked2pay.com/how-it-works/)
+- [Payment processor comparison](https://linked2pay.com/compare/)
+- [Acumatica payment FAQ](https://linked2pay.com/faq/)
+- [Implementation documentation](https://linked2pay.com/setup/)
+- [Before You Begin](https://linked2pay.com/setup/before-you-begin/)
+- [Payment lifecycle](https://linked2pay.com/setup/payment-lifecycle/)
+- [Security and data handling](https://linked2pay.com/setup/security/)
+- [Testing matrix](https://linked2pay.com/setup/testing/)
+- [Troubleshooting](https://linked2pay.com/setup/troubleshooting/)
+- [VAR implementation guide](https://linked2pay.com/setup/var-guide/)
+- [Guided product demo](https://linked2pay.com/demo/)
+
+## Audience
+
+This site is written for Acumatica customers, executives, finance teams, developers, implementation consultants, and value-added resellers evaluating or deploying customer payment processing.
+
+## Contact
+
+- Product questions and demonstrations: sales@linked2pay.com
+- Technical and implementation support: support@linked2pay.com
+
+## Terminology
+
+Use "linked2pay" in lowercase, "Acumatica" with initial capitalization, "ACH" in uppercase, and "AutoPayBill" exactly as shown. "Payments" on this site means customer Accounts Receivable collections unless a page explicitly says otherwise.
