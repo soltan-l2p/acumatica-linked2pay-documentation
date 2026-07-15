@@ -235,6 +235,40 @@ a {
   outline: none;
 }
 
+.nav-links a[aria-current="page"] {
+  color: var(--blue-deep);
+}
+
+/* ---------- subpage hero ---------- */
+
+.page-hero {
+  padding: 68px 0 10px;
+}
+
+.page-title {
+  max-width: 820px;
+}
+
+.page-hero + .product,
+.page-hero + .how,
+.page-hero + .compare,
+.page-hero + .faq {
+  padding-top: 36px;
+}
+
+.page-hero + .product .feature-row:first-child {
+  margin-top: 0;
+}
+
+.page-hero + .faq .faq-item:first-of-type {
+  margin-top: 0;
+}
+
+.page-hero + .how .step-grid,
+.page-hero + .compare .table-scroll {
+  margin-top: 0;
+}
+
 /* ---------- hero ---------- */
 
 .hero {
@@ -585,6 +619,87 @@ a {
   border-radius: 16px;
   background: var(--surface);
   box-shadow: var(--soft-shadow);
+}
+
+/* ---------- homepage product teaser ---------- */
+
+.teaser .feature-row {
+  margin-top: 0;
+}
+
+.teaser .teaser-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+}
+
+.teaser .feature-text p {
+  margin-top: 14px;
+}
+
+.teaser-actions {
+  margin-top: 26px;
+  animation: none;
+}
+
+/* ---------- explore cards ---------- */
+
+.explore {
+  padding: 84px 0 30px;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 26px 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--soft-shadow);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.explore-card:hover,
+.explore-card:focus-visible {
+  transform: translateY(-6px);
+  border-color: rgba(17, 104, 201, 0.42);
+  box-shadow: var(--shadow);
+  outline: none;
+}
+
+.explore-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: var(--blue-soft);
+  font-size: 1.2rem;
+}
+
+.explore-card h3 {
+  margin: 10px 0 0;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.explore-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.explore-card .path-action {
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 0.9rem;
 }
 
 /* ---------- how it works ---------- */
@@ -1058,7 +1173,8 @@ a {
   }
 
   .benefit-grid,
-  .step-grid {
+  .step-grid,
+  .explore-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1086,7 +1202,8 @@ a {
   }
 
   .benefit-grid,
-  .step-grid {
+  .step-grid,
+  .explore-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1106,8 +1223,13 @@ a {
   .video,
   .compare,
   .faq,
-  .docs {
+  .docs,
+  .explore {
     padding-top: 60px;
+  }
+
+  .page-hero {
+    padding-top: 44px;
   }
 
   .final-cta {
