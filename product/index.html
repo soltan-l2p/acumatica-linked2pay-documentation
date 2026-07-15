@@ -47,8 +47,30 @@
           <a href="/how-it-works/">How It Works</a>
           <a href="/compare/">Compare</a>
           <a href="/faq/">FAQ</a>
-          <a href="/setup/">Docs</a>
+          <details class="nav-dropdown">
+            <summary>Docs <span class="nav-chevron" aria-hidden="true"></span></summary>
+            <div class="nav-dropdown-menu">
+              <a href="/setup/">Setup documentation<small>Install and configure linked2pay</small></a>
+              <a href="/demo/">Demo walkthroughs<small>See common payment workflows</small></a>
+            </div>
+          </details>
         </nav>
+        <details class="mobile-menu">
+          <summary>
+            <span class="sr-only">Open navigation</span>
+            <span class="hamburger" aria-hidden="true"></span>
+          </summary>
+          <nav class="mobile-panel" aria-label="Mobile sections">
+            <a href="/product/">Product</a>
+            <a href="/how-it-works/">How It Works</a>
+            <a href="/compare/">Compare</a>
+            <a href="/faq/">FAQ</a>
+            <span class="mobile-docs-label">Documentation</span>
+            <a href="/setup/">Setup documentation</a>
+            <a href="/demo/">Demo walkthroughs</a>
+            <a class="mobile-demo" href="#request-demo">Request a Demo</a>
+          </nav>
+        </details>
         <div class="nav-cta">
           <a class="btn btn-primary btn-sm" href="#request-demo">Request a Demo</a>
         </div>
@@ -161,7 +183,7 @@
           <h2 class="section-title" id="video-title">From install to first payment in 5 minutes</h2>
           <!-- TODO: replace this placeholder with the real embedded walkthrough video -->
           <div class="video-frame" role="img" aria-label="Video coming soon: 5-minute linked2pay for Acumatica setup walkthrough">
-            <div class="video-play" aria-hidden="true">▶</div>
+            <div class="video-play" aria-hidden="true"></div>
             <p class="video-label">5-minute setup &amp; demo walkthrough</p>
             <p class="video-soon">Video coming soon - <a href="/demo/">follow the step-by-step demo</a> in the meantime</p>
           </div>
