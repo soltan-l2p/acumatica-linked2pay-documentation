@@ -1927,3 +1927,237 @@ a {
     bottom: 14px;
   }
 }
+
+/* ---------- platform lifecycle rail ---------- */
+.platform-header {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.platform-header .section-title {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.platform-header .platform-lede {
+  max-width: 660px;
+  margin: 18px auto 0;
+}
+
+.platform-scale {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 9px 16px;
+  border: 1px solid rgba(17, 104, 201, 0.18);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--blue-soft);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.platform-scale strong {
+  color: var(--blue-deep);
+  font-size: 1.18rem;
+  letter-spacing: -0.025em;
+}
+
+.platform-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 58px;
+  padding-top: 2px;
+}
+
+.platform-rail::before {
+  position: absolute;
+  top: 24px;
+  left: 8.3%;
+  right: 8.3%;
+  height: 2px;
+  background: linear-gradient(90deg, #76b8e2, var(--blue), #76b8e2);
+  content: "";
+}
+
+.platform-stop {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 0 14px;
+  text-align: center;
+}
+
+.platform-node {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 22px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--blue);
+  box-shadow: 0 0 0 1px rgba(17, 104, 201, 0.24), 0 8px 20px rgba(17, 104, 201, 0.18);
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+}
+
+.platform-stop h3 {
+  margin: 0 0 9px;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.platform-stop p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 980px) {
+  .platform-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 34px 0;
+  }
+
+  .platform-rail::before {
+    display: none;
+  }
+
+  .platform-stop {
+    padding-inline: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .platform-header {
+    text-align: left;
+  }
+
+  .platform-header .section-title,
+  .platform-header .platform-lede {
+    margin-left: 0;
+  }
+
+  .platform-scale {
+    align-items: flex-start;
+    border-radius: 14px;
+  }
+
+  .platform-rail {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 38px;
+    padding-left: 4px;
+  }
+
+  .platform-rail::before {
+    display: block;
+    top: 22px;
+    bottom: 22px;
+    left: 27px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(180deg, #76b8e2, var(--blue), #76b8e2);
+  }
+
+  .platform-stop {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    column-gap: 18px;
+    padding: 0 0 28px;
+    text-align: left;
+  }
+
+  .platform-stop:last-child {
+    padding-bottom: 0;
+  }
+
+  .platform-node {
+    grid-row: 1 / span 2;
+    width: 46px;
+    height: 46px;
+    margin: 0;
+  }
+
+  .platform-stop h3 {
+    align-self: end;
+    margin-bottom: 5px;
+  }
+}
+/* ---------- pre-benefits contact prompt ---------- */
+.contact-prompt {
+  padding: 54px 0 0;
+}
+
+.contact-prompt-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 22px 26px;
+  border: 1px solid rgba(17, 104, 201, 0.2);
+  border-radius: 20px;
+  background: linear-gradient(110deg, #f1f7ff, #f8fbff);
+}
+
+.contact-prompt p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact-prompt strong {
+  color: var(--ink);
+  font-size: 1.04rem;
+}
+
+.contact-prompt a {
+  flex: 0 0 auto;
+  padding: 11px 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--blue-deep);
+  font-size: 0.88rem;
+  font-weight: 800;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-prompt a:hover,
+.contact-prompt a:focus-visible {
+  background: var(--blue);
+  box-shadow: 0 9px 22px rgba(17, 104, 201, 0.2);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 620px) {
+  .contact-prompt {
+    padding-top: 38px;
+  }
+
+  .contact-prompt-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .contact-prompt a {
+    width: 100%;
+    text-align: center;
+  }
+}
