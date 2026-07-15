@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Support and Escalation | linked2pay for Acumatica</title><meta name="description" content="Route implementation, Acumatica, gateway, and security issues with evidence needed for fast diagnosis and no sensitive-data exposure." /><link rel="stylesheet" href="/setup/styles.css" /><link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" /></head>
+<body class="site theme-light"><input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label><div class="site-shell">
+<aside class="sidebar-nav" aria-label="Documentation sections"><a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><p class="sidebar-kicker">Implementation documentation</p><button class="docs-search-launch" type="button" data-docs-search><span>Search documentation</span><kbd>/</kbd></button><nav class="sidebar-menu" aria-label="Documentation sections">
+          <p class="sidebar-section-label">Documentation</p>
+          <a class="sidebar-link" href="/setup/">Documentation overview</a>
+          <p class="sidebar-section-label">Start here</p>
+          <a class="sidebar-link" href="/setup/before-you-begin/">Before You Begin</a>
+          <a class="sidebar-link" href="/setup/setup/">Installation path</a>
+          <p class="sidebar-section-label">Setup steps</p>
+          <a class="sidebar-link" href="/setup/setup-confirm-extension/">1A Import extension</a>
+          <a class="sidebar-link" href="/setup/setup-confirm-publish/">1B Publish extension</a>
+          <a class="sidebar-link" href="/setup/setup-processing-center/">2A Card processing center</a>
+          <a class="sidebar-link" href="/setup/setup-processing-api/">2B API settings</a>
+          <a class="sidebar-link" href="/setup/setup-processing-webhook/">2C Webhook</a>
+          <a class="sidebar-link" href="/setup/setup-processing-ach/">2D ACH processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-methods/">3A Card payment method</a>
+          <a class="sidebar-link" href="/setup/setup-payment-link-center/">3B Link processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-ach/">3C ACH payment method</a>
+          <a class="sidebar-link" href="/setup/setup-nonstock-items/">4 Fee item</a>
+          <p class="sidebar-section-label">Operations</p>
+          <a class="sidebar-link" href="/setup/payment-lifecycle/">Payment lifecycle</a>
+          <a class="sidebar-link" href="/setup/outbound-payments/">Vendor payments (planned)</a>
+          <a class="sidebar-link" href="/setup/troubleshooting/">Troubleshooting</a>
+          <p class="sidebar-section-label">Delivery</p>
+          <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link" href="/setup/security/">Security</a>
+          <a class="sidebar-link" href="/setup/var-guide/">VAR implementation guide</a>
+          <p class="sidebar-section-label">Reference</p>
+          <a class="sidebar-link" href="/setup/known-issues/">Known issues</a>
+          <a class="sidebar-link" href="/setup/release-notes/">Release notes</a>
+          <a class="sidebar-link is-active" href="/setup/support/" aria-current="page">Support</a>
+</nav></aside><div class="page-frame"><header class="mobile-topbar"><a class="mobile-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><button class="docs-search-launch mobile-docs-search" type="button" data-docs-search><span>Search</span></button><label class="menu-button" for="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></label></header>
+<main class="main-shell"><nav class="doc-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/setup/">Documentation</a><span aria-hidden="true">/</span><span aria-current="page">Support and Escalation</span></nav><section class="hero docs-hero"><div class="hero-inner"><p class="eyebrow">Get help safely</p><h1>Support and Escalation</h1><p class="lead">Route implementation, Acumatica, gateway, and security issues with evidence needed for fast diagnosis and no sensitive-data exposure.</p></div></section><div class="docs-layout"><article class="docs-article">
+<section id="contacts"><h2>Support contacts</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Need</th><th>Contact</th><th>Use</th></tr></thead><tbody><tr><td>Implementation/commercial</td><td><a href="mailto:sales@linked2pay.com?subject=Acumatica%20linked2pay%20request">sales@linked2pay.com</a></td><td>Deployment, account enablement, demo, or routing.</td></tr><tr><td>Acumatica configuration</td><td>Customer's Acumatica VAR/support desk</td><td>Customization, roles, screens, accounting, environment.</td></tr><tr><td>Gateway/API</td><td>Assigned linked2pay support channel</td><td>Authentication, merchant, transaction, status, webhook service.</td></tr><tr><td>Security incident</td><td>Customer security owner and assigned linked2pay incident channel</td><td>Credential, token, data, or unauthorized webhook exposure.</td></tr></tbody></table></div></section>
+<section id="severity"><h2>Severity and escalation</h2><ul><li><strong>Critical:</strong> duplicate-funds risk, exposed secrets/payment data, broad outage, high-value unreconciled transaction. Stop and escalate.</li><li><strong>High:</strong> production rail unavailable, broad webhook failure.</li><li><strong>Normal:</strong> single-record setup/data issue, documentation question, sandbox defect.</li></ul></section>
+<section id="case"><h2>What to include</h2><ul class="checklist"><li>Acumatica/integration builds.</li><li>Environment, company/branch, screen ID, rail.</li><li>Document type/reference and timestamp/time zone.</li><li>Transaction/payment IDs.</li><li>Sanitized error/log excerpt.</li><li>Steps attempted and whether funds moved.</li></ul><div class="notice danger"><strong>Never attach:</strong> API/webhook keys, passwords, full tokens, card/bank data, CVV, production exports, or unmasked customer information.</div></section>
+<section id="first-response"><h2>Before opening a case</h2><p>Check Acumatica, portal, Payment Status, Webhook History, Trace, and <code>App_Data/L2PLogs</code>. If outcome is unknown, do not retry until history confirms whether funds moved.</p></section>
+</article><aside class="page-toc" data-page-toc><h2>On this page</h2></aside></div><nav class="pager" aria-label="Page navigation"><a class="pager-link muted" href="/setup/release-notes/"><span>Previous</span><strong>Release notes</strong></a><span></span></nav></main></div></div><script src="/docs-search-index.js"></script><script src="/docs.js"></script><script src="/setup/image-zoom.js"></script></body></html>

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before You Begin | linked2pay for Acumatica</title>
+    <meta
+      name="description"
+      content="Confirm version support, modules, credentials, environments, network access, limitations, and implementation effort before publishing the integration."
+    />
+    <link rel="stylesheet" href="/setup/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
+  </head>
+  <body class="site theme-light">
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label
+      class="sidebar-backdrop"
+      for="sidebar-toggle"
+      aria-label="Close menu"
+    ></label>
+    <div class="site-shell">
+      <aside class="sidebar-nav" aria-label="Documentation sections">
+        <a
+          class="sidebar-brand simple-logo"
+          href="/"
+          aria-label="linked2pay for Acumatica home"
+          ><img src="/setup/images/linked2pay.png" alt="linked2pay"
+        /></a>
+        <p class="sidebar-kicker">Implementation documentation</p>
+        <button class="docs-search-launch" type="button" data-docs-search>
+          <span>Search documentation</span><kbd>/</kbd>
+        </button>
+        <nav class="sidebar-menu" aria-label="Documentation sections">
+          <p class="sidebar-section-label">Documentation</p>
+          <a class="sidebar-link" href="/setup/">Documentation overview</a>
+          <p class="sidebar-section-label">Start here</p>
+          <a
+            class="sidebar-link is-active"
+            href="/setup/before-you-begin/"
+            aria-current="page"
+            >Before You Begin</a
+          >
+          <a class="sidebar-link" href="/setup/setup/">Installation path</a>
+          <p class="sidebar-section-label">Setup steps</p>
+          <a class="sidebar-link" href="/setup/setup-confirm-extension/"
+            >1A Import extension</a
+          >
+          <a class="sidebar-link" href="/setup/setup-confirm-publish/"
+            >1B Publish extension</a
+          >
+          <a class="sidebar-link" href="/setup/setup-processing-center/"
+            >2A Card processing center</a
+          >
+          <a class="sidebar-link" href="/setup/setup-processing-api/"
+            >2B API settings</a
+          >
+          <a class="sidebar-link" href="/setup/setup-processing-webhook/"
+            >2C Webhook</a
+          >
+          <a class="sidebar-link" href="/setup/setup-processing-ach/"
+            >2D ACH processing center</a
+          >
+          <a class="sidebar-link" href="/setup/setup-payment-methods/"
+            >3A Card payment method</a
+          >
+          <a class="sidebar-link" href="/setup/setup-payment-link-center/"
+            >3B Link processing center</a
+          >
+          <a class="sidebar-link" href="/setup/setup-payment-ach/"
+            >3C ACH payment method</a
+          >
+          <a class="sidebar-link" href="/setup/setup-nonstock-items/"
+            >4 Fee item</a
+          >
+          <p class="sidebar-section-label">Operations</p>
+          <a class="sidebar-link" href="/setup/payment-lifecycle/"
+            >Payment lifecycle</a
+          >
+          <a class="sidebar-link" href="/setup/outbound-payments/"
+            >Vendor payments (planned)</a
+          >
+          <a class="sidebar-link" href="/setup/troubleshooting/"
+            >Troubleshooting</a
+          >
+          <p class="sidebar-section-label">Delivery</p>
+          <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link" href="/setup/security/">Security</a>
+          <a class="sidebar-link" href="/setup/var-guide/"
+            >VAR implementation guide</a
+          >
+          <p class="sidebar-section-label">Reference</p>
+          <a class="sidebar-link" href="/setup/known-issues/">Known issues</a>
+          <a class="sidebar-link" href="/setup/release-notes/">Release notes</a>
+          <a class="sidebar-link" href="/setup/support/">Support</a>
+        </nav>
+      </aside>
+      <div class="page-frame">
+        <header class="mobile-topbar">
+          <a
+            class="mobile-brand simple-logo"
+            href="/"
+            aria-label="linked2pay for Acumatica home"
+            ><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a
+          ><button
+            class="docs-search-launch mobile-docs-search"
+            type="button"
+            data-docs-search
+          >
+            <span>Search</span></button
+          ><label
+            class="menu-button"
+            for="sidebar-toggle"
+            aria-label="Open menu"
+            ><span></span><span></span><span></span
+          ></label>
+        </header>
+        <main class="main-shell">
+          <nav class="doc-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span aria-hidden="true">/</span
+            ><a href="/setup/">Documentation</a><span aria-hidden="true">/</span
+            ><span aria-current="page">Before You Begin</span>
+          </nav>
+          <section class="hero docs-hero">
+            <div class="hero-inner">
+              <p class="eyebrow">Prerequisites and deployment boundaries</p>
+              <h1>Before You Begin</h1>
+              <p class="lead">
+                Confirm version support, modules, credentials, environments,
+                network access, limitations, and implementation effort before
+                publishing the integration.
+              </p>
+            </div>
+          </section>
+          <div class="docs-layout">
+            <article class="docs-article">
+              <section id="supported-versions">
+                <h2>Supported Acumatica versions</h2>
+                <div class="success-box">
+                  <strong>Validated build:</strong> Acumatica 2025 R2 build
+                  <code>25.201.0213</code> on .NET Framework 4.8.
+                </div>
+                <p>
+                  The integration is compiled against that build. Treat other
+                  releases, updates, hosting models, or customized payment
+                  screens as unvalidated until sandbox regression testing is
+                  complete.
+                </p>
+                <ul>
+                  <li>Rebuild and test before another major release.</li>
+                  <li>
+                    Revalidate after upgrades or payment-related customization
+                    changes.
+                  </li>
+                  <li>Record exact Acumatica and integration builds.</li>
+                </ul>
+              </section>
+              <section id="modules-licenses">
+                <h2>Required modules, licenses, roles, and permissions</h2>
+                <div class="table-scroll">
+                  <table class="field-table">
+                    <thead>
+                      <tr>
+                        <th>Requirement</th>
+                        <th>When needed</th>
+                        <th>Minimum expectation</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Customization Projects</td>
+                        <td>All</td>
+                        <td>
+                          Import, validate, publish, and unpublish rights.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Cash Management / payment processing</td>
+                        <td>All</td>
+                        <td>Processing Centers and Payment Methods.</td>
+                      </tr>
+                      <tr>
+                        <td>Accounts Receivable</td>
+                        <td>Collections</td>
+                        <td>
+                          Customers, invoices, Payments and Applications,
+                          release.
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>linked2pay merchant account</td>
+                        <td>All</td>
+                        <td>
+                          Enabled customer card and ACH debit services.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Administrator</td>
+                        <td>Setup</td>
+                        <td>
+                          System Administrator or least-privilege equivalent.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>AR operator</td>
+                        <td>Operations</td>
+                        <td>
+                          Job actions only; no credential/customization access.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section id="credentials">
+                <h2>linked2pay account and credentials</h2>
+                <ul class="checklist">
+                  <li>
+                    API login ID and transaction key for the correct
+                    merchant/environment.
+                  </li>
+                  <li>Webhook API key in linked2pay and Acumatica.</li>
+                  <li>Required card/ACH services enabled.</li>
+                  <li>
+                    Tokens created in the same environment as credentials.
+                  </li>
+                </ul>
+                <div class="warning">
+                  <strong>Token rule:</strong> never reuse contact or
+                  payment-profile IDs across environments or merchant accounts.
+                </div>
+              </section>
+              <section id="environments">
+                <h2>Sandbox versus production</h2>
+                <div class="table-scroll">
+                  <table class="field-table">
+                    <thead>
+                      <tr>
+                        <th>Environment</th>
+                        <th>Base URL</th>
+                        <th>Data rule</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Sandbox</td>
+                        <td><code>https://test.linked2pay.com</code></td>
+                        <td>Synthetic data and sandbox tokens only.</td>
+                      </tr>
+                      <tr>
+                        <td>Production</td>
+                        <td><code>https://api.linked2pay.com</code></td>
+                        <td>Production credentials and tokens.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="notice danger">
+                  <strong>Build limitation:</strong> the base URL is compiled
+                  into the integration. Changing credentials does not change
+                  environments.
+                </div>
+              </section>
+              <section id="network">
+                <h2>Network, firewall, and webhook requirements</h2>
+                <ul>
+                  <li>
+                    Outbound HTTPS TCP 443 from Acumatica to the selected
+                    linked2pay URL.
+                  </li>
+                  <li>Trusted HTTPS access to the Acumatica webhook URL.</li>
+                  <li>
+                    Preserve <code>X-Api-Key</code> through WAF/proxy/load
+                    balancer.
+                  </li>
+                  <li>
+                    Allow the app identity to write
+                    <code>App_Data/L2PLogs</code>.
+                  </li>
+                </ul>
+              </section>
+              <section id="limitations">
+                <h2>Known compatibility limitations</h2>
+                <ul>
+                  <li>
+                    Only build <code>25.201.0213</code> is identified as
+                    validated.
+                  </li>
+                  <li>API environment is compile-time.</li>
+                  <li>Vendor payments are not available in the current release.</li>
+                  
+                  <li>Pull customers from linked2pay is unavailable.</li>
+                  <li>
+                    Generic profile create/update/delete is not implemented.
+                  </li>
+                  <li>
+                    Chargeback and ACH-return accounting documents are not
+                    automatic.
+                  </li>
+                </ul>
+                <p>Review <a href="/setup/known-issues/">Known Issues</a>.</p>
+              </section>
+              <section id="effort">
+                <h2>Estimated implementation effort</h2>
+                <p>
+                  Plan <strong>8–16 implementation hours</strong> for a standard
+                  single-company deployment: installation, configuration,
+                  network coordination, sandbox testing, UAT, and cutover. Add time for multiple entities, custom approvals, upgrades, or
+                  conflicts. This is a planning estimate, not an SLA.
+                </p>
+              </section>
+              <section id="ready">
+                <h2>Readiness checkpoint</h2>
+                <ul class="checklist">
+                  <li>Build/modules/roles confirmed.</li>
+                  <li>Sandbox credentials and webhook key ready.</li>
+                  <li>Network owner assigned.</li>
+                  <li>AR card and ACH scope approved.</li>
+                  <li>Testing and accounting owners assigned.</li>
+                </ul>
+                <div class="next-step-box">
+                  <strong>Next:</strong>
+                  <a href="/setup/setup/">Installation Path</a>.
+                </div>
+              </section>
+            </article>
+            <aside class="page-toc" data-page-toc><h2>On this page</h2></aside>
+          </div>
+          <nav class="pager" aria-label="Page navigation">
+            <a class="pager-link muted" href="/setup/"
+              ><span>Previous</span><strong>Documentation overview</strong></a
+            ><a class="pager-link" href="/setup/setup/"
+              ><span>Next</span><strong>Installation path</strong></a
+            >
+          </nav>
+        </main>
+      </div>
+    </div>
+    <script src="/docs-search-index.js"></script>
+    <script src="/docs.js"></script>
+    <script src="/setup/image-zoom.js"></script>
+  </body>
+</html>

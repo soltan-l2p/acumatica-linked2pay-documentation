@@ -1,79 +1,41 @@
-﻿<!doctype html>
-<html lang="en">
-  <head>
-    <base href="/setup/" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linked2pay for Acumatica | Create the Credit Card Processing Center</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
-  </head>
-  <body class="site theme-light">
-    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label
-      class="sidebar-backdrop"
-      for="sidebar-toggle"
-      aria-label="Close menu"
-    ></label>
-    <div class="site-shell">
-      <aside class="sidebar-nav" aria-label="Documentation sections">
-        <a
-          class="sidebar-brand simple-logo"
-          href="/"
-          aria-label="linked2pay for Acumatica home"
-        >
-          <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
-        </a>
-        <p class="sidebar-kicker">Guide Menu</p>
-                <nav class="sidebar-menu" aria-label="Documentation sections">
-          <a class="sidebar-link" href="/">Documentation Home</a>
-          <a class="sidebar-link" href="/demo/">Demo Walkthrough</a>
-          <a class="sidebar-link" href="/setup/">Overview</a>
-          <p class="sidebar-section-label">Setup Path</p>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup"><span>1</span>Setup Overview</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-extension"><span>1A</span>Import Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-publish"><span>1B</span>Publish Extension</a>
-          <a class="sidebar-link sidebar-step-link is-active" href="/setup/setup-processing-center" aria-current="page"><span>2A</span>Create Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-api"><span>2B</span>API Settings</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-webhook"><span>2C</span>Webhook Setup</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-ach"><span>2D</span>ACH Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-methods"><span>3A</span>Credit Card Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-link-center"><span>3B</span>Link Processing Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-ach"><span>3C</span>ACH Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-nonstock-items"><span>4</span>Non-Stock Items</a>
-        </nav>
-      </aside>      <div class="page-frame">
-        <header class="mobile-topbar">
-          <a
-            class="mobile-brand simple-logo"
-            href="/"
-            aria-label="linked2pay for Acumatica home"
-          >
-            <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
-          </a>
-          <label
-            class="menu-button"
-            for="sidebar-toggle"
-            aria-label="Open menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </header>
-        <main class="main-shell">
-          <section class="hero setup-step-hero">
-            <div class="hero-inner">
-              <p class="eyebrow">Setup 2A</p>
-              <h1>Create the Credit Card Processing Center</h1>
-              <p class="lead">
-                Create the first linked2pay processing center for credit card
-                payments.
-              </p>
-            </div>
-          </section>
-
-          <section class="story-band setup-story">
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Create the Credit Card Processing Center | linked2pay for Acumatica</title><meta name="description" content="Create the active linked2pay card processing center and select the integration plugin." /><link rel="stylesheet" href="/setup/styles.css" /><link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" /></head>
+<body class="site theme-light"><input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label><div class="site-shell">
+<aside class="sidebar-nav" aria-label="Documentation sections"><a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><p class="sidebar-kicker">Implementation documentation</p><button class="docs-search-launch" type="button" data-docs-search><span>Search documentation</span><kbd>/</kbd></button><nav class="sidebar-menu" aria-label="Documentation sections">
+          <p class="sidebar-section-label">Documentation</p>
+          <a class="sidebar-link" href="/setup/">Documentation overview</a>
+          <p class="sidebar-section-label">Start here</p>
+          <a class="sidebar-link" href="/setup/before-you-begin/">Before You Begin</a>
+          <a class="sidebar-link" href="/setup/setup/">Installation path</a>
+          <p class="sidebar-section-label">Setup steps</p>
+          <a class="sidebar-link" href="/setup/setup-confirm-extension/">1A Import extension</a>
+          <a class="sidebar-link" href="/setup/setup-confirm-publish/">1B Publish extension</a>
+          <a class="sidebar-link is-active" href="/setup/setup-processing-center/" aria-current="page">2A Card processing center</a>
+          <a class="sidebar-link" href="/setup/setup-processing-api/">2B API settings</a>
+          <a class="sidebar-link" href="/setup/setup-processing-webhook/">2C Webhook</a>
+          <a class="sidebar-link" href="/setup/setup-processing-ach/">2D ACH processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-methods/">3A Card payment method</a>
+          <a class="sidebar-link" href="/setup/setup-payment-link-center/">3B Link processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-ach/">3C ACH payment method</a>
+          <a class="sidebar-link" href="/setup/setup-nonstock-items/">4 Fee item</a>
+          <p class="sidebar-section-label">Operations</p>
+          <a class="sidebar-link" href="/setup/payment-lifecycle/">Payment lifecycle</a>
+          <a class="sidebar-link" href="/setup/outbound-payments/">Vendor payments (planned)</a>
+          <a class="sidebar-link" href="/setup/troubleshooting/">Troubleshooting</a>
+          <p class="sidebar-section-label">Delivery</p>
+          <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link" href="/setup/security/">Security</a>
+          <a class="sidebar-link" href="/setup/var-guide/">VAR implementation guide</a>
+          <p class="sidebar-section-label">Reference</p>
+          <a class="sidebar-link" href="/setup/known-issues/">Known issues</a>
+          <a class="sidebar-link" href="/setup/release-notes/">Release notes</a>
+          <a class="sidebar-link" href="/setup/support/">Support</a>
+</nav></aside><div class="page-frame"><header class="mobile-topbar"><a class="mobile-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><button class="docs-search-launch mobile-docs-search" type="button" data-docs-search><span>Search</span></button><label class="menu-button" for="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></label></header>
+<main class="main-shell"><nav class="doc-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/setup/">Documentation</a><span aria-hidden="true">/</span><span aria-current="page">Create the Credit Card Processing Center</span></nav><section class="hero docs-hero"><div class="hero-inner"><p class="eyebrow">Setup 2A</p><h1>Create the Credit Card Processing Center</h1><p class="lead">Create the active linked2pay card processing center and select the integration plugin.</p></div></section><div class="docs-layout"><article class="docs-article">
+<section id="purpose"><h2>Purpose</h2><p>Create the Acumatica processing-center record that owns card credentials, payment behavior, fee settings, and the linked2pay plugin.</p></section>
+<section id="prerequisites"><h2>Prerequisites</h2><ul><li>Extension published/verified.</li><li>Approved card cash account exists.</li><li>Card services enabled on the linked2pay merchant.</li><li>Administrator can maintain Processing Centers.</li></ul></section>
+<section id="navigation"><h2>Acumatica navigation path and screen ID</h2><p><strong>Navigation:</strong> Banking &gt; Credit Card Processing &gt; Processing Centers list, then open the record (<code>CA2050PL / CA205000</code>)</p></section>
+<section id="instructions"><h2>Step-by-step instructions</h2><div class="preserved-tutorial"><section class="story-band setup-story">
             <article class="story-copy">
               <p class="eyebrow">Open the processing center screen</p>
               <h2>Now we connect Acumatica to linked2pay.</h2>
@@ -165,21 +127,10 @@
             <figure class="guide-image">
               <img src="/setup/images/screenshots/11.png" alt="linked2pay processing center fields" />
             </figure>
-          </section>
-
-          <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="/setup/setup-confirm-publish">
-              <span>Previous</span>
-              <strong>1B Publish Extension</strong>
-            </a>
-            <a class="pager-link" href="/setup/setup-processing-api">
-              <span>Next</span>
-              <strong>2B API Settings</strong>
-            </a>
-          </nav>
-        </main>
-      </div>
-    </div>
-    <script src="image-zoom.js"></script>
-  </body>
-</html>
+          </section></div></section>
+<section id="field-reference"><h2>Field reference</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Field or setting</th><th>Required value</th><th>Notes</th></tr></thead><tbody><tr><td>Processing Center ID</td><td><code>L2PCC</code></td><td>Recommended card center ID.</td></tr><tr><td>Name</td><td>linked2pay Credit Card Payments</td><td>Use clear customer-approved naming.</td></tr><tr><td>Active</td><td>Checked</td><td>Required for boarding and processing.</td></tr><tr><td>Cash Account</td><td>Approved card settlement account</td><td>Controls reconciliation/accounting.</td></tr><tr><td>Payment Plug-In</td><td><code>Linked2PayIntegration.PaymentProcessor</code></td><td>Loads linked2pay settings.</td></tr></tbody></table></div></section>
+<section id="expected"><h2>Expected result</h2><div class="success-box">An active <code>L2PCC</code> record opens on <code>CA205000</code>, displays linked2pay settings, and is linked to the approved cash account.</div></section>
+<section id="validation"><h2>Validation steps</h2><ul class="checklist"><li>Record saves without validation errors.</li><li>Plugin persists after refresh.</li><li>Settings grid contains API Username, API Password/Key, Webhook API Key, Payment Method, and Card Fee.</li><li>No credentials appear in screenshots/change tickets.</li></ul></section>
+<section id="errors"><h2>Common errors</h2><div class="table-scroll"><table class="matrix-table"><thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead><tbody><tr><td>Plugin not listed</td><td>Extension not loaded</td><td>Return to publish verification.</td></tr><tr><td>Processing center not found</td><td>Unsaved/inactive/incorrect company</td><td>Save, activate, and confirm company context.</td></tr><tr><td>Wrong cash account</td><td>Design mapping incomplete</td><td>Stop and obtain accounting approval before testing.</td></tr></tbody></table></div><p>For unresolved issues, review <a href="/setup/troubleshooting/">Troubleshooting</a> and <a href="/setup/support/">Support</a>.</p></section>
+<section id="next"><h2>Next step</h2><div class="next-step-box">Continue to <a href="/setup/setup-processing-api/">Configure API settings</a>.</div></section>
+</article><aside class="page-toc" data-page-toc><h2>On this page</h2></aside></div><nav class="pager" aria-label="Page navigation"><a class="pager-link muted" href="/setup/setup-confirm-publish/"><span>Previous</span><strong>Publish the extension</strong></a><a class="pager-link" href="/setup/setup-processing-api/"><span>Next</span><strong>Configure API settings</strong></a></nav></main></div></div><script src="/docs-search-index.js"></script><script src="/docs.js"></script><script src="/setup/image-zoom.js"></script></body></html>

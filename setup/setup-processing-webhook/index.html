@@ -1,80 +1,41 @@
-﻿<!doctype html>
-<html lang="en">
-  <head>
-    <base href="/setup/" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linked2pay for Acumatica | Configure the Webhook Connection</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
-  </head>
-  <body class="site theme-light">
-    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label
-      class="sidebar-backdrop"
-      for="sidebar-toggle"
-      aria-label="Close menu"
-    ></label>
-    <div class="site-shell">
-      <aside class="sidebar-nav" aria-label="Documentation sections">
-        <a
-          class="sidebar-brand simple-logo"
-          href="/"
-          aria-label="linked2pay for Acumatica home"
-        >
-          <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
-        </a>
-        <p class="sidebar-kicker">Guide Menu</p>
-                <nav class="sidebar-menu" aria-label="Documentation sections">
-          <a class="sidebar-link" href="/">Documentation Home</a>
-          <a class="sidebar-link" href="/demo/">Demo Walkthrough</a>
-          <a class="sidebar-link" href="/setup/">Overview</a>
-          <p class="sidebar-section-label">Setup Path</p>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup"><span>1</span>Setup Overview</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-extension"><span>1A</span>Import Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-publish"><span>1B</span>Publish Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-center"><span>2A</span>Create Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-api"><span>2B</span>API Settings</a>
-          <a class="sidebar-link sidebar-step-link is-active" href="/setup/setup-processing-webhook" aria-current="page"><span>2C</span>Webhook Setup</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-ach"><span>2D</span>ACH Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-methods"><span>3A</span>Credit Card Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-link-center"><span>3B</span>Link Processing Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-ach"><span>3C</span>ACH Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-nonstock-items"><span>4</span>Non-Stock Items</a>
-        </nav>
-      </aside>
-      <div class="page-frame">
-        <header class="mobile-topbar">
-          <a
-            class="mobile-brand simple-logo"
-            href="/"
-            aria-label="linked2pay for Acumatica home"
-          >
-            <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
-          </a>
-          <label
-            class="menu-button"
-            for="sidebar-toggle"
-            aria-label="Open menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </header>
-        <main class="main-shell">
-          <section class="hero setup-step-hero">
-            <div class="hero-inner">
-              <p class="eyebrow">Setup 2C</p>
-              <h1>Configure the Webhook Connection</h1>
-              <p class="lead">
-                Create the Acumatica webhook, register it in linked2pay, and
-                copy the webhook key back into Acumatica.
-              </p>
-            </div>
-          </section>
-
-          <section class="story-band setup-story">
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Configure the Webhook Connection | linked2pay for Acumatica</title><meta name="description" content="Create an authenticated linked2pay callback so Acumatica receives transaction-status changes." /><link rel="stylesheet" href="/setup/styles.css" /><link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" /></head>
+<body class="site theme-light"><input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label><div class="site-shell">
+<aside class="sidebar-nav" aria-label="Documentation sections"><a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><p class="sidebar-kicker">Implementation documentation</p><button class="docs-search-launch" type="button" data-docs-search><span>Search documentation</span><kbd>/</kbd></button><nav class="sidebar-menu" aria-label="Documentation sections">
+          <p class="sidebar-section-label">Documentation</p>
+          <a class="sidebar-link" href="/setup/">Documentation overview</a>
+          <p class="sidebar-section-label">Start here</p>
+          <a class="sidebar-link" href="/setup/before-you-begin/">Before You Begin</a>
+          <a class="sidebar-link" href="/setup/setup/">Installation path</a>
+          <p class="sidebar-section-label">Setup steps</p>
+          <a class="sidebar-link" href="/setup/setup-confirm-extension/">1A Import extension</a>
+          <a class="sidebar-link" href="/setup/setup-confirm-publish/">1B Publish extension</a>
+          <a class="sidebar-link" href="/setup/setup-processing-center/">2A Card processing center</a>
+          <a class="sidebar-link" href="/setup/setup-processing-api/">2B API settings</a>
+          <a class="sidebar-link is-active" href="/setup/setup-processing-webhook/" aria-current="page">2C Webhook</a>
+          <a class="sidebar-link" href="/setup/setup-processing-ach/">2D ACH processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-methods/">3A Card payment method</a>
+          <a class="sidebar-link" href="/setup/setup-payment-link-center/">3B Link processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-ach/">3C ACH payment method</a>
+          <a class="sidebar-link" href="/setup/setup-nonstock-items/">4 Fee item</a>
+          <p class="sidebar-section-label">Operations</p>
+          <a class="sidebar-link" href="/setup/payment-lifecycle/">Payment lifecycle</a>
+          <a class="sidebar-link" href="/setup/outbound-payments/">Vendor payments (planned)</a>
+          <a class="sidebar-link" href="/setup/troubleshooting/">Troubleshooting</a>
+          <p class="sidebar-section-label">Delivery</p>
+          <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link" href="/setup/security/">Security</a>
+          <a class="sidebar-link" href="/setup/var-guide/">VAR implementation guide</a>
+          <p class="sidebar-section-label">Reference</p>
+          <a class="sidebar-link" href="/setup/known-issues/">Known issues</a>
+          <a class="sidebar-link" href="/setup/release-notes/">Release notes</a>
+          <a class="sidebar-link" href="/setup/support/">Support</a>
+</nav></aside><div class="page-frame"><header class="mobile-topbar"><a class="mobile-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><button class="docs-search-launch mobile-docs-search" type="button" data-docs-search><span>Search</span></button><label class="menu-button" for="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></label></header>
+<main class="main-shell"><nav class="doc-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/setup/">Documentation</a><span aria-hidden="true">/</span><span aria-current="page">Configure the Webhook Connection</span></nav><section class="hero docs-hero"><div class="hero-inner"><p class="eyebrow">Setup 2C</p><h1>Configure the Webhook Connection</h1><p class="lead">Create an authenticated linked2pay callback so Acumatica receives transaction-status changes.</p></div></section><div class="docs-layout"><article class="docs-article">
+<section id="purpose"><h2>Purpose</h2><p>Register the Acumatica webhook handler, configure linked2pay to call its HTTPS URL, and enforce the same <code>X-Api-Key</code> on both sides.</p></section>
+<section id="prerequisites"><h2>Prerequisites</h2><ul><li>Extension published and L2PCC active.</li><li>WEBHOOKKEY can be stored securely.</li><li>Public HTTPS access approved through firewall/WAF/proxy.</li><li>Application identity can write App_Data/L2PLogs.</li></ul></section>
+<section id="navigation"><h2>Acumatica navigation path and screen ID</h2><p><strong>Navigation:</strong> More Items &gt; Configuration &gt; Integration &gt; Preferences &gt; Webhooks (<code>SM304000</code>)</p></section>
+<section id="instructions"><h2>Step-by-step instructions</h2><div class="preserved-tutorial"><section class="story-band setup-story">
             <article class="story-copy">
               <p>
                 Open a new browser tab and go to Acumatica. Then go to
@@ -210,21 +171,10 @@
                 alt="Webhook key in Acumatica"
               />
             </figure>
-          </section>
-
-          <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="/setup/setup-processing-api">
-              <span>Previous</span>
-              <strong>2B API Settings</strong>
-            </a>
-            <a class="pager-link" href="/setup/setup-processing-ach">
-              <span>Next</span>
-              <strong>2D ACH Center</strong>
-            </a>
-          </nav>
-        </main>
-      </div>
-    </div>
-    <script src="image-zoom.js"></script>
-  </body>
-</html>
+          </section></div></section>
+<section id="field-reference"><h2>Field reference</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Field or setting</th><th>Required value</th><th>Notes</th></tr></thead><tbody><tr><td>Webhook Name</td><td><code>linked2pay</code></td><td>Descriptive Acumatica registration.</td></tr><tr><td>Implementation Class</td><td><code>Linked2PayIntegration.Webhooks.L2PWebhookHandler</code></td><td>Required handler.</td></tr><tr><td>Payload URL</td><td>Generated Acumatica HTTPS URL</td><td>Must be reachable externally.</td></tr><tr><td>Event types</td><td>ACH and Credit Card</td><td>Select only enabled rails.</td></tr><tr><td>Header</td><td><code>X-Api-Key</code></td><td>Required by handler.</td></tr><tr><td><code>WEBHOOKKEY</code></td><td>Same high-entropy key</td><td>Store as secret.</td></tr></tbody></table></div></section>
+<section id="expected"><h2>Expected result</h2><div class="success-box">An authenticated test receives HTTP 200, writes a sanitized entry under <code>App_Data/L2PLogs</code>, and updates a matching transaction/status history when a valid transaction ID is supplied.</div></section>
+<section id="validation"><h2>Validation steps</h2><ul class="checklist"><li>Missing key returns HTTP 401.</li><li>Wrong key returns HTTP 401.</li><li>Empty/missing transId returns HTTP 400.</li><li>Valid authenticated payload returns HTTP 200.</li><li>Webhook History and Last Status Update change for a matching non-echo event.</li></ul></section>
+<section id="errors"><h2>Common errors</h2><div class="table-scroll"><table class="matrix-table"><thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead><tbody><tr><td>HTTP 401</td><td>Missing/wrong X-Api-Key or no active configured key</td><td>Match header and WEBHOOKKEY exactly.</td></tr><tr><td>HTTP 400</td><td>Empty body or missing transId</td><td>Correct payload.</td></tr><tr><td>HTTP 500</td><td>Parsing/database/runtime error</td><td>Review webhook file log and Acumatica trace.</td></tr><tr><td>No inbound request</td><td>DNS/TLS/firewall/WAF/routing</td><td>Test public URL and preserve header/body.</td></tr><tr><td>200 but no visible change</td><td>Echo/duplicate status or unknown transaction</td><td>Review log/history and transaction ID.</td></tr></tbody></table></div><p>For unresolved issues, review <a href="/setup/troubleshooting/">Troubleshooting</a> and <a href="/setup/support/">Support</a>.</p></section>
+<section id="next"><h2>Next step</h2><div class="next-step-box">Continue to <a href="/setup/setup-processing-ach/">Create the ACH processing center</a>.</div></section>
+</article><aside class="page-toc" data-page-toc><h2>On this page</h2></aside></div><nav class="pager" aria-label="Page navigation"><a class="pager-link muted" href="/setup/setup-processing-api/"><span>Previous</span><strong>Configure API values</strong></a><a class="pager-link" href="/setup/setup-processing-ach/"><span>Next</span><strong>Create the ACH processing center</strong></a></nav></main></div></div><script src="/docs-search-index.js"></script><script src="/docs.js"></script><script src="/setup/image-zoom.js"></script></body></html>

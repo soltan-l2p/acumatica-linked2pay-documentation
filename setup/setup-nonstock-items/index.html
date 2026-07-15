@@ -1,79 +1,41 @@
-﻿<!doctype html>
-<html lang="en">
-  <head>
-    <base href="/setup/" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linked2pay for Acumatica | Configure Non-Stock Items</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
-  </head>
-  <body class="site theme-light">
-    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label
-      class="sidebar-backdrop"
-      for="sidebar-toggle"
-      aria-label="Close menu"
-    ></label>
-    <div class="site-shell">
-      <aside class="sidebar-nav" aria-label="Documentation sections">
-        <a
-          class="sidebar-brand simple-logo"
-          href="/"
-          aria-label="linked2pay for Acumatica home"
-        >
-          <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
-        </a>
-        <p class="sidebar-kicker">Guide Menu</p>
-                <nav class="sidebar-menu" aria-label="Documentation sections">
-          <a class="sidebar-link" href="/">Documentation Home</a>
-          <a class="sidebar-link" href="/demo/">Demo Walkthrough</a>
-          <a class="sidebar-link" href="/setup/">Overview</a>
-          <p class="sidebar-section-label">Setup Path</p>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup"><span>1</span>Setup Overview</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-extension"><span>1A</span>Import Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-publish"><span>1B</span>Publish Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-center"><span>2A</span>Create Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-api"><span>2B</span>API Settings</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-webhook"><span>2C</span>Webhook Setup</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-ach"><span>2D</span>ACH Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-methods"><span>3A</span>Credit Card Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-link-center"><span>3B</span>Link Processing Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-ach"><span>3C</span>ACH Method</a>
-          <a class="sidebar-link sidebar-step-link is-active" href="/setup/setup-nonstock-items" aria-current="page"><span>4</span>Non-Stock Items</a>
-        </nav>
-      </aside>
-      <div class="page-frame">
-        <header class="mobile-topbar">
-          <a
-            class="mobile-brand simple-logo"
-            href="/"
-            aria-label="linked2pay for Acumatica home"
-          >
-            <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
-          </a>
-          <label
-            class="menu-button"
-            for="sidebar-toggle"
-            aria-label="Open menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </header>
-        <main class="main-shell">
-          <section class="hero setup-step-hero">
-            <div class="hero-inner">
-              <p class="eyebrow">Setup 4</p>
-              <h1>Configure Non-Stock Items</h1>
-              <p class="lead">
-                Create a non-stock item in Acumatica for the Credit Card Fee.
-              </p>
-            </div>
-          </section>
-
-          <section class="story-band setup-story">
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Configure the Credit Card Fee Item | linked2pay for Acumatica</title><meta name="description" content="Create the CCFEE non-stock item used when linked2pay applies a card-processing fee." /><link rel="stylesheet" href="/setup/styles.css" /><link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" /></head>
+<body class="site theme-light"><input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label><div class="site-shell">
+<aside class="sidebar-nav" aria-label="Documentation sections"><a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><p class="sidebar-kicker">Implementation documentation</p><button class="docs-search-launch" type="button" data-docs-search><span>Search documentation</span><kbd>/</kbd></button><nav class="sidebar-menu" aria-label="Documentation sections">
+          <p class="sidebar-section-label">Documentation</p>
+          <a class="sidebar-link" href="/setup/">Documentation overview</a>
+          <p class="sidebar-section-label">Start here</p>
+          <a class="sidebar-link" href="/setup/before-you-begin/">Before You Begin</a>
+          <a class="sidebar-link" href="/setup/setup/">Installation path</a>
+          <p class="sidebar-section-label">Setup steps</p>
+          <a class="sidebar-link" href="/setup/setup-confirm-extension/">1A Import extension</a>
+          <a class="sidebar-link" href="/setup/setup-confirm-publish/">1B Publish extension</a>
+          <a class="sidebar-link" href="/setup/setup-processing-center/">2A Card processing center</a>
+          <a class="sidebar-link" href="/setup/setup-processing-api/">2B API settings</a>
+          <a class="sidebar-link" href="/setup/setup-processing-webhook/">2C Webhook</a>
+          <a class="sidebar-link" href="/setup/setup-processing-ach/">2D ACH processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-methods/">3A Card payment method</a>
+          <a class="sidebar-link" href="/setup/setup-payment-link-center/">3B Link processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-ach/">3C ACH payment method</a>
+          <a class="sidebar-link is-active" href="/setup/setup-nonstock-items/" aria-current="page">4 Fee item</a>
+          <p class="sidebar-section-label">Operations</p>
+          <a class="sidebar-link" href="/setup/payment-lifecycle/">Payment lifecycle</a>
+          <a class="sidebar-link" href="/setup/outbound-payments/">Vendor payments (planned)</a>
+          <a class="sidebar-link" href="/setup/troubleshooting/">Troubleshooting</a>
+          <p class="sidebar-section-label">Delivery</p>
+          <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link" href="/setup/security/">Security</a>
+          <a class="sidebar-link" href="/setup/var-guide/">VAR implementation guide</a>
+          <p class="sidebar-section-label">Reference</p>
+          <a class="sidebar-link" href="/setup/known-issues/">Known issues</a>
+          <a class="sidebar-link" href="/setup/release-notes/">Release notes</a>
+          <a class="sidebar-link" href="/setup/support/">Support</a>
+</nav></aside><div class="page-frame"><header class="mobile-topbar"><a class="mobile-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><button class="docs-search-launch mobile-docs-search" type="button" data-docs-search><span>Search</span></button><label class="menu-button" for="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></label></header>
+<main class="main-shell"><nav class="doc-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/setup/">Documentation</a><span aria-hidden="true">/</span><span aria-current="page">Configure the Credit Card Fee Item</span></nav><section class="hero docs-hero"><div class="hero-inner"><p class="eyebrow">Setup 4</p><h1>Configure the Credit Card Fee Item</h1><p class="lead">Create the CCFEE non-stock item used when linked2pay applies a card-processing fee.</p></div></section><div class="docs-layout"><article class="docs-article">
+<section id="purpose"><h2>Purpose</h2><p>Provide the posting-controlled line item required by Apply Fee to create, release, and apply an AR Debit Memo for the processing fee.</p></section>
+<section id="prerequisites"><h2>Prerequisites</h2><ul><li>Card fees approved legally and operationally for the customer.</li><li>L2PCC FEE configured with approved percentage.</li><li>Posting class, sales account/subaccount, tax category, and UOM approved by accounting.</li><li>Non-Stock Items maintenance/release rights.</li></ul></section>
+<section id="navigation"><h2>Acumatica navigation path and screen ID</h2><p><strong>Navigation:</strong> Receivables &gt; Profiles &gt; Non-Stock Items (<code>IN202000</code>)</p></section>
+<section id="instructions"><h2>Step-by-step instructions</h2><div class="preserved-tutorial"><section class="story-band setup-story">
             <article class="story-copy">
               <p>
                 In Acumatica, go to
@@ -139,21 +101,10 @@
               processing centers are ready, and Acumatica has the payment
               methods needed for the linked2pay workflow.
             </div>
-          </section>
-
-          <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="/setup/setup-payment-ach">
-              <span>Previous</span>
-              <strong>3C ACH Method</strong>
-            </a>
-            <a class="pager-link" href="/setup/setup">
-              <span>Next</span>
-              <strong>Setup Overview</strong>
-            </a>
-          </nav>
-        </main>
-      </div>
-    </div>
-    <script src="image-zoom.js"></script>
-  </body>
-</html>
+          </section></div></section>
+<section id="field-reference"><h2>Field reference</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Field or setting</th><th>Required value</th><th>Notes</th></tr></thead><tbody><tr><td>Inventory ID</td><td><code>CCFEE</code></td><td>Hard requirement in integration.</td></tr><tr><td>Description</td><td>Processing Fee</td><td>Standard user-facing terminology.</td></tr><tr><td>Type</td><td>Non-Stock Item</td><td>Required.</td></tr><tr><td>Base/Sales UOM</td><td>Customer-approved unit</td><td>Must allow one fee line.</td></tr><tr><td>Posting Class</td><td>Accounting-approved</td><td>Controls accounts/subaccounts.</td></tr><tr><td>Sales Account/Subaccount</td><td>Accounting-approved fee revenue/offset</td><td>Never infer from screenshot.</td></tr><tr><td>Tax Category</td><td>Customer-approved</td><td>Depends on jurisdiction/policy.</td></tr><tr><td>Active</td><td>Checked</td><td>Required for Apply Fee.</td></tr></tbody></table></div></section>
+<section id="expected"><h2>Expected result</h2><div class="success-box">Apply Fee calculates the approved percentage, increases the payment total, creates and releases an AR Debit Memo with one CCFEE line, and applies that memo to the payment with the expected GL/tax result.</div></section>
+<section id="validation"><h2>Validation steps</h2><ul class="checklist"><li>CCFEE can be selected/opened and is active.</li><li>Test fee equals base amount multiplied by FEE percent.</li><li>Debit memo description references the payment.</li><li>Debit memo is released/applied once.</li><li>GL accounts/subaccounts/period and tax are approved.</li><li>Removing fee before processing behaves as expected; removal after processing is blocked.</li></ul></section>
+<section id="errors"><h2>Common errors</h2><div class="table-scroll"><table class="matrix-table"><thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead><tbody><tr><td>CCFEE not found</td><td>Missing/inactive/wrong ID</td><td>Create exact ID CCFEE and activate.</td></tr><tr><td>Debit memo creation failed</td><td>Missing posting class/accounts/UOM/tax setup</td><td>Correct accounting configuration.</td></tr><tr><td>Fee is incorrect</td><td>FEE percentage or base amount wrong</td><td>Verify FEE uses whole percent (3 = 3%) and payment base.</td></tr><tr><td>Cannot remove fee</td><td>Payment authorized/captured/released/updated</td><td>Use documented void/refund/accounting correction; do not edit processed amount.</td></tr></tbody></table></div><p>For unresolved issues, review <a href="/setup/troubleshooting/">Troubleshooting</a> and <a href="/setup/support/">Support</a>.</p></section>
+<section id="next"><h2>Next step</h2><div class="next-step-box">Continue to <a href="/setup/testing/">Run the testing matrix</a>.</div></section>
+</article><aside class="page-toc" data-page-toc><h2>On this page</h2></aside></div><nav class="pager" aria-label="Page navigation"><a class="pager-link muted" href="/setup/setup-payment-ach/"><span>Previous</span><strong>Create the ACH method</strong></a><a class="pager-link" href="/setup/testing/"><span>Next</span><strong>Run the testing matrix</strong></a></nav></main></div></div><script src="/docs-search-index.js"></script><script src="/docs.js"></script><script src="/setup/image-zoom.js"></script></body></html>

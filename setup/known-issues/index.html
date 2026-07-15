@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Known Issues | linked2pay for Acumatica</title><meta name="description" content="Review validated limitations, mitigations, and production risks before scoping, testing, or upgrading the integration." /><link rel="stylesheet" href="/setup/styles.css" /><link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" /></head>
+<body class="site theme-light"><input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label><div class="site-shell">
+<aside class="sidebar-nav" aria-label="Documentation sections"><a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><p class="sidebar-kicker">Implementation documentation</p><button class="docs-search-launch" type="button" data-docs-search><span>Search documentation</span><kbd>/</kbd></button><nav class="sidebar-menu" aria-label="Documentation sections">
+          <p class="sidebar-section-label">Documentation</p>
+          <a class="sidebar-link" href="/setup/">Documentation overview</a>
+          <p class="sidebar-section-label">Start here</p>
+          <a class="sidebar-link" href="/setup/before-you-begin/">Before You Begin</a>
+          <a class="sidebar-link" href="/setup/setup/">Installation path</a>
+          <p class="sidebar-section-label">Setup steps</p>
+          <a class="sidebar-link" href="/setup/setup-confirm-extension/">1A Import extension</a>
+          <a class="sidebar-link" href="/setup/setup-confirm-publish/">1B Publish extension</a>
+          <a class="sidebar-link" href="/setup/setup-processing-center/">2A Card processing center</a>
+          <a class="sidebar-link" href="/setup/setup-processing-api/">2B API settings</a>
+          <a class="sidebar-link" href="/setup/setup-processing-webhook/">2C Webhook</a>
+          <a class="sidebar-link" href="/setup/setup-processing-ach/">2D ACH processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-methods/">3A Card payment method</a>
+          <a class="sidebar-link" href="/setup/setup-payment-link-center/">3B Link processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-ach/">3C ACH payment method</a>
+          <a class="sidebar-link" href="/setup/setup-nonstock-items/">4 Fee item</a>
+          <p class="sidebar-section-label">Operations</p>
+          <a class="sidebar-link" href="/setup/payment-lifecycle/">Payment lifecycle</a>
+          <a class="sidebar-link" href="/setup/outbound-payments/">Vendor payments (planned)</a>
+          <a class="sidebar-link" href="/setup/troubleshooting/">Troubleshooting</a>
+          <p class="sidebar-section-label">Delivery</p>
+          <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link" href="/setup/security/">Security</a>
+          <a class="sidebar-link" href="/setup/var-guide/">VAR implementation guide</a>
+          <p class="sidebar-section-label">Reference</p>
+          <a class="sidebar-link is-active" href="/setup/known-issues/" aria-current="page">Known issues</a>
+          <a class="sidebar-link" href="/setup/release-notes/">Release notes</a>
+          <a class="sidebar-link" href="/setup/support/">Support</a>
+</nav></aside><div class="page-frame"><header class="mobile-topbar"><a class="mobile-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><button class="docs-search-launch mobile-docs-search" type="button" data-docs-search><span>Search</span></button><label class="menu-button" for="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></label></header>
+<main class="main-shell"><nav class="doc-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/setup/">Documentation</a><span aria-hidden="true">/</span><span aria-current="page">Known Issues</span></nav><section class="hero docs-hero"><div class="hero-inner"><p class="eyebrow">Current operational constraints</p><h1>Known Issues</h1><p class="lead">Review validated limitations, mitigations, and production risks before scoping, testing, or upgrading the integration.</p></div></section><div class="docs-layout"><article class="docs-article">
+<section id="current"><h2>Current known issues and limitations</h2><div class="table-scroll"><table class="matrix-table"><thead><tr><th>Area</th><th>Limitation</th><th>Mitigation</th></tr></thead><tbody><tr><td>Version</td><td>Only Acumatica 2025 R2 build <code>25.201.0213</code> identified as validated.</td><td>Regression test other builds.</td></tr><tr><td>Environment</td><td>Base URL compiled into integration.</td><td>Build/publish for target environment.</td></tr><tr><td>Vendor payments</td><td>Not available in the current release.</td><td>Treat as roadmap only; do not configure or demonstrate.</td></tr><tr><td>Profile operations</td><td>Generic create/update/delete not implemented.</td><td>Use boarding/sync-from-gateway.</td></tr><tr><td>Customer pull</td><td>Pull from linked2pay unavailable.</td><td>Use board/sync/bulk sync.</td></tr><tr><td>Chargebacks/returns</td><td>Status tracked; accounting document not automatic.</td><td>Define manual accounting procedure.</td></tr><tr><td>Idempotency</td><td>No universal key documented for initial payment.</td><td>Check both systems before retry.</td></tr></tbody></table></div></section>
+<section id="report"><h2>Report a new issue</h2><p>Capture sanitized steps, builds, screen ID, document/reference, timestamps, expected/actual results, transaction ID, and logs. Use the <a href="/setup/support/">support guide</a>.</p></section>
+</article><aside class="page-toc" data-page-toc><h2>On this page</h2></aside></div><nav class="pager" aria-label="Page navigation"><a class="pager-link muted" href="/setup/var-guide/"><span>Previous</span><strong>VAR implementation guide</strong></a><a class="pager-link" href="/setup/release-notes/"><span>Next</span><strong>Release notes</strong></a></nav></main></div></div><script src="/docs-search-index.js"></script><script src="/docs.js"></script><script src="/setup/image-zoom.js"></script></body></html>

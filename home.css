@@ -369,19 +369,15 @@ a {
 }
 
 .hero-checklist li::before {
-  content: "✓";
+  content: "";
   position: absolute;
-  left: 0;
-  top: -1px;
-  width: 18px;
-  height: 18px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--blue-soft);
-  color: var(--blue-deep);
-  font-size: 0.7rem;
-  font-weight: 800;
+  left: 5px;
+  top: 1px;
+  width: 7px;
+  height: 12px;
+  border: solid var(--blue-deep);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .hero-actions {

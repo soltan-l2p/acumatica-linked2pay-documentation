@@ -1,15 +1,18 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linked2pay for Acumatica | Overview</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Implementation Documentation | linked2pay for Acumatica</title>
+    <meta
+      name="description"
+      content="A complete guide to receiving customer credit card and ACH payments with linked2pay inside Acumatica."
+    />
+    <link rel="stylesheet" href="/setup/styles.css" />
     <link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" />
   </head>
   <body class="site theme-light">
-    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" />
-    <label
+    <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label
       class="sidebar-backdrop"
       for="sidebar-toggle"
       aria-label="Close menu"
@@ -20,116 +23,240 @@
           class="sidebar-brand simple-logo"
           href="/"
           aria-label="linked2pay for Acumatica home"
-        >
-          <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
-        </a>
-        <p class="sidebar-kicker">Guide Menu</p>
-                <nav class="sidebar-menu" aria-label="Documentation sections">
-          <a class="sidebar-link" href="/">Documentation Home</a>
-          <a class="sidebar-link" href="/demo/">Demo Walkthrough</a>
-          <a class="sidebar-link is-active" href="/setup/" aria-current="page">Overview</a>
-          <p class="sidebar-section-label">Setup Path</p>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup"><span>1</span>Setup Overview</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-extension"><span>1A</span>Import Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-confirm-publish"><span>1B</span>Publish Extension</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-center"><span>2A</span>Create Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-api"><span>2B</span>API Settings</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-webhook"><span>2C</span>Webhook Setup</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-processing-ach"><span>2D</span>ACH Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-methods"><span>3A</span>Credit Card Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-link-center"><span>3B</span>Link Processing Center</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-payment-ach"><span>3C</span>ACH Method</a>
-          <a class="sidebar-link sidebar-step-link" href="/setup/setup-nonstock-items"><span>4</span>Non-Stock Items</a>
+          ><img src="/setup/images/linked2pay.png" alt="linked2pay"
+        /></a>
+        <p class="sidebar-kicker">Implementation documentation</p>
+        <button class="docs-search-launch" type="button" data-docs-search>
+          <span>Search documentation</span><kbd>/</kbd>
+        </button>
+        <nav class="sidebar-menu" aria-label="Documentation sections">
+          <p class="sidebar-section-label">Documentation</p>
+          <a class="sidebar-link is-active" href="/setup/" aria-current="page"
+            >Documentation overview</a
+          >
+          <p class="sidebar-section-label">Start here</p>
+          <a class="sidebar-link" href="/setup/before-you-begin/"
+            >Before You Begin</a
+          >
+          <a class="sidebar-link" href="/setup/setup/">Installation path</a>
+          <p class="sidebar-section-label">Setup steps</p>
+          <a class="sidebar-link" href="/setup/setup-confirm-extension/"
+            >1A Import extension</a
+          >
+          <a class="sidebar-link" href="/setup/setup-confirm-publish/"
+            >1B Publish extension</a
+          >
+          <a class="sidebar-link" href="/setup/setup-processing-center/"
+            >2A Card processing center</a
+          >
+          <a class="sidebar-link" href="/setup/setup-processing-api/"
+            >2B API settings</a
+          >
+          <a class="sidebar-link" href="/setup/setup-processing-webhook/"
+            >2C Webhook</a
+          >
+          <a class="sidebar-link" href="/setup/setup-processing-ach/"
+            >2D ACH processing center</a
+          >
+          <a class="sidebar-link" href="/setup/setup-payment-methods/"
+            >3A Card payment method</a
+          >
+          <a class="sidebar-link" href="/setup/setup-payment-link-center/"
+            >3B Link processing center</a
+          >
+          <a class="sidebar-link" href="/setup/setup-payment-ach/"
+            >3C ACH payment method</a
+          >
+          <a class="sidebar-link" href="/setup/setup-nonstock-items/"
+            >4 Fee item</a
+          >
+          <p class="sidebar-section-label">Operations</p>
+          <a class="sidebar-link" href="/setup/payment-lifecycle/"
+            >Payment lifecycle</a
+          >
+          <a class="sidebar-link" href="/setup/outbound-payments/"
+            >Vendor payments (planned)</a
+          >
+          <a class="sidebar-link" href="/setup/troubleshooting/"
+            >Troubleshooting</a
+          >
+          <p class="sidebar-section-label">Delivery</p>
+          <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link" href="/setup/security/">Security</a>
+          <a class="sidebar-link" href="/setup/var-guide/"
+            >VAR implementation guide</a
+          >
+          <p class="sidebar-section-label">Reference</p>
+          <a class="sidebar-link" href="/setup/known-issues/">Known issues</a>
+          <a class="sidebar-link" href="/setup/release-notes/">Release notes</a>
+          <a class="sidebar-link" href="/setup/support/">Support</a>
         </nav>
-      </aside>      <div class="page-frame">
+      </aside>
+      <div class="page-frame">
         <header class="mobile-topbar">
           <a
             class="mobile-brand simple-logo"
             href="/"
             aria-label="linked2pay for Acumatica home"
+            ><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a
+          ><button
+            class="docs-search-launch mobile-docs-search"
+            type="button"
+            data-docs-search
           >
-            <img src="/setup/images/linked2pay.png" alt="linked2pay logo" />
-          </a>
-          <label
+            <span>Search</span></button
+          ><label
             class="menu-button"
             for="sidebar-toggle"
             aria-label="Open menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
+            ><span></span><span></span><span></span
+          ></label>
         </header>
         <main class="main-shell">
-          <section class="hero">
+          <nav class="doc-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span aria-hidden="true">/</span
+            ><a href="/setup/">Documentation</a><span aria-hidden="true">/</span
+            ><span aria-current="page">Implementation Documentation</span>
+          </nav>
+          <section class="hero docs-hero">
             <div class="hero-inner">
-              <p class="eyebrow"><span class="brand-case">linked2pay</span> for Acumatica</p>
-              <h1>Setup Documentation</h1>
+              <p class="eyebrow">Evaluate, implement, and operate</p>
+              <h1>Implementation Documentation</h1>
               <p class="lead">
-                Use this guide to install the linked2pay customization, configure
-                the processing centers, and prepare the payment methods Acumatica
-                needs for the integration.
+                A complete guide to receiving customer credit card and ACH
+                payments with linked2pay inside Acumatica.
               </p>
             </div>
           </section>
-
-          <section class="story-band">
-            <article class="story-copy">
-              <p class="eyebrow">Guided Setup</p>
-              <h2>Start with the foundation, then move step by step.</h2>
-              <p>
-                This documentation is focused on the setup path only. The
-                customer workflow, auto-bill workflow, webhooks reference,
-                testing checklist, and support notes can be added back later as
-                separate sections.
-              </p>
-              <p>
-                The setup pages are split into smaller walkthroughs so each page
-                stays focused on one part of the process.
-              </p>
+          <div class="docs-layout">
+            <article class="docs-article">
+              <section id="scope">
+                <h2>Product scope</h2>
+                <div class="scope-grid">
+                  <article class="doc-card">
+                    <span class="status-chip">Supported</span>
+                    <h3>Receive customer payments</h3>
+                    <p>
+                      Collect Accounts Receivable payments by credit card or
+                      ACH, use saved tokens, apply processing fees, run
+                      AutoPayBill, synchronize customers and payment methods,
+                      and track gateway status in Acumatica.
+                    </p>
+                  </article>
+                  <article class="doc-card">
+                    <span class="status-chip limited">Planned</span>
+                    <h3>Vendor payments</h3>
+                    <p>
+                      Vendor-payment processing is not available in the current
+                      release. It is planned for a future version and must not
+                      be included in current implementation scope,
+                      demonstrations, or testing.
+                    </p>
+                  </article>
+                </div>
+                <div class="warning">
+                  <strong>Current scope:</strong> implement customer credit card
+                  and ACH collections only. Vendor payments are roadmap
+                  functionality, not a supported current workflow.
+                </div>
+              </section>
+              <section id="start">
+                <h2>Choose your starting point</h2>
+                <div class="card-grid">
+                  <article class="doc-card">
+                    <h3>Evaluate and plan</h3>
+                    <p>
+                      Confirm versions, modules, credentials, network access,
+                      limitations, and effort.
+                    </p>
+                    <p>
+                      <a href="/setup/before-you-begin/"
+                        >Read Before You Begin</a
+                      >
+                    </p>
+                  </article>
+                  <article class="doc-card">
+                    <h3>Install and configure</h3>
+                    <p>
+                      Follow the ordered path from import through payment
+                      methods and fees.
+                    </p>
+                    <p><a href="/setup/setup/">Open installation</a></p>
+                  </article>
+                  <article class="doc-card">
+                    <h3>Test and deploy</h3>
+                    <p>
+                      Run the formal matrix, security review, and go-live
+                      checklist.
+                    </p>
+                    <p><a href="/setup/testing/">Open testing</a></p>
+                  </article>
+                  <article class="doc-card">
+                    <h3>Operate and troubleshoot</h3>
+                    <p>
+                      Understand statuses, accounting, logs, errors, and
+                      escalation.
+                    </p>
+                    <p>
+                      <a href="/setup/troubleshooting/">Open troubleshooting</a>
+                    </p>
+                  </article>
+                </div>
+              </section>
+              <section id="audiences">
+                <h2>Guidance by role</h2>
+                <div class="table-scroll">
+                  <table class="field-table">
+                    <thead>
+                      <tr>
+                        <th>Role</th>
+                        <th>Start with</th>
+                        <th>Outcome</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Executive</td>
+                        <td>Scope, security, effort, known issues</td>
+                        <td>Approve fit, risk, and ownership.</td>
+                      </tr>
+                      <tr>
+                        <td>Developer</td>
+                        <td>
+                          Prerequisites, setup, lifecycle, troubleshooting
+                        </td>
+                        <td>Install, validate, and support.</td>
+                      </tr>
+                      <tr>
+                        <td>VAR</td>
+                        <td>VAR guide, testing, handoff</td>
+                        <td>Discover, scope, deliver, transition.</td>
+                      </tr>
+                      <tr>
+                        <td>AR user</td>
+                        <td>Lifecycle and demos</td>
+                        <td>
+                          Run customer payments and respond to exceptions.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
             </article>
-
-            <figure class="transparent-image">
-              <img
-                src="/setup/images/head-link.png"
-                alt="linked2pay and Acumatica integration overview"
-              />
-            </figure>
-          </section>
-
-          <section class="content-band">
-            <div class="setup-index-grid">
-              <a class="setup-card" href="/setup/setup-confirm-extension">
-                <span class="card-number">01</span>
-                <strong>Confirm Extension</strong>
-                <span>Import, review, publish, and verify the linked2pay customization project.</span>
-              </a>
-              <a class="setup-card" href="/setup/setup-processing-center">
-                <span class="card-number">02</span>
-                <strong>Processing Center</strong>
-                <span>Create the linked2pay processing centers and configure the connection values.</span>
-              </a>
-              <a class="setup-card" href="/setup/setup-payment-methods">
-                <span class="card-number">03</span>
-                <strong>Payment Methods</strong>
-                <span>Prepare the credit card and ACH payment methods used by linked2pay.</span>
-              </a>
-            </div>
-          </section>
-
+            <aside class="page-toc" data-page-toc><h2>On this page</h2></aside>
+          </div>
           <nav class="pager" aria-label="Page navigation">
-            <a class="pager-link muted" href="/setup/setup-payment-ach">
-              <span>Previous</span>
-              <strong>Final Setup Page</strong>
-            </a>
-            <a class="pager-link" href="/setup/setup">
-              <span>Next</span>
-              <strong>Setup Overview</strong>
-            </a>
+            <span></span
+            ><a class="pager-link" href="/setup/before-you-begin/"
+              ><span>Next</span><strong>Before You Begin</strong></a
+            >
           </nav>
         </main>
       </div>
     </div>
-    <script src="image-zoom.js"></script>
+    <script src="/docs-search-index.js"></script>
+    <script src="/docs.js"></script>
+    <script src="/setup/image-zoom.js"></script>
   </body>
 </html>

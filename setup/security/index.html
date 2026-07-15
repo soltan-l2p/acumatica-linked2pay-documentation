@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Security and Data Handling | linked2pay for Acumatica</title><meta name="description" content="Apply least privilege, protect secrets, authenticate webhooks, define PCI boundaries, and keep sensitive information out of screenshots and support channels." /><link rel="stylesheet" href="/setup/styles.css" /><link rel="icon" type="image/x-icon" href="/setup/images/favicon.ico" /></head>
+<body class="site theme-light"><input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label><div class="site-shell">
+<aside class="sidebar-nav" aria-label="Documentation sections"><a class="sidebar-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><p class="sidebar-kicker">Implementation documentation</p><button class="docs-search-launch" type="button" data-docs-search><span>Search documentation</span><kbd>/</kbd></button><nav class="sidebar-menu" aria-label="Documentation sections">
+          <p class="sidebar-section-label">Documentation</p>
+          <a class="sidebar-link" href="/setup/">Documentation overview</a>
+          <p class="sidebar-section-label">Start here</p>
+          <a class="sidebar-link" href="/setup/before-you-begin/">Before You Begin</a>
+          <a class="sidebar-link" href="/setup/setup/">Installation path</a>
+          <p class="sidebar-section-label">Setup steps</p>
+          <a class="sidebar-link" href="/setup/setup-confirm-extension/">1A Import extension</a>
+          <a class="sidebar-link" href="/setup/setup-confirm-publish/">1B Publish extension</a>
+          <a class="sidebar-link" href="/setup/setup-processing-center/">2A Card processing center</a>
+          <a class="sidebar-link" href="/setup/setup-processing-api/">2B API settings</a>
+          <a class="sidebar-link" href="/setup/setup-processing-webhook/">2C Webhook</a>
+          <a class="sidebar-link" href="/setup/setup-processing-ach/">2D ACH processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-methods/">3A Card payment method</a>
+          <a class="sidebar-link" href="/setup/setup-payment-link-center/">3B Link processing center</a>
+          <a class="sidebar-link" href="/setup/setup-payment-ach/">3C ACH payment method</a>
+          <a class="sidebar-link" href="/setup/setup-nonstock-items/">4 Fee item</a>
+          <p class="sidebar-section-label">Operations</p>
+          <a class="sidebar-link" href="/setup/payment-lifecycle/">Payment lifecycle</a>
+          <a class="sidebar-link" href="/setup/outbound-payments/">Vendor payments (planned)</a>
+          <a class="sidebar-link" href="/setup/troubleshooting/">Troubleshooting</a>
+          <p class="sidebar-section-label">Delivery</p>
+          <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link is-active" href="/setup/security/" aria-current="page">Security</a>
+          <a class="sidebar-link" href="/setup/var-guide/">VAR implementation guide</a>
+          <p class="sidebar-section-label">Reference</p>
+          <a class="sidebar-link" href="/setup/known-issues/">Known issues</a>
+          <a class="sidebar-link" href="/setup/release-notes/">Release notes</a>
+          <a class="sidebar-link" href="/setup/support/">Support</a>
+</nav></aside><div class="page-frame"><header class="mobile-topbar"><a class="mobile-brand simple-logo" href="/" aria-label="linked2pay for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><button class="docs-search-launch mobile-docs-search" type="button" data-docs-search><span>Search</span></button><label class="menu-button" for="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></label></header>
+<main class="main-shell"><nav class="doc-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/setup/">Documentation</a><span aria-hidden="true">/</span><span aria-current="page">Security and Data Handling</span></nav><section class="hero docs-hero"><div class="hero-inner"><p class="eyebrow">Tokenization, credentials, webhooks, roles, and audit</p><h1>Security and Data Handling</h1><p class="lead">Apply least privilege, protect secrets, authenticate webhooks, define PCI boundaries, and keep sensitive information out of screenshots and support channels.</p></div></section><div class="docs-layout"><article class="docs-article">
+<section id="tokenization"><h2>Tokenization and sensitive data</h2><p>The integration expects linked2pay contact/payment-profile tokens; raw-card fallback is unsupported. Acumatica stores identifiers, masked descriptors, and transaction IDs—not full card/bank numbers.</p><div class="notice danger"><strong>Never store or transmit:</strong> API keys, full card numbers, CVV, full bank/routing data, unmasked tokens, or customer personal information in screenshots, notes, chat, email, source control, or support tickets.</div></section>
+<section id="pci"><h2>PCI responsibility boundaries</h2><p>Tokenization reduces exposure but does not automatically remove all PCI obligations. The merchant retains responsibility for scope determination, access controls, policies, endpoints, and approved payment-entry methods. Consult the merchant's PCI assessor/compliance owner.</p></section>
+<section id="keys"><h2>API-key storage and rotation</h2><ul><li>Store API and webhook keys only in authorized processing-center settings or approved secret management.</li><li>Restrict Processing Centers and database exports.</li><li>Separate sandbox/production credentials.</li><li>Rotate on schedule and after exposure/staff transition.</li><li>Coordinate both sides, then retest authentication/webhook.</li><li>Never place secret values in screenshots or shared exports.</li></ul></section>
+<section id="webhook"><h2>Webhook authentication</h2><p>The handler requires <code>X-Api-Key</code> and compares it to <code>WEBHOOKKEY</code> on active linked2pay centers. Missing/invalid keys return HTTP 401.</p><ul><li>HTTPS only; preserve header through proxies.</li><li>High-entropy environment-specific key.</li><li>Monitor repeated 401/400/500 responses.</li><li>Restrict/rotate logs containing transaction identifiers.</li></ul></section>
+<section id="rbac"><h2>Role-based access</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Role</th><th>Allow</th><th>Restrict</th></tr></thead><tbody><tr><td>Administrator</td><td>Customization, centers, webhook, tests</td><td>Routine approval if segregation required</td></tr><tr><td>AR operator</td><td>Profiles, AR Payments, assigned actions</td><td>Credentials/publication</td></tr><tr><td>Approver</td><td>Approved release</td><td>Credential/payment-token changes</td></tr><tr><td>Support</td><td>Read-only diagnostics, sanitized logs</td><td>Secrets/raw payment data</td></tr></tbody></table></div></section>
+<section id="audit"><h2>Audit logging and retention</h2><p>Enable Acumatica audit history for customers, methods, centers, and AR payment records. Retain transaction/history, trace, and webhook logs under customer policy. Limit file-system access and mask personal data before escalation.</p></section>
+<section id="sandbox"><h2>Sandbox data rules</h2><ul class="checklist"><li>Synthetic identities/payment data only.</li><li>No production tokens in sandbox.</li><li>No unmasked production database restores.</li><li>Expire sandbox credentials after the project.</li></ul></section>
+</article><aside class="page-toc" data-page-toc><h2>On this page</h2></aside></div><nav class="pager" aria-label="Page navigation"><a class="pager-link muted" href="/setup/testing/"><span>Previous</span><strong>Testing matrix</strong></a><a class="pager-link" href="/setup/var-guide/"><span>Next</span><strong>VAR implementation guide</strong></a></nav></main></div></div><script src="/docs-search-index.js"></script><script src="/docs.js"></script><script src="/setup/image-zoom.js"></script></body></html>
