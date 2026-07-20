@@ -1,4 +1,4 @@
-# linked2pay for Acumatica
+# linked2pay - integration for Acumatica
 
 > linked2pay is a customer payment integration for Acumatica ERP. The current integration supports receiving customer credit card and ACH payments; it does not currently support outbound Accounts Payable or vendor payments.
 

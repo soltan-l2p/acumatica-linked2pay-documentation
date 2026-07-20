@@ -76,7 +76,7 @@
     <section class="docs-search-dialog" role="dialog" aria-modal="true" aria-labelledby="docs-search-title">
       <div class="docs-search-head">
         <div>
-          <p class="docs-search-kicker">linked2pay for Acumatica</p>
+          <p class="docs-search-kicker">linked2pay - integration for Acumatica</p>
           <h2 id="docs-search-title">Search documentation</h2>
         </div>
         <button type="button" class="docs-search-close" aria-label="Close search"><span aria-hidden="true"></span></button>

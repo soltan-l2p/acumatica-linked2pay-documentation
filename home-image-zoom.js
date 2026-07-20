@@ -1,17 +1,35 @@
 (() => {
-  const frame = document.querySelector(".hero-shot .browser-frame");
-  const sourceImage = frame?.querySelector("img");
+  const frames = Array.from(
+    document.querySelectorAll(
+      ".hero-shot .browser-frame, .teaser .teaser-zoom-frame",
+    ),
+  );
 
-  if (!frame || !sourceImage) {
+  const viewers = frames
+    .map((frame) => {
+      const sourceImage = frame.querySelector("img");
+      if (!sourceImage) {
+        return null;
+      }
+
+      const trigger = document.createElement("button");
+      trigger.type = "button";
+      trigger.className = "hero-expand-trigger";
+      trigger.setAttribute(
+        "aria-label",
+        `View ${sourceImage.alt || "Acumatica screenshot"} full screen`,
+      );
+      trigger.innerHTML =
+        '<span class="hero-expand-icon" aria-hidden="true"></span><span class="sr-only">View full screen</span>';
+      frame.appendChild(trigger);
+
+      return { sourceImage, trigger };
+    })
+    .filter(Boolean);
+
+  if (!viewers.length) {
     return;
   }
-
-  const trigger = document.createElement("button");
-  trigger.type = "button";
-  trigger.className = "hero-expand-trigger";
-  trigger.setAttribute("aria-label", "View the Acumatica payment screenshot full screen");
-  trigger.innerHTML = '<span class="hero-expand-icon" aria-hidden="true"></span><span class="sr-only">View full screen</span>';
-  frame.appendChild(trigger);
 
   const overlay = document.createElement("div");
   overlay.className = "hero-lightbox";
@@ -48,6 +66,7 @@
   const zoomOutButton = overlay.querySelector("[data-zoom-out]");
   const zoomInButton = overlay.querySelector("[data-zoom-in]");
   const zoomResetButton = overlay.querySelector("[data-zoom-reset]");
+  let activeViewer = null;
   let scale = 1;
   let baseWidth = 0;
   let baseHeight = 0;
@@ -87,11 +106,14 @@
     updateImageSize();
   };
 
-  const openLightbox = () => {
-    lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
-    lightboxImage.alt = sourceImage.alt || "Acumatica payment screenshot";
-    title.textContent = sourceImage.alt || "Acumatica payment screenshot";
+  const openLightbox = (viewer) => {
+    activeViewer = viewer;
+    lightboxImage.src = viewer.sourceImage.currentSrc || viewer.sourceImage.src;
+    lightboxImage.alt = viewer.sourceImage.alt || "Acumatica screenshot";
+    title.textContent = viewer.sourceImage.alt || "Acumatica screenshot";
     scale = 1;
+    baseWidth = 0;
+    baseHeight = 0;
     overlay.hidden = false;
     previousBodyOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -110,11 +132,15 @@
     overlay.hidden = true;
     document.body.style.overflow = previousBodyOverflow;
     lightboxImage.removeAttribute("src");
-    trigger.focus({ preventScroll: true });
+    activeViewer?.trigger.focus({ preventScroll: true });
+    activeViewer = null;
   };
 
-  sourceImage.addEventListener("click", openLightbox);
-  trigger.addEventListener("click", openLightbox);
+  viewers.forEach((viewer) => {
+    viewer.sourceImage.addEventListener("click", () => openLightbox(viewer));
+    viewer.trigger.addEventListener("click", () => openLightbox(viewer));
+  });
+
   closeButton.addEventListener("click", closeLightbox);
   zoomOutButton.addEventListener("click", () => setScale(scale - 0.25));
   zoomInButton.addEventListener("click", () => setScale(scale + 0.25));
@@ -134,14 +160,18 @@
     }
   });
 
-  stage.addEventListener("wheel", (event) => {
-    if (!event.ctrlKey && !event.metaKey) {
-      return;
-    }
+  stage.addEventListener(
+    "wheel",
+    (event) => {
+      if (!event.ctrlKey && !event.metaKey) {
+        return;
+      }
 
-    event.preventDefault();
-    setScale(scale + (event.deltaY < 0 ? 0.25 : -0.25));
-  }, { passive: false });
+      event.preventDefault();
+      setScale(scale + (event.deltaY < 0 ? 0.25 : -0.25));
+    },
+    { passive: false },
+  );
 
   document.addEventListener("keydown", (event) => {
     if (overlay.hidden) {
@@ -150,7 +180,11 @@
 
     if (event.key === "Escape") {
       closeLightbox();
-    } else if ((event.key === "+" || event.key === "=") && !event.ctrlKey && !event.metaKey) {
+    } else if (
+      (event.key === "+" || event.key === "=") &&
+      !event.ctrlKey &&
+      !event.metaKey
+    ) {
       setScale(scale + 0.25);
     } else if (event.key === "-" && !event.ctrlKey && !event.metaKey) {
       setScale(scale - 0.25);

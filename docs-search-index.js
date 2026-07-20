@@ -2,7 +2,7 @@ window.L2P_DOCS_INDEX = [
   {
     title: "Create Invoice",
     summary:
-      "Guided demonstration for create invoice in the linked2pay for Acumatica walkthrough.",
+      "Guided demonstration for create invoice in the linked2pay - integration for Acumatica walkthrough.",
     url: "/demo/create-invoice/",
     keywords: "Open the invoice workspace",
   },
@@ -16,7 +16,7 @@ window.L2P_DOCS_INDEX = [
   {
     title: "Create Invoice (Template)",
     summary:
-      "Guided demonstration for create invoice (template) in the linked2pay for Acumatica walkthrough.",
+      "Guided demonstration for create invoice (template) in the linked2pay - integration for Acumatica walkthrough.",
     url: "/demo/create-invoice-template/",
     keywords: "",
   },
@@ -35,7 +35,7 @@ window.L2P_DOCS_INDEX = [
   {
     title: "Demo Walkthrough",
     summary:
-      "linked2pay for Acumatica demo flow for customers, payment methods, invoices, recurring payments, and linked2pay Center.",
+      "linked2pay - integration for Acumatica demo flow for customers, payment methods, invoices, recurring payments, and linked2pay Center.",
     url: "/demo/",
     keywords:
       "Customers, payment methods, invoices, recurring payments, then linked2pay Center.",
@@ -51,7 +51,7 @@ window.L2P_DOCS_INDEX = [
   {
     title: "Add to Schedule",
     summary:
-      "Guided demonstration for add to schedule in the linked2pay for Acumatica walkthrough.",
+      "Guided demonstration for add to schedule in the linked2pay - integration for Acumatica walkthrough.",
     url: "/demo/add-to-schedule/",
     keywords: "",
   },
@@ -88,7 +88,7 @@ window.L2P_DOCS_INDEX = [
   {
     title: "Pay with AutoPayBill",
     summary:
-      "Guided demonstration for pay with autopaybill in the linked2pay for Acumatica walkthrough.",
+      "Guided demonstration for pay with autopaybill in the linked2pay - integration for Acumatica walkthrough.",
     url: "/demo/recurring-pay-with-autopaybill/",
     keywords: "",
   },
@@ -109,7 +109,7 @@ window.L2P_DOCS_INDEX = [
   {
     title: "Generate Invoices",
     summary:
-      "Guided demonstration for generate invoices in the linked2pay for Acumatica walkthrough.",
+      "Guided demonstration for generate invoices in the linked2pay - integration for Acumatica walkthrough.",
     url: "/demo/generate-invoices/",
     keywords: "Configure generation first Result",
   },
@@ -122,21 +122,21 @@ window.L2P_DOCS_INDEX = [
   {
     title: "Pay with ACH",
     summary:
-      "Guided demonstration for pay with ach in the linked2pay for Acumatica walkthrough.",
+      "Guided demonstration for pay with ach in the linked2pay - integration for Acumatica walkthrough.",
     url: "/demo/pay-with-ach/",
     keywords: "",
   },
   {
     title: "Pay with Card",
     summary:
-      "Guided demonstration for pay with card in the linked2pay for Acumatica walkthrough.",
+      "Guided demonstration for pay with card in the linked2pay - integration for Acumatica walkthrough.",
     url: "/demo/pay-with-card/",
     keywords: "Attention",
   },
   {
     title: "Pay with AutoPayBill",
     summary:
-      "Guided demonstration for pay with autopaybill in the linked2pay for Acumatica walkthrough.",
+      "Guided demonstration for pay with autopaybill in the linked2pay - integration for Acumatica walkthrough.",
     url: "/demo/pay-with-autopaybill/",
     keywords: "Create Invoice",
   },
@@ -172,7 +172,7 @@ window.L2P_DOCS_INDEX = [
     keywords: "Ordered installation path Setup map Change control On this page",
   },
   {
-    title: "Publish and Verify the Extension",
+    title: "Publish and Verify the Integration",
     summary:
       "Publish the reviewed customization and verify that linked2pay components load in Acumatica.",
     url: "/setup/setup-confirm-publish/",
@@ -180,12 +180,12 @@ window.L2P_DOCS_INDEX = [
       "Purpose Prerequisites Acumatica navigation path and screen ID Step-by-step instructions Field reference Expected result Validation steps Common errors Next step On this page",
   },
   {
-    title: "Import the linked2pay Extension",
+    title: "Import the linked2pay Integration Package",
     summary:
       "Import the linked2pay customization package into the validated Acumatica sandbox.",
     url: "/setup/setup-confirm-extension/",
     keywords:
-      "Purpose Prerequisites Acumatica navigation path and screen ID Step-by-step instructions Import the customization project first. Field reference Expected result Validation steps Common errors Next step On this page",
+      "Purpose Prerequisites Acumatica navigation path and screen ID Step-by-step instructions Import the integration package first. Field reference Expected result Validation steps Common errors Next step On this page",
   },
   {
     title: "Before You Begin",
@@ -222,7 +222,7 @@ window.L2P_DOCS_INDEX = [
   {
     title: "Vendor Payments Roadmap",
     summary:
-      "Vendor-payment processing is planned for a future linked2pay for Acumatica release and is not available today.",
+      "Vendor-payment processing is planned for a future linked2pay - integration for Acumatica release and is not available today.",
     url: "/setup/outbound-payments/",
     keywords:
       "Current availability Roadmap guidance What to implement today On this page",
