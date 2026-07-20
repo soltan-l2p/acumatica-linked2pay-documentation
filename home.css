@@ -636,6 +636,8 @@ a {
 /* ---------- homepage product teaser ---------- */
 
 .teaser .feature-row {
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 36px;
   margin-top: 0;
 }
 
