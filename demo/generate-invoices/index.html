@@ -4,11 +4,8 @@
     <base href="/demo/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linked2pay - integration for Acumatica | Generate Invoices</title>
-    <meta
-      name="description"
-      content="Guided demonstration for generate invoices in the linked2pay - integration for Acumatica walkthrough. Follow the Acumatica workflow and verify the expected customer-payment result."
-    />
+    <title>Generate Recurring Invoices | linked2pay for Acumatica</title>
+    <meta name="description" content="Run Acumatica&#39;s standard process manually for the demo, then schedule it for unattended production use." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
       <!-- SEO:START -->
@@ -20,8 +17,8 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="linked2pay" />
-    <meta property="og:title" content="linked2pay - integration for Acumatica | Generate Invoices" />
-    <meta property="og:description" content="Guided demonstration for generate invoices in the linked2pay - integration for Acumatica walkthrough. Follow the Acumatica workflow and verify the expected customer-payment result." />
+    <meta property="og:title" content="Generate Recurring Invoices | linked2pay for Acumatica" />
+    <meta property="og:description" content="Run Acumatica&#39;s standard process manually for the demo, then schedule it for unattended production use." />
     <meta property="og:url" content="https://linked2pay.com/demo/generate-invoices/" />
     <meta property="og:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta property="og:image:secure_url" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
@@ -30,11 +27,11 @@
     <meta property="og:image:height" content="266" />
     <meta property="og:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="linked2pay - integration for Acumatica | Generate Invoices" />
-    <meta name="twitter:description" content="Guided demonstration for generate invoices in the linked2pay - integration for Acumatica walkthrough. Follow the Acumatica workflow and verify the expected customer-payment result." />
+    <meta name="twitter:title" content="Generate Recurring Invoices | linked2pay for Acumatica" />
+    <meta name="twitter:description" content="Run Acumatica&#39;s standard process manually for the demo, then schedule it for unattended production use." />
     <meta name="twitter:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta name="twitter:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
-    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/demo/generate-invoices/#webpage","url":"https://linked2pay.com/demo/generate-invoices/","name":"linked2pay - integration for Acumatica | Generate Invoices","description":"Guided demonstration for generate invoices in the linked2pay - integration for Acumatica walkthrough. Follow the Acumatica workflow and verify the expected customer-payment result.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/demo/generate-invoices/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/demo/generate-invoices/#breadcrumb"},"dateModified":"2026-07-20","headline":"Generate Invoices","mainEntityOfPage":{"@id":"https://linked2pay.com/demo/generate-invoices/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/demo/generate-invoices/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/demo/generate-invoices/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Demo","item":"https://linked2pay.com/demo/"},{"@type":"ListItem","position":3,"name":"Generate Invoices","item":"https://linked2pay.com/demo/generate-invoices/"}]}]}</script>
+    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/demo/generate-invoices/#webpage","url":"https://linked2pay.com/demo/generate-invoices/","name":"Generate Recurring Invoices | linked2pay for Acumatica","description":"Run Acumatica\u0027s standard process manually for the demo, then schedule it for unattended production use.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/demo/generate-invoices/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/demo/generate-invoices/#breadcrumb"},"dateModified":"2026-07-21","headline":"Generate Recurring Invoices","mainEntityOfPage":{"@id":"https://linked2pay.com/demo/generate-invoices/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/demo/generate-invoices/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/demo/generate-invoices/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Demo","item":"https://linked2pay.com/demo/"},{"@type":"ListItem","position":3,"name":"Generate Recurring Invoices","item":"https://linked2pay.com/demo/generate-invoices/"}]}]}</script>
     <!-- SEO:END -->
   </head>
   <body class="site theme-light">
@@ -63,17 +60,17 @@
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>First Customer Sync</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Update and Sync Customer</a>
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Wallet Payment Methods</a>
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Mirror Wallet Changes</a>
+              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Assign Cash Accounts and Defaults</a>
             </div>
           </details>
           <details class="sidebar-group">
@@ -82,16 +79,16 @@
               <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
               <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
               <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with linked2pay Auto-Bill</a>
             </div>
           </details>
           <details class="sidebar-group" open>
             <summary class="sidebar-link is-parent-active">Recurring Payments</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink is-active" href="/demo/generate-invoices" aria-current="page"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add Template to Schedule</a>
+              <a class="sidebar-sublink is-active" href="/demo/generate-invoices" aria-current="page"><span>14</span>Generate Recurring Invoices</a>
+              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Automate Recurring Invoice Payments</a>
             </div>
           </details>
           <details class="sidebar-group">
@@ -123,101 +120,33 @@
         </header>
         <main class="main-shell">
           <section class="hero setup-step-hero">
-            <div class="hero-inner">
-              <p class="eyebrow">Recurring Payments</p>
-              <h1>Generate Invoices</h1>
-              <p class="lead">
-                Generate invoices from the recurring schedule and review the
-                created documents.
-              </p>
-            </div>
+            <div class="hero-inner"><p class="eyebrow">Recurring Billing</p><h1>Generate Recurring Invoices</h1><p class="lead">Run Acumatica's standard process manually for the demo, then schedule it for unattended production use.</p></div>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <h2>Configure generation first</h2>
-              <p>
-                Set the execution date and number execution.<br /><br />Your
-                recurring transaction should appear on the list if you chose its
-                date or any date after that.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/49.png"
-                alt="Run invoice generation screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Open Generate Recurring Transactions</h2><p>Go to <strong>Receivables &gt; Processes &gt; Generate Recurring Transactions</strong> (<code>AR504000</code>). Set the execution date to include the schedules you want to demonstrate.</p></article>
+            <figure class="guide-image"><img src="images/screenshots/49.png" alt="Generate Recurring Transactions filters" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>Either</p>
-              <ul>
-                <li>
-                  Check the specific recurring transaction and click on
-                  <code>Run</code>
-                </li>
-                <li>
-                  Or simply just click on <code>Run All</code> if you want to
-                  run it for all the recurring transactions you have for the
-                  date you set.
-                </li>
-              </ul>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/50.png"
-                alt="Run invoice generation screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Run the due schedules</h2><p>Select individual schedules and click <strong>Run</strong>, or use <strong>Run All</strong>. For a larger demo, create multiple schedules or use an execution count that produces the approved number of test invoices.</p></article>
+            <figure class="guide-image"><img src="images/screenshots/50.png" alt="Run recurring transaction schedules" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                You should be able to see result screen with different statuses.
-                <br /><br />To double check, click on
-                <code>Schedule ID</code> to review the documents.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/51.png"
-                alt="Run invoice generation screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Review generated documents</h2><p>Open the schedule and review <strong>Generated Documents</strong>. Confirm invoice customer, amount, date, due date, release state, and recurrence sequence before payment processing.</p></article>
+            <figure class="guide-image"><img src="images/screenshots/52.png" alt="Generated recurring AR invoices" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <h2>Result</h2>
-              <p>
-                Open
-                <span class="text-bold text-italic">Generated Documents</span>
-                tab to see newly generated invoices.
-                <br /><br />As you can see, Invoices have been generated based
-                on given instructions
-                <span class="text-bold text-italic">(every 2 days)</span>.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/52.png"
-                alt="Run invoice generation screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Schedule production generation</h2><p>In production, create a daily Acumatica automation schedule for this process, such as 6:00 AM. It should finish before the linked2pay Auto-Bill schedule begins.</p></article>
+            <figure class="guide-image"><img src="/demo/images/sample.png" alt="Sample recurring invoice automation schedule" /></figure>
           </section>
-
-          <section class="content-band">
-            <div class="callout">
-              Since you generated recurring transactions, let's use AutoBill to pay them out.
-            </div>
-          </section>
+          <section class="content-band"><div class="callout">Manual Run is the clearest demonstration. The production goal is unattended generation followed by unattended payment.</div></section>
           <nav class="pager" aria-label="Page navigation">
             <a class="pager-link muted" href="/demo/add-to-schedule">
               <span>Previous</span>
-              <strong>Add to Schedule</strong>
+              <strong>Add Template to Schedule</strong>
             </a>
             <a class="pager-link" href="/demo/recurring-pay-with-autopaybill">
               <span>Next</span>
-              <strong>Pay with AutoPayBill</strong>
+              <strong>Automate Recurring Invoice Payments</strong>
             </a>
           </nav>
         </main>

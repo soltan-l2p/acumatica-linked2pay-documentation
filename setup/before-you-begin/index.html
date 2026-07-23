@@ -33,7 +33,7 @@
     <meta name="twitter:description" content="Confirm version support, modules, credentials, environments, network access, limitations, and implementation effort before publishing the integration." />
     <meta name="twitter:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta name="twitter:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
-    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/setup/before-you-begin/#webpage","url":"https://linked2pay.com/setup/before-you-begin/","name":"Before You Begin | linked2pay - integration for Acumatica","description":"Confirm version support, modules, credentials, environments, network access, limitations, and implementation effort before publishing the integration.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/setup/before-you-begin/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/setup/before-you-begin/#breadcrumb"},"dateModified":"2026-07-20","headline":"Before You Begin","mainEntityOfPage":{"@id":"https://linked2pay.com/setup/before-you-begin/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/setup/before-you-begin/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/setup/before-you-begin/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://linked2pay.com/setup/"},{"@type":"ListItem","position":3,"name":"Before You Begin","item":"https://linked2pay.com/setup/before-you-begin/"}]}]}</script>
+    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/setup/before-you-begin/#webpage","url":"https://linked2pay.com/setup/before-you-begin/","name":"Before You Begin | linked2pay - integration for Acumatica","description":"Confirm version support, modules, credentials, environments, network access, limitations, and implementation effort before publishing the integration.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/setup/before-you-begin/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/setup/before-you-begin/#breadcrumb"},"dateModified":"2026-07-21","headline":"Before You Begin","mainEntityOfPage":{"@id":"https://linked2pay.com/setup/before-you-begin/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/setup/before-you-begin/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/setup/before-you-begin/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://linked2pay.com/setup/"},{"@type":"ListItem","position":3,"name":"Before You Begin","item":"https://linked2pay.com/setup/before-you-begin/"}]}]}</script>
     <!-- SEO:END -->
   </head>
   <body class="site theme-light">
@@ -108,6 +108,7 @@
           >
           <p class="sidebar-section-label">Delivery</p>
           <a class="sidebar-link" href="/setup/testing/">Testing matrix</a>
+          <a class="sidebar-link" href="/setup/automation/">5 Automation schedules</a>
           <a class="sidebar-link" href="/setup/security/">Security</a>
           <a class="sidebar-link" href="/setup/var-guide/"
             >VAR implementation guide</a
@@ -157,197 +158,14 @@
           </section>
           <div class="docs-layout">
             <article class="docs-article">
-              <section id="supported-versions">
-                <h2>Supported Acumatica versions</h2>
-                <div class="success-box">
-                  <strong>Validated build:</strong> Acumatica 2025 R2 build
-                  <code>25.201.0213</code> on .NET Framework 4.8.
-                </div>
-                <p>
-                  The integration is compiled against that build. Treat other
-                  releases, updates, hosting models, or customized payment
-                  screens as unvalidated until sandbox regression testing is
-                  complete.
-                </p>
-                <ul>
-                  <li>Rebuild and test before another major release.</li>
-                  <li>
-                    Revalidate after upgrades or payment-related customization
-                    changes.
-                  </li>
-                  <li>Record exact Acumatica and integration builds.</li>
-                </ul>
-              </section>
-              <section id="modules-licenses">
-                <h2>Required modules, licenses, roles, and permissions</h2>
-                <div class="table-scroll">
-                  <table class="field-table">
-                    <thead>
-                      <tr>
-                        <th>Requirement</th>
-                        <th>When needed</th>
-                        <th>Minimum expectation</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Customization Projects</td>
-                        <td>All</td>
-                        <td>
-                          Import, validate, publish, and unpublish rights.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Cash Management / payment processing</td>
-                        <td>All</td>
-                        <td>Processing Centers and Payment Methods.</td>
-                      </tr>
-                      <tr>
-                        <td>Accounts Receivable</td>
-                        <td>Collections</td>
-                        <td>
-                          Customers, invoices, Payments and Applications,
-                          release.
-                        </td>
-                      </tr>
-                      
-                      <tr>
-                        <td>linked2pay merchant account</td>
-                        <td>All</td>
-                        <td>
-                          Enabled customer card and ACH debit services.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Administrator</td>
-                        <td>Setup</td>
-                        <td>
-                          System Administrator or least-privilege equivalent.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>AR operator</td>
-                        <td>Operations</td>
-                        <td>
-                          Job actions only; no credential/customization access.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </section>
-              <section id="credentials">
-                <h2>linked2pay account and credentials</h2>
-                <ul class="checklist">
-                  <li>
-                    API login ID and transaction key for the correct
-                    merchant/environment.
-                  </li>
-                  <li>Webhook API key in linked2pay and Acumatica.</li>
-                  <li>Required card/ACH services enabled.</li>
-                  <li>
-                    Tokens created in the same environment as credentials.
-                  </li>
-                </ul>
-                <div class="warning">
-                  <strong>Token rule:</strong> never reuse contact or
-                  payment-profile IDs across environments or merchant accounts.
-                </div>
-              </section>
-              <section id="environments">
-                <h2>Sandbox versus production</h2>
-                <div class="table-scroll">
-                  <table class="field-table">
-                    <thead>
-                      <tr>
-                        <th>Environment</th>
-                        <th>Base URL</th>
-                        <th>Data rule</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Sandbox</td>
-                        <td><code>https://test.linked2pay.com</code></td>
-                        <td>Synthetic data and sandbox tokens only.</td>
-                      </tr>
-                      <tr>
-                        <td>Production</td>
-                        <td><code>https://api.linked2pay.com</code></td>
-                        <td>Production credentials and tokens.</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="notice danger">
-                  <strong>Build limitation:</strong> the base URL is compiled
-                  into the integration. Changing credentials does not change
-                  environments.
-                </div>
-              </section>
-              <section id="network">
-                <h2>Network, firewall, and webhook requirements</h2>
-                <ul>
-                  <li>
-                    Outbound HTTPS TCP 443 from Acumatica to the selected
-                    linked2pay URL.
-                  </li>
-                  <li>Trusted HTTPS access to the Acumatica webhook URL.</li>
-                  <li>
-                    Preserve <code>X-Api-Key</code> through WAF/proxy/load
-                    balancer.
-                  </li>
-                  <li>
-                    Allow the app identity to write
-                    <code>App_Data/L2PLogs</code>.
-                  </li>
-                </ul>
-              </section>
-              <section id="limitations">
-                <h2>Known compatibility limitations</h2>
-                <ul>
-                  <li>
-                    Only build <code>25.201.0213</code> is identified as
-                    validated.
-                  </li>
-                  <li>API environment is compile-time.</li>
-                  <li>Vendor payments are not available in the current release.</li>
-                  
-                  <li>Pull customers from linked2pay is unavailable.</li>
-                  <li>
-                    Generic profile create/update/delete is not implemented.
-                  </li>
-                  <li>
-                    Chargeback and ACH-return accounting documents are not
-                    automatic.
-                  </li>
-                </ul>
-                <p>Review <a href="/setup/known-issues/">Known Issues</a>.</p>
-              </section>
-              <section id="effort">
-                <h2>Estimated implementation effort</h2>
-                <p>
-                  Plan <strong>8–16 implementation hours</strong> for a standard
-                  single-company deployment: installation, configuration,
-                  network coordination, sandbox testing, UAT, and cutover. Add time for multiple entities, custom approvals, upgrades, or
-                  conflicts. This is a planning estimate, not an SLA.
-                </p>
-              </section>
-              <section id="ready">
-                <h2>Readiness checkpoint</h2>
-                <ul class="checklist">
-                  <li>Build/modules/roles confirmed.</li>
-                  <li>Sandbox credentials and webhook key ready.</li>
-                  <li>Network owner assigned.</li>
-                  <li>AR card and ACH scope approved.</li>
-                  <li>Testing and accounting owners assigned.</li>
-                </ul>
-                <div class="next-step-box">
-                  <strong>Next:</strong>
-                  <a href="/setup/setup/">Installation Path</a>.
-                </div>
-              </section>
-            </article>
+<section id="supported-versions"><h2>Supported Acumatica versions</h2><div class="success-box"><strong>Validated build:</strong> Acumatica 2025 R2 build <code>25.201.0213</code> on .NET Framework 4.8 with linked2pay integration version <code>2.0.0</code>.</div><p>Treat other releases, updates, hosting models, or customized payment screens as unvalidated until sandbox regression testing is complete.</p><ul><li>Rebuild and test before another major Acumatica release.</li><li>Revalidate after upgrades or payment-related customization changes.</li><li>Record the exact Acumatica build, integration version, and customization package used for each environment.</li></ul></section>
+<section id="modules-licenses"><h2>Required modules, licenses, roles, and permissions</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Requirement</th><th>When needed</th><th>Minimum expectation</th></tr></thead><tbody><tr><td>Customization Projects</td><td>Installation</td><td>Import, validate, publish, and rollback rights.</td></tr><tr><td>Cash Management / payment processing</td><td>All payments</td><td>Processing Centers, Payment Methods, and approved cash accounts.</td></tr><tr><td>Accounts Receivable</td><td>Collections</td><td>Customers, invoices, Payments and Applications, release, and processing screens.</td></tr><tr><td>Automation Schedules</td><td>Unattended recurring billing</td><td>Rights to create and monitor schedules for AR504000 and AR508800.</td></tr><tr><td>linked2pay merchant account</td><td>All</td><td>Enabled customer card and ACH services for the selected environment.</td></tr></tbody></table></div></section>
+<section id="credentials"><h2>linked2pay account and credentials</h2><ul><li>API username and API password/key for the correct merchant.</li><li>API Base URL for sandbox or production.</li><li>Webhook API key configured in linked2pay and Acumatica.</li><li>Contact and Payment Profile IDs created under the same merchant and environment as the credentials.</li></ul><div class="warning"><strong>Token rule:</strong> never reuse Contact Profile IDs or Payment Profile IDs across environments or merchant accounts.</div></section>
+<section id="environments"><h2>Sandbox versus production</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Environment</th><th>API Base URL</th><th>Data rule</th></tr></thead><tbody><tr><td>Sandbox</td><td><code>https://test.linked2pay.com</code></td><td>Synthetic data and sandbox tokens only.</td></tr><tr><td>Production</td><td>Production URL supplied by linked2pay</td><td>Production credentials and tokens only.</td></tr></tbody></table></div><p>The API Base URL is configurable on each processing center. Changing environments requires changing the Base URL, credentials, webhook key, and tokens together, followed by <strong>Test Credentials</strong> and full regression testing.</p></section>
+<section id="network"><h2>Network, firewall, and webhook requirements</h2><ul><li>Outbound HTTPS TCP 443 from Acumatica to the configured linked2pay Base URL.</li><li>Trusted public HTTPS access to the Acumatica webhook URL.</li><li>Preserve <code>X-Api-Key</code> through the WAF, proxy, or load balancer.</li><li>Allow the application identity to write <code>App_Data/L2PLogs</code> when webhook file logging is enabled.</li></ul></section>
+<section id="limitations"><h2>Current scope boundaries</h2><ul><li>Accounts Receivable customer collections are supported; vendor payments are not.</li><li>Pulling brand-new customers from linked2pay into Acumatica is not available.</li><li>Invoice synchronization and linked2pay invoice-email links are out of scope.</li><li>Chargeback and ACH-return accounting documents are not created automatically.</li><li>Card brand may be unavailable until linked2pay returns it with transaction data; commercial-card processing therefore uses a brand-neutral fallback sequence.</li></ul><p>Review <a href="/setup/known-issues/">Known Issues</a> before scoping or go-live.</p></section>
+<section id="readiness"><h2>Readiness checkpoint</h2><ul class="checklist"><li>Build, modules, roles, and package version confirmed.</li><li>Sandbox Base URL, credentials, and webhook key ready.</li><li>Network and accounting owners assigned.</li><li>AR card, ACH, fee, Level 2/3, and AutoPayBill scope approved.</li><li>Testing, reconciliation, and support owners assigned.</li></ul><div class="next-step-box">Next: <a href="/setup/setup/">Installation Path</a>.</div></section>
+</article>
             <aside class="page-toc" data-page-toc><h2>On this page</h2></aside>
           </div>
           <nav class="pager" aria-label="Page navigation">

@@ -1,26 +1,31 @@
 # linked2pay - integration for Acumatica
 
-> linked2pay is a customer payment integration for Acumatica ERP. The current integration supports receiving customer credit card and ACH payments; it does not currently support outbound Accounts Payable or vendor payments.
-
-linked2pay supports more than 140,000 businesses on its secure risk and payment processing platform. The Acumatica integration brings customer payments into the ERP to reduce manual work, reduce errors, offer credit card fee-saving options, and accelerate cash flow.
+> linked2pay is an Accounts Receivable customer-payment integration for Acumatica ERP. Integration version 2.0.0 is validated with Acumatica 2025 R2 build 25.201.0213. Accounts Payable and vendor payments are outside the current scope.
 
 ## Current Acumatica integration scope
 
-- Customer credit card payments
-- Customer ACH payments
-- Saved tokenized customer payment methods
-- Recurring billing with AutoPayBill
-- Customer and payment-method synchronization
-- Payment fee programs
-- Transaction status updates and reconciliation support
-- Installation, security, testing, troubleshooting, and VAR deployment guidance
+- Unified customer Sync: create, update, or recreate a missing linked2pay contact
+- Read-only customer Contact Profile ID
+- Tokenized card and ACH wallet synchronization by Payment Profile ID
+- Create, update, reactivate, and deactivate mirrored customer payment methods
+- linked2pay Center bulk customer sync, cash-account assignment, and default-payment assignment
+- Customer card and ACH payments, voids, and refunds
+- Automatic credit-card fee calculation with recoverable CCFEE debit-memo accounting
+- Configurable sandbox or production API Base URL
+- Authenticated, idempotent webhooks with retryable unmatched events and configurable logging retention
+- Duplicate-charge prevention, ambiguous-result reconciliation, and captured-but-unreleased recovery
+- Level 3 to Level 2 to standard card-processing fallback when enabled and safe
+- linked2pay Auto-Bill for all eligible due AR invoices
+- Unattended recurring invoice generation followed by scheduled Auto-Bill
+- Modern and Classic UI support for customized customer and payment workflows
 
 ## Not currently supported
 
-- Outbound Accounts Payable payments
-- Sending vendor payments from Acumatica
-
-Vendor payments are a future roadmap capability and must not be described as available in the current release.
+- Outbound Accounts Payable or vendor payments
+- Pulling new customers from linked2pay into Acumatica
+- Invoice synchronization between Acumatica and linked2pay
+- linked2pay invoice email links
+- Automatic Acumatica accounting documents for chargebacks or ACH returns
 
 ## Primary pages
 
@@ -31,6 +36,7 @@ Vendor payments are a future roadmap capability and must not be described as ava
 - [Acumatica payment FAQ](https://linked2pay.com/faq/)
 - [Implementation documentation](https://linked2pay.com/setup/)
 - [Before You Begin](https://linked2pay.com/setup/before-you-begin/)
+- [Automation schedules](https://linked2pay.com/setup/automation/)
 - [Payment lifecycle](https://linked2pay.com/setup/payment-lifecycle/)
 - [Security and data handling](https://linked2pay.com/setup/security/)
 - [Testing matrix](https://linked2pay.com/setup/testing/)
@@ -49,4 +55,4 @@ This site is written for Acumatica customers, executives, finance teams, develop
 
 ## Terminology
 
-Use "linked2pay" in lowercase, "Acumatica" with initial capitalization, "ACH" in uppercase, and "AutoPayBill" exactly as shown. "Payments" on this site means customer Accounts Receivable collections unless a page explicitly says otherwise.
+Use "linked2pay" in lowercase, "Acumatica" with initial capitalization, "ACH" in uppercase, and "linked2pay Auto-Bill" for the processing screen. "Payments" means customer Accounts Receivable collections unless a page explicitly says otherwise.

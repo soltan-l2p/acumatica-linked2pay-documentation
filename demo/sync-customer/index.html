@@ -4,11 +4,8 @@
     <base href="/demo/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linked2pay - integration for Acumatica | Sync Customer</title>
-    <meta
-      name="description"
-      content="Guided demonstration for syncing an Acumatica customer with linked2pay. Follow the Acumatica workflow and verify the expected customer-payment result."
-    />
+    <title>Update and Sync a Customer | linked2pay for Acumatica</title>
+    <meta name="description" content="Send current Acumatica customer information to the existing linked2pay contact and refresh its wallet." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
       <!-- SEO:START -->
@@ -20,8 +17,8 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="linked2pay" />
-    <meta property="og:title" content="linked2pay - integration for Acumatica | Sync Customer" />
-    <meta property="og:description" content="Guided demonstration for syncing an Acumatica customer with linked2pay. Follow the Acumatica workflow and verify the expected customer-payment result." />
+    <meta property="og:title" content="Update and Sync a Customer | linked2pay for Acumatica" />
+    <meta property="og:description" content="Send current Acumatica customer information to the existing linked2pay contact and refresh its wallet." />
     <meta property="og:url" content="https://linked2pay.com/demo/sync-customer/" />
     <meta property="og:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta property="og:image:secure_url" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
@@ -30,11 +27,11 @@
     <meta property="og:image:height" content="266" />
     <meta property="og:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="linked2pay - integration for Acumatica | Sync Customer" />
-    <meta name="twitter:description" content="Guided demonstration for syncing an Acumatica customer with linked2pay. Follow the Acumatica workflow and verify the expected customer-payment result." />
+    <meta name="twitter:title" content="Update and Sync a Customer | linked2pay for Acumatica" />
+    <meta name="twitter:description" content="Send current Acumatica customer information to the existing linked2pay contact and refresh its wallet." />
     <meta name="twitter:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta name="twitter:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
-    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/demo/sync-customer/#webpage","url":"https://linked2pay.com/demo/sync-customer/","name":"linked2pay - integration for Acumatica | Sync Customer","description":"Guided demonstration for syncing an Acumatica customer with linked2pay. Follow the Acumatica workflow and verify the expected customer-payment result.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/demo/sync-customer/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/demo/sync-customer/#breadcrumb"},"dateModified":"2026-07-20","headline":"Sync Customer with linked2pay","mainEntityOfPage":{"@id":"https://linked2pay.com/demo/sync-customer/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/demo/sync-customer/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/demo/sync-customer/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Demo","item":"https://linked2pay.com/demo/"},{"@type":"ListItem","position":3,"name":"Sync Customer with linked2pay","item":"https://linked2pay.com/demo/sync-customer/"}]}]}</script>
+    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/demo/sync-customer/#webpage","url":"https://linked2pay.com/demo/sync-customer/","name":"Update and Sync a Customer | linked2pay for Acumatica","description":"Send current Acumatica customer information to the existing linked2pay contact and refresh its wallet.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/demo/sync-customer/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/demo/sync-customer/#breadcrumb"},"dateModified":"2026-07-21","headline":"Update and Sync a Customer","mainEntityOfPage":{"@id":"https://linked2pay.com/demo/sync-customer/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/demo/sync-customer/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/demo/sync-customer/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Demo","item":"https://linked2pay.com/demo/"},{"@type":"ListItem","position":3,"name":"Update and Sync a Customer","item":"https://linked2pay.com/demo/sync-customer/"}]}]}</script>
     <!-- SEO:END -->
   </head>
   <body class="site theme-light">
@@ -63,17 +60,17 @@
             <summary class="sidebar-link is-parent-active">Customers</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink is-active" href="/demo/sync-customer" aria-current="page"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>First Customer Sync</a>
+              <a class="sidebar-sublink is-active" href="/demo/sync-customer" aria-current="page"><span>3</span>Update and Sync Customer</a>
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Wallet Payment Methods</a>
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Mirror Wallet Changes</a>
+              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Assign Cash Accounts and Defaults</a>
             </div>
           </details>
           <details class="sidebar-group">
@@ -82,16 +79,16 @@
               <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
               <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
               <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with linked2pay Auto-Bill</a>
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Recurring Payments</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add Template to Schedule</a>
+              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Recurring Invoices</a>
+              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Automate Recurring Invoice Payments</a>
             </div>
           </details>
           <details class="sidebar-group">
@@ -125,76 +122,43 @@
           <section class="hero setup-step-hero">
             <div class="hero-inner">
               <p class="eyebrow">Customers</p>
-              <h1>Sync Customer with linked2pay</h1>
-              <p class="lead">
-                Demonstrate the sync moment that keeps customer information
-                aligned between Acumatica and linked2pay.
-              </p>
+              <h1>Update and Sync a Customer</h1>
+              <p class="lead">Send current Acumatica customer information to the existing linked2pay contact and refresh its wallet.</p>
             </div>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <h2>First update customer in Acumatica</h2>
-              <p>
-                As you can see in the screenshot, I've updated the customer
-                information in Acumatica for simulation purposes.
-              </p>
+              <h2>Update the Acumatica customer</h2>
+              <p>Change the customer information you want to demonstrate, then save the record. The integration checks the primary contact email and the account contact email and uses the available valid value.</p>
             </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/9.png"
-                alt="Sample customer sync action"
-              />
-            </figure>
+            <figure class="guide-image"><img src="images/screenshots/9.png" alt="Updated Acumatica customer" /></figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p>
-                Now go to
-                <span class="text-bold text-italic"
-                  >linked2pay Integration</span
-                >
-                tab and click on the
-                <span class="text-bold text-italic">Sync with linked2pay</span>
-                button to sync the customer information from Acumatica to
-                linked2pay.
-              </p>
+              <h2>Run Sync with linked2pay</h2>
+              <p>Open the <strong>linked2pay Integration</strong> tab and click <strong>Sync with linked2pay</strong>. With a valid Contact Profile ID, the integration updates the existing contact and mirrors its card and bank profiles into Acumatica.</p>
             </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/10.png"
-                alt="Sample customer sync status"
-              />
-            </figure>
+            <figure class="guide-image"><img src="images/screenshots/10.png" alt="Sync an existing customer with linked2pay" /></figure>
           </section>
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p class="eyebrow">
-                <span class="brand-case">linked2pay</span> Portal
-              </p>
-              <p>
-                After the sync, you can see the updated customer information in
-                <span class="text-bold text-italic">linked2pay</span> portal.
-              </p>
+              <h2>Recovery when the portal contact was deleted</h2>
+              <p>If the stored Contact Profile ID no longer exists in linked2pay, Sync recreates the contact, stores the new read-only ID, and deactivates stale linked2pay payment methods in Acumatica. The user does not need a separate Board action.</p>
             </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/11.png"
-                alt="Sample customer ready for payment methods"
-              />
-            </figure>
+            <figure class="guide-image"><img src="/demo/images/sample.png" alt="Sample customer recreation result" /></figure>
           </section>
-          <section class="content-band">
-            <div class="callout">
-              At the end of this step, you should have a customer record in
-              linked2pay that is synced with the latest information from
-              Acumatica.
-            </div>
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <h2>Verify the result</h2>
+              <p>Confirm the linked2pay contact reflects the latest Acumatica data. The success message reports customer and payment-method changes.</p>
+            </article>
+            <figure class="guide-image"><img src="images/screenshots/11.png" alt="Updated customer in linked2pay" /></figure>
           </section>
+          <section class="content-band"><div class="callout">The Contact Profile ID is the connection key. It is populated and maintained by the integration, not manually edited by users.</div></section>
           <nav class="pager" aria-label="Page navigation">
             <a class="pager-link muted" href="/demo/board-customer">
               <span>Previous</span>
-              <strong>Board Your Customer from Acumatica to linked2pay</strong>
+              <strong>First Customer Sync</strong>
             </a>
             <a class="pager-link" href="/demo/create-payment-methods">
               <span>Next</span>

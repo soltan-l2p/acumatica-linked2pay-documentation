@@ -213,7 +213,7 @@ a {
 
 .nav-brand {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
 }
 
@@ -223,9 +223,13 @@ a {
 
 .brand-for {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.94rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
+}
+
+.brand-for strong {
+  font-weight: 700;
 }
 
 .nav-links {
@@ -351,34 +355,25 @@ a {
   animation: fade-up 600ms ease both 280ms;
 }
 
-.hero-checklist {
+.hero-bullets {
   margin: 24px 0 0;
-  padding: 0;
+  padding-left: 20px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 18px;
-  list-style: none;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  list-style: disc;
   animation: fade-up 600ms ease both 400ms;
 }
 
-.hero-checklist li {
-  position: relative;
-  padding-left: 26px;
+.hero-bullets li {
+  padding-left: 2px;
   color: var(--ink);
   font-size: 0.95rem;
   font-weight: 600;
 }
 
-.hero-checklist li::before {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 7px;
-  height: 12px;
-  border: solid var(--blue-deep);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+.hero-bullets li::marker {
+  color: var(--blue-deep);
 }
 
 .hero-actions {
@@ -1251,7 +1246,7 @@ a {
     padding: 44px 0 40px;
   }
 
-  .hero-checklist {
+  .hero-bullets {
     grid-template-columns: 1fr;
   }
 
@@ -1547,7 +1542,7 @@ a {
   .nav-inner { padding-inline: 16px; }
   .nav-brand { gap: 7px; }
   .nav-brand .brand-word { font-size: 1.38rem; }
-  .brand-for { font-size: 1rem; }
+  .brand-for { font-size: 0.94rem; }
 }
 
 /* ---------- platform capabilities ---------- */

@@ -4,11 +4,8 @@
     <base href="/demo/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Defaults | linked2pay - integration for Acumatica</title>
-    <meta
-      name="description"
-      content="Configure the recommended Acumatica default payment method and cash account for linked2pay, then verify the expected customer payment settings."
-    />
+    <title>Assign Cash Accounts and Defaults | linked2pay for Acumatica</title>
+    <meta name="description" content="Prepare one or many customers for payment processing from one central Acumatica screen." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
       <!-- SEO:START -->
@@ -20,8 +17,8 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="linked2pay" />
-    <meta property="og:title" content="Payment Defaults | linked2pay - integration for Acumatica" />
-    <meta property="og:description" content="Configure the recommended Acumatica default payment method and cash account for linked2pay, then verify the expected customer payment settings." />
+    <meta property="og:title" content="Assign Cash Accounts and Defaults | linked2pay for Acumatica" />
+    <meta property="og:description" content="Prepare one or many customers for payment processing from one central Acumatica screen." />
     <meta property="og:url" content="https://linked2pay.com/demo/payment-defaults/" />
     <meta property="og:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta property="og:image:secure_url" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
@@ -30,11 +27,11 @@
     <meta property="og:image:height" content="266" />
     <meta property="og:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Payment Defaults | linked2pay - integration for Acumatica" />
-    <meta name="twitter:description" content="Configure the recommended Acumatica default payment method and cash account for linked2pay, then verify the expected customer payment settings." />
+    <meta name="twitter:title" content="Assign Cash Accounts and Defaults | linked2pay for Acumatica" />
+    <meta name="twitter:description" content="Prepare one or many customers for payment processing from one central Acumatica screen." />
     <meta name="twitter:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta name="twitter:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
-    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/demo/payment-defaults/#webpage","url":"https://linked2pay.com/demo/payment-defaults/","name":"Payment Defaults | linked2pay - integration for Acumatica","description":"Configure the recommended Acumatica default payment method and cash account for linked2pay, then verify the expected customer payment settings.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/demo/payment-defaults/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/demo/payment-defaults/#breadcrumb"},"dateModified":"2026-07-20","headline":"Set Default Payments and Cash Account","mainEntityOfPage":{"@id":"https://linked2pay.com/demo/payment-defaults/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/demo/payment-defaults/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/demo/payment-defaults/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Demo","item":"https://linked2pay.com/demo/"},{"@type":"ListItem","position":3,"name":"Set Default Payments and Cash Account","item":"https://linked2pay.com/demo/payment-defaults/"}]}]}</script>
+    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/demo/payment-defaults/#webpage","url":"https://linked2pay.com/demo/payment-defaults/","name":"Assign Cash Accounts and Defaults | linked2pay for Acumatica","description":"Prepare one or many customers for payment processing from one central Acumatica screen.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/demo/payment-defaults/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/demo/payment-defaults/#breadcrumb"},"dateModified":"2026-07-21","headline":"Assign Cash Accounts and Defaults","mainEntityOfPage":{"@id":"https://linked2pay.com/demo/payment-defaults/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/demo/payment-defaults/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/demo/payment-defaults/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Demo","item":"https://linked2pay.com/demo/"},{"@type":"ListItem","position":3,"name":"Assign Cash Accounts and Defaults","item":"https://linked2pay.com/demo/payment-defaults/"}]}]}</script>
     <!-- SEO:END -->
   </head>
   <body class="site theme-light">
@@ -63,17 +60,17 @@
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>First Customer Sync</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Update and Sync Customer</a>
             </div>
           </details>
           <details class="sidebar-group" open>
             <summary class="sidebar-link is-parent-active">Payment Methods</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink is-active" href="/demo/payment-defaults" aria-current="page"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Wallet Payment Methods</a>
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Mirror Wallet Changes</a>
+              <a class="sidebar-sublink is-active" href="/demo/payment-defaults" aria-current="page"><span>7</span>Assign Cash Accounts and Defaults</a>
             </div>
           </details>
           <details class="sidebar-group">
@@ -82,16 +79,16 @@
               <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
               <a class="sidebar-sublink" href="/demo/pay-with-card"><span>9</span>Pay with Card</a>
               <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with linked2pay Auto-Bill</a>
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Recurring Payments</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add Template to Schedule</a>
+              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Recurring Invoices</a>
+              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Automate Recurring Invoice Payments</a>
             </div>
           </details>
           <details class="sidebar-group">
@@ -124,81 +121,32 @@
         <main class="main-shell">
           <section class="hero setup-step-hero">
             <div class="hero-inner">
-              <p class="eyebrow">Payment Methods</p>
-              <h1>Set Default Payments and Cash Account</h1>
-              <p class="lead">
-                For each payment method that is synced from linked2pay,
-                <span class="text-bold">you must select a cash account</span> in
-                Acumatica. Additionally, you should set a recommended default
-                payment method to streamline the payment workflow.
-              </p>
+              <p class="eyebrow">linked2pay Center</p>
+              <h1>Assign Cash Accounts and Defaults</h1>
+              <p class="lead">Prepare one or many customers for payment processing from one central Acumatica screen.</p>
             </div>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                Under the Payment Methods section, click on one of the synced
-                linked2pay payment methods and then click on the
-                <span class="text-bold">"View Payment Method"</span> button.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/22.png"
-                alt="Sample saved linked2pay payment method"
-              />
-            </figure>
+            <article class="story-copy"><h2>Open linked2pay Center</h2><p>Go to <strong>Receivables &gt; Processes &gt; linked2pay Center</strong> (<code>LP102000</code>). The customer grid supports selected-row processing and Process All.</p></article>
+            <figure class="guide-image"><img src="/demo/images/sample.png" alt="Sample linked2pay Center customer grid" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                In the opened window, select the appropriate cash account for
-                this payment method and save the changes.<br /><br /><span
-                  class="text-bold text-italic"
-                  >IMPORTANT:</span
-                >
-                Do this step for each payment method you synced from linked2pay.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/23.png"
-                alt="Sample saved linked2pay payment method"
-              />
-            </figure>
+            <article class="story-copy"><h2>Assign a cash account</h2><p>Set <strong>Operation</strong> to <strong>Assign Cash Account</strong>. Choose linked2pay Credit Card or linked2pay ACH, select an active AR cash account mapped to that payment method, then process selected customers or all customers.</p></article>
+            <figure class="guide-image"><img src="/demo/images/sample.png" alt="Sample Assign Cash Account operation" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p class="eyebrow">Default method</p>
-              <h2>Choose the recommended default.</h2>
-              <p>
-                Select one of the synced linked2pay payment methods and check
-                the box to set it as the recommended default payment method.
-                This will help streamline the payment process for your
-                customers.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/24.png"
-                alt="Sample default payment method setting"
-              />
-            </figure>
+            <article class="story-copy"><h2>Set the default payment method</h2><p>Set <strong>Operation</strong> to <strong>Set Default Payment Method</strong>, choose the linked2pay payment method, and process the required customers. An eligible current default is preserved; otherwise the integration selects an active profile consistently.</p></article>
+            <figure class="guide-image"><img src="/demo/images/sample.png" alt="Sample Set Default Payment Method operation" /></figure>
           </section>
-
-          <section class="content-band">
-            <div class="callout">
-              This page is a demonstration of how to set the recommended default
-              payment method and cash account for each synced linked2pay payment
-              method in Acumatica. Following these steps ensures that your
-              payment workflow is efficient and that all transactions are
-              properly recorded.
-            </div>
+          <section class="story-band setup-story">
+            <article class="story-copy"><h2>Review every row</h2><p>The processing window records success or the specific error for each customer. One failed customer does not stop the remaining rows. Correct failed setup and rerun only those customers.</p></article>
+            <figure class="guide-image"><img src="/demo/images/sample.png" alt="Sample linked2pay Center processing results" /></figure>
           </section>
+          <section class="content-band"><div class="callout">These operations update Acumatica configuration only. They do not create, delete, or change wallet methods in linked2pay.</div></section>
           <nav class="pager" aria-label="Page navigation">
             <a class="pager-link muted" href="/demo/payment-methods-crud">
               <span>Previous</span>
-              <strong>Demonstrate CRUD of Payment Methods</strong>
+              <strong>Mirror Wallet Changes</strong>
             </a>
             <a class="pager-link" href="/demo/create-invoice">
               <span>Next</span>

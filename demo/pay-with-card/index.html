@@ -4,11 +4,8 @@
     <base href="/demo/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linked2pay - integration for Acumatica | Pay with Card</title>
-    <meta
-      name="description"
-      content="Guided demonstration for pay with card in the linked2pay - integration for Acumatica walkthrough. Follow the Acumatica workflow and verify the expected customer-payment result."
-    />
+    <title>Pay with Card | linked2pay for Acumatica</title>
+    <meta name="description" content="Create an Acumatica payment, apply the configured card fee, and process it through linked2pay." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
       <!-- SEO:START -->
@@ -20,8 +17,8 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="linked2pay" />
-    <meta property="og:title" content="linked2pay - integration for Acumatica | Pay with Card" />
-    <meta property="og:description" content="Guided demonstration for pay with card in the linked2pay - integration for Acumatica walkthrough. Follow the Acumatica workflow and verify the expected customer-payment result." />
+    <meta property="og:title" content="Pay with Card | linked2pay for Acumatica" />
+    <meta property="og:description" content="Create an Acumatica payment, apply the configured card fee, and process it through linked2pay." />
     <meta property="og:url" content="https://linked2pay.com/demo/pay-with-card/" />
     <meta property="og:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta property="og:image:secure_url" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
@@ -30,11 +27,11 @@
     <meta property="og:image:height" content="266" />
     <meta property="og:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="linked2pay - integration for Acumatica | Pay with Card" />
-    <meta name="twitter:description" content="Guided demonstration for pay with card in the linked2pay - integration for Acumatica walkthrough. Follow the Acumatica workflow and verify the expected customer-payment result." />
+    <meta name="twitter:title" content="Pay with Card | linked2pay for Acumatica" />
+    <meta name="twitter:description" content="Create an Acumatica payment, apply the configured card fee, and process it through linked2pay." />
     <meta name="twitter:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta name="twitter:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
-    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/demo/pay-with-card/#webpage","url":"https://linked2pay.com/demo/pay-with-card/","name":"linked2pay - integration for Acumatica | Pay with Card","description":"Guided demonstration for pay with card in the linked2pay - integration for Acumatica walkthrough. Follow the Acumatica workflow and verify the expected customer-payment result.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/demo/pay-with-card/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/demo/pay-with-card/#breadcrumb"},"dateModified":"2026-07-20","headline":"Pay with Card","mainEntityOfPage":{"@id":"https://linked2pay.com/demo/pay-with-card/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/demo/pay-with-card/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/demo/pay-with-card/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Demo","item":"https://linked2pay.com/demo/"},{"@type":"ListItem","position":3,"name":"Pay with Card","item":"https://linked2pay.com/demo/pay-with-card/"}]}]}</script>
+    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/demo/pay-with-card/#webpage","url":"https://linked2pay.com/demo/pay-with-card/","name":"Pay with Card | linked2pay for Acumatica","description":"Create an Acumatica payment, apply the configured card fee, and process it through linked2pay.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/demo/pay-with-card/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/demo/pay-with-card/#breadcrumb"},"dateModified":"2026-07-21","headline":"Pay with Card","mainEntityOfPage":{"@id":"https://linked2pay.com/demo/pay-with-card/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/demo/pay-with-card/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/demo/pay-with-card/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Demo","item":"https://linked2pay.com/demo/"},{"@type":"ListItem","position":3,"name":"Pay with Card","item":"https://linked2pay.com/demo/pay-with-card/"}]}]}</script>
     <!-- SEO:END -->
   </head>
   <body class="site theme-light">
@@ -63,17 +60,17 @@
             <summary class="sidebar-link">Customers</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-customer"><span>1</span>Create Customer</a>
-              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>Board Your Customer from Acumatica to linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Sync Customer with linked2pay</a>
+              <a class="sidebar-sublink" href="/demo/board-customer"><span>2</span>First Customer Sync</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer"><span>3</span>Update and Sync Customer</a>
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Payment Methods</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-payment-methods"><span>4</span>Create Payment Methods in linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Customer with linked2pay</a>
-              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Demonstrate CRUD of Payment Methods</a>
-              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Set Default Payments and Cash Account</a>
+              <a class="sidebar-sublink" href="/demo/sync-customer-payment-methods"><span>5</span>Sync Wallet Payment Methods</a>
+              <a class="sidebar-sublink" href="/demo/payment-methods-crud"><span>6</span>Mirror Wallet Changes</a>
+              <a class="sidebar-sublink" href="/demo/payment-defaults"><span>7</span>Assign Cash Accounts and Defaults</a>
             </div>
           </details>
           <details class="sidebar-group" open>
@@ -82,16 +79,16 @@
               <a class="sidebar-sublink" href="/demo/create-invoice"><span>8</span>Create Invoice</a>
               <a class="sidebar-sublink is-active" href="/demo/pay-with-card" aria-current="page"><span>9</span>Pay with Card</a>
               <a class="sidebar-sublink" href="/demo/pay-with-ach"><span>10</span>Pay with ACH</a>
-              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/pay-with-autopaybill"><span>11</span>Pay with linked2pay Auto-Bill</a>
             </div>
           </details>
           <details class="sidebar-group">
             <summary class="sidebar-link">Recurring Payments</summary>
             <div class="setup-sublist">
               <a class="sidebar-sublink" href="/demo/create-invoice-template"><span>12</span>Create Invoice (Template)</a>
-              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add to Schedule</a>
-              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Invoices</a>
-              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Pay with AutoPayBill</a>
+              <a class="sidebar-sublink" href="/demo/add-to-schedule"><span>13</span>Add Template to Schedule</a>
+              <a class="sidebar-sublink" href="/demo/generate-invoices"><span>14</span>Generate Recurring Invoices</a>
+              <a class="sidebar-sublink" href="/demo/recurring-pay-with-autopaybill"><span>15</span>Automate Recurring Invoice Payments</a>
             </div>
           </details>
           <details class="sidebar-group">
@@ -123,180 +120,33 @@
         </header>
         <main class="main-shell">
           <section class="hero setup-step-hero">
-            <div class="hero-inner">
-              <p class="eyebrow">Invoice</p>
-              <h1>Pay with Card</h1>
-              <p class="lead">
-                Use a card payment method to pay the invoice through the
-                linked2pay workflow.
-              </p>
-            </div>
+            <div class="hero-inner"><p class="eyebrow">Invoice</p><h1>Pay with Card</h1><p class="lead">Create an Acumatica payment, apply the configured card fee, and process it through linked2pay.</p></div>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                In the last step you released the invoice and created a balance.
-                Now you should be able to see <code>Pay</code> button in the
-                invoice workspace. Click it to start the payment flow.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/29.png"
-                alt="Start the card payment screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Start from a released invoice</h2><p>Open a released invoice with a remaining balance and click <strong>Pay</strong>. Select the customer's active linked2pay card profile and its approved cash account.</p></article>
+            <figure class="guide-image"><img src="images/screenshots/29.png" alt="Start a card payment from an invoice" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                You should be able to see the payment details page like this:
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/30.png"
-                alt="Confirm card details screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Review the automatic processing fee</h2><p>When an eligible linked2pay card payment is saved, the configured percentage is applied automatically. The integration creates and applies a CCFEE debit memo so the invoice amount and fee are accounted for separately.</p></article>
+            <figure class="guide-image"><img src="images/screenshots/31.png" alt="Automatic credit card processing fee" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <h2>Attention</h2>
-              <p>
-                Because I picked <code>linked2pay Credit Card</code> as the
-                payment method, you can see there is a
-                <span class="text-bold">Processing Fee</span> added to the total
-                amount. <br /><br />
-                <span class="text-bold">Note:</span> The processing fee is only
-                for credit card payments. ACH payments do not have a processing
-                fee. <br /><br />
-                Check
-                <a
-                  class="text-bold text-italic"
-                  style="color: #1985c9"
-                  href="/setup/setup-processing-api"
-                  >Processing Fee</a
-                >
-                to see how you can manage these fees.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/31.png"
-                alt="Verify the paid status screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Allow a payment-level exception</h2><p>Before processing, use <strong>Remove Processing Fee</strong> to waive the fee for this payment. Use <strong>Apply Fee</strong> to calculate and add it again. Changing the payment method to ACH removes an unprocessed card fee; changing back to card recalculates it.</p></article>
+            <figure class="guide-image"><img src="images/screenshots/32.png" alt="Remove or apply a processing fee" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                You can click on
-                <span class="text-bold">Remove Processing Fee</span> if you want
-                to make exceptions for your customers or exclude processing fee
-                for specific invoices.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/32.png"
-                alt="Remove processing fee screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Process the payment</h2><p>Use the payment Actions menu to authorize and capture, or use the approved combined action for the demo. Only an approved linked2pay processing transaction can mark the payment paid and close a zero-balance invoice.</p></article>
+            <figure class="guide-image"><img src="images/screenshots/37.png" alt="Capture an approved card payment" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                And visa versa, you can click on
-                <span class="text-bold">Apply Fee</span> if you want to add
-                after removing it for some reason.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/33.png"
-                alt="Apply processing fee screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Commercial-card data and fallback</h2><p>When Level 3 is enabled, the integration first sends eligible invoice-line detail as Level 3. A definite gateway rejection with no transaction identifiers falls back to Level 2 and then standard processing. Because the wallet API does not reliably provide card brand, all cards use the same ordered strategy. A timeout or ambiguous result never triggers an automatic fallback or unsafe retry.</p></article>
+            <figure class="guide-image"><img src="/demo/images/sample.png" alt="Sample Level 3 card transaction result" /></figure>
           </section>
           <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                Now click on <code>...</code> on the top to open the actions
-                menu.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/34.png"
-                alt="Actions menu screenshot"
-              />
-            </figure>
+            <article class="story-copy"><h2>Verify both systems</h2><p>Confirm one approved CC processing transaction in Acumatica and one charge in linked2pay. Repeating the action must not create a second charge.</p></article>
+            <figure class="guide-image"><img src="images/screenshots/38.png" alt="Captured payment in linked2pay" /></figure>
           </section>
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                Click on <code>Authorize</code> first to authorize the payment.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/35.png"
-                alt="Actions menu screenshot"
-              />
-            </figure>
-          </section>
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                On <span class="text-bold">linked2pay</span> portal, please go
-                to <span class="text-bold">Card</span> section under
-                <span class="text-bold">Reporting</span> to see the payment is
-                authorized and ready to be captured.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/36.png"
-                alt="Card reporting screenshot"
-              />
-            </figure>
-          </section>
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                Finally click on <code>Capture</code> to capture the authorized
-                payment.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/37.png"
-                alt="Capture payment screenshot"
-              />
-            </figure>
-          </section>
-          <section class="story-band setup-story">
-            <article class="story-copy">
-              <p>
-                On linked2pay portal, you should be able to see the payment is
-                captured.
-              </p>
-            </article>
-            <figure class="guide-image">
-              <img
-                src="images/screenshots/38.png"
-                alt="Capture payment screenshot"
-              />
-            </figure>
-          </section>
-
-          <section class="content-band">
-            <div class="callout">
-              This page is for the card payment path. Keep the narration simple
-              and let the screenshot show the important fields.
-            </div>
-          </section>
+          <section class="content-band"><div class="callout">If Acumatica reports an ambiguous gateway result, verify the linked2pay portal first and use the controlled reconciliation/retry path. Do not simply run the payment again.</div></section>
           <nav class="pager" aria-label="Page navigation">
             <a class="pager-link muted" href="/demo/create-invoice">
               <span>Previous</span>

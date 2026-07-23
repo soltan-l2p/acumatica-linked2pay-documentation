@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Enter merchant credentials and card behavior settings, then authenticate the processing center. Includes validation and troubleshooting guidance." />
     <meta name="twitter:image" content="https://linked2pay.com/images/linked2pay-acumatica-share.png" />
     <meta name="twitter:image:alt" content="linked2pay customer card and ACH payment processing for Acumatica ERP" />
-    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/setup/setup-processing-api/#webpage","url":"https://linked2pay.com/setup/setup-processing-api/","name":"Configure API Values | linked2pay - integration for Acumatica","description":"Enter merchant credentials and card behavior settings, then authenticate the processing center. Includes validation and troubleshooting guidance.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/setup/setup-processing-api/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/setup/setup-processing-api/#breadcrumb"},"dateModified":"2026-07-20","headline":"Configure API Values","mainEntityOfPage":{"@id":"https://linked2pay.com/setup/setup-processing-api/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/setup/setup-processing-api/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/setup/setup-processing-api/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://linked2pay.com/setup/"},{"@type":"ListItem","position":3,"name":"Configure API Values","item":"https://linked2pay.com/setup/setup-processing-api/"}]}]}</script>
+    <script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://linked2pay.com/setup/setup-processing-api/#webpage","url":"https://linked2pay.com/setup/setup-processing-api/","name":"Configure API Values | linked2pay - integration for Acumatica","description":"Enter merchant credentials and card behavior settings, then authenticate the processing center. Includes validation and troubleshooting guidance.","inLanguage":"en-US","isPartOf":{"@id":"https://linked2pay.com/#website"},"about":{"@id":"https://linked2pay.com/#software"},"primaryImageOfPage":{"@id":"https://linked2pay.com/setup/setup-processing-api/#primaryimage"},"breadcrumb":{"@id":"https://linked2pay.com/setup/setup-processing-api/#breadcrumb"},"dateModified":"2026-07-21","headline":"Configure API Values","mainEntityOfPage":{"@id":"https://linked2pay.com/setup/setup-processing-api/#webpage"},"author":{"@id":"https://linked2pay.com/#organization"},"publisher":{"@id":"https://linked2pay.com/#organization"}},{"@type":"ImageObject","@id":"https://linked2pay.com/setup/setup-processing-api/#primaryimage","url":"https://linked2pay.com/images/linked2pay-acumatica-share.png","contentUrl":"https://linked2pay.com/images/linked2pay-acumatica-share.png","width":736,"height":266,"caption":"linked2pay customer card and ACH payment processing for Acumatica ERP"},{"@type":"BreadcrumbList","@id":"https://linked2pay.com/setup/setup-processing-api/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linked2pay.com/"},{"@type":"ListItem","position":2,"name":"Documentation","item":"https://linked2pay.com/setup/"},{"@type":"ListItem","position":3,"name":"Configure API Values","item":"https://linked2pay.com/setup/setup-processing-api/"}]}]}</script>
     <!-- SEO:END -->
   </head>
 <body class="site theme-light"><input class="sidebar-toggle" type="checkbox" id="sidebar-toggle" /><label class="sidebar-backdrop" for="sidebar-toggle" aria-label="Close menu"></label><div class="site-shell">
@@ -43,6 +43,7 @@
           <a class="sidebar-link" href="/setup/setup-payment-link-center/">3B Link processing center</a>
           <a class="sidebar-link" href="/setup/setup-payment-ach/">3C ACH payment method</a>
           <a class="sidebar-link" href="/setup/setup-nonstock-items/">4 Fee item</a>
+          <a class="sidebar-link" href="/setup/automation/">5 Automation schedules</a>
           <p class="sidebar-section-label">Operations</p>
           <a class="sidebar-link" href="/setup/payment-lifecycle/">Payment lifecycle</a>
           <a class="sidebar-link" href="/setup/outbound-payments/">Vendor payments (planned)</a>
@@ -58,7 +59,7 @@
 </nav></aside><div class="page-frame"><header class="mobile-topbar"><a class="mobile-brand simple-logo" href="/" aria-label="linked2pay - integration for Acumatica home"><img src="/setup/images/linked2pay.png" alt="linked2pay" /></a><button class="docs-search-launch mobile-docs-search" type="button" data-docs-search><span>Search</span></button><label class="menu-button" for="sidebar-toggle" aria-label="Open menu"><span></span><span></span><span></span></label></header>
 <main class="main-shell"><nav class="doc-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/setup/">Documentation</a><span aria-hidden="true">/</span><span aria-current="page">Configure API Values</span></nav><section class="hero docs-hero"><div class="hero-inner"><p class="eyebrow">Setup 2B</p><h1>Configure API Values</h1><p class="lead">Enter merchant credentials and card behavior settings, then authenticate the processing center.</p></div></section><div class="docs-layout"><article class="docs-article">
 <section id="purpose"><h2>Purpose</h2><p>Connect the card processing center to the correct linked2pay merchant/environment and explicitly configure card, AutoPayBill, fee, and Level 2/3 behavior.</p></section>
-<section id="prerequisites"><h2>Prerequisites</h2><ul><li><code>L2PCC</code> center created.</li><li>Sandbox API login/key from an approved secret channel.</li><li>Compiled base URL confirmed as sandbox.</li><li>Business approval for AutoPayBill and fee percentage.</li></ul></section>
+<section id="prerequisites"><h2>Prerequisites</h2><ul><li><code>L2PCC</code> center created.</li><li>Sandbox API login/key from an approved secret channel.</li><li>Sandbox API Base URL and merchant credentials confirmed.</li><li>Business approval for AutoPayBill and fee percentage.</li></ul></section>
 <section id="navigation"><h2>Acumatica navigation path and screen ID</h2><p><strong>Navigation:</strong> Banking &gt; Credit Card Processing &gt; Processing Centers &gt; L2PCC (<code>CA205000</code>)</p></section>
 <section id="instructions"><h2>Step-by-step instructions</h2><div class="preserved-tutorial"><section class="story-band setup-story">
             <article class="story-copy">
@@ -130,6 +131,14 @@
                 the connection continues to work.
               </span>
             </div>
+          </section>
+
+          <section class="story-band setup-story">
+            <article class="story-copy">
+              <p class="eyebrow">Environment</p>
+              <p>Set <span class="text-bold">API Base URL</span> (<code>BASEURL</code>) to the linked2pay environment used by these credentials. Use <code>https://test.linked2pay.com</code> for sandbox. Use the production URL supplied by linked2pay for production. The URL must use HTTPS.</p>
+            </article>
+            <figure class="guide-image"><img src="/setup/images/sample.png" alt="Sample API Base URL setting in Acumatica" /></figure>
           </section>
 
           <section class="story-band setup-story">
@@ -209,28 +218,10 @@
 
           <section class="story-band setup-story">
             <article class="story-copy">
-              <p>
-                Set <span class="text-bold">BOTH</span> -
-                <span class="text-bold">LEVEL2</span> and
-                <span class="text-bold">LEVEL3</span> to
-                <span class="text-italic text-bold">True</span> to enable Level
-                2 &amp; 3 processing for your payments.<br /><br /><span
-                  class="text-bold text-italic"
-                  >Do this for both processing centers.</span
-                ><br /><span class="text-italic"
-                  >(You haven't created ACH Processing Center yet, but keep in
-                  mind)</span
-                ><br /><br />
-                If one of them at least is set to
-                <span class="text-bold">False</span>, it won't be enabled.
-              </p>
+              <p><span class="text-bold">Enable Level 3 Processing</span> starts eligible card transactions at Level 3. A definite rejection with no gateway transaction IDs falls back to Level 2 and then standard processing. If only <span class="text-bold">Enable Level 2 Processing</span> is enabled, the sequence is Level 2 then standard.</p>
+              <p>These settings apply to the credit-card center. They do not need to be enabled on the ACH center. A timeout or ambiguous response never triggers automatic fallback because the gateway may already have processed the payment.</p>
             </article>
-            <figure class="guide-image">
-              <img
-                src="/setup/images/screenshots/17-2.png"
-                alt="linked2pay user field"
-              />
-            </figure>
+            <figure class="guide-image"><img src="/setup/images/sample.png" alt="Sample Level 2 and Level 3 processing settings" /></figure>
           </section>
 
           <section class="story-band setup-story">
@@ -250,9 +241,9 @@
               />
             </figure>
           </section></div></section>
-<section id="field-reference"><h2>Field reference</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Field or setting</th><th>Required value</th><th>Notes</th></tr></thead><tbody><tr><td><code>L2PUSER</code></td><td>linked2pay API login ID</td><td>Required; correct merchant/environment.</td></tr><tr><td><code>APIKEY</code></td><td>Web Service / transaction key</td><td>Required secret.</td></tr><tr><td><code>PAYMETHOD</code></td><td>Credit Card</td><td>Controls endpoint/payload.</td></tr><tr><td><code>FEE</code></td><td>Approved percent or <code>0</code></td><td>Card only; requires CCFEE setup.</td></tr><tr><td><code>AUTOBILL</code></td><td>True or False</td><td>Default for new customers; configure consistently across active centers.</td></tr><tr><td><code>LEVEL2</code></td><td>True/False</td><td>Enhanced card data when enabled.</td></tr><tr><td><code>LEVEL3</code></td><td>True/False</td><td>Enhanced line data when enabled.</td></tr><tr><td><code>WEBHOOKKEY</code></td><td>Added in next step</td><td>Do not leave blank before webhook testing.</td></tr></tbody></table></div></section>
+<section id="field-reference"><h2>Field reference</h2><div class="table-scroll"><table class="field-table"><thead><tr><th>Field or setting</th><th>Required value</th><th>Notes</th></tr></thead><tbody><tr><td>API Username (<code>L2PUSER</code>)</td><td>linked2pay API login ID</td><td>Required; correct merchant/environment.</td></tr><tr><td>API Password / Key (<code>APIKEY</code>)</td><td>Web Service key</td><td>Required encrypted secret.</td></tr><tr><td>API Base URL (<code>BASEURL</code>)</td><td>Sandbox or approved production HTTPS URL</td><td>Configurable per center; must match credentials and tokens.</td></tr><tr><td>Payment Method (<code>PAYMETHOD</code>)</td><td>Credit Card</td><td>Controls endpoint and payload.</td></tr><tr><td>Processing Fee (%) (<code>FEE</code>)</td><td>Approved value from 0 through 3</td><td>Enter 3 for 3%; requires CCFEE when greater than zero.</td></tr><tr><td>Enable Level 2 Processing</td><td>True/False</td><td>Level 2 then standard fallback.</td></tr><tr><td>Enable Level 3 Processing</td><td>True/False</td><td>Level 3 then Level 2 then standard fallback.</td></tr><tr><td>Default Enable Auto Bill for New Customers</td><td>True/False</td><td>New customers default on only when both card and ACH centers are True.</td></tr><tr><td>Webhook API Key</td><td>Added in next step</td><td>Must match <code>X-Api-Key</code>.</td></tr><tr><td>Webhook Log Level</td><td>Metadata recommended</td><td>Off, Errors Only, Metadata, or Full Payload.</td></tr><tr><td>Webhook Retention (Days)</td><td>30 recommended</td><td>Allowed range 1-365.</td></tr></tbody></table></div></section>
 <section id="expected"><h2>Expected result</h2><div class="success-box">Test Credentials returns <strong>Authenticated successfully</strong> with a linked2pay client ID, and the center remains set to Credit Card.</div></section>
-<section id="validation"><h2>Validation steps</h2><ul class="checklist"><li>Authentication succeeds after refresh.</li><li>Client ID belongs to intended sandbox merchant.</li><li><code>PAYMETHOD</code> remains Credit Card.</li><li>Fee/AutoPayBill/Level settings match signed design.</li><li>Secrets are absent from screenshots and logs shared externally.</li></ul></section>
-<section id="errors"><h2>Common errors</h2><div class="table-scroll"><table class="matrix-table"><thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead><tbody><tr><td>Authentication Failed</td><td>Wrong login/key, merchant, or compiled URL</td><td>Confirm all three; do not repeatedly rotate without diagnosis.</td></tr><tr><td>API Username/Password required</td><td>Blank L2PUSER/APIKEY</td><td>Enter both from approved source.</td></tr><tr><td>Invalid payment type</td><td>PAYMETHOD blank/wrong</td><td>Select Credit Card exactly.</td></tr><tr><td>Fees wrong</td><td>FEE interpreted as percentage</td><td>Enter 3 for 3%, not 0.03; verify calculation in sandbox.</td></tr></tbody></table></div><p>For unresolved issues, review <a href="/setup/troubleshooting/">Troubleshooting</a> and <a href="/setup/support/">Support</a>.</p></section>
+<section id="validation"><h2>Validation steps</h2><ul class="checklist"><li>Authentication succeeds and returns the intended client ID.</li><li>API Base URL, credentials, and tokens belong to the same environment.</li><li>Payment Method remains Credit Card.</li><li>Fee, Auto-Bill default, and Level 2/3 settings match the approved design.</li><li>Secrets are absent from screenshots and shared logs.</li></ul></section>
+<section id="errors"><h2>Common errors</h2><div class="table-scroll"><table class="matrix-table"><thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead><tbody><tr><td>Authentication Failed</td><td>Wrong username/key, merchant, or Base URL</td><td>Confirm all three; do not repeatedly rotate credentials without diagnosis.</td></tr><tr><td>Base URL rejected</td><td>Blank, invalid, or non-HTTPS URL</td><td>Enter the approved HTTPS origin without an API path.</td></tr><tr><td>Invalid payment type</td><td>Payment Method blank/wrong</td><td>Select Credit Card.</td></tr><tr><td>Fee validation error</td><td>Value is not invariant or outside 0-3</td><td>Enter a whole percentage such as 3 for 3%.</td></tr></tbody></table></div></section>
 <section id="next"><h2>Next step</h2><div class="next-step-box">Continue to <a href="/setup/setup-processing-webhook/">Configure webhook authentication</a>.</div></section>
 </article><aside class="page-toc" data-page-toc><h2>On this page</h2></aside></div><nav class="pager" aria-label="Page navigation"><a class="pager-link muted" href="/setup/setup-processing-center/"><span>Previous</span><strong>Create the card center</strong></a><a class="pager-link" href="/setup/setup-processing-webhook/"><span>Next</span><strong>Configure webhook authentication</strong></a></nav></main></div></div><script src="/docs-search-index.js"></script><script src="/docs.js"></script><script src="/setup/image-zoom.js"></script></body></html>
